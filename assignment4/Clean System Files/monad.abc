@@ -1,0 +1,241 @@
+.comp 920 01011101001
+.start _nostart_
+.depend "StdMisc"
+.depend "monad"
+.endinfo
+.module m_monad "monad"
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc _ind
+.implab _indirection _eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.export e_monad_rFunctor;
+.record e_monad_rFunctor; a 1 0 "Functor;"
+.descexp e_monad_tFunctor; e_monad_cFunctor; _hnf 1 1 "Functor;"
+.n 1 e_monad_tFunctor;
+.o 1 0
+e_monad_cFunctor;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	fill_r e_monad_rFunctor; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_dFunctor;.fmap
+.export e_monad_nFunctor;.fmap
+.export e_monad_eaFunctor;.fmap
+.descs e_monad_dFunctor;.fmap e_monad_nFunctor;.fmap _ 1 0 "Functor;.fmap"
+.n -4 e_monad_dFunctor;.fmap e_monad_eaFunctor;.fmap
+.o 1 0
+e_monad_nFunctor;.fmap
+	push_node _cycle_in_spine 1
+.o 2 0
+e_monad_eaFunctor;.fmap
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_rApplicative;
+.record e_monad_rApplicative; aa(a) 3 0 "Applicative;"
+.descexp e_monad_tApplicative; e_monad_cApplicative; _hnf 3 1 "Applicative;"
+.n 3 e_monad_tApplicative;
+.o 1 0
+e_monad_cApplicative;
+	push_node _cycle_in_spine 3
+	jsr_eval 2
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 2 1 0
+	update_a 0 3
+	pop_a 1
+	fill_r e_monad_rApplicative; 3 0 3 0 0
+	pop_a 3
+.d 1 0
+	rtn
+.export e_monad_dApplicative;.<*>
+.export e_monad_nApplicative;.<*>
+.export e_monad_eaApplicative;.<*>
+.descs e_monad_dApplicative;.<*> e_monad_nApplicative;.<*> _ 1 0 "Applicative;.<*>"
+.n -4 e_monad_dApplicative;.<*> e_monad_eaApplicative;.<*>
+.o 1 0
+e_monad_nApplicative;.<*>
+	push_node _cycle_in_spine 1
+.o 2 0
+e_monad_eaApplicative;.<*>
+	jsr_eval 0
+	repl_r_args_a 3 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_dApplicative;.pure
+.export e_monad_nApplicative;.pure
+.export e_monad_eaApplicative;.pure
+.descs e_monad_dApplicative;.pure e_monad_nApplicative;.pure _ 3 0 "Applicative;.pure"
+.n -4 e_monad_dApplicative;.pure e_monad_eaApplicative;.pure
+.o 1 0
+e_monad_nApplicative;.pure
+	push_node _cycle_in_spine 1
+.o 2 0
+e_monad_eaApplicative;.pure
+	jsr_eval 0
+	repl_r_args_a 3 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_dApplicative;.Functor
+.export e_monad_nApplicative;.Functor
+.desc e_monad_dApplicative;.Functor e_monad_nApplicative;.Functor _hnf 1 0 "Applicative;.Functor"
+.n 1 e_monad_dApplicative;.Functor
+.o 1 0
+e_monad_nApplicative;.Functor
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 3 0 3 1
+	fill_r e_monad_rFunctor; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_rMonad;
+.record e_monad_rMonad; aa 2 0 "Monad;"
+.descexp e_monad_tMonad; e_monad_cMonad; _hnf 2 1 "Monad;"
+.n 2 e_monad_tMonad;
+.o 1 0
+e_monad_cMonad;
+	push_node _cycle_in_spine 2
+	jsr_eval 1
+	jsr_eval 0
+	fill_r e_monad_rMonad; 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e_monad_dMonad;.bind
+.export e_monad_nMonad;.bind
+.export e_monad_eaMonad;.bind
+.descs e_monad_dMonad;.bind e_monad_nMonad;.bind _ 1 0 "Monad;.bind"
+.n -4 e_monad_dMonad;.bind e_monad_eaMonad;.bind
+.o 1 0
+e_monad_nMonad;.bind
+	push_node _cycle_in_spine 1
+.o 2 0
+e_monad_eaMonad;.bind
+	jsr_eval 0
+	repl_r_args_a 2 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_dMonad;.Applicative
+.export e_monad_nMonad;.Applicative
+.descs e_monad_dMonad;.Applicative e_monad_nMonad;.Applicative _ 2 0 "Monad;.Applicative"
+.n -4 e_monad_dMonad;.Applicative
+.o 1 0
+e_monad_nMonad;.Applicative
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 2 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_rfail;
+.record e_monad_rfail; aa 2 0 "fail;"
+.descexp e_monad_tfail; e_monad_cfail; _hnf 2 1 "fail;"
+.n 2 e_monad_tfail;
+.o 1 0
+e_monad_cfail;
+	push_node _cycle_in_spine 2
+	jsr_eval 1
+	jsr_eval 0
+	fill_r e_monad_rfail; 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.export e_monad_dfail;.fail
+.export e_monad_nfail;.fail
+.export e_monad_eafail;.fail
+.descs e_monad_dfail;.fail e_monad_nfail;.fail _ 1 0 "fail;.fail"
+.n -4 e_monad_dfail;.fail e_monad_eafail;.fail
+.o 1 0
+e_monad_nfail;.fail
+	push_node _cycle_in_spine 1
+.o 2 0
+e_monad_eafail;.fail
+	jsr_eval 0
+	repl_r_args_a 2 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_dfail;.Applicative
+.export e_monad_nfail;.Applicative
+.descs e_monad_dfail;.Applicative e_monad_nfail;.Applicative _ 2 0 "fail;.Applicative"
+.n -4 e_monad_dfail;.Applicative
+.o 1 0
+e_monad_nfail;.Applicative
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	repl_r_args_a 2 0 2 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_rOrMonad;
+.record e_monad_rOrMonad; a 1 0 "OrMonad;"
+.descexp e_monad_tOrMonad; e_monad_cOrMonad; _hnf 1 1 "OrMonad;"
+.n 1 e_monad_tOrMonad;
+.o 1 0
+e_monad_cOrMonad;
+	push_node _cycle_in_spine 1
+	jsr_eval 0
+	fill_r e_monad_rOrMonad; 1 0 1 0 0
+	pop_a 1
+.d 1 0
+	rtn
+.export e_monad_dOrMonad;.<|>
+.export e_monad_nOrMonad;.<|>
+.export e_monad_eaOrMonad;.<|>
+.descs e_monad_dOrMonad;.<|> e_monad_nOrMonad;.<|> _ 1 0 "OrMonad;.<|>"
+.n -4 e_monad_dOrMonad;.<|> e_monad_eaOrMonad;.<|>
+.o 1 0
+e_monad_nOrMonad;.<|>
+	push_node _cycle_in_spine 1
+.o 2 0
+e_monad_eaOrMonad;.<|>
+	jsr_eval 0
+	repl_r_args_a 1 0 1 1
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn

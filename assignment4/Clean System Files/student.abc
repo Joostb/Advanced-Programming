@@ -1,0 +1,833 @@
+.comp 920 01011101001
+.start __student_Start
+.depend "monad"
+.depend "StdMaybe"
+.depend "_SystemEnum"
+.depend "StdEnum"
+.depend "StdMisc"
+.depend "StdFunc"
+.depend "StdCharList"
+.depend "StdTuple"
+.depend "StdOrdList"
+.depend "StdList"
+.depend "StdClass"
+.depend "StdFile"
+.depend "StdString"
+.depend "_SystemArray"
+.depend "StdArray"
+.depend "StdChar"
+.depend "StdReal"
+.depend "StdInt"
+.depend "StdOverloaded"
+.depend "StdBool"
+.depend "StdEnv"
+.endinfo
+.module m_student "student"
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc _ind
+.implab _indirection _eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.implab e_StdFile_sfreadi
+.implab e_StdFile_sfreadline
+.impdesc e_StdFile_dstdio;33
+.implab e_StdFile_nstdio;33
+.impdesc e_StdFile_d<<<;38
+.implab e_StdFile_s<<<;38
+.implab e_StdFile_n<<<;38
+.implab e_StdString_s%;10
+.implab e_StdChar_s==;18
+.implab e_StdInt_s-;7
+.implab e_StdInt_s<;17
+.record r46 aa 2 0 "State"
+.descs d47 n47 _ 1 0 "State.w"
+.n -4 d47 ea47
+.o 1 0
+n47
+	push_node _cycle_in_spine 1
+.o 2 0
+ea47
+	jsr_eval 0
+	repl_r_args_a 2 0 1 1
+	jmp_eval_upd
+.descs d48 n48 _ 2 0 "State.c"
+.n -4 d48 ea48
+.o 1 0
+n48
+	push_node _cycle_in_spine 1
+.o 2 0
+ea48
+	jsr_eval 0
+	repl_r_args_a 2 0 2 1
+	jmp_eval_upd
+.desc d56 _hnf _add_arg 1 0 "IO"
+.record r50 aaa 3 0 "Student"
+.export __student_Start
+.o 0 0
+__student_Start
+	buildI 65536
+	build _ 1 n5
+.d 1 0
+	jmp _driver
+.n 1 _
+.o 1 0
+n5
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea5
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+ea5
+	jsr_eval 0
+.o 1 0
+s5
+	buildh e_StdMaybe_dNothing 0
+	push_a 1
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	create
+	buildh _Nil 0
+	update_a 0 3
+	pop_a 1
+.d 1 0
+	jsr s8
+.o 1 0
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 0
+	jmp s57
+.o 1 0
+s8
+	buildh d14 0
+	build _ 0 n28
+	buildh d37 1
+	create
+	buildAC "Your first name please: "
+	buildh ARRAY 1
+.d 2 0
+	jsr s4
+.o 1 0
+	create
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jsr s33
+.o 1 0
+.d 3 0
+	jmp s33
+.desc d14 _hnf l14 1 0 "<lambda>[line:127];9;13"
+.o 2 0
+l14
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.o 2 0
+ea14
+.o 2 0
+s14
+	push_a 0
+	buildh d13 1
+	build _ 0 n28
+	buildh d36 1
+	create
+	buildAC "Your last name please: "
+	buildh ARRAY 1
+	buildh _Nil 0
+	update_a 0 5
+	pop_a 1
+.d 2 0
+	jsr s4
+.o 1 0
+	create
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jsr s33
+.o 1 0
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s33
+.n 0 _ ea28
+.o 1 0
+n28
+	push_node _cycle_in_spine 0
+.o 1 0
+ea28
+.o 1 0
+s28
+	buildh d21 0
+	fillh d56 1 1
+.d 1 0
+	rtn
+.desc d21 _hnf l21 1 0 "r;20"
+.o 2 0
+l21
+	pop_a 1
+.d 1 0
+	jsr ea21
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 1 0
+ea21
+	jsr_eval 0
+	repl_r_args 2 0
+.o 2 0
+s21
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jsr s1
+.o 2 0
+	push_a 1
+	jsr_eval 0
+	eq_desc e_StdMaybe_dJust 1 0
+	exit_false selector_m_error
+	repl_args 1 1
+	jsr_eval 0
+	pushF_a 0
+	pop_a 1
+.d 0 2 f
+	jsr readLineF
+.o 1 2 f
+	push_a 0
+	updatepop_a 0 1
+.d 1 0
+	jsr s10
+.o 1 0
+	push_a 0
+	push_arraysize CHAR 0 1
+	pushI 0
+	ltI
+	jmp_false else.1
+	buildF_b 0
+	buildh e_StdMaybe_dJust 1
+	push_a 2
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	push_a 1
+	buildh ARRAY 1
+	buildh e_StdMaybe_dJust 1
+	update_a 1 4
+	updatepop_a 0 3
+	pop_b 2
+.d 2 0
+	rtn
+else.1
+	buildAC "String must be not empty "
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+	updatepop_a 0 1
+.d 1 2 f
+	jsr writeFS
+.o 0 2 f
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 0 2 f
+	jsr readLineF
+.o 1 2 f
+	push_a 0
+	updatepop_a 0 1
+.d 1 0
+	jsr s10
+.o 1 0
+	push_a 0
+	push_arraysize CHAR 0 1
+	pushI 0
+	ltI
+	jmp_false else.2
+	buildF_b 0
+	buildh e_StdMaybe_dJust 1
+	push_a 2
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	push_a 1
+	buildh ARRAY 1
+	buildh e_StdMaybe_dJust 1
+	update_a 1 4
+	updatepop_a 0 3
+	pop_b 2
+.d 2 0
+	rtn
+else.2
+	buildF_b 0
+	buildh e_StdMaybe_dJust 1
+	push_a 2
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	buildh e_StdMaybe_dNothing 0
+	update_a 1 4
+	updatepop_a 0 3
+	pop_b 2
+.d 2 0
+	rtn
+.desc d13 _hnf l13 2 0 "<lambda>[line:129];9;12"
+.a 2 ea13
+.o 2 0
+l13
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+ea13
+.o 3 0
+s13
+	push_a 1
+	push_a 1
+	buildh d39 2
+	build _ 0 n29
+	buildh d35 1
+	create
+	buildAC "Your student nmber please: "
+	buildh ARRAY 1
+	buildh _Nil 0
+	update_a 0 5
+	update_a 0 6
+	pop_a 1
+.d 2 0
+	jsr s4
+.o 1 0
+	create
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jsr s33
+.o 1 0
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp s33
+.desc d39 _hnf l39 3 0 "<lambda>[line:131];9;38"
+.a 3 ea39
+.o 2 0
+l39
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.o 4 0
+ea39
+.o 4 0
+s39
+	push_a 1
+	build _ 1 n10
+	push_a 1
+	build _ 1 n10
+	push_a 4
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	build_r r50 3 0 0 0
+	update_a 0 3
+	pop_a 3
+	updatepop_a 0 3
+.d 2 0
+	jmp s32
+.o 3 0
+s33
+	repl_args 1 1
+	push_a 0
+	push_a 2
+	buildh d26 2
+	fillh d56 1 3
+	pop_a 2
+.d 1 0
+	rtn
+.desc d26 _hnf l26 3 0 "<lambda>[line:84];11;25"
+.a 0 a26
+.o 2 0
+l26
+	repl_args 2 2
+.o 3 0
+a26
+.d 3 0
+	jsr ea26
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 3 0
+ea26
+	jsr_eval 1
+.o 3 0
+s26
+	push_a 2
+	push_a 2
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	jsr_ap 1
+	repl_args 2 2
+	jsr_eval 0
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s43
+.o 3 0
+s43
+	eq_desc e_StdMaybe_dJust 1 0
+	jmp_true case.3
+	jmp case.4
+case.3
+	repl_args 1 1
+	push_a 2
+	jsr_eval 0
+	push_a 1
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 3 4
+	update_a 1 3
+	updatepop_a 0 2
+	jsr_ap 1
+	push_a 1
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 0
+	jmp s57
+case.4
+	buildh e_StdMaybe_dNothing 0
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+.o 2 0
+s32
+	push_a 0
+	buildh d24 1
+	fillh d56 1 2
+	pop_a 1
+.d 1 0
+	rtn
+.desc d24 _hnf l24 2 0 "<lambda>[line:74];15;23"
+.a 0 a24
+.o 2 0
+l24
+	repl_args 1 1
+.o 2 0
+a24
+.o 2 0
+ea24
+	push_a 0
+	buildh e_StdMaybe_dJust 1
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 3
+	updatepop_a 0 2
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 0 _ ea29
+.o 1 0
+n29
+	push_node _cycle_in_spine 0
+.o 1 0
+ea29
+.o 1 0
+s29
+	buildh d22 0
+	fillh d56 1 1
+.d 1 0
+	rtn
+.desc d22 _hnf l22 1 0 "r;21"
+.o 2 0
+l22
+	pop_a 1
+.d 1 0
+	jsr ea22
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 1 0
+ea22
+	jsr_eval 0
+	repl_r_args 2 0
+.o 2 0
+s22
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jsr s1
+.o 2 0
+	push_a 1
+	jsr_eval 0
+	eq_desc e_StdMaybe_dJust 1 0
+	exit_false selector_m_error
+	repl_args 1 1
+	jsr_eval 0
+	pushF_a 0
+	pop_a 1
+.d 0 2 f
+	jsr	readFI
+.o 0 4 b i f
+	push_b 0
+	jmp_false else.5
+	buildF_b 2
+	buildh e_StdMaybe_dJust 1
+	push_a 1
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	buildI_b 1
+	buildh e_StdMaybe_dJust 1
+	update_a 1 3
+	updatepop_a 0 2
+	pop_b 4
+.d 2 0
+	rtn
+else.5
+	buildAC "An integer please "
+	push_b 3
+	push_b 3
+	update_b 1 5
+	updatepop_b 0 4
+.d 1 2 f
+	jsr writeFS
+.o 0 2 f
+	push_b 1
+	push_b 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 0 2 f
+	jsr	readFI
+.o 0 4 b i f
+	push_b 0
+	jmp_false else.6
+	buildF_b 2
+	buildh e_StdMaybe_dJust 1
+	push_a 1
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	buildI_b 1
+	buildh e_StdMaybe_dJust 1
+	update_a 1 3
+	updatepop_a 0 2
+	pop_b 4
+.d 2 0
+	rtn
+else.6
+	buildF_b 2
+	buildh e_StdMaybe_dJust 1
+	push_a 1
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	buildh e_StdMaybe_dNothing 0
+	update_a 1 3
+	updatepop_a 0 2
+	pop_b 4
+.d 2 0
+	rtn
+.n 1 _
+.o 1 0
+n10
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea10
+.o 1 0
+	push_a 0
+	fillh ARRAY 1 2
+	pop_a 1
+.d 1 0
+	rtn
+.o 1 0
+ea10
+	jsr_eval 0
+	push_array 0
+	update_a 0 1
+	pop_a 1
+.o 1 0
+s10
+	push_a 0
+	push_arraysize CHAR 0 1
+	push_b 0
+	pushI 0
+	ltI
+	jmp_false else.7
+	pushI 1
+	push_b 1
+	subI
+	push_a 0
+	select CHAR 0 1
+	pushC '\n'
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	eqC
+	jmp_false else.7
+	pushI 2
+	push_b 1
+	subI
+	pushI 0
+	push_a 0
+	updatepop_a 0 1
+	update_b 1 2
+	updatepop_b 0 1
+.d 1 2 ii
+	jsr sliceAC
+.o 1 0
+.d 1 0
+	rtn
+else.7
+	pop_b 1
+.d 1 0
+	rtn
+.desc d35 _hnf l35 2 0 "<lambda>[line:24];25;34"
+.a 0 ea35
+.o 2 0
+l35
+	repl_args 1 1
+.o 2 0
+ea35
+	jsr_eval 0
+.o 2 0
+s35
+	updatepop_a 0 1
+.d 1 0
+	rtn
+.desc d36 _hnf l36 2 0 "<lambda>[line:24];25;35"
+.a 0 ea36
+.o 2 0
+l36
+	repl_args 1 1
+.o 2 0
+ea36
+	jsr_eval 0
+.o 2 0
+s36
+	updatepop_a 0 1
+.d 1 0
+	rtn
+.desc d37 _hnf l37 2 0 "<lambda>[line:24];25;36"
+.a 0 ea37
+.o 2 0
+l37
+	repl_args 1 1
+.o 2 0
+ea37
+	jsr_eval 0
+.o 2 0
+s37
+	updatepop_a 0 1
+.d 1 0
+	rtn
+.o 2 0
+s4
+	push_a 0
+	buildh d38 1
+	fillh d56 1 2
+	pop_a 1
+.d 1 0
+	rtn
+.desc d38 _hnf l38 2 0 "w;37"
+.a 0 a38
+.o 2 0
+l38
+	repl_args 1 1
+.o 2 0
+a38
+.o 2 0
+ea38
+	jsr_eval 1
+	push_r_args 1 2 0
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	push_a 2
+	push_a 2
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jsr s1
+.o 2 0
+	push_a 1
+	build _ 1 n58
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 2 e_StdFile_n<<<;38
+	buildh e_StdMaybe_dJust 1
+	push_a 1
+	build_r r46 2 0 0 0
+	update_a 0 2
+	pop_a 2
+	push_a 3
+	buildh e_StdMaybe_dJust 1
+	update_a 1 4
+	updatepop_a 0 3
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.n 1 _ _
+.o 1 0
+n58
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea58
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 1 0
+ea58
+	jsr_eval 0
+.o 1 0
+s58
+	eq_desc e_StdMaybe_dJust 1 0
+	jmp_true case.9
+	jmp s58.1
+case.9
+	repl_args 1 1
+	jmp_eval
+s58.1
+	pop_a 1
+	pushD m_student
+	pushD x_58
+.d 0 2 ii
+	jmp _match_error
+.string x_58 "_match0"
+.o 2 0
+s1
+	jmp case.10
+case.10
+	jsr_eval 1
+	eq_desc e_StdMaybe_dNothing 0 1
+	jmp_true case.12
+	jmp case.11
+case.12
+	push_a 0
+	build _ 1 e_StdFile_nstdio;33
+	push_a 0
+	build d_S.1 -1 n_S.1
+	buildh e_StdMaybe_dJust 1
+	push_a 1
+	build d_S.2 -1 n_S.2
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+case.11
+.d 2 0
+	rtn
+.o 2 0
+s57
+	repl_args 1 1
+	push_a 0
+	jsr_eval 0
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 3
+	updatepop_a 0 2
+	jsr_ap 1
+	repl_args 2 2
+.d 2 0
+	rtn
