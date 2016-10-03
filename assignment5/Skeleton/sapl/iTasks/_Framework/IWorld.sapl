@@ -1,0 +1,252 @@
+|| ?module? iTasks._Framework.IWorld
+
+
+iTasks._Framework.IWorld.write_25 _x_0 localDate_1 !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> _Tuple2 (Data.Error.Ok (StdFunc.const True)) (update iworld_2::iTasks._Framework.IWorld._IWorld [2:update clocks_1_2::iTasks._Framework.IWorld._SystemClocks [0:localDate_1]])) 
+iTasks._Framework.IWorld.read_24 _x_0 !iworld_1 = case iworld_1 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case clocks_1_2 (iTasks._Framework.IWorld._SystemClocks localDate_2_0 localTime_2_1 utcDate_2_2 utcTime_2_3 -> _Tuple2 (Data.Error.Ok localDate_2_0) iworld_1) ) 
+iTasks._Framework.IWorld.iworldLocalDate = iTasks._Framework.SDS.createReadWriteSDS "IWorld" "localDate" iTasks._Framework.IWorld.read_24 iTasks._Framework.IWorld.write_25
+iTasks._Framework.IWorld.write_27 _x_0 localTime_1 !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> _Tuple2 (Data.Error.Ok (StdFunc.const True)) (update iworld_2::iTasks._Framework.IWorld._IWorld [2:update clocks_1_2::iTasks._Framework.IWorld._SystemClocks [1:localTime_1]])) 
+iTasks._Framework.IWorld.read_26 _x_0 !iworld_1 = case iworld_1 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case clocks_1_2 (iTasks._Framework.IWorld._SystemClocks localDate_2_0 localTime_2_1 utcDate_2_2 utcTime_2_3 -> _Tuple2 (Data.Error.Ok localTime_2_1) iworld_1) ) 
+iTasks._Framework.IWorld.iworldLocalTime = iTasks._Framework.SDS.createReadWriteSDS "IWorld" "localTime" iTasks._Framework.IWorld.read_26 iTasks._Framework.IWorld.write_27
+iTasks._Framework.IWorld.write_29 _x_0 utcDate_1 !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> _Tuple2 (Data.Error.Ok (StdFunc.const True)) (update iworld_2::iTasks._Framework.IWorld._IWorld [2:update clocks_1_2::iTasks._Framework.IWorld._SystemClocks [2:utcDate_1]])) 
+iTasks._Framework.IWorld.read_28 _x_0 !iworld_1 = case iworld_1 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case clocks_1_2 (iTasks._Framework.IWorld._SystemClocks localDate_2_0 localTime_2_1 utcDate_2_2 utcTime_2_3 -> _Tuple2 (Data.Error.Ok utcDate_2_2) iworld_1) ) 
+iTasks._Framework.IWorld.iworldUTCDate = iTasks._Framework.SDS.createReadWriteSDS "IWorld" "utcDate" iTasks._Framework.IWorld.read_28 iTasks._Framework.IWorld.write_29
+iTasks._Framework.IWorld.write_31 _x_0 utcTime_1 !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> _Tuple2 (Data.Error.Ok (StdFunc.const True)) (update iworld_2::iTasks._Framework.IWorld._IWorld [2:update clocks_1_2::iTasks._Framework.IWorld._SystemClocks [3:utcTime_1]])) 
+iTasks._Framework.IWorld.read_30 _x_0 !iworld_1 = case iworld_1 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case clocks_1_2 (iTasks._Framework.IWorld._SystemClocks localDate_2_0 localTime_2_1 utcDate_2_2 utcTime_2_3 -> _Tuple2 (Data.Error.Ok utcTime_2_3) iworld_1) ) 
+iTasks._Framework.IWorld.iworldUTCTime = iTasks._Framework.SDS.createReadWriteSDS "IWorld" "utcTime" iTasks._Framework.IWorld.read_30 iTasks._Framework.IWorld.write_31
+iTasks._Framework.IWorld.updateClocks !iworld_0 = case iworld_0 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> let _x_2_0 = iTasks._Framework.Util.currentLocalDateTimeWorld world_1_12, world_2_1 = select _x_2_0::_Tuple2 1, _x_2_2 = iTasks._Framework.Util.currentUTCDateTimeWorld world_2_1, _x_2_3 = select _x_2_2::_Tuple2 0, utcTime_2_4 = select _x_2_3::_Tuple2 1, world_2_5 = select _x_2_2::_Tuple2 1, utcDate_2_6 = select _x_2_3::_Tuple2 0 in case (<{iTasks.API.Core.Types.==_82}> utcTime_2_4 (select clocks_1_2::iTasks._Framework.IWorld._SystemClocks 3)) (True -> case (<{iTasks.API.Core.Types.==_81}> utcDate_2_6 (select clocks_1_2::iTasks._Framework.IWorld._SystemClocks 2)) (True -> let _x_5_0 = select _x_2_0::_Tuple2 0, localTime_5_1 = select _x_5_0::_Tuple2 1, localDate_5_2 = select _x_5_0::_Tuple2 0 in case (<{iTasks.API.Core.Types.==_82}> localTime_5_1 (select clocks_1_2::iTasks._Framework.IWorld._SystemClocks 1)) (True -> case (<{iTasks.API.Core.Types.==_81}> localDate_5_2 (select clocks_1_2::iTasks._Framework.IWorld._SystemClocks 0)) (True -> update iworld_0::iTasks._Framework.IWorld._IWorld [12:world_2_5]) (False -> select (iTasks._Framework.SDS.write localDate_5_2 iTasks._Framework.IWorld.iworldLocalDate (update iworld_0::iTasks._Framework.IWorld._IWorld [12:world_2_5]))::_Tuple2 1) ) (False -> select (iTasks._Framework.SDS.write localTime_5_1 iTasks._Framework.IWorld.iworldLocalTime (<{iTasks._Framework.IWorld._if;54;16_751}> (<{iTasks.API.Core.Types.==_81}> localDate_5_2 (select clocks_1_2::iTasks._Framework.IWorld._SystemClocks 0)) iworld_0 world_2_5 localDate_5_2))::_Tuple2 1) ) (False -> let _x_5_0 = select _x_2_0::_Tuple2 0, localTime_5_1 = select _x_5_0::_Tuple2 1, localDate_5_2 = select _x_5_0::_Tuple2 0 in select (iTasks._Framework.SDS.write utcDate_2_6 iTasks._Framework.IWorld.iworldUTCDate (<{iTasks._Framework.IWorld._if;55;16_753}> (<{iTasks.API.Core.Types.==_82}> localTime_5_1 (select clocks_1_2::iTasks._Framework.IWorld._SystemClocks 1)) localDate_5_2 clocks_1_2 iworld_0 world_2_5 localTime_5_1))::_Tuple2 1) ) (False -> select (iTasks._Framework.SDS.write utcTime_2_4 iTasks._Framework.IWorld.iworldUTCTime (<{iTasks._Framework.IWorld._if;56;16_757}> (<{iTasks.API.Core.Types.==_81}> utcDate_2_6 (select clocks_1_2::iTasks._Framework.IWorld._SystemClocks 2)) _x_2_0 clocks_1_2 iworld_0 world_2_5 utcDate_2_6))::_Tuple2 1) ) 
+<{iTasks._Framework.IWorld._if;56;16_757}> !_x_0::B !_x_1 !clocks_2 !iworld_3 !world_4 utcDate_5 = case _x_0 (True -> let _x_2_0 = select _x_1::_Tuple2 0, localTime_2_1 = select _x_2_0::_Tuple2 1, localDate_2_2 = select _x_2_0::_Tuple2 0 in case (<{iTasks.API.Core.Types.==_82}> localTime_2_1 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 1)) (True -> case (<{iTasks.API.Core.Types.==_81}> localDate_2_2 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 0)) (True -> update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4]) (False -> select (iTasks._Framework.SDS.write localDate_2_2 iTasks._Framework.IWorld.iworldLocalDate (update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4]))::_Tuple2 1) ) (False -> select (iTasks._Framework.SDS.write localTime_2_1 iTasks._Framework.IWorld.iworldLocalTime (<{iTasks._Framework.IWorld._if;54;16_754}> (<{iTasks.API.Core.Types.==_81}> localDate_2_2 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 0)) iworld_3 world_4 localDate_2_2))::_Tuple2 1) ) (_ -> let _x_1_0 = select _x_1::_Tuple2 0, localTime_1_1 = select _x_1_0::_Tuple2 1, localDate_1_2 = select _x_1_0::_Tuple2 0 in select (iTasks._Framework.SDS.write utcDate_5 iTasks._Framework.IWorld.iworldUTCDate (<{iTasks._Framework.IWorld._if;55;16_756}> (<{iTasks.API.Core.Types.==_82}> localTime_1_1 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 1)) localDate_1_2 clocks_2 iworld_3 world_4 localTime_1_1))::_Tuple2 1)
+<{iTasks._Framework.IWorld._if;55;16_756}> !_x_0::B !localDate_1 !clocks_2 !iworld_3 !world_4 localTime_5 = case _x_0 (True -> case (<{iTasks.API.Core.Types.==_81}> localDate_1 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 0)) (True -> update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4]) (False -> select (iTasks._Framework.SDS.write localDate_1 iTasks._Framework.IWorld.iworldLocalDate (update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4]))::_Tuple2 1) ) (_ -> select (iTasks._Framework.SDS.write localTime_5 iTasks._Framework.IWorld.iworldLocalTime (<{iTasks._Framework.IWorld._if;54;16_755}> (<{iTasks.API.Core.Types.==_81}> localDate_1 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 0)) iworld_3 world_4 localDate_1))::_Tuple2 1)
+<{iTasks._Framework.IWorld._if;54;16_755}> !_x_0::B !iworld_1 !world_2 localDate_3 = case _x_0 (True -> update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]) (_ -> select (iTasks._Framework.SDS.write localDate_3 iTasks._Framework.IWorld.iworldLocalDate (update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]))::_Tuple2 1)
+<{iTasks._Framework.IWorld._if;54;16_754}> !_x_0::B !iworld_1 !world_2 localDate_3 = case _x_0 (True -> update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]) (_ -> select (iTasks._Framework.SDS.write localDate_3 iTasks._Framework.IWorld.iworldLocalDate (update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]))::_Tuple2 1)
+<{iTasks._Framework.IWorld._if;55;16_753}> !_x_0::B !localDate_1 !clocks_2 !iworld_3 !world_4 localTime_5 = case _x_0 (True -> case (<{iTasks.API.Core.Types.==_81}> localDate_1 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 0)) (True -> update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4]) (False -> select (iTasks._Framework.SDS.write localDate_1 iTasks._Framework.IWorld.iworldLocalDate (update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4]))::_Tuple2 1) ) (_ -> select (iTasks._Framework.SDS.write localTime_5 iTasks._Framework.IWorld.iworldLocalTime (<{iTasks._Framework.IWorld._if;54;16_752}> (<{iTasks.API.Core.Types.==_81}> localDate_1 (select clocks_2::iTasks._Framework.IWorld._SystemClocks 0)) iworld_3 world_4 localDate_1))::_Tuple2 1)
+<{iTasks._Framework.IWorld._if;54;16_752}> !_x_0::B !iworld_1 !world_2 localDate_3 = case _x_0 (True -> update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]) (_ -> select (iTasks._Framework.SDS.write localDate_3 iTasks._Framework.IWorld.iworldLocalDate (update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]))::_Tuple2 1)
+<{iTasks._Framework.IWorld._if;54;16_751}> !_x_0::B !iworld_1 !world_2 localDate_3 = case _x_0 (True -> update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]) (_ -> select (iTasks._Framework.SDS.write localDate_3 iTasks._Framework.IWorld.iworldLocalDate (update iworld_1::iTasks._Framework.IWorld._IWorld [12:world_2]))::_Tuple2 1)
+iTasks._Framework.IWorld.fclose_5 !file_0 !iworld_1 = case iworld_1 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> let _x_2_0 = StdFile.fclose_30 file_0 world_1_12 in <{_Tuple2!3}> (select _x_2_0::_Tuple2 0) (update iworld_1::iTasks._Framework.IWorld._IWorld [12:select _x_2_0::_Tuple2 1])) 
+iTasks._Framework.IWorld.fopen_6 !filename_0 !mode_1::I !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> let _x_2_0 = StdFile.fopen_31 filename_0 mode_1 world_1_12 in <{_Tuple3!7}> (select _x_2_0::_Tuple3 0) (select _x_2_0::_Tuple3 1) (update iworld_2::iTasks._Framework.IWorld._IWorld [12:select _x_2_0::_Tuple3 2])) 
+iTasks._Framework.IWorld.sfopen_7 !filename_0 !mode_1::I !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> let _x_2_0 = StdFile.sfopen_32 filename_0 mode_1 world_1_12 in <{_Tuple3!7}> (select _x_2_0::_Tuple3 0) (select _x_2_0::_Tuple3 1) (update iworld_2::iTasks._Framework.IWorld._IWorld [12:select _x_2_0::_Tuple3 2])) 
+iTasks._Framework.IWorld.stdio_8 !iworld_0 = case iworld_0 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> let _x_2_0 = StdFile.stdio_33 world_1_12 in <{_Tuple2!3}> (select _x_2_0::_Tuple2 0) (update iworld_0::iTasks._Framework.IWorld._IWorld [12:select _x_2_0::_Tuple2 1])) 
+<{iTasks._Framework.IWorld.TD;IWorld}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;ServerInfo}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;SystemPaths}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;SystemClocks}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;ShareCache}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;TaskEvalState}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;IOTasks}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;IOTaskInstance}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;ListenerInstanceOpts}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;ConnectionInstanceOpts}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;ConnectionId}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;IOStates}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;IOState}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;IOConnectionState}> _x_0::B = _predefined._Nil
+<{iTasks._Framework.IWorld.TD;Resource}> _x_0::B = _predefined._Nil
+
+:: iTasks._Framework.IWorld.IOTaskInstance = iTasks._Framework.IWorld.ListenerInstance !a1 !a2 | iTasks._Framework.IWorld.ConnectionInstance !a1 !a2 | iTasks._Framework.IWorld.BackgroundInstance !a1
+:: iTasks._Framework.IWorld.IOState = iTasks._Framework.IWorld.IOActive !a1 | iTasks._Framework.IWorld.IODestroyed !a1 | iTasks._Framework.IWorld.IOException !a1
+:: iTasks._Framework.IWorld.Resource = iTasks._Framework.IWorld.Resource
+
+|| Converted Records
+:: iTasks._Framework.IWorld._IWorld = {!iTasks._Framework.IWorld.server, !iTasks._Framework.IWorld.config, !iTasks._Framework.IWorld.clocks, !iTasks._Framework.IWorld.current, iTasks._Framework.IWorld.random, !iTasks._Framework.IWorld.sdsNotifyRequests, !iTasks._Framework.IWorld.memoryShares, !iTasks._Framework.IWorld.cachedShares, !iTasks._Framework.IWorld.exposedShares, iTasks._Framework.IWorld.jsCompilerState, !iTasks._Framework.IWorld.ioTasks, !iTasks._Framework.IWorld.ioStates, !iTasks._Framework.IWorld.world, !iTasks._Framework.IWorld.resources, !iTasks._Framework.IWorld.onClient::B, !iTasks._Framework.IWorld.shutdown::B}
+
+:: iTasks._Framework.IWorld._ServerInfo = {!iTasks._Framework.IWorld.serverName, !iTasks._Framework.IWorld.serverURL, !iTasks._Framework.IWorld.buildID, !iTasks._Framework.IWorld.paths, !iTasks._Framework.IWorld.customCSS::B}
+
+:: iTasks._Framework.IWorld._SystemPaths = {!iTasks._Framework.IWorld.appDirectory, !iTasks._Framework.IWorld.dataDirectory, !iTasks._Framework.IWorld.publicWebDirectories}
+
+:: iTasks._Framework.IWorld._SystemClocks = {!iTasks._Framework.IWorld.localDate, !iTasks._Framework.IWorld.localTime, !iTasks._Framework.IWorld.utcDate, !iTasks._Framework.IWorld.utcTime}
+
+:: iTasks._Framework.IWorld._TaskEvalState = {!iTasks._Framework.IWorld.taskTime, !iTasks._Framework.IWorld.taskInstance, !iTasks._Framework.IWorld.sessionInstance, !iTasks._Framework.IWorld.attachmentChain, !iTasks._Framework.IWorld.nextTaskNo, !iTasks._Framework.IWorld.eventRoute, !iTasks._Framework.IWorld.editletDiffs}
+
+:: iTasks._Framework.IWorld._IOTasks = {!iTasks._Framework.IWorld.done, !iTasks._Framework.IWorld.todo}
+
+:: iTasks._Framework.IWorld._ListenerInstanceOpts = {!iTasks._Framework.IWorld.taskId, !iTasks._Framework.IWorld.nextConnectionId, !iTasks._Framework.IWorld.port::I, !iTasks._Framework.IWorld.connectionTask, !iTasks._Framework.IWorld.removeOnClose::B}
+
+:: iTasks._Framework.IWorld._ConnectionInstanceOpts = {!iTasks._Framework.IWorld.taskId, !iTasks._Framework.IWorld.connectionId, !iTasks._Framework.IWorld.remoteHost, !iTasks._Framework.IWorld.connectionTask, !iTasks._Framework.IWorld.removeOnClose::B}
+
+:: iTasks._Framework.IWorld._IOConnectionState = {!iTasks._Framework.IWorld.connectionTaskState, !iTasks._Framework.IWorld.closed::B}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_s;}> = {!iTasks._Framework.IWorld.JSONEncode_s}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_ss;}> = {!iTasks._Framework.IWorld.JSONEncode_ss}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_sss;}> = {!iTasks._Framework.IWorld.JSONEncode_sss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_s;}> = {!iTasks._Framework.IWorld.JSONDecode_s}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_ss;}> = {!iTasks._Framework.IWorld.JSONDecode_ss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_sss;}> = {!iTasks._Framework.IWorld.JSONDecode_sss}
+
+:: <{iTasks._Framework.IWorld.gDefault_s;}> = {iTasks._Framework.IWorld.gDefault_s}
+
+:: <{iTasks._Framework.IWorld.gDefault_ss;}> = {iTasks._Framework.IWorld.gDefault_ss}
+
+:: <{iTasks._Framework.IWorld.gDefault_sss;}> = {iTasks._Framework.IWorld.gDefault_sss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_s;}> = {!iTasks._Framework.IWorld.gUpdate_s}
+
+:: <{iTasks._Framework.IWorld.gUpdate_ss;}> = {!iTasks._Framework.IWorld.gUpdate_ss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_sss;}> = {!iTasks._Framework.IWorld.gUpdate_sss}
+
+:: <{iTasks._Framework.IWorld.gVerify_s;}> = {!iTasks._Framework.IWorld.gVerify_s}
+
+:: <{iTasks._Framework.IWorld.gVerify_ss;}> = {!iTasks._Framework.IWorld.gVerify_ss}
+
+:: <{iTasks._Framework.IWorld.gVerify_sss;}> = {!iTasks._Framework.IWorld.gVerify_sss}
+
+:: <{iTasks._Framework.IWorld.gText_s;}> = {!iTasks._Framework.IWorld.gText_s}
+
+:: <{iTasks._Framework.IWorld.gText_ss;}> = {!iTasks._Framework.IWorld.gText_ss}
+
+:: <{iTasks._Framework.IWorld.gText_sss;}> = {!iTasks._Framework.IWorld.gText_sss}
+
+:: <{iTasks._Framework.IWorld.gEditor_s;}> = {!iTasks._Framework.IWorld.gEditor_s}
+
+:: <{iTasks._Framework.IWorld.gEditor_ss;}> = {!iTasks._Framework.IWorld.gEditor_ss}
+
+:: <{iTasks._Framework.IWorld.gEditor_sss;}> = {!iTasks._Framework.IWorld.gEditor_sss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_s;}> = {!iTasks._Framework.IWorld.gEditMeta_s}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_ss;}> = {!iTasks._Framework.IWorld.gEditMeta_ss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_sss;}> = {!iTasks._Framework.IWorld.gEditMeta_sss}
+
+:: <{iTasks._Framework.IWorld.gEq_s;}> = {!iTasks._Framework.IWorld.gEq_s}
+
+:: <{iTasks._Framework.IWorld.gEq_ss;}> = {!iTasks._Framework.IWorld.gEq_ss}
+
+:: <{iTasks._Framework.IWorld.gEq_sss;}> = {!iTasks._Framework.IWorld.gEq_sss}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_ssss;}> = {!iTasks._Framework.IWorld.JSONEncode_ssss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_ssss;}> = {!iTasks._Framework.IWorld.JSONDecode_ssss}
+
+:: <{iTasks._Framework.IWorld.gEq_ssss;}> = {!iTasks._Framework.IWorld.gEq_ssss}
+
+:: <{iTasks._Framework.IWorld.gDefault_ssss;}> = {iTasks._Framework.IWorld.gDefault_ssss}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_sssss;}> = {!iTasks._Framework.IWorld.JSONEncode_sssss}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_ssssss;}> = {!iTasks._Framework.IWorld.JSONEncode_ssssss}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_sssssss;}> = {!iTasks._Framework.IWorld.JSONEncode_sssssss}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_ssssssss;}> = {!iTasks._Framework.IWorld.JSONEncode_ssssssss}
+
+:: <{iTasks._Framework.IWorld.JSONEncode_sssssssss;}> = {!iTasks._Framework.IWorld.JSONEncode_sssssssss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_sssss;}> = {!iTasks._Framework.IWorld.JSONDecode_sssss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_ssssss;}> = {!iTasks._Framework.IWorld.JSONDecode_ssssss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_sssssss;}> = {!iTasks._Framework.IWorld.JSONDecode_sssssss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_ssssssss;}> = {!iTasks._Framework.IWorld.JSONDecode_ssssssss}
+
+:: <{iTasks._Framework.IWorld.JSONDecode_sssssssss;}> = {!iTasks._Framework.IWorld.JSONDecode_sssssssss}
+
+:: <{iTasks._Framework.IWorld.bimap_s;}> = {iTasks._Framework.IWorld.bimap_s}
+
+:: <{iTasks._Framework.IWorld.bimap_ss;}> = {iTasks._Framework.IWorld.bimap_ss}
+
+:: <{iTasks._Framework.IWorld.bimap_sss;}> = {iTasks._Framework.IWorld.bimap_sss}
+
+:: <{iTasks._Framework.IWorld.gEq_sssss;}> = {!iTasks._Framework.IWorld.gEq_sssss}
+
+:: <{iTasks._Framework.IWorld.gEq_ssssss;}> = {!iTasks._Framework.IWorld.gEq_ssssss}
+
+:: <{iTasks._Framework.IWorld.gEq_sssssss;}> = {!iTasks._Framework.IWorld.gEq_sssssss}
+
+:: <{iTasks._Framework.IWorld.gEq_ssssssss;}> = {!iTasks._Framework.IWorld.gEq_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gEq_sssssssss;}> = {!iTasks._Framework.IWorld.gEq_sssssssss}
+
+:: <{iTasks._Framework.IWorld.gEditor_ssss;}> = {!iTasks._Framework.IWorld.gEditor_ssss}
+
+:: <{iTasks._Framework.IWorld.gText_ssss;}> = {!iTasks._Framework.IWorld.gText_ssss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_ssss;}> = {!iTasks._Framework.IWorld.gEditMeta_ssss}
+
+:: <{iTasks._Framework.IWorld.gEditor_sssss;}> = {!iTasks._Framework.IWorld.gEditor_sssss}
+
+:: <{iTasks._Framework.IWorld.gText_sssss;}> = {!iTasks._Framework.IWorld.gText_sssss}
+
+:: <{iTasks._Framework.IWorld.gDefault_sssss;}> = {iTasks._Framework.IWorld.gDefault_sssss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_sssss;}> = {!iTasks._Framework.IWorld.gEditMeta_sssss}
+
+:: <{iTasks._Framework.IWorld.gEditor_ssssss;}> = {!iTasks._Framework.IWorld.gEditor_ssssss}
+
+:: <{iTasks._Framework.IWorld.gText_ssssss;}> = {!iTasks._Framework.IWorld.gText_ssssss}
+
+:: <{iTasks._Framework.IWorld.gDefault_ssssss;}> = {iTasks._Framework.IWorld.gDefault_ssssss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_ssssss;}> = {!iTasks._Framework.IWorld.gEditMeta_ssssss}
+
+:: <{iTasks._Framework.IWorld.gEditor_sssssss;}> = {!iTasks._Framework.IWorld.gEditor_sssssss}
+
+:: <{iTasks._Framework.IWorld.gText_sssssss;}> = {!iTasks._Framework.IWorld.gText_sssssss}
+
+:: <{iTasks._Framework.IWorld.gDefault_sssssss;}> = {iTasks._Framework.IWorld.gDefault_sssssss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_sssssss;}> = {!iTasks._Framework.IWorld.gEditMeta_sssssss}
+
+:: <{iTasks._Framework.IWorld.gEditor_ssssssss;}> = {!iTasks._Framework.IWorld.gEditor_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gText_ssssssss;}> = {!iTasks._Framework.IWorld.gText_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gDefault_ssssssss;}> = {iTasks._Framework.IWorld.gDefault_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_ssssssss;}> = {!iTasks._Framework.IWorld.gEditMeta_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gEditor_sssssssss;}> = {!iTasks._Framework.IWorld.gEditor_sssssssss}
+
+:: <{iTasks._Framework.IWorld.gText_sssssssss;}> = {!iTasks._Framework.IWorld.gText_sssssssss}
+
+:: <{iTasks._Framework.IWorld.gDefault_sssssssss;}> = {iTasks._Framework.IWorld.gDefault_sssssssss}
+
+:: <{iTasks._Framework.IWorld.gEditMeta_sssssssss;}> = {!iTasks._Framework.IWorld.gEditMeta_sssssssss}
+
+:: <{iTasks._Framework.IWorld.gVerify_ssss;}> = {!iTasks._Framework.IWorld.gVerify_ssss}
+
+:: <{iTasks._Framework.IWorld.gVerify_sssss;}> = {!iTasks._Framework.IWorld.gVerify_sssss}
+
+:: <{iTasks._Framework.IWorld.gVerify_ssssss;}> = {!iTasks._Framework.IWorld.gVerify_ssssss}
+
+:: <{iTasks._Framework.IWorld.gVerify_sssssss;}> = {!iTasks._Framework.IWorld.gVerify_sssssss}
+
+:: <{iTasks._Framework.IWorld.gVerify_ssssssss;}> = {!iTasks._Framework.IWorld.gVerify_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gVerify_sssssssss;}> = {!iTasks._Framework.IWorld.gVerify_sssssssss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_ssss;}> = {!iTasks._Framework.IWorld.gUpdate_ssss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_sssss;}> = {!iTasks._Framework.IWorld.gUpdate_sssss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_ssssss;}> = {!iTasks._Framework.IWorld.gUpdate_ssssss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_sssssss;}> = {!iTasks._Framework.IWorld.gUpdate_sssssss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_ssssssss;}> = {!iTasks._Framework.IWorld.gUpdate_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gUpdate_sssssssss;}> = {!iTasks._Framework.IWorld.gUpdate_sssssssss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_s;}> = {!iTasks._Framework.IWorld.gLexOrd_s}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_ss;}> = {!iTasks._Framework.IWorld.gLexOrd_ss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_sss;}> = {!iTasks._Framework.IWorld.gLexOrd_sss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_ssss;}> = {!iTasks._Framework.IWorld.gLexOrd_ssss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_sssss;}> = {!iTasks._Framework.IWorld.gLexOrd_sssss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_ssssss;}> = {!iTasks._Framework.IWorld.gLexOrd_ssssss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_sssssss;}> = {!iTasks._Framework.IWorld.gLexOrd_sssssss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_ssssssss;}> = {!iTasks._Framework.IWorld.gLexOrd_ssssssss}
+
+:: <{iTasks._Framework.IWorld.gLexOrd_sssssssss;}> = {!iTasks._Framework.IWorld.gLexOrd_sssssssss}
+

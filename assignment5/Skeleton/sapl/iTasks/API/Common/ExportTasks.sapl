@@ -1,0 +1,261 @@
+|| ?module? iTasks.API.Common.ExportTasks
+
+
+iTasks.API.Common.ExportTasks.ioException s_0 = let e_1_0 = iTasks.API.Core.Types.FileException s_0 System.File.IOError in Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp e_1_0 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;FileException}>))) (iTasks.API.Core.Types.toString_89 e_1_0))
+iTasks.API.Common.ExportTasks.openException s_0 = let e_1_0 = iTasks.API.Core.Types.FileException s_0 System.File.CannotOpen in Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp e_1_0 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;FileException}>))) (iTasks.API.Core.Types.toString_89 e_1_0))
+iTasks.API.Common.ExportTasks.closeException s_0 = let e_1_0 = iTasks.API.Core.Types.FileException s_0 System.File.CannotClose in Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp e_1_0 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;FileException}>))) (iTasks.API.Core.Types.toString_89 e_1_0))
+iTasks.API.Common.ExportTasks.writeDocument task_0 filename_1 !document_2 !iworld_3 = let _x_1_0 = iTasks._Framework.TaskStore.loadDocumentContent (select document_2::iTasks.API.Core.Types._Document 0) iworld_3, mbContent_1_1 = select _x_1_0::_Tuple2 0 in case (Data.Maybe.isNothing mbContent_1_1) (True -> let iworld_3_0 = select _x_1_0::_Tuple2 1 in _Tuple2 (iTasks.API.Common.ExportTasks.ioException filename_1) (update iworld_3_0::iTasks._Framework.IWorld._IWorld [12:select iworld_3_0::iTasks._Framework.IWorld._IWorld 12])) (False -> let iworld_3_0 = select _x_1_0::_Tuple2 1, world_3_1 = select iworld_3_0::iTasks._Framework.IWorld._IWorld 12, _x_3_2 = StdFile.fopen_31 filename_1 4 world_3_1 in case (StdBool.not (select _x_3_2::_Tuple3 0)) (True -> _Tuple2 (iTasks.API.Common.ExportTasks.openException filename_1) (update iworld_3_0::iTasks._Framework.IWorld._IWorld [12:select _x_3_2::_Tuple3 2])) (False -> let file_5_0 = select _x_3_2::_Tuple3 1, file_5_1 = StdFile.fwrites (Data.Maybe.fromJust mbContent_1_1) file_5_0, world_5_2 = select _x_3_2::_Tuple3 2, _x_5_3 = StdFile.fclose_30 file_5_1 world_5_2 in case (StdBool.not (select _x_5_3::_Tuple2 0)) (True -> _Tuple2 (iTasks.API.Common.ExportTasks.closeException filename_1) (update iworld_3_0::iTasks._Framework.IWorld._IWorld [12:select _x_5_3::_Tuple2 1])) (False -> _Tuple2 (Data.Error.Ok document_2) (update iworld_3_0::iTasks._Framework.IWorld._IWorld [12:select _x_5_3::_Tuple2 1])) ) ) 
+iTasks.API.Common.ExportTasks.eval_15 filename_0 !document_1 task_2 !iworld_3 = iTasks.API.Common.ExportTasks.writeDocument task_2 filename_0 document_1 iworld_3
+iTasks.API.Common.ExportTasks.exportDocument !filename_0 !document_1 = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Common.ExportTasks.gEditor_s;}> iTasks.API.Core.Types.gEditor_Document_208) (<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> iTasks.API.Core.Types.gEditMeta_Document_219) (<{iTasks.API.Common.ExportTasks.gUpdate_s;}> iTasks.API.Core.Types.gUpdate_Document_230) (<{iTasks.API.Common.ExportTasks.gVerify_s;}> iTasks.API.Core.Types.gVerify_Document_241) (<{iTasks.API.Common.ExportTasks.gText_s;}> iTasks.API.Core.Types.gText_Document_197) (<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode_Document_153) (<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> iTasks.API.Core.Types.JSONDecode_Document_164) (<{iTasks.API.Common.ExportTasks.gDefault_s;}> iTasks.API.Core.Types.gDefault_Document_175) (<{iTasks.API.Common.ExportTasks.gEq_s;}> iTasks.API.Core.Types.gEq_Document_186) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;Document}>))) (iTasks.API.Common.ExportTasks.eval_15 filename_0 document_1)
+iTasks.API.Common.ExportTasks.writeAll !content_0 !file_1 = StdFile.fwrites content_0 file_1
+iTasks.API.Common.ExportTasks.fileTask task_0 !filename_1 content_2 f_3 !iworld_4 = case iworld_4 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case current_1_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_2_0 task_2_1 session_2_2 attachmentChain_2_3 nextTaskNo_2_4 eventRoute_2_5 editletDiffs_2_6 -> let _x_3_0 = StdFile.fopen_31 filename_1 4 world_1_12 in case (StdBool.not (select _x_3_0::_Tuple3 0)) (True -> _Tuple2 (iTasks.API.Common.ExportTasks.openException filename_1) (update iworld_4::iTasks._Framework.IWorld._IWorld [12:select _x_3_0::_Tuple3 2])) (False -> let file_5_0 = select _x_3_0::_Tuple3 1, file_5_1 = f_3 content_2 file_5_0, world_5_2 = select _x_3_0::_Tuple3 2, _x_5_3 = StdFile.fclose_30 file_5_1 world_5_2 in case (StdBool.not (select _x_5_3::_Tuple2 0)) (True -> _Tuple2 (iTasks.API.Common.ExportTasks.closeException filename_1) (update iworld_4::iTasks._Framework.IWorld._IWorld [12:select _x_5_3::_Tuple2 1])) (False -> _Tuple2 (Data.Error.Ok content_2) (update iworld_4::iTasks._Framework.IWorld._IWorld [12:select _x_5_3::_Tuple2 1])) ) ) ) 
+iTasks.API.Common.ExportTasks.eval_16 !filename_0 content_1 task_2 !iworld_3 = iTasks.API.Common.ExportTasks.fileTask task_2 filename_0 content_1 iTasks.API.Common.ExportTasks.writeAll iworld_3
+iTasks.API.Common.ExportTasks.exportTextFile !filename_0 !content_1 = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Common.ExportTasks.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__String_24) (<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (<{iTasks.API.Common.ExportTasks.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__String_123) (<{iTasks.API.Common.ExportTasks.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__String_90) (<{iTasks.API.Common.ExportTasks.gText_s;}> iTasks._Framework.Generic.Visualization.gText__String_15) (<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> Text.JSON.JSONEncode__String_14) (<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> Text.JSON.JSONDecode__String_38) (<{iTasks.API.Common.ExportTasks.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__String_12) (<{iTasks.API.Common.ExportTasks.gEq_s;}> GenEq.gEq__String_6) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))) (iTasks.API.Common.ExportTasks.eval_16 filename_0 content_1)
+iTasks.API.Common.ExportTasks.eval_17 !filename_0 !content_1 task_2 !iworld_3 = case iworld_3 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case current_1_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_2_0 task_2_1 session_2_2 attachmentChain_2_3 nextTaskNo_2_4 eventRoute_2_5 editletDiffs_2_6 -> let csv_3_0 = Text.join_5 "\n" (StdList.map (Text.join_5 ",") content_1), _x_3_1 = iTasks._Framework.TaskStore.createDocument filename_0 "text/csv" csv_3_0 iworld_3, iworld_3_2 = select _x_3_1::_Tuple2 1 in <{iTasks.API.Common.ExportTasks._c;22;11_777}> (select _x_3_1::_Tuple2 0) iworld_3_2) ) 
+<{iTasks.API.Common.ExportTasks._c;22;11_777}> !_x_0 iworld_1 = case _x_0 (Data.Error.Ok doc_1_0 -> _Tuple2 (Data.Error.Ok doc_1_0) iworld_1) (Data.Error.Error e_1_0 -> _Tuple2 (Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp e_1_0 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{System.File.TD;FileError}>))) (System.File.toString_10 e_1_0))) iworld_1) 
+iTasks.API.Common.ExportTasks.createCSVFile !filename_0 !content_1 = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Common.ExportTasks.gEditor_s;}> iTasks.API.Core.Types.gEditor_Document_208) (<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> iTasks.API.Core.Types.gEditMeta_Document_219) (<{iTasks.API.Common.ExportTasks.gUpdate_s;}> iTasks.API.Core.Types.gUpdate_Document_230) (<{iTasks.API.Common.ExportTasks.gVerify_s;}> iTasks.API.Core.Types.gVerify_Document_241) (<{iTasks.API.Common.ExportTasks.gText_s;}> iTasks.API.Core.Types.gText_Document_197) (<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode_Document_153) (<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> iTasks.API.Core.Types.JSONDecode_Document_164) (<{iTasks.API.Common.ExportTasks.gDefault_s;}> iTasks.API.Core.Types.gDefault_Document_175) (<{iTasks.API.Common.ExportTasks.gEq_s;}> iTasks.API.Core.Types.gEq_Document_186) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;Document}>))) (iTasks.API.Common.ExportTasks.eval_17 filename_0 content_1)
+iTasks.API.Common.ExportTasks.eval_18 !filename_0 content_1 task_2 !iworld_3 = iTasks.API.Common.ExportTasks.fileTask task_2 filename_0 content_1 Text.CSV.writeCSVFile iworld_3
+iTasks.API.Common.ExportTasks.JSONEncode_s_235 !_vJSONEncode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONEncode__List_16 (select _vJSONEncode_s_0::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) x1_1 x2_2
+iTasks.API.Common.ExportTasks.JSONDecode_s_274 !_vJSONDecode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONDecode__List_43 (select _vJSONDecode_s_0::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_1 x2_2
+iTasks.API.Common.ExportTasks.gEq_s_320::B !_vgEq_s_0 x1_1 x2_2 = GenEq.gEq__List_16 (select _vgEq_s_0::<{iTasks.API.Common.ExportTasks.gEq_s;}> 0) x1_1 x2_2
+iTasks.API.Common.ExportTasks.gEditor_s_362 !_vgEditor_s_0 !_vgText_s_1 !_vgDefault_s_2 !_vgEditMeta_s_3 !_vJSONEncode_s_4 !_vJSONDecode_s_5 !x1_6 !x2_7 !x3_8 !x4_9 = iTasks._Framework.Generic.Interaction.gEditor__List_25 (select _vgEditor_s_0::<{iTasks.API.Common.ExportTasks.gEditor_s;}> 0) (select _vgText_s_1::<{iTasks.API.Common.ExportTasks.gText_s;}> 0) (select _vgDefault_s_2::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vgEditMeta_s_3::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) (select _vJSONEncode_s_4::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_5::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_6 x2_7 x3_8 x4_9
+iTasks.API.Common.ExportTasks.gEditMeta_s_411 !_vgEditMeta_s_0 x1_1 = iTasks._Framework.Generic.Interaction.gEditMeta__List_58 (select _vgEditMeta_s_0::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) x1_1
+iTasks.API.Common.ExportTasks.gVerify_s_460 !_vgVerify_s_0 !x1_1 x2_2 = iTasks._Framework.Generic.Interaction.gVerify__List_91 (select _vgVerify_s_0::<{iTasks.API.Common.ExportTasks.gVerify_s;}> 0) x1_1 x2_2
+iTasks.API.Common.ExportTasks.gUpdate_s_509 !_vgUpdate_s_0 !_vgDefault_s_1 !_vJSONEncode_s_2 !_vJSONDecode_s_3 !x1_4 !x2_5 !x3_6 !x4_7 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 (select _vgUpdate_s_0::<{iTasks.API.Common.ExportTasks.gUpdate_s;}> 0) (select _vgDefault_s_1::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vJSONEncode_s_2::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_3::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_4 x2_5 x3_6 x4_7
+iTasks.API.Common.ExportTasks.gText_s_558 !_vgText_s_0 !x1_1 x2_2 = iTasks._Framework.Generic.Visualization.gText__List_16 (select _vgText_s_0::<{iTasks.API.Common.ExportTasks.gText_s;}> 0) x1_1 x2_2
+iTasks.API.Common.ExportTasks.gDefault_s_606 !_vgDefault_s_0 = iTasks._Framework.Generic.Defaults.gDefault__List_13 (select _vgDefault_s_0::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0)
+iTasks.API.Common.ExportTasks.gEq_s_757::B x1_0 x2_1 = GenEq.gEq__List_16 GenEq.gEq__String_6 x1_0 x2_1
+iTasks.API.Common.ExportTasks.gEq_s_758::B x1_0 x2_1 = GenEq.gEq__List_16 iTasks.API.Common.ExportTasks.gEq_s_757 x1_0 x2_1
+iTasks.API.Common.ExportTasks.gDefault_s_743 = iTasks._Framework.Generic.Defaults.gDefault__List_13 iTasks._Framework.Generic.Defaults.gDefault__String_12
+iTasks.API.Common.ExportTasks.gDefault_s_756 = iTasks._Framework.Generic.Defaults.gDefault__List_13 iTasks.API.Common.ExportTasks.gDefault_s_743
+iTasks.API.Common.ExportTasks.JSONDecode_s_746 !x1_0::B !x2_1 = Text.JSON.JSONDecode__List_43 Text.JSON.JSONDecode__String_38 x1_0 x2_1
+iTasks.API.Common.ExportTasks.JSONDecode_s_755 !x1_0::B !x2_1 = Text.JSON.JSONDecode__List_43 iTasks.API.Common.ExportTasks.JSONDecode_s_746 x1_0 x2_1
+iTasks.API.Common.ExportTasks.JSONEncode_s_745 !x1_0::B !x2_1 = Text.JSON.JSONEncode__List_16 Text.JSON.JSONEncode__String_14 x1_0 x2_1
+iTasks.API.Common.ExportTasks.JSONEncode_s_754 !x1_0::B !x2_1 = Text.JSON.JSONEncode__List_16 iTasks.API.Common.ExportTasks.JSONEncode_s_745 x1_0 x2_1
+iTasks.API.Common.ExportTasks.gText_s_742 !x1_0 x2_1 = iTasks._Framework.Generic.Visualization.gText__List_16 iTasks._Framework.Generic.Visualization.gText__String_15 x1_0 x2_1
+iTasks.API.Common.ExportTasks.gText_s_753 !x1_0 x2_1 = iTasks._Framework.Generic.Visualization.gText__List_16 iTasks.API.Common.ExportTasks.gText_s_742 x1_0 x2_1
+iTasks.API.Common.ExportTasks.gVerify_s_751 !x1_0 x2_1 = iTasks._Framework.Generic.Interaction.gVerify__List_91 iTasks._Framework.Generic.Interaction.gVerify__String_90 x1_0 x2_1
+iTasks.API.Common.ExportTasks.gVerify_s_752 !x1_0 x2_1 = iTasks._Framework.Generic.Interaction.gVerify__List_91 iTasks.API.Common.ExportTasks.gVerify_s_751 x1_0 x2_1
+iTasks.API.Common.ExportTasks.gUpdate_s_749 !_vgDefault_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks._Framework.Generic.Interaction.gUpdate__String_123 (select _vgDefault_s_0::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vJSONEncode_s_1::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+iTasks.API.Common.ExportTasks.gUpdate_s_759 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks._Framework.Generic.Interaction.gUpdate__String_123 iTasks._Framework.Generic.Defaults.gDefault__String_12 (select _vJSONEncode_s_0::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+iTasks.API.Common.ExportTasks.gUpdate_s_760 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks._Framework.Generic.Interaction.gUpdate__String_123 iTasks._Framework.Generic.Defaults.gDefault__String_12 Text.JSON.JSONEncode__String_14 (select _vJSONDecode_s_0::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+iTasks.API.Common.ExportTasks.gUpdate_s_761 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks._Framework.Generic.Interaction.gUpdate__String_123 iTasks._Framework.Generic.Defaults.gDefault__String_12 Text.JSON.JSONEncode__String_14 Text.JSON.JSONDecode__String_38 x1_0 x2_1 x3_2 x4_3
+iTasks.API.Common.ExportTasks.gUpdate_s_750 !_vgDefault_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks.API.Common.ExportTasks.gUpdate_s_761 (select _vgDefault_s_0::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vJSONEncode_s_1::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+iTasks.API.Common.ExportTasks.gEditMeta_s_744 x1_0 = iTasks._Framework.Generic.Interaction.gEditMeta__List_58 iTasks._Framework.Generic.Interaction.gEditMeta__String_57 x1_0
+iTasks.API.Common.ExportTasks.gEditMeta_s_748 x1_0 = iTasks._Framework.Generic.Interaction.gEditMeta__List_58 iTasks.API.Common.ExportTasks.gEditMeta_s_744 x1_0
+iTasks.API.Common.ExportTasks.gEditor_s_741 !_vgText_s_0 !_vgDefault_s_1 !_vgEditMeta_s_2 !_vJSONEncode_s_3 !_vJSONDecode_s_4 !x1_5 !x2_6 !x3_7 !x4_8 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks._Framework.Generic.Interaction.gEditor__String_24 (select _vgText_s_0::<{iTasks.API.Common.ExportTasks.gText_s;}> 0) (select _vgDefault_s_1::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vgEditMeta_s_2::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) (select _vJSONEncode_s_3::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_4::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_5 x2_6 x3_7 x4_8
+iTasks.API.Common.ExportTasks.gEditor_s_762 !_vgDefault_s_0 !_vgEditMeta_s_1 !_vJSONEncode_s_2 !_vJSONDecode_s_3 !x1_4 !x2_5 !x3_6 !x4_7 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks._Framework.Generic.Interaction.gEditor__String_24 iTasks._Framework.Generic.Visualization.gText__String_15 (select _vgDefault_s_0::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vgEditMeta_s_1::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) (select _vJSONEncode_s_2::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_3::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_4 x2_5 x3_6 x4_7
+iTasks.API.Common.ExportTasks.gEditor_s_763 !_vgEditMeta_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks._Framework.Generic.Interaction.gEditor__String_24 iTasks._Framework.Generic.Visualization.gText__String_15 iTasks._Framework.Generic.Defaults.gDefault__String_12 (select _vgEditMeta_s_0::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) (select _vJSONEncode_s_1::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+iTasks.API.Common.ExportTasks.gEditor_s_764 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks._Framework.Generic.Interaction.gEditor__String_24 iTasks._Framework.Generic.Visualization.gText__String_15 iTasks._Framework.Generic.Defaults.gDefault__String_12 iTasks._Framework.Generic.Interaction.gEditMeta__String_57 (select _vJSONEncode_s_0::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+iTasks.API.Common.ExportTasks.gEditor_s_765 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks._Framework.Generic.Interaction.gEditor__String_24 iTasks._Framework.Generic.Visualization.gText__String_15 iTasks._Framework.Generic.Defaults.gDefault__String_12 iTasks._Framework.Generic.Interaction.gEditMeta__String_57 Text.JSON.JSONEncode__String_14 (select _vJSONDecode_s_0::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+iTasks.API.Common.ExportTasks.gEditor_s_766 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks._Framework.Generic.Interaction.gEditor__String_24 iTasks._Framework.Generic.Visualization.gText__String_15 iTasks._Framework.Generic.Defaults.gDefault__String_12 iTasks._Framework.Generic.Interaction.gEditMeta__String_57 Text.JSON.JSONEncode__String_14 Text.JSON.JSONDecode__String_38 x1_0 x2_1 x3_2 x4_3
+iTasks.API.Common.ExportTasks.gEditor_s_747 !_vgText_s_0 !_vgDefault_s_1 !_vgEditMeta_s_2 !_vJSONEncode_s_3 !_vJSONDecode_s_4 !x1_5 !x2_6 !x3_7 !x4_8 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks.API.Common.ExportTasks.gEditor_s_766 (select _vgText_s_0::<{iTasks.API.Common.ExportTasks.gText_s;}> 0) (select _vgDefault_s_1::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vgEditMeta_s_2::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) (select _vJSONEncode_s_3::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_4::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_5 x2_6 x3_7 x4_8
+iTasks.API.Common.ExportTasks.gUpdate_s_768 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks.API.Common.ExportTasks.gUpdate_s_761 iTasks.API.Common.ExportTasks.gDefault_s_743 (select _vJSONEncode_s_0::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+iTasks.API.Common.ExportTasks.gEditor_s_767 !_vgDefault_s_0 !_vgEditMeta_s_1 !_vJSONEncode_s_2 !_vJSONDecode_s_3 !x1_4 !x2_5 !x3_6 !x4_7 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks.API.Common.ExportTasks.gEditor_s_766 iTasks.API.Common.ExportTasks.gText_s_742 (select _vgDefault_s_0::<{iTasks.API.Common.ExportTasks.gDefault_s;}> 0) (select _vgEditMeta_s_1::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) (select _vJSONEncode_s_2::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_3::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_4 x2_5 x3_6 x4_7
+iTasks.API.Common.ExportTasks.gUpdate_s_770 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks.API.Common.ExportTasks.gUpdate_s_761 iTasks.API.Common.ExportTasks.gDefault_s_743 iTasks.API.Common.ExportTasks.JSONEncode_s_745 (select _vJSONDecode_s_0::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+iTasks.API.Common.ExportTasks.gEditor_s_769 !_vgEditMeta_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks.API.Common.ExportTasks.gEditor_s_766 iTasks.API.Common.ExportTasks.gText_s_742 iTasks.API.Common.ExportTasks.gDefault_s_743 (select _vgEditMeta_s_0::<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> 0) (select _vJSONEncode_s_1::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+iTasks.API.Common.ExportTasks.gUpdate_s_772 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 iTasks.API.Common.ExportTasks.gUpdate_s_761 iTasks.API.Common.ExportTasks.gDefault_s_743 iTasks.API.Common.ExportTasks.JSONEncode_s_745 iTasks.API.Common.ExportTasks.JSONDecode_s_746 x1_0 x2_1 x3_2 x4_3
+iTasks.API.Common.ExportTasks.gEditor_s_771 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks.API.Common.ExportTasks.gEditor_s_766 iTasks.API.Common.ExportTasks.gText_s_742 iTasks.API.Common.ExportTasks.gDefault_s_743 iTasks.API.Common.ExportTasks.gEditMeta_s_744 (select _vJSONEncode_s_0::<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+iTasks.API.Common.ExportTasks.gEditor_s_773 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks.API.Common.ExportTasks.gEditor_s_766 iTasks.API.Common.ExportTasks.gText_s_742 iTasks.API.Common.ExportTasks.gDefault_s_743 iTasks.API.Common.ExportTasks.gEditMeta_s_744 iTasks.API.Common.ExportTasks.JSONEncode_s_745 (select _vJSONDecode_s_0::<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+iTasks.API.Common.ExportTasks.gEditor_s_774 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gEditor__List_25 iTasks.API.Common.ExportTasks.gEditor_s_766 iTasks.API.Common.ExportTasks.gText_s_742 iTasks.API.Common.ExportTasks.gDefault_s_743 iTasks.API.Common.ExportTasks.gEditMeta_s_744 iTasks.API.Common.ExportTasks.JSONEncode_s_745 iTasks.API.Common.ExportTasks.JSONDecode_s_746 x1_0 x2_1 x3_2 x4_3
+iTasks.API.Common.ExportTasks.exportCSVFile !filename_0 !content_1 = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Common.ExportTasks.gEditor_s;}> iTasks.API.Common.ExportTasks.gEditor_s_774) (<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> iTasks.API.Common.ExportTasks.gEditMeta_s_748) (<{iTasks.API.Common.ExportTasks.gUpdate_s;}> iTasks.API.Common.ExportTasks.gUpdate_s_772) (<{iTasks.API.Common.ExportTasks.gVerify_s;}> iTasks.API.Common.ExportTasks.gVerify_s_752) (<{iTasks.API.Common.ExportTasks.gText_s;}> iTasks.API.Common.ExportTasks.gText_s_753) (<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> iTasks.API.Common.ExportTasks.JSONEncode_s_754) (<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> iTasks.API.Common.ExportTasks.JSONDecode_s_755) (<{iTasks.API.Common.ExportTasks.gDefault_s;}> iTasks.API.Common.ExportTasks.gDefault_s_756) (<{iTasks.API.Common.ExportTasks.gEq_s;}> iTasks.API.Common.ExportTasks.gEq_s_758) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))))) (iTasks.API.Common.ExportTasks.eval_18 filename_0 content_1)
+iTasks.API.Common.ExportTasks.eval_19 !filename_0 content_1 delimitChar_2::C quoteChar_3::C escapeChar_4::C task_5 !iworld_6 = iTasks.API.Common.ExportTasks.fileTask task_5 filename_0 content_1 (Text.CSV.writeCSVFileWith delimitChar_2 quoteChar_3 escapeChar_4) iworld_6
+iTasks.API.Common.ExportTasks.exportCSVFileWith !delimitChar_0::C !quoteChar_1::C !escapeChar_2::C !filename_3 !content_4 = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Common.ExportTasks.gEditor_s;}> iTasks.API.Common.ExportTasks.gEditor_s_774) (<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> iTasks.API.Common.ExportTasks.gEditMeta_s_748) (<{iTasks.API.Common.ExportTasks.gUpdate_s;}> iTasks.API.Common.ExportTasks.gUpdate_s_772) (<{iTasks.API.Common.ExportTasks.gVerify_s;}> iTasks.API.Common.ExportTasks.gVerify_s_752) (<{iTasks.API.Common.ExportTasks.gText_s;}> iTasks.API.Common.ExportTasks.gText_s_753) (<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> iTasks.API.Common.ExportTasks.JSONEncode_s_754) (<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> iTasks.API.Common.ExportTasks.JSONDecode_s_755) (<{iTasks.API.Common.ExportTasks.gDefault_s;}> iTasks.API.Common.ExportTasks.gDefault_s_756) (<{iTasks.API.Common.ExportTasks.gEq_s;}> iTasks.API.Common.ExportTasks.gEq_s_758) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))))) (iTasks.API.Common.ExportTasks.eval_19 filename_3 content_4 delimitChar_0 quoteChar_1 escapeChar_2)
+iTasks.API.Common.ExportTasks.eval_20 !<{_vJSONEncode*_0}> !filename_1 !content_2 task_3 !iworld_4 = let _x_1_0 = iTasks._Framework.TaskStore.createDocument filename_1 "text/json" (Text.JSON.toString_7 (Text.JSON.toJSON <{_vJSONEncode*_0}> content_2)) iworld_4, iworld_1_1 = select _x_1_0::_Tuple2 1 in <{iTasks.API.Common.ExportTasks._c;41;11_778}> (select _x_1_0::_Tuple2 0) iworld_1_1
+<{iTasks.API.Common.ExportTasks._c;41;11_778}> !_x_0 iworld_1 = case _x_0 (Data.Error.Ok doc_1_0 -> _Tuple2 (Data.Error.Ok doc_1_0) iworld_1) (Data.Error.Error e_1_0 -> _Tuple2 (Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp e_1_0 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{System.File.TD;FileError}>))) (System.File.toString_10 e_1_0))) iworld_1) 
+iTasks.API.Common.ExportTasks.createJSONFile !_viTask_0 !filename_1 content_2 = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Common.ExportTasks.gEditor_s;}> iTasks.API.Core.Types.gEditor_Document_208) (<{iTasks.API.Common.ExportTasks.gEditMeta_s;}> iTasks.API.Core.Types.gEditMeta_Document_219) (<{iTasks.API.Common.ExportTasks.gUpdate_s;}> iTasks.API.Core.Types.gUpdate_Document_230) (<{iTasks.API.Common.ExportTasks.gVerify_s;}> iTasks.API.Core.Types.gVerify_Document_241) (<{iTasks.API.Common.ExportTasks.gText_s;}> iTasks.API.Core.Types.gText_Document_197) (<{iTasks.API.Common.ExportTasks.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode_Document_153) (<{iTasks.API.Common.ExportTasks.JSONDecode_s;}> iTasks.API.Core.Types.JSONDecode_Document_164) (<{iTasks.API.Common.ExportTasks.gDefault_s;}> iTasks.API.Core.Types.gDefault_Document_175) (<{iTasks.API.Common.ExportTasks.gEq_s;}> iTasks.API.Core.Types.gEq_Document_186) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;Document}>))) (iTasks.API.Common.ExportTasks.eval_20 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 5) filename_1 content_2)
+iTasks.API.Common.ExportTasks.writeJSON !_vtoString_0 encoder_1 content_2 !file_3 = StdFile.fwrites (select _vtoString_0::<{StdOverloaded.toString;}> 0 (encoder_1 content_2)) file_3
+iTasks.API.Common.ExportTasks.eval_21 !_vtoString_0 !filename_1 content_2 encoder_3 task_4 !iworld_5 = iTasks.API.Common.ExportTasks.fileTask task_4 filename_1 content_2 (iTasks.API.Common.ExportTasks.writeJSON _vtoString_0 encoder_3) iworld_5
+iTasks.API.Common.ExportTasks.writeJSON_776 !encoder_0 content_1 !file_2 = StdFile.fwrites (Text.JSON.toString_7 (encoder_0 content_1)) file_2
+iTasks.API.Common.ExportTasks.eval_775 !filename_0 content_1 encoder_2 task_3 !iworld_4 = iTasks.API.Common.ExportTasks.fileTask task_3 filename_0 content_1 (iTasks.API.Common.ExportTasks.writeJSON_776 encoder_2) iworld_4
+iTasks.API.Common.ExportTasks.exportJSONFileWith !_viTask_0 !encoder_1 !filename_2 content_3 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Common.ExportTasks.eval_775 filename_2 content_3 encoder_1)
+iTasks.API.Common.ExportTasks.exportJSONFile !_viTask_0 !filename_1 content_2 = iTasks.API.Common.ExportTasks.exportJSONFileWith _viTask_0 (Text.JSON.toJSON (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 5)) filename_1 content_2
+
+
+|| Converted Records
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_s;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_s}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_ss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_ss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_sss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_sss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_s;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_s}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_ss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_ss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_sss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_s;}> = {iTasks.API.Common.ExportTasks.gDefault_s}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_ss;}> = {iTasks.API.Common.ExportTasks.gDefault_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_sss;}> = {iTasks.API.Common.ExportTasks.gDefault_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_s;}> = {!iTasks.API.Common.ExportTasks.gUpdate_s}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_ss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_sss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_s;}> = {!iTasks.API.Common.ExportTasks.gVerify_s}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_ss;}> = {!iTasks.API.Common.ExportTasks.gVerify_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_sss;}> = {!iTasks.API.Common.ExportTasks.gVerify_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_s;}> = {!iTasks.API.Common.ExportTasks.gText_s}
+
+:: <{iTasks.API.Common.ExportTasks.gText_ss;}> = {!iTasks.API.Common.ExportTasks.gText_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_sss;}> = {!iTasks.API.Common.ExportTasks.gText_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_s;}> = {!iTasks.API.Common.ExportTasks.gEditor_s}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_ss;}> = {!iTasks.API.Common.ExportTasks.gEditor_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_sss;}> = {!iTasks.API.Common.ExportTasks.gEditor_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_s;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_s}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_ss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_sss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_s;}> = {!iTasks.API.Common.ExportTasks.gEq_s}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_ss;}> = {!iTasks.API.Common.ExportTasks.gEq_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_sss;}> = {!iTasks.API.Common.ExportTasks.gEq_sss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_ssss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_ssss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_ssss;}> = {!iTasks.API.Common.ExportTasks.gEq_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_ssss;}> = {iTasks.API.Common.ExportTasks.gDefault_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_sssss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_ssssss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_sssssss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_ssssssss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONEncode_sssssssss;}> = {!iTasks.API.Common.ExportTasks.JSONEncode_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_sssss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_ssssss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_sssssss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_ssssssss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.JSONDecode_sssssssss;}> = {!iTasks.API.Common.ExportTasks.JSONDecode_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.bimap_s;}> = {iTasks.API.Common.ExportTasks.bimap_s}
+
+:: <{iTasks.API.Common.ExportTasks.bimap_ss;}> = {iTasks.API.Common.ExportTasks.bimap_ss}
+
+:: <{iTasks.API.Common.ExportTasks.bimap_sss;}> = {iTasks.API.Common.ExportTasks.bimap_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_sssss;}> = {!iTasks.API.Common.ExportTasks.gEq_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_ssssss;}> = {!iTasks.API.Common.ExportTasks.gEq_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_sssssss;}> = {!iTasks.API.Common.ExportTasks.gEq_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_ssssssss;}> = {!iTasks.API.Common.ExportTasks.gEq_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEq_sssssssss;}> = {!iTasks.API.Common.ExportTasks.gEq_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_ssss;}> = {!iTasks.API.Common.ExportTasks.gEditor_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_ssss;}> = {!iTasks.API.Common.ExportTasks.gText_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_ssss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_sssss;}> = {!iTasks.API.Common.ExportTasks.gEditor_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_sssss;}> = {!iTasks.API.Common.ExportTasks.gText_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_sssss;}> = {iTasks.API.Common.ExportTasks.gDefault_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_sssss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_ssssss;}> = {!iTasks.API.Common.ExportTasks.gEditor_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_ssssss;}> = {!iTasks.API.Common.ExportTasks.gText_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_ssssss;}> = {iTasks.API.Common.ExportTasks.gDefault_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_ssssss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_sssssss;}> = {!iTasks.API.Common.ExportTasks.gEditor_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_sssssss;}> = {!iTasks.API.Common.ExportTasks.gText_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_sssssss;}> = {iTasks.API.Common.ExportTasks.gDefault_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_sssssss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_ssssssss;}> = {!iTasks.API.Common.ExportTasks.gEditor_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_ssssssss;}> = {!iTasks.API.Common.ExportTasks.gText_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_ssssssss;}> = {iTasks.API.Common.ExportTasks.gDefault_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_ssssssss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditor_sssssssss;}> = {!iTasks.API.Common.ExportTasks.gEditor_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gText_sssssssss;}> = {!iTasks.API.Common.ExportTasks.gText_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gDefault_sssssssss;}> = {iTasks.API.Common.ExportTasks.gDefault_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gEditMeta_sssssssss;}> = {!iTasks.API.Common.ExportTasks.gEditMeta_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_ssss;}> = {!iTasks.API.Common.ExportTasks.gVerify_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_sssss;}> = {!iTasks.API.Common.ExportTasks.gVerify_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_ssssss;}> = {!iTasks.API.Common.ExportTasks.gVerify_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_sssssss;}> = {!iTasks.API.Common.ExportTasks.gVerify_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_ssssssss;}> = {!iTasks.API.Common.ExportTasks.gVerify_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gVerify_sssssssss;}> = {!iTasks.API.Common.ExportTasks.gVerify_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_ssss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_sssss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_ssssss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_sssssss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_ssssssss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gUpdate_sssssssss;}> = {!iTasks.API.Common.ExportTasks.gUpdate_sssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_s;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_s}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_ss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_ss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_sss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_sss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_ssss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_ssss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_sssss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_sssss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_ssssss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_ssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_sssssss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_sssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_ssssssss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_ssssssss}
+
+:: <{iTasks.API.Common.ExportTasks.gLexOrd_sssssssss;}> = {!iTasks.API.Common.ExportTasks.gLexOrd_sssssssss}
+

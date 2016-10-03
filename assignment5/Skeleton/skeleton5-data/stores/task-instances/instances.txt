@@ -1,0 +1,1 @@
+20161002-113743[{"instanceNo":10,"instanceKey":"henbcplliatwbkcsmlzrsajkmqsigmey","listId":["TaskId",0,0],"session":true,"build":"20161002-113743","issuedAt":"2016-10-02 11:37:54","progress":{"value":["Unstable"],"attachedTo":[],"firstEvent":"2016-10-02 11:37:54","connectedTo":"127.0.0.1","lastIO":"2016-10-02 11:38:01"},"attributes":["Tip"]}]

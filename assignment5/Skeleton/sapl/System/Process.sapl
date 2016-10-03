@@ -1,0 +1,46 @@
+|| ?module? System.Process
+
+
+System.Process.argvLength_8::I !_vArray_0 !_x_1 !l_2::I = case _x_1 (_predefined._Cons a_1_0 as_1_1 -> System.Process.argvLength_8 _vArray_0 as_1_1 (<{StdInt.+_6}> l_2 (StdInt.bitand (<{StdInt.+_6}> (select _vArray_0::<{_SystemArray.Array;}> 4 a_1_0) 8) -8))) (_predefined._Nil -> l_2) 
+System.Process.copyChars_6 !ai_0::I !a_1 !si_2::I !s_3 = case (<{StdInt.<_17}> ai_0 (_SystemArray.size_20 a_1)) (True -> System.Process.copyChars_6 (<{StdInt.+_6}> ai_0 1) a_1 (<{StdInt.+_6}> si_2 1) (_SystemArray.update_21 s_3 si_2 (_SystemArray.select_19 a_1 ai_0))) (False -> s_3) 
+System.Process.copyArgs_5 !_x_0 i_1::I !s_2 = case _x_0 (_predefined._Cons a_1_0 as_1_1 -> System.Process.copyArgs_5 as_1_1 (<{StdInt.+_6}> i_1 (StdInt.bitand (<{StdInt.+_6}> (_SystemArray.size_20 a_1_0) 8) -8)) (System.Process.copyChars_6 0 a_1_0 i_1 s_2)) (_predefined._Nil -> s_2) 
+System.Process.createArgsString_9 !args_size_0::I !argv_list_1 = System.Process.copyArgs_5 argv_list_1 0 (_SystemArray.createArray_17 args_size_0 '\0')
+System.Process.fillArgv_7 !arg_n_0::I !_x_1 !argv_2 !args_memory_3::I = case _x_1 (_predefined._Cons a_1_0 as_1_1 -> System.Process.fillArgv_7 (<{StdInt.+_6}> arg_n_0 1) as_1_1 (_SystemArray.update_13 argv_2 arg_n_0 args_memory_3) (<{StdInt.+_6}> args_memory_3 (StdInt.bitand (<{StdInt.+_6}> (_SystemArray.size_20 a_1_0) 8) -8))) (_predefined._Nil -> _SystemArray.update_13 argv_2 arg_n_0 0) 
+System.Process.createArgv_10 !argv_list_0 !args_memory_1::I = System.Process.fillArgv_7 0 argv_list_0 (_SystemArray.createArray_9 (<{StdInt.+_6}> (StdList.length_47 argv_list_0) 1) 0) args_memory_1
+System.Process.argvLength_55::I !_x_0 !l_1::I = case _x_0 (_predefined._Cons a_1_0 as_1_1 -> System.Process.argvLength_55 as_1_1 (<{StdInt.+_6}> l_1 (StdInt.bitand (<{StdInt.+_6}> (_SystemArray.size_20 a_1_0) 8) -8))) (_predefined._Nil -> l_1) 
+System.Process.makeArgv_11 !argv_list_0 = let args_size_1_0::I = System.Process.argvLength_55 argv_list_0 0, args_memory_1_1::I = System._Posix.malloc args_size_1_0 in case (<{StdInt.==_16}> args_memory_1_1 0) (True -> StdMisc.abort "malloc failed") (False -> let args_memory_3_0::I = System._Posix.memcpy_string_to_pointer args_memory_1_1 (System.Process.createArgsString_9 args_size_1_0 argv_list_0) args_size_1_0 in <{_Tuple2!3}> (System.Process.createArgv_10 argv_list_0 args_memory_3_0) args_memory_3_0) 
+System.Process.runProcess !path_0 !args_1 !mCurrentDirectory_2 !world_3 = let _x_1_0 = System.File.fileExists path_0 world_3 in case (StdBool.not (select _x_1_0::_Tuple2 0)) (True -> _Tuple2 (Data.Error.Error (_Tuple2 1 (<{StdString.+++_11}> "File " (<{StdString.+++_11}> path_0 " does not exist")))) (select _x_1_0::_Tuple2 1)) (False -> let world_3_0::I = select _x_1_0::_Tuple2 1, _x_3_1 = System._Posix.fork world_3_0, pid_3_2 = select _x_3_1::_Tuple2 0 in case (<{StdInt.==_16}> pid_3_2 0) (True -> System._Posix.exit 1 (select (System._Posix.execvp (<{StdString.+++_11}> path_0 "\0") (select (System.Process.makeArgv_11 (_predefined._Cons path_0 args_1))::_Tuple2 0) (select _x_3_1::_Tuple2 1))::_Tuple2 1)) (False -> case (<{StdInt.<_17}> 0 pid_3_2) (True -> _Tuple2 (Data.Error.Ok (System.Process._ProcessHandle pid_3_2)) (select _x_3_1::_Tuple2 1)) (False -> System.OSError.getLastOSError (select _x_3_1::_Tuple2 1)) ) ) 
+System.Process.checkProcess !_x_0 !world_1 = case _x_0 (System.Process._ProcessHandle pid_1_0 -> let status_2_0::I = _SystemArray.createArray_9 1 0, _x_2_1 = System._Posix.waitpid pid_1_0 status_2_0 1 world_1, ret_2_2 = select _x_2_1::_Tuple2 0 in case (<{StdInt.==_16}> ret_2_2 0) (True -> _Tuple2 (Data.Error.Ok Data.Maybe.Nothing) (select _x_2_1::_Tuple2 1)) (False -> case (<{StdInt.==_16}> ret_2_2 pid_1_0) (True -> _Tuple2 (Data.Error.Ok (Data.Maybe.Just (StdInt.bitand (<{StdInt.>>}> (_SystemArray.select_11 status_2_0 0) 8) 255))) (select _x_2_1::_Tuple2 1)) (False -> System.OSError.getLastOSError (select _x_2_1::_Tuple2 1)) ) ) 
+System.Process.waitForProcess !_x_0 !world_1 = case _x_0 (System.Process._ProcessHandle pid_1_0 -> let status_2_0 = _SystemArray.createArray_9 1 0, _x_2_1 = System._Posix.waitpid pid_1_0 status_2_0 0 world_1 in case (<{StdInt.==_16}> (select _x_2_1::_Tuple2 0) pid_1_0) (True -> <{_Tuple2!3}> (Data.Error.Ok (StdInt.bitand (<{StdInt.>>}> (_SystemArray.select_11 status_2_0 0) 8) 255)) (select _x_2_1::_Tuple2 1)) (False -> System.OSError.getLastOSError (select _x_2_1::_Tuple2 1)) ) 
+System.Process.callProcess !path_0 !args_1 !mCurrentDirectory_2 !world_3 = let _x_1_0 = System.Process.runProcess path_0 args_1 mCurrentDirectory_2 world_3, world_1_1 = select _x_1_0::_Tuple2 1 in <{System.Process._c;112;7_56}> (select _x_1_0::_Tuple2 0) world_1_1
+<{System.Process._c;112;7_56}> !_x_0 world_1 = case _x_0 (Data.Error.Ok handle_1_0 -> System.Process.waitForProcess handle_1_0 world_1) (Data.Error.Error e_1_0 -> _Tuple2 (Data.Error.Error e_1_0) world_1) 
+<{System.Process.TD;ProcessHandle}> _x_0::B = _predefined._Nil
+
+
+|| Converted Records
+:: System.Process._ProcessHandle = {System.Process.pid::I}
+
+:: <{System.Process.bimap_s;}> = {System.Process.bimap_s}
+
+:: <{System.Process.bimap_ss;}> = {System.Process.bimap_ss}
+
+:: <{System.Process.bimap_sss;}> = {System.Process.bimap_sss}
+
+:: <{System.Process.gEq_s;}> = {!System.Process.gEq_s}
+
+:: <{System.Process.gEq_ss;}> = {!System.Process.gEq_ss}
+
+:: <{System.Process.gEq_sss;}> = {!System.Process.gEq_sss}
+
+:: <{System.Process.gEq_ssss;}> = {!System.Process.gEq_ssss}
+
+:: <{System.Process.gEq_sssss;}> = {!System.Process.gEq_sssss}
+
+:: <{System.Process.gEq_ssssss;}> = {!System.Process.gEq_ssssss}
+
+:: <{System.Process.gEq_sssssss;}> = {!System.Process.gEq_sssssss}
+
+:: <{System.Process.gEq_ssssssss;}> = {!System.Process.gEq_ssssssss}
+
+:: <{System.Process.gEq_sssssssss;}> = {!System.Process.gEq_sssssssss}
+

@@ -1,0 +1,192 @@
+|| ?module? iTasks
+
+
+
+
+|| Converted Records
+:: <{iTasks.JSONEncode_s;}> = {!iTasks.JSONEncode_s}
+
+:: <{iTasks.JSONEncode_ss;}> = {!iTasks.JSONEncode_ss}
+
+:: <{iTasks.JSONEncode_sss;}> = {!iTasks.JSONEncode_sss}
+
+:: <{iTasks.JSONDecode_s;}> = {!iTasks.JSONDecode_s}
+
+:: <{iTasks.JSONDecode_ss;}> = {!iTasks.JSONDecode_ss}
+
+:: <{iTasks.JSONDecode_sss;}> = {!iTasks.JSONDecode_sss}
+
+:: <{iTasks.gDefault_s;}> = {iTasks.gDefault_s}
+
+:: <{iTasks.gDefault_ss;}> = {iTasks.gDefault_ss}
+
+:: <{iTasks.gDefault_sss;}> = {iTasks.gDefault_sss}
+
+:: <{iTasks.gUpdate_s;}> = {!iTasks.gUpdate_s}
+
+:: <{iTasks.gUpdate_ss;}> = {!iTasks.gUpdate_ss}
+
+:: <{iTasks.gUpdate_sss;}> = {!iTasks.gUpdate_sss}
+
+:: <{iTasks.gVerify_s;}> = {!iTasks.gVerify_s}
+
+:: <{iTasks.gVerify_ss;}> = {!iTasks.gVerify_ss}
+
+:: <{iTasks.gVerify_sss;}> = {!iTasks.gVerify_sss}
+
+:: <{iTasks.gText_s;}> = {!iTasks.gText_s}
+
+:: <{iTasks.gText_ss;}> = {!iTasks.gText_ss}
+
+:: <{iTasks.gText_sss;}> = {!iTasks.gText_sss}
+
+:: <{iTasks.gEditor_s;}> = {!iTasks.gEditor_s}
+
+:: <{iTasks.gEditor_ss;}> = {!iTasks.gEditor_ss}
+
+:: <{iTasks.gEditor_sss;}> = {!iTasks.gEditor_sss}
+
+:: <{iTasks.gEditMeta_s;}> = {!iTasks.gEditMeta_s}
+
+:: <{iTasks.gEditMeta_ss;}> = {!iTasks.gEditMeta_ss}
+
+:: <{iTasks.gEditMeta_sss;}> = {!iTasks.gEditMeta_sss}
+
+:: <{iTasks.gEq_s;}> = {!iTasks.gEq_s}
+
+:: <{iTasks.gEq_ss;}> = {!iTasks.gEq_ss}
+
+:: <{iTasks.gEq_sss;}> = {!iTasks.gEq_sss}
+
+:: <{iTasks.JSONEncode_ssss;}> = {!iTasks.JSONEncode_ssss}
+
+:: <{iTasks.JSONDecode_ssss;}> = {!iTasks.JSONDecode_ssss}
+
+:: <{iTasks.gEq_ssss;}> = {!iTasks.gEq_ssss}
+
+:: <{iTasks.gDefault_ssss;}> = {iTasks.gDefault_ssss}
+
+:: <{iTasks.JSONEncode_sssss;}> = {!iTasks.JSONEncode_sssss}
+
+:: <{iTasks.JSONEncode_ssssss;}> = {!iTasks.JSONEncode_ssssss}
+
+:: <{iTasks.JSONEncode_sssssss;}> = {!iTasks.JSONEncode_sssssss}
+
+:: <{iTasks.JSONEncode_ssssssss;}> = {!iTasks.JSONEncode_ssssssss}
+
+:: <{iTasks.JSONEncode_sssssssss;}> = {!iTasks.JSONEncode_sssssssss}
+
+:: <{iTasks.JSONDecode_sssss;}> = {!iTasks.JSONDecode_sssss}
+
+:: <{iTasks.JSONDecode_ssssss;}> = {!iTasks.JSONDecode_ssssss}
+
+:: <{iTasks.JSONDecode_sssssss;}> = {!iTasks.JSONDecode_sssssss}
+
+:: <{iTasks.JSONDecode_ssssssss;}> = {!iTasks.JSONDecode_ssssssss}
+
+:: <{iTasks.JSONDecode_sssssssss;}> = {!iTasks.JSONDecode_sssssssss}
+
+:: <{iTasks.bimap_s;}> = {iTasks.bimap_s}
+
+:: <{iTasks.bimap_ss;}> = {iTasks.bimap_ss}
+
+:: <{iTasks.bimap_sss;}> = {iTasks.bimap_sss}
+
+:: <{iTasks.gEq_sssss;}> = {!iTasks.gEq_sssss}
+
+:: <{iTasks.gEq_ssssss;}> = {!iTasks.gEq_ssssss}
+
+:: <{iTasks.gEq_sssssss;}> = {!iTasks.gEq_sssssss}
+
+:: <{iTasks.gEq_ssssssss;}> = {!iTasks.gEq_ssssssss}
+
+:: <{iTasks.gEq_sssssssss;}> = {!iTasks.gEq_sssssssss}
+
+:: <{iTasks.gEditor_ssss;}> = {!iTasks.gEditor_ssss}
+
+:: <{iTasks.gText_ssss;}> = {!iTasks.gText_ssss}
+
+:: <{iTasks.gEditMeta_ssss;}> = {!iTasks.gEditMeta_ssss}
+
+:: <{iTasks.gEditor_sssss;}> = {!iTasks.gEditor_sssss}
+
+:: <{iTasks.gText_sssss;}> = {!iTasks.gText_sssss}
+
+:: <{iTasks.gDefault_sssss;}> = {iTasks.gDefault_sssss}
+
+:: <{iTasks.gEditMeta_sssss;}> = {!iTasks.gEditMeta_sssss}
+
+:: <{iTasks.gEditor_ssssss;}> = {!iTasks.gEditor_ssssss}
+
+:: <{iTasks.gText_ssssss;}> = {!iTasks.gText_ssssss}
+
+:: <{iTasks.gDefault_ssssss;}> = {iTasks.gDefault_ssssss}
+
+:: <{iTasks.gEditMeta_ssssss;}> = {!iTasks.gEditMeta_ssssss}
+
+:: <{iTasks.gEditor_sssssss;}> = {!iTasks.gEditor_sssssss}
+
+:: <{iTasks.gText_sssssss;}> = {!iTasks.gText_sssssss}
+
+:: <{iTasks.gDefault_sssssss;}> = {iTasks.gDefault_sssssss}
+
+:: <{iTasks.gEditMeta_sssssss;}> = {!iTasks.gEditMeta_sssssss}
+
+:: <{iTasks.gEditor_ssssssss;}> = {!iTasks.gEditor_ssssssss}
+
+:: <{iTasks.gText_ssssssss;}> = {!iTasks.gText_ssssssss}
+
+:: <{iTasks.gDefault_ssssssss;}> = {iTasks.gDefault_ssssssss}
+
+:: <{iTasks.gEditMeta_ssssssss;}> = {!iTasks.gEditMeta_ssssssss}
+
+:: <{iTasks.gEditor_sssssssss;}> = {!iTasks.gEditor_sssssssss}
+
+:: <{iTasks.gText_sssssssss;}> = {!iTasks.gText_sssssssss}
+
+:: <{iTasks.gDefault_sssssssss;}> = {iTasks.gDefault_sssssssss}
+
+:: <{iTasks.gEditMeta_sssssssss;}> = {!iTasks.gEditMeta_sssssssss}
+
+:: <{iTasks.gVerify_ssss;}> = {!iTasks.gVerify_ssss}
+
+:: <{iTasks.gVerify_sssss;}> = {!iTasks.gVerify_sssss}
+
+:: <{iTasks.gVerify_ssssss;}> = {!iTasks.gVerify_ssssss}
+
+:: <{iTasks.gVerify_sssssss;}> = {!iTasks.gVerify_sssssss}
+
+:: <{iTasks.gVerify_ssssssss;}> = {!iTasks.gVerify_ssssssss}
+
+:: <{iTasks.gVerify_sssssssss;}> = {!iTasks.gVerify_sssssssss}
+
+:: <{iTasks.gUpdate_ssss;}> = {!iTasks.gUpdate_ssss}
+
+:: <{iTasks.gUpdate_sssss;}> = {!iTasks.gUpdate_sssss}
+
+:: <{iTasks.gUpdate_ssssss;}> = {!iTasks.gUpdate_ssssss}
+
+:: <{iTasks.gUpdate_sssssss;}> = {!iTasks.gUpdate_sssssss}
+
+:: <{iTasks.gUpdate_ssssssss;}> = {!iTasks.gUpdate_ssssssss}
+
+:: <{iTasks.gUpdate_sssssssss;}> = {!iTasks.gUpdate_sssssssss}
+
+:: <{iTasks.gLexOrd_s;}> = {!iTasks.gLexOrd_s}
+
+:: <{iTasks.gLexOrd_ss;}> = {!iTasks.gLexOrd_ss}
+
+:: <{iTasks.gLexOrd_sss;}> = {!iTasks.gLexOrd_sss}
+
+:: <{iTasks.gLexOrd_ssss;}> = {!iTasks.gLexOrd_ssss}
+
+:: <{iTasks.gLexOrd_sssss;}> = {!iTasks.gLexOrd_sssss}
+
+:: <{iTasks.gLexOrd_ssssss;}> = {!iTasks.gLexOrd_ssssss}
+
+:: <{iTasks.gLexOrd_sssssss;}> = {!iTasks.gLexOrd_sssssss}
+
+:: <{iTasks.gLexOrd_ssssssss;}> = {!iTasks.gLexOrd_ssssssss}
+
+:: <{iTasks.gLexOrd_sssssssss;}> = {!iTasks.gLexOrd_sssssssss}
+

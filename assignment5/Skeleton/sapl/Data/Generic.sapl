@@ -1,0 +1,18 @@
+|| ?module? Data.Generic
+
+
+Data.Generic.fromOBJECT !_x_0 = case _x_0 (StdGeneric.OBJECT x_1_0 -> x_1_0) 
+Data.Generic.fromCONS !_x_0 = case _x_0 (StdGeneric.CONS x_1_0 -> x_1_0) 
+Data.Generic.fromRECORD !_x_0 = case _x_0 (StdGeneric.RECORD x_1_0 -> x_1_0) 
+Data.Generic.fromFIELD !_x_0 = case _x_0 (StdGeneric.FIELD x_1_0 -> x_1_0) 
+Data.Generic.fromPAIRX !_x_0 = case _x_0 (StdGeneric.PAIR x_1_0 _x_1_1 -> x_1_0) 
+Data.Generic.fromPAIRY !_x_0 = case _x_0 (StdGeneric.PAIR _x_1_0 y_1_1 -> y_1_1) 
+
+
+|| Converted Records
+:: <{Data.Generic.bimap_s;}> = {Data.Generic.bimap_s}
+
+:: <{Data.Generic.bimap_ss;}> = {Data.Generic.bimap_ss}
+
+:: <{Data.Generic.bimap_sss;}> = {Data.Generic.bimap_sss}
+

@@ -1,0 +1,263 @@
+|| ?module? iTasks.API.Core.Tasks
+
+
+iTasks.API.Core.Tasks.anon_15 a_0 task_1 iworld_2 = _Tuple2 (Data.Error.Ok a_0) iworld_2
+iTasks.API.Core.Tasks.treturn !_viTask_0 !a_1 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.anon_15 a_1)
+iTasks.API.Core.Tasks.anon_16 !_vTC_0 !_vtoString_1 e_2 task_3 iworld_4 = _Tuple2 (Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp e_2 (_SystemDynamic._normalise (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) _vTC_0 (_SystemDynamic._initial_unification_environment 1 0)) (_SystemDynamic.TypeVar 0))) (select _vtoString_1::<{StdOverloaded.toString;}> 0 e_2))) iworld_4
+iTasks.API.Core.Tasks.throw !_viTask_0 !_viTask_1 !_vtoString_2 !e_3 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.anon_16 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 9) _vtoString_2 e_3)
+iTasks.API.Core.Tasks.eval_17 !shared_0 task_1 !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case current_1_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_2_0 task_2_1 session_2_2 attachmentChain_2_3 nextTaskNo_2_4 eventRoute_2_5 editletDiffs_2_6 -> let _x_3_0 = iTasks._Framework.SDS.read shared_0 iworld_2, iworld_3_1 = select _x_3_0::_Tuple2 1 in <{iTasks.API.Core.Tasks._c;32;11_767}> (select _x_3_0::_Tuple2 0) iworld_3_1) ) 
+<{iTasks.API.Core.Tasks._c;32;11_767}> !_x_0 iworld_1 = case _x_0 (Data.Error.Ok val_1_0 -> _Tuple2 (Data.Error.Ok val_1_0) iworld_1) (Data.Error.Error e_1_0 -> _Tuple2 (Data.Error.Error e_1_0) iworld_1) 
+iTasks.API.Core.Tasks.get !_viTask_0 !shared_1 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.eval_17 shared_1)
+iTasks.API.Core.Tasks.eval_18 !val_0 !shared_1 task_2 !iworld_3 = case iworld_3 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case current_1_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_2_0 task_2_1 session_2_2 attachmentChain_2_3 nextTaskNo_2_4 eventRoute_2_5 editletDiffs_2_6 -> let _x_3_0 = iTasks._Framework.SDS.write val_0 shared_1 iworld_3, iworld_3_1 = select _x_3_0::_Tuple2 1 in <{iTasks.API.Core.Tasks._c;41;11_768}> (select _x_3_0::_Tuple2 0) val_0 iworld_3_1) ) 
+<{iTasks.API.Core.Tasks._c;41;11_768}> !_x_0 val_1 iworld_2 = case _x_0 (Data.Error.Ok _x_1_0 -> _Tuple2 (Data.Error.Ok val_1) iworld_2) (Data.Error.Error e_1_0 -> _Tuple2 (Data.Error.Error e_1_0) iworld_2) 
+iTasks.API.Core.Tasks.set !_viTask_0 !val_1 !shared_2 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.eval_18 val_1 shared_2)
+iTasks.API.Core.Tasks.eval_19 fun_0 !shared_1 task_2 !iworld_3 = case iworld_3 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case current_1_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_2_0 task_2_1 session_2_2 attachmentChain_2_3 nextTaskNo_2_4 eventRoute_2_5 editletDiffs_2_6 -> let _x_3_0 = iTasks._Framework.SDS.read shared_1 iworld_3, iworld_3_1 = select _x_3_0::_Tuple2 1 in <{iTasks.API.Core.Tasks._c;50;11_770}> (select _x_3_0::_Tuple2 0) iworld_3_1 shared_1 fun_0) ) 
+<{iTasks.API.Core.Tasks._c;50;11_770}> !_x_0 iworld_1 shared_2 fun_3 = case _x_0 (Data.Error.Error e_1_0 -> _Tuple2 (Data.Error.Error e_1_0) iworld_1) (Data.Error.Ok r_1_0 -> let w_2_0 = fun_3 r_1_0, _x_2_1 = iTasks._Framework.SDS.write w_2_0 shared_2 iworld_1, iworld_2_2 = select _x_2_1::_Tuple2 1 in <{iTasks.API.Core.Tasks._c;55;19_769}> (select _x_2_1::_Tuple2 0) w_2_0 iworld_2_2) 
+<{iTasks.API.Core.Tasks._c;55;19_769}> !_x_0 w_1 iworld_2 = case _x_0 (Data.Error.Ok _x_1_0 -> _Tuple2 (Data.Error.Ok w_1) iworld_2) (Data.Error.Error e_1_0 -> _Tuple2 (Data.Error.Error e_1_0) iworld_2) 
+iTasks.API.Core.Tasks.upd !_viTask_0 !_viTask_1 !fun_2 !shared_3 = iTasks._Framework.Task.mkInstantTask _viTask_1 (iTasks.API.Core.Tasks.eval_19 fun_2 shared_3)
+iTasks.API.Core.Tasks.eval_20 shared_0 event_1 evalOpts_2 !_x_3 iworld_4 = case _x_3 (iTasks._Framework.TaskState.TCInit task_1_0 ts_1_1 -> case task_1_0 (iTasks.API.Core.Types.TaskId instanceNo_2_0 _x_2_1 -> let _x_3_0 = iTasks._Framework.SDS.readRegister task_1_0 shared_0 iworld_4 in _Tuple2 (<{iTasks.API.Core.Tasks._c;64;17_771}> (select _x_3_0::_Tuple2 0) ts_1_1 evalOpts_2 task_1_0) (select _x_3_0::_Tuple2 1)) ) (iTasks._Framework.TaskState.TCDestroy _x_1_0 -> _Tuple2 iTasks._Framework.Task.DestroyedResult iworld_4) 
+<{iTasks.API.Core.Tasks._c;64;17_771}> !_x_0 ts_1::I evalOpts_2 task_3 = case _x_0 (Data.Error.Ok val_1_0 -> iTasks._Framework.Task.ValueResult (iTasks.API.Core.Types.Value val_1_0 False) (iTasks._Framework.Task._TaskEvalInfo ts_1 _predefined._Nil True) (iTasks._Framework.Task.finalizeRep evalOpts_2 iTasks._Framework.Task.NoRep) (iTasks._Framework.TaskState.TCInit task_3 ts_1)) (Data.Error.Error e_1_0 -> iTasks._Framework.Task.ExceptionResult e_1_0) 
+iTasks.API.Core.Tasks.watch !_viTask_0 !shared_1 = iTasks._Framework.Task.Task (iTasks.API.Core.Tasks.eval_20 shared_1)
+iTasks.API.Core.Tasks.matchAndApplyEvent_22 !<{_vgUpdate*_0}> !_x_1 match_2 taskTime_3 v_4 mask_5 ts_6 iworld_7 = case _x_1 (iTasks._Framework.Task.EditEvent task_1_0 name_1_1 value_1_2 -> case (<{iTasks.API.Core.Types.==_129}> task_1_0 match_2) (True -> let _x_3_0 = iTasks._Framework.Generic.Interaction.updateValueAndMask <{_vgUpdate*_0}> task_1_0 (iTasks.API.Core.Types.s2dp name_1_1) value_1_2 (_Tuple2 v_4 mask_5) iworld_7, _x_3_1 = select _x_3_0::_Tuple2 0 in _Tuple4 (select _x_3_1::_Tuple2 0) (select _x_3_1::_Tuple2 1) taskTime_3 (select _x_3_0::_Tuple2 1)) (False -> _Tuple4 v_4 mask_5 ts_6 iworld_7) ) (_ -> _Tuple4 v_4 mask_5 ts_6 iworld_7)
+iTasks.API.Core.Tasks.visualizeView_23 !<{_vgEditor*_0}> !<{_vgEditMeta*_1}> !_vdescr_2 task_3 evalOpts_4 !value_5 desc_6 iworld_7 = case value_5 (_Tuple3 v_1_0 vmask_1_1 vver_1_2 -> let layout_2_0 = iTasks._Framework.Task.repLayoutRules evalOpts_4, _x_2_1 = iTasks._Framework.Generic.Interaction.visualizeAsEditor <{_vgEditor*_0}> <{_vgEditMeta*_1}> value_5 task_3 layout_2_0 iworld_7 in _Tuple2 (iTasks._Framework.Task.TaskRep (iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (select layout_2_0::iTasks.UI.Layout._LayoutRules 0 (select _vdescr_2::<{iTasks.API.Core.Types.descr;}> 0 desc_6) (iTasks.UI.Definition._UIForm Data.Map.newMap (select _x_2_1::_Tuple2 0) iTasks.UI.Definition.defaultSizeOpts))) _predefined._Nil)) (select _x_2_1::_Tuple2 1)) 
+iTasks.API.Core.Tasks.eval_21 !<{_vJSONEncode*_0}> !<{_vJSONEncode*_1}> !<{_vJSONEncode*_2}> !<{_vJSONDecode*_3}> !<{_vJSONDecode*_4}> !<{_vJSONDecode*_5}> !<{_vgUpdate*_6}> !<{_vgEq*_7}> !<{_vgVerify*_8}> !<{_vgEditor*_9}> !<{_vgEditMeta*_10}> !_vdescr_11 !<{_vJSONEncode*_12}> !<{_vJSONEncode*_13}> desc_14 refreshFun_15 initFun_16 shared_17 event_18 evalOpts_19 !_x_20 iworld_21 = case _x_20 (iTasks._Framework.TaskState.TCInit task_1_0 ts_1_1 -> case task_1_0 (iTasks.API.Core.Types.TaskId instanceNo_2_0 _x_2_1 -> let _x_3_0 = iTasks._Framework.SDS.readRegister task_1_0 shared_17 iworld_21, iworld_3_1 = select _x_3_0::_Tuple2 1 in <{iTasks.API.Core.Tasks._c;78;11_772}> (select _x_3_0::_Tuple2 0) iworld_3_1 initFun_16 <{_vJSONEncode*_0}> <{_vJSONEncode*_1}> <{_vJSONEncode*_2}> <{_vJSONDecode*_3}> <{_vJSONDecode*_4}> <{_vJSONDecode*_5}> <{_vgUpdate*_6}> <{_vgEq*_7}> <{_vgVerify*_8}> <{_vgEditor*_9}> <{_vgEditMeta*_10}> _vdescr_11 <{_vJSONEncode*_12}> <{_vJSONEncode*_13}> desc_14 refreshFun_15 shared_17 event_18 evalOpts_19 task_1_0 ts_1_1) ) (iTasks._Framework.TaskState.TCInteract task_1_0 ts_1_1 encl_1_2 encr_1_3 encv_1_4 mask_1_5 -> case task_1_0 (iTasks.API.Core.Types.TaskId instanceNo_2_0 _x_2_1 -> case iworld_21 (iTasks._Framework.IWorld._IWorld server_3_0 config_3_1 clocks_3_2 current_3_3 random_3_4 sdsNotifyRequests_3_5 memoryShares_3_6 cachedShares_3_7 exposedShares_3_8 jsCompilerState_3_9 ioTasks_3_10 ioStates_3_11 world_3_12 resources_3_13 onClient_3_14 shutdown_3_15 -> case current_3_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_4_0 task_4_1 session_4_2 attachmentChain_4_3 nextTaskNo_4_4 eventRoute_4_5 editletDiffs_4_6 -> let _x_5_0 = _Tuple3 (Data.Maybe.fromJust (Text.JSON.fromJSON <{_vJSONDecode*_3}> encl_1_2)) (Data.Maybe.fromJust (Text.JSON.fromJSON <{_vJSONDecode*_4}> encr_1_3)) (Data.Maybe.fromJust (Text.JSON.fromJSON <{_vJSONDecode*_5}> encv_1_4)), v_5_1 = select _x_5_0::_Tuple3 2, _x_5_2 = iTasks.API.Core.Tasks.matchAndApplyEvent_22 <{_vgUpdate*_6}> event_18 task_1_0 taskTime_4_0 v_5_1 mask_1_5 ts_1_1 iworld_21, iworld_5_3 = select _x_5_2::_Tuple4 3, _x_5_4 = iTasks._Framework.SDS.readRegister task_1_0 shared_17 iworld_5_3, mbr_5_5 = select _x_5_4::_Tuple2 0 in case (Data.Error.isError mbr_5_5) (True -> _Tuple2 (iTasks._Framework.Task.ExceptionResult (Data.Error.fromError mbr_5_5)) (select _x_5_4::_Tuple2 1)) (False -> let nr_7_0 = Data.Error.fromOk mbr_5_5, r_7_1::B = select _x_5_0::_Tuple3 1, rChanged_7_2::B = <{GenEq.=!=}> <{_vgEq*_7}> nr_7_0 r_7_1, _x_7_3 = <{iTasks.API.Core.Tasks._if;97;35_774}> (iTasks.API.Core.Tasks._f773_773 rChanged_7_2 vChanged_7_14) refreshFun_15 l_7_15 nr_7_0 nv_7_11 nmask_7_12 rChanged_7_2 vChanged_7_14 vValid_7_13, _x_7_4 = select _x_7_3::_Tuple2 1, nv_7_5 = select _x_7_4::_Tuple2 0, nmask_7_6 = select _x_7_4::_Tuple2 1, nver_7_7::I = iTasks._Framework.Generic.Interaction.verifyMaskedValue <{_vgVerify*_8}> (_Tuple2 nv_7_5 nmask_7_6), nts_7_8 = select _x_5_2::_Tuple4 2, _x_7_9 = iTasks.API.Core.Tasks.visualizeView_23 <{_vgEditor*_9}> <{_vgEditMeta*_10}> _vdescr_11 task_1_0 evalOpts_19 (_Tuple3 nv_7_5 nmask_7_6 nver_7_7) desc_14 (select _x_5_4::_Tuple2 1), nl_7_10 = select _x_7_3::_Tuple2 0, nv_7_11 = select _x_5_2::_Tuple4 0, nmask_7_12 = select _x_5_2::_Tuple4 1, vValid_7_13::B = iTasks._Framework.Generic.Interaction.isValid (iTasks._Framework.Generic.Interaction.verifyMaskedValue <{_vgVerify*_8}> (_Tuple2 nv_7_11 nmask_7_12)), vChanged_7_14 = <{GenEq.=!=}> (<{iTasks.API.Core.Tasks.gEq_s;}> GenEq.gEq_Int_2) nts_7_8 ts_1_1, l_7_15 = select _x_5_0::_Tuple3 0 in _Tuple2 (iTasks._Framework.Task.ValueResult (<{iTasks.API.Core.Tasks._if;101;35_775}> (iTasks._Framework.Generic.Interaction.isValid nver_7_7) nl_7_10) (iTasks._Framework.Task._TaskEvalInfo nts_7_8 _predefined._Nil True) (iTasks._Framework.Task.finalizeRep evalOpts_19 (select _x_7_9::_Tuple2 0)) (iTasks._Framework.TaskState.TCInteract task_1_0 nts_7_8 (Text.JSON.toJSON <{_vJSONEncode*_12}> nl_7_10) (Text.JSON.toJSON <{_vJSONEncode*_1}> nr_7_0) (Text.JSON.toJSON <{_vJSONEncode*_13}> nv_7_5) nmask_7_6)) (select _x_7_9::_Tuple2 1)) ) ) ) ) (iTasks._Framework.TaskState.TCDestroy _x_1_0 -> _Tuple2 iTasks._Framework.Task.DestroyedResult iworld_21) 
+<{iTasks.API.Core.Tasks._if;101;35_775}> !_x_0::B nl_1 = case _x_0 (True -> iTasks.API.Core.Types.Value nl_1 False) (_ -> iTasks.API.Core.Types.NoValue)
+<{iTasks.API.Core.Tasks._if;97;35_774}> !_x_0::B refreshFun_1 l_2 nr_3 nv_4 nmask_5 rChanged_6::B vChanged_7::B vValid_8::B = case _x_0 (True -> refreshFun_1 l_2 nr_3 (_Tuple2 nv_4 nmask_5) rChanged_6 vChanged_7 vValid_8) (_ -> _Tuple2 l_2 (_Tuple2 nv_4 nmask_5))
+iTasks.API.Core.Tasks._f773_773::B !rChanged_0::B vChanged_1::B = case rChanged_0 (True -> True) (_ -> vChanged_1)
+<{iTasks.API.Core.Tasks._c;78;11_772}> !_x_0 iworld_1 initFun_2 <{_vJSONEncode*_3}> <{_vJSONEncode*_4}> <{_vJSONEncode*_5}> <{_vJSONDecode*_6}> <{_vJSONDecode*_7}> <{_vJSONDecode*_8}> <{_vgUpdate*_9}> <{_vgEq*_10}> <{_vgVerify*_11}> <{_vgEditor*_12}> <{_vgEditMeta*_13}> _vdescr_14 <{_vJSONEncode*_15}> <{_vJSONEncode*_16}> desc_17 refreshFun_18 shared_19 event_20 evalOpts_21 task_22 ts_23::I = case _x_0 (Data.Error.Error e_1_0 -> _Tuple2 (iTasks._Framework.Task.ExceptionResult e_1_0) iworld_1) (Data.Error.Ok r_1_0 -> let _x_2_0 = initFun_2 r_1_0, _x_2_1 = select _x_2_0::_Tuple2 1 in iTasks.API.Core.Tasks.eval_21 <{_vJSONEncode*_3}> <{_vJSONEncode*_4}> <{_vJSONEncode*_5}> <{_vJSONDecode*_6}> <{_vJSONDecode*_7}> <{_vJSONDecode*_8}> <{_vgUpdate*_9}> <{_vgEq*_10}> <{_vgVerify*_11}> <{_vgEditor*_12}> <{_vgEditMeta*_13}> _vdescr_14 <{_vJSONEncode*_15}> <{_vJSONEncode*_16}> desc_17 refreshFun_18 initFun_2 shared_19 event_20 evalOpts_21 (iTasks._Framework.TaskState.TCInteract task_22 ts_23 (Text.JSON.toJSON <{_vJSONEncode*_3}> (select _x_2_0::_Tuple2 0)) (Text.JSON.toJSON <{_vJSONEncode*_4}> r_1_0) (Text.JSON.toJSON <{_vJSONEncode*_5}> (select _x_2_1::_Tuple2 0)) (select _x_2_1::_Tuple2 1)) iworld_1) 
+iTasks.API.Core.Tasks.interact !_vdescr_0 !_viTask_1 !_viTask_2 !_viTask_3 !desc_4 !shared_5 initFun_6 refreshFun_7 = iTasks._Framework.Task.Task (iTasks.API.Core.Tasks.eval_21 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_2::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_3::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 6) (select _viTask_2::<{iTasks._Framework.Generic.iTask;}> 6) (select _viTask_3::<{iTasks._Framework.Generic.iTask;}> 6) (select _viTask_3::<{iTasks._Framework.Generic.iTask;}> 2) (select _viTask_2::<{iTasks._Framework.Generic.iTask;}> 8) (select _viTask_3::<{iTasks._Framework.Generic.iTask;}> 3) (select _viTask_3::<{iTasks._Framework.Generic.iTask;}> 0) (select _viTask_3::<{iTasks._Framework.Generic.iTask;}> 1) _vdescr_0 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_3::<{iTasks._Framework.Generic.iTask;}> 5) desc_4 refreshFun_7 initFun_6 shared_5)
+<{iTasks.API.Core.Tasks.get`_35}> !<{_v<_0}> _x_1 !_x_2 = case _x_2 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 _x_1 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_35}> <{_v<_0}> _x_1 l_1_3) (False -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 kx_1_1 _x_1) (True -> <{iTasks.API.Core.Tasks.get`_35}> <{_v<_0}> _x_1 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+<{iTasks.API.Core.Tasks.get`_34}> !<{_v<_0}> _x_1 !_x_2 = case _x_2 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 _x_1 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_34}> <{_v<_0}> _x_1 l_1_3) (False -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 kx_1_1 _x_1) (True -> <{iTasks.API.Core.Tasks.get`_34}> <{_v<_0}> _x_1 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+<{iTasks.API.Core.Tasks.get`_33}> !<{_v<_0}> _x_1 !_x_2 = case _x_2 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 _x_1 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_33}> <{_v<_0}> _x_1 l_1_3) (False -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 kx_1_1 _x_1) (True -> <{iTasks.API.Core.Tasks.get`_33}> <{_v<_0}> _x_1 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+<{iTasks.API.Core.Tasks.get`_761}> _x_0 !_x_1 = case _x_1 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (<{iTasks.API.Core.Types.<_130}> _x_0 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_761}> _x_0 l_1_3) (False -> case (<{iTasks.API.Core.Types.<_130}> kx_1_1 _x_0) (True -> <{iTasks.API.Core.Tasks.get`_761}> _x_0 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+<{iTasks.API.Core.Tasks.get`_759}> _x_0 !_x_1 = case _x_1 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (<{iTasks.API.Core.Types.<_130}> _x_0 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_759}> _x_0 l_1_3) (False -> case (<{iTasks.API.Core.Types.<_130}> kx_1_1 _x_0) (True -> <{iTasks.API.Core.Tasks.get`_759}> _x_0 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+<{iTasks.API.Core.Tasks.get`_760}> _x_0::I !_x_1 = case _x_1 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (<{StdInt.<_17}> _x_0 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_760}> _x_0 l_1_3) (False -> case (<{StdInt.<_17}> kx_1_1 _x_0) (True -> <{iTasks.API.Core.Tasks.get`_760}> _x_0 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+iTasks.API.Core.Tasks.eval_27 !_vTC_0 !_vTC_1 !_vTC_2 !_vTC_3 host_4 port_5::I handlers_6 sds_7 event_8 evalOpts_9 !tree_10 !iworld_11 = case tree_10 (iTasks._Framework.TaskState.TCInit task_1_0 ts_1_1 -> case iworld_11 (iTasks._Framework.IWorld._IWorld server_2_0 config_2_1 clocks_2_2 current_2_3 random_2_4 sdsNotifyRequests_2_5 memoryShares_2_6 cachedShares_2_7 exposedShares_2_8 jsCompilerState_2_9 ioTasks_2_10 ioStates_2_11 world_2_12 resources_2_13 onClient_2_14 shutdown_2_15 -> case ioTasks_2_10 (iTasks._Framework.IWorld._IOTasks done_3_0 todo_3_1 -> <{iTasks.API.Core.Tasks._c;157;11_776}> (iTasks._Framework.TaskServer.addConnection task_1_0 host_4 port_5 (iTasks._Framework.Task.wrapConnectionTask _vTC_0 _vTC_1 _vTC_2 handlers_6 sds_7) iworld_11) ts_1_1 task_1_0) ) ) (iTasks._Framework.TaskState.TCBasic task_1_0 ts_1_1 _x_1_2 _x_1_3 -> case iworld_11 (iTasks._Framework.IWorld._IWorld server_2_0 config_2_1 clocks_2_2 current_2_3 random_2_4 sdsNotifyRequests_2_5 memoryShares_2_6 cachedShares_2_7 exposedShares_2_8 jsCompilerState_2_9 ioTasks_2_10 ioStates_2_11 world_2_12 resources_2_13 onClient_2_14 shutdown_2_15 -> <{iTasks.API.Core.Tasks._c;164;11_780}> (<{iTasks.API.Core.Tasks.get`_759}> task_1_0 ioStates_2_11) ts_1_1 tree_10 iworld_11 _vTC_3) ) (iTasks._Framework.TaskState.TCDestroy _x_1_0 -> case _x_1_0 (iTasks._Framework.TaskState.TCBasic task_2_0 ts_2_1 _x_2_2 _x_2_3 -> case iworld_11 (iTasks._Framework.IWorld._IWorld server_3_0 config_3_1 clocks_3_2 current_3_3 random_3_4 sdsNotifyRequests_3_5 memoryShares_3_6 cachedShares_3_7 exposedShares_3_8 jsCompilerState_3_9 ioTasks_3_10 ioStates_3_11 world_3_12 resources_3_13 onClient_3_14 shutdown_3_15 -> _Tuple2 iTasks._Framework.Task.DestroyedResult (update iworld_11::iTasks._Framework.IWorld._IWorld [11:<{iTasks.API.Core.Tasks._c;177;22_781}> (<{iTasks.API.Core.Tasks.get`_761}> task_2_0 ioStates_3_11) task_2_0 ioStates_3_11])) ) ) 
+<{iTasks.API.Core.Tasks._c;177;22_781}> !_x_0 task_1 !ioStates_2 = case _x_0 (Data.Maybe.Just _x_1_0 -> case _x_1_0 (iTasks._Framework.IWorld.IOActive values_2_0 -> Data.Map.put (<{StdOverloaded.<;}> <{iTasks.API.Core.Types.<_130}>) task_1 (iTasks._Framework.IWorld.IODestroyed values_2_0) ioStates_2) ) (_ -> ioStates_2)
+<{iTasks.API.Core.Tasks._c;164;11_780}> !_x_0 ts_1::I tree_2 iworld_3 a_ij_4 = case _x_0 (Data.Maybe.Nothing -> _Tuple2 (iTasks._Framework.Task.ValueResult iTasks.API.Core.Types.NoValue (iTasks._Framework.Task._TaskEvalInfo ts_1 _predefined._Nil True) iTasks._Framework.Task.NoRep tree_2) iworld_3) (Data.Maybe.Just _x_1_0 -> case _x_1_0 (iTasks._Framework.IWorld.IOActive values_2_0 -> <{iTasks.API.Core.Tasks._c;168;19_779}> (<{iTasks.API.Core.Tasks.get`_760}> 0 values_2_0) a_ij_4 ts_1 tree_2 iworld_3) (iTasks._Framework.IWorld.IOException e_2_0 -> _Tuple2 (iTasks._Framework.Task.ExceptionResult (iTasks._Framework.Task.exception (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char))) (<{StdOverloaded.toString;}> StdString.toString_9) e_2_0)) iworld_3) ) 
+<{iTasks.API.Core.Tasks._c;168;19_779}> !_x_0 a_ij_1 ts_2::I tree_3 iworld_4 = case _x_0 (Data.Maybe.Just _x_1_0 -> case _x_1_0 (_Tuple2 _x_2_0 s_2_1 -> iTasks.API.Core.Tasks._f778_778 _x_2_0 a_ij_1 s_2_1 ts_2 tree_3 iworld_4) ) (_ -> <{iTasks.API.Core.Tasks._c;168;19_777}> iworld_4)
+iTasks.API.Core.Tasks._f778_778 !_x_0 a_ij_1 s_2::B ts_3::I tree_4 iworld_5 = case _x_0 (_SystemDynamic._DynamicTemp value_1_0 type_1_1 -> let !result_2_0 = _SystemDynamic._unify (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) a_ij_1 (_SystemDynamic._initial_unification_environment 1 0)) type_1_1 (_SystemDynamic.TypeVar 0), !unify_bool_2_1 = select result_2_0::_Tuple2 0 in case unify_bool_2_1 (True -> _Tuple2 (iTasks._Framework.Task.ValueResult (iTasks.API.Core.Types.Value value_1_0 s_2) (iTasks._Framework.Task._TaskEvalInfo ts_3 _predefined._Nil True) iTasks._Framework.Task.NoRep tree_4) iworld_5) ) (_ -> <{iTasks.API.Core.Tasks._c;168;19_777}> iworld_5)
+<{iTasks.API.Core.Tasks._c;168;19_777}> iworld_0 = _Tuple2 (iTasks._Framework.Task.ExceptionResult (iTasks._Framework.Task.exception (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char))) (<{StdOverloaded.toString;}> StdString.toString_9) "Corrupt IO task result")) iworld_0
+<{iTasks.API.Core.Tasks._c;157;11_776}> !_x_0 ts_1::I task_2 = case _x_0 (_Tuple2 _x_1_0 iworld_1_1 -> case _x_1_0 (Data.Error.Error e_2_0 -> _Tuple2 (iTasks._Framework.Task.ExceptionResult e_2_0) iworld_1_1) (Data.Error.Ok _x_2_0 -> _Tuple2 (iTasks._Framework.Task.ValueResult iTasks.API.Core.Types.NoValue (iTasks._Framework.Task._TaskEvalInfo ts_1 _predefined._Nil True) iTasks._Framework.Task.NoRep (iTasks._Framework.TaskState.TCBasic task_2 ts_1 Text.JSON.JSONNull False)) iworld_1_1) ) 
+iTasks.API.Core.Tasks.tcpconnect !_viTask_0 !_viTask_1 !_viTask_2 !host_3 !port_4::I !sds_5 handlers_6 = iTasks._Framework.Task.Task (iTasks.API.Core.Tasks.eval_27 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 9) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 9) (select _viTask_2::<{iTasks._Framework.Generic.iTask;}> 9) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 9) host_3 port_4 handlers_6 sds_5)
+<{iTasks.API.Core.Tasks.get`_39}> !<{_v<_0}> _x_1 !_x_2 = case _x_2 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 _x_1 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_39}> <{_v<_0}> _x_1 l_1_3) (False -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 kx_1_1 _x_1) (True -> <{iTasks.API.Core.Tasks.get`_39}> <{_v<_0}> _x_1 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+iTasks.API.Core.Tasks.anon_38 k_0 x_1 xs_2 = _predefined._Cons (_Tuple2 k_0 x_1) xs_2
+<{iTasks.API.Core.Tasks.get`_37}> !<{_v<_0}> _x_1 !_x_2 = case _x_2 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 _x_1 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_37}> <{_v<_0}> _x_1 l_1_3) (False -> case (select <{_v<_0}>::<{StdOverloaded.<;}> 0 kx_1_1 _x_1) (True -> <{iTasks.API.Core.Tasks.get`_37}> <{_v<_0}> _x_1 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+iTasks.API.Core.Tasks.rep_26 !<{_vgText*_0}> port_1 = iTasks._Framework.Task.TaskRep (iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (iTasks.UI.Definition._UIForm Data.Map.newMap (_predefined._Cons (_Tuple2 (iTasks.UI.Definition.stringDisplay (<{iTasks._Framework.Generic.Visualization.<+++}> <{_vgText*_0}> "Listening for connections on port " port_1)) Data.Map.newMap) _predefined._Nil) iTasks.UI.Definition.defaultSizeOpts)) _predefined._Nil)
+<{iTasks.API.Core.Tasks.c;138;36_24}> !_vTC_0 !g_l_1 = <{iTasks.API.Core.Tasks.g_c1;138;55_785}> g_l_1 _vTC_0
+<{iTasks.API.Core.Tasks.g_c1;138;55_785}> !g_l_0 a_ij_1 = case g_l_0 (_predefined._Cons g_h_1_0 g_t_1_1 -> <{iTasks.API.Core.Tasks.g_c2;138;55_784}> g_h_1_0 a_ij_1 g_t_1_1) (_ -> _predefined._Nil)
+<{iTasks.API.Core.Tasks.g_c2;138;55_784}> !g_h_0 !a_ij_1 g_t_2 = case g_h_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_1 (_Tuple2 _x_2_0 _x_2_1 -> iTasks.API.Core.Tasks._f783_783 _x_2_0 a_ij_1 g_t_2) ) (_ -> <{iTasks.API.Core.Tasks.g_c2;138;55_782}> a_ij_1 g_t_2)
+iTasks.API.Core.Tasks._f783_783 !_x_0 !a_ij_1 g_t_2 = case _x_0 (_SystemDynamic._DynamicTemp value_1_0 type_1_1 -> let !result_2_0 = _SystemDynamic._unify (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) a_ij_1 (_SystemDynamic._initial_unification_environment 1 0)) type_1_1 (_SystemDynamic.TypeVar 0), !unify_bool_2_1 = select result_2_0::_Tuple2 0 in case unify_bool_2_1 (True -> _predefined._Cons value_1_0 (<{iTasks.API.Core.Tasks.c;138;36_24}> a_ij_1 g_t_2)) ) (_ -> <{iTasks.API.Core.Tasks.g_c2;138;55_782}> a_ij_1 g_t_2)
+<{iTasks.API.Core.Tasks.g_c2;138;55_782}> !_vTC_0 !g_t_1 = <{iTasks.API.Core.Tasks.c;138;36_24}> _vTC_0 g_t_1
+<{iTasks.API.Core.Tasks.get`_764}> _x_0 !_x_1 = case _x_1 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (<{iTasks.API.Core.Types.<_130}> _x_0 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_764}> _x_0 l_1_3) (False -> case (<{iTasks.API.Core.Types.<_130}> kx_1_1 _x_0) (True -> <{iTasks.API.Core.Tasks.get`_764}> _x_0 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+<{iTasks.API.Core.Tasks.get`_763}> _x_0 !_x_1 = case _x_1 (Data.Map.Tip -> Data.Maybe.Nothing) (Data.Map.Bin _x_1_0 kx_1_1 x_1_2 l_1_3 r_1_4 -> case (<{iTasks.API.Core.Types.<_130}> _x_0 kx_1_1) (True -> <{iTasks.API.Core.Tasks.get`_763}> _x_0 l_1_3) (False -> case (<{iTasks.API.Core.Types.<_130}> kx_1_1 _x_0) (True -> <{iTasks.API.Core.Tasks.get`_763}> _x_0 r_1_4) (False -> Data.Maybe.Just x_1_2) ) ) 
+iTasks.API.Core.Tasks.rep_762 port_0::I = iTasks._Framework.Task.TaskRep (iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (iTasks.UI.Definition._UIForm Data.Map.newMap (_predefined._Cons (_Tuple2 (iTasks.UI.Definition.stringDisplay (<{iTasks._Framework.Generic.Visualization.<+++}> (<{iTasks.API.Core.Tasks.gText_s;}> iTasks._Framework.Generic.Visualization.gText_Int_11) "Listening for connections on port " port_0)) Data.Map.newMap) _predefined._Nil) iTasks.UI.Definition.defaultSizeOpts)) _predefined._Nil)
+iTasks.API.Core.Tasks.eval_25 !_vTC_0 !_vTC_1 !_vTC_2 !_vTC_3 port_4::I removeClosed_5::B handlers_6 sds_7 event_8 evalOpts_9 !tree_10 !iworld_11 = case tree_10 (iTasks._Framework.TaskState.TCInit task_1_0 ts_1_1 -> <{iTasks.API.Core.Tasks._c;126;11_786}> (iTasks._Framework.TaskServer.addListener task_1_0 port_4 removeClosed_5 (iTasks._Framework.Task.wrapConnectionTask _vTC_0 _vTC_1 _vTC_2 handlers_6 sds_7) iworld_11) port_4 ts_1_1 task_1_0) (iTasks._Framework.TaskState.TCBasic task_1_0 ts_1_1 _x_1_2 _x_1_3 -> case iworld_11 (iTasks._Framework.IWorld._IWorld server_2_0 config_2_1 clocks_2_2 current_2_3 random_2_4 sdsNotifyRequests_2_5 memoryShares_2_6 cachedShares_2_7 exposedShares_2_8 jsCompilerState_2_9 ioTasks_2_10 ioStates_2_11 world_2_12 resources_2_13 onClient_2_14 shutdown_2_15 -> <{iTasks.API.Core.Tasks._c;134;11_787}> (<{iTasks.API.Core.Tasks.get`_763}> task_1_0 ioStates_2_11) iworld_11 _vTC_3 ts_1_1 port_4 task_1_0) ) (iTasks._Framework.TaskState.TCDestroy _x_1_0 -> case _x_1_0 (iTasks._Framework.TaskState.TCBasic task_2_0 ts_2_1 _x_2_2 _x_2_3 -> case iworld_11 (iTasks._Framework.IWorld._IWorld server_3_0 config_3_1 clocks_3_2 current_3_3 random_3_4 sdsNotifyRequests_3_5 memoryShares_3_6 cachedShares_3_7 exposedShares_3_8 jsCompilerState_3_9 ioTasks_3_10 ioStates_3_11 world_3_12 resources_3_13 onClient_3_14 shutdown_3_15 -> _Tuple2 iTasks._Framework.Task.DestroyedResult (update iworld_11::iTasks._Framework.IWorld._IWorld [11:<{iTasks.API.Core.Tasks._c;144;22_788}> (<{iTasks.API.Core.Tasks.get`_764}> task_2_0 ioStates_3_11) task_2_0 ioStates_3_11])) ) ) 
+<{iTasks.API.Core.Tasks._c;144;22_788}> !_x_0 task_1 !ioStates_2 = case _x_0 (Data.Maybe.Just _x_1_0 -> case _x_1_0 (iTasks._Framework.IWorld.IOActive values_2_0 -> Data.Map.put (<{StdOverloaded.<;}> <{iTasks.API.Core.Types.<_130}>) task_1 (iTasks._Framework.IWorld.IODestroyed values_2_0) ioStates_2) ) (_ -> ioStates_2)
+<{iTasks.API.Core.Tasks._c;134;11_787}> !_x_0 iworld_1 _vTC_2 ts_3::I port_4::I task_5 = case _x_0 (Data.Maybe.Just _x_1_0 -> case _x_1_0 (iTasks._Framework.IWorld.IOException e_2_0 -> _Tuple2 (iTasks._Framework.Task.ExceptionResult (iTasks._Framework.Task.exception (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char))) (<{StdOverloaded.toString;}> StdString.toString_9) e_2_0)) iworld_1) (iTasks._Framework.IWorld.IOActive values_2_0 -> _Tuple2 (iTasks._Framework.Task.ValueResult (iTasks.API.Core.Types.Value (<{iTasks.API.Core.Tasks.c;138;36_24}> _vTC_2 (Data.Map.foldrWithKey iTasks.API.Core.Tasks.anon_38 _predefined._Nil values_2_0)) False) (iTasks._Framework.Task._TaskEvalInfo ts_3 _predefined._Nil True) (iTasks.API.Core.Tasks.rep_762 port_4) (iTasks._Framework.TaskState.TCBasic task_5 ts_3 Text.JSON.JSONNull False)) iworld_1) ) (Data.Maybe.Nothing -> _Tuple2 (iTasks._Framework.Task.ValueResult (iTasks.API.Core.Types.Value _predefined._Nil False) (iTasks._Framework.Task._TaskEvalInfo ts_3 _predefined._Nil True) (iTasks.API.Core.Tasks.rep_762 port_4) (iTasks._Framework.TaskState.TCBasic task_5 ts_3 Text.JSON.JSONNull False)) iworld_1) 
+<{iTasks.API.Core.Tasks._c;126;11_786}> !_x_0 port_1::I ts_2::I task_3 = case _x_0 (_Tuple2 _x_1_0 iworld_1_1 -> case _x_1_0 (Data.Error.Error e_2_0 -> _Tuple2 (iTasks._Framework.Task.ExceptionResult (iTasks._Framework.Task.exception (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char))) (<{StdOverloaded.toString;}> StdString.toString_9) (<{StdString.+++_11}> "Error: port " (<{StdString.+++_11}> (StdString.toString_5 port_1) " already in use.")))) iworld_1_1) (Data.Error.Ok _x_2_0 -> _Tuple2 (iTasks._Framework.Task.ValueResult (iTasks.API.Core.Types.Value _predefined._Nil False) (iTasks._Framework.Task._TaskEvalInfo ts_2 _predefined._Nil True) (iTasks.API.Core.Tasks.rep_762 port_1) (iTasks._Framework.TaskState.TCBasic task_3 ts_2 Text.JSON.JSONNull False)) iworld_1_1) ) 
+iTasks.API.Core.Tasks.tcplisten !_viTask_0 !_viTask_1 !_viTask_2 !port_3::I !removeClosed_4::B !sds_5 handlers_6 = iTasks._Framework.Task.Task (iTasks.API.Core.Tasks.eval_25 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 9) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 9) (select _viTask_2::<{iTasks._Framework.Generic.iTask;}> 9) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 9) port_3 removeClosed_4 handlers_6 sds_5)
+iTasks.API.Core.Tasks.eval_28 fun_0 task_1 !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> _Tuple2 (Data.Error.Ok _predefined._Unit) (update iworld_2::iTasks._Framework.IWorld._IWorld [12:fun_0 world_1_12])) 
+iTasks.API.Core.Tasks.appWorld !fun_0 = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Core.Tasks.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__Unit_26) (<{iTasks.API.Core.Tasks.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__Unit_59) (<{iTasks.API.Core.Tasks.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__Unit_125) (<{iTasks.API.Core.Tasks.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__Unit_92) (<{iTasks.API.Core.Tasks.gText_s;}> iTasks._Framework.Generic.Visualization.gText__Unit_17) (<{iTasks.API.Core.Tasks.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode__Unit_661) (<{iTasks.API.Core.Tasks.JSONDecode_s;}> iTasks.API.Core.Types.JSONDecode__Unit_668) (<{iTasks.API.Core.Tasks.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__Unit_14) (<{iTasks.API.Core.Tasks.gEq_s;}> iTasks.API.Core.Types.gEq__Unit_675) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__Unit))) (iTasks.API.Core.Tasks.eval_28 fun_0)
+iTasks.API.Core.Tasks.eval_29 fun_0 task_1 !iworld_2 = case iworld_2 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> let _x_2_0 = fun_0 world_1_12 in _Tuple2 (Data.Error.Ok (select _x_2_0::_Tuple2 0)) (update iworld_2::iTasks._Framework.IWorld._IWorld [12:select _x_2_0::_Tuple2 1])) 
+iTasks.API.Core.Tasks.accWorld !_viTask_0 !fun_1 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.eval_29 fun_1)
+iTasks.API.Core.Tasks.eval_30 !_vTC_0 !_vtoString_1 errf_2 !fun_3 task_4 !iworld_5 = case iworld_5 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case current_1_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_2_0 task_2_1 session_2_2 attachmentChain_2_3 nextTaskNo_2_4 eventRoute_2_5 editletDiffs_2_6 -> let _x_3_0 = fun_3 world_1_12, world_3_1 = select _x_3_0::_Tuple2 1 in <{iTasks.API.Core.Tasks._c;200;11_789}> (select _x_3_0::_Tuple2 0) errf_2 _vTC_0 _vtoString_1 iworld_5 world_3_1) ) 
+<{iTasks.API.Core.Tasks._c;200;11_789}> !_x_0 errf_1 a_ij_2 _vtoString_3 iworld_4 world_5 = case _x_0 (Data.Error.Error e_1_0 -> let err_2_0 = errf_1 e_1_0 in _Tuple2 (Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp err_2_0 (_SystemDynamic._normalise (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) a_ij_2 (_SystemDynamic._initial_unification_environment 1 0)) (_SystemDynamic.TypeVar 0))) (select _vtoString_3::<{StdOverloaded.toString;}> 0 err_2_0))) (update iworld_4::iTasks._Framework.IWorld._IWorld [12:world_5])) (Data.Error.Ok v_1_0 -> _Tuple2 (Data.Error.Ok v_1_0) (update iworld_4::iTasks._Framework.IWorld._IWorld [12:world_5])) 
+iTasks.API.Core.Tasks.accWorldError !_viTask_0 !_vTC_1 !_vtoString_2 !fun_3 !errf_4 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.eval_30 _vTC_1 _vtoString_2 errf_4 fun_3)
+iTasks.API.Core.Tasks.eval_766 !_vTC_0 errf_1 !fun_2 task_3 !iworld_4 = case iworld_4 (iTasks._Framework.IWorld._IWorld server_1_0 config_1_1 clocks_1_2 current_1_3 random_1_4 sdsNotifyRequests_1_5 memoryShares_1_6 cachedShares_1_7 exposedShares_1_8 jsCompilerState_1_9 ioTasks_1_10 ioStates_1_11 world_1_12 resources_1_13 onClient_1_14 shutdown_1_15 -> case current_1_3 (iTasks._Framework.IWorld._TaskEvalState taskTime_2_0 task_2_1 session_2_2 attachmentChain_2_3 nextTaskNo_2_4 eventRoute_2_5 editletDiffs_2_6 -> let _x_3_0 = fun_2 world_1_12, world_3_1 = select _x_3_0::_Tuple2 1 in <{iTasks.API.Core.Tasks._c;200;11_790}> (select _x_3_0::_Tuple2 0) errf_1 _vTC_0 iworld_4 world_3_1) ) 
+<{iTasks.API.Core.Tasks._c;200;11_790}> !_x_0 errf_1 _vTC_2 iworld_3 world_4 = case _x_0 (Data.Error.Error e_1_0 -> let err_2_0 = errf_1 e_1_0 in _Tuple2 (Data.Error.Error (_Tuple2 (_SystemDynamic._DynamicTemp err_2_0 (_SystemDynamic._normalise (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) _vTC_2 (_SystemDynamic._initial_unification_environment 1 0)) (_SystemDynamic.TypeVar 0))) (iTasks.API.Core.Types.toString_94 err_2_0))) (update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4])) (Data.Error.Ok v_1_0 -> _Tuple2 (Data.Error.Ok v_1_0) (update iworld_3::iTasks._Framework.IWorld._IWorld [12:world_4])) 
+iTasks.API.Core.Tasks.accWorldError_765 !_viTask_0 !_vTC_1 !fun_2 !errf_3 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.eval_766 _vTC_1 errf_3 fun_2)
+iTasks.API.Core.Tasks.accWorldOSError !_viTask_0 !fun_1 = iTasks.API.Core.Tasks.accWorldError_765 _viTask_0 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;OSException}>)) fun_1 iTasks.API.Core.Types.OSException
+iTasks.API.Core.Tasks.eval_31 !<{_vgText*_0}> v_1 _x_2 iworld_3 = _Tuple2 (Data.Error.Ok v_1) (StdDebug.trace_n_6 (iTasks._Framework.Generic.Visualization.toSingleLineText <{_vgText*_0}> v_1) iworld_3)
+iTasks.API.Core.Tasks.traceValue !_viTask_0 v_1 = iTasks._Framework.Task.mkInstantTask _viTask_0 (iTasks.API.Core.Tasks.eval_31 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 4) v_1)
+iTasks.API.Core.Tasks.anon_32 task_0 iworld_1 = _Tuple2 (Data.Error.Ok _predefined._Unit) (update iworld_1::iTasks._Framework.IWorld._IWorld [15:True])
+iTasks.API.Core.Tasks.shutDown = iTasks._Framework.Task.mkInstantTask (<{iTasks._Framework.Generic.iTask;}> (<{iTasks.API.Core.Tasks.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__Unit_26) (<{iTasks.API.Core.Tasks.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__Unit_59) (<{iTasks.API.Core.Tasks.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__Unit_125) (<{iTasks.API.Core.Tasks.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__Unit_92) (<{iTasks.API.Core.Tasks.gText_s;}> iTasks._Framework.Generic.Visualization.gText__Unit_17) (<{iTasks.API.Core.Tasks.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode__Unit_661) (<{iTasks.API.Core.Tasks.JSONDecode_s;}> iTasks.API.Core.Types.JSONDecode__Unit_668) (<{iTasks.API.Core.Tasks.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__Unit_14) (<{iTasks.API.Core.Tasks.gEq_s;}> iTasks.API.Core.Types.gEq__Unit_675) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__Unit))) iTasks.API.Core.Tasks.anon_32
+
+
+|| Converted Records
+:: <{iTasks.API.Core.Tasks.JSONEncode_s;}> = {!iTasks.API.Core.Tasks.JSONEncode_s}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_ss;}> = {!iTasks.API.Core.Tasks.JSONEncode_ss}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_sss;}> = {!iTasks.API.Core.Tasks.JSONEncode_sss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_s;}> = {!iTasks.API.Core.Tasks.JSONDecode_s}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_ss;}> = {!iTasks.API.Core.Tasks.JSONDecode_ss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_sss;}> = {!iTasks.API.Core.Tasks.JSONDecode_sss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_s;}> = {iTasks.API.Core.Tasks.gDefault_s}
+
+:: <{iTasks.API.Core.Tasks.gDefault_ss;}> = {iTasks.API.Core.Tasks.gDefault_ss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_sss;}> = {iTasks.API.Core.Tasks.gDefault_sss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_s;}> = {!iTasks.API.Core.Tasks.gUpdate_s}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_ss;}> = {!iTasks.API.Core.Tasks.gUpdate_ss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_sss;}> = {!iTasks.API.Core.Tasks.gUpdate_sss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_s;}> = {!iTasks.API.Core.Tasks.gVerify_s}
+
+:: <{iTasks.API.Core.Tasks.gVerify_ss;}> = {!iTasks.API.Core.Tasks.gVerify_ss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_sss;}> = {!iTasks.API.Core.Tasks.gVerify_sss}
+
+:: <{iTasks.API.Core.Tasks.gText_s;}> = {!iTasks.API.Core.Tasks.gText_s}
+
+:: <{iTasks.API.Core.Tasks.gText_ss;}> = {!iTasks.API.Core.Tasks.gText_ss}
+
+:: <{iTasks.API.Core.Tasks.gText_sss;}> = {!iTasks.API.Core.Tasks.gText_sss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_s;}> = {!iTasks.API.Core.Tasks.gEditor_s}
+
+:: <{iTasks.API.Core.Tasks.gEditor_ss;}> = {!iTasks.API.Core.Tasks.gEditor_ss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_sss;}> = {!iTasks.API.Core.Tasks.gEditor_sss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_s;}> = {!iTasks.API.Core.Tasks.gEditMeta_s}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_ss;}> = {!iTasks.API.Core.Tasks.gEditMeta_ss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_sss;}> = {!iTasks.API.Core.Tasks.gEditMeta_sss}
+
+:: <{iTasks.API.Core.Tasks.gEq_s;}> = {!iTasks.API.Core.Tasks.gEq_s}
+
+:: <{iTasks.API.Core.Tasks.gEq_ss;}> = {!iTasks.API.Core.Tasks.gEq_ss}
+
+:: <{iTasks.API.Core.Tasks.gEq_sss;}> = {!iTasks.API.Core.Tasks.gEq_sss}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_ssss;}> = {!iTasks.API.Core.Tasks.JSONEncode_ssss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_ssss;}> = {!iTasks.API.Core.Tasks.JSONDecode_ssss}
+
+:: <{iTasks.API.Core.Tasks.gEq_ssss;}> = {!iTasks.API.Core.Tasks.gEq_ssss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_ssss;}> = {iTasks.API.Core.Tasks.gDefault_ssss}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_sssss;}> = {!iTasks.API.Core.Tasks.JSONEncode_sssss}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_ssssss;}> = {!iTasks.API.Core.Tasks.JSONEncode_ssssss}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_sssssss;}> = {!iTasks.API.Core.Tasks.JSONEncode_sssssss}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_ssssssss;}> = {!iTasks.API.Core.Tasks.JSONEncode_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.JSONEncode_sssssssss;}> = {!iTasks.API.Core.Tasks.JSONEncode_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_sssss;}> = {!iTasks.API.Core.Tasks.JSONDecode_sssss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_ssssss;}> = {!iTasks.API.Core.Tasks.JSONDecode_ssssss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_sssssss;}> = {!iTasks.API.Core.Tasks.JSONDecode_sssssss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_ssssssss;}> = {!iTasks.API.Core.Tasks.JSONDecode_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.JSONDecode_sssssssss;}> = {!iTasks.API.Core.Tasks.JSONDecode_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.bimap_s;}> = {iTasks.API.Core.Tasks.bimap_s}
+
+:: <{iTasks.API.Core.Tasks.bimap_ss;}> = {iTasks.API.Core.Tasks.bimap_ss}
+
+:: <{iTasks.API.Core.Tasks.bimap_sss;}> = {iTasks.API.Core.Tasks.bimap_sss}
+
+:: <{iTasks.API.Core.Tasks.gEq_sssss;}> = {!iTasks.API.Core.Tasks.gEq_sssss}
+
+:: <{iTasks.API.Core.Tasks.gEq_ssssss;}> = {!iTasks.API.Core.Tasks.gEq_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gEq_sssssss;}> = {!iTasks.API.Core.Tasks.gEq_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gEq_ssssssss;}> = {!iTasks.API.Core.Tasks.gEq_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gEq_sssssssss;}> = {!iTasks.API.Core.Tasks.gEq_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_ssss;}> = {!iTasks.API.Core.Tasks.gEditor_ssss}
+
+:: <{iTasks.API.Core.Tasks.gText_ssss;}> = {!iTasks.API.Core.Tasks.gText_ssss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_ssss;}> = {!iTasks.API.Core.Tasks.gEditMeta_ssss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_sssss;}> = {!iTasks.API.Core.Tasks.gEditor_sssss}
+
+:: <{iTasks.API.Core.Tasks.gText_sssss;}> = {!iTasks.API.Core.Tasks.gText_sssss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_sssss;}> = {iTasks.API.Core.Tasks.gDefault_sssss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_sssss;}> = {!iTasks.API.Core.Tasks.gEditMeta_sssss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_ssssss;}> = {!iTasks.API.Core.Tasks.gEditor_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gText_ssssss;}> = {!iTasks.API.Core.Tasks.gText_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_ssssss;}> = {iTasks.API.Core.Tasks.gDefault_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_ssssss;}> = {!iTasks.API.Core.Tasks.gEditMeta_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_sssssss;}> = {!iTasks.API.Core.Tasks.gEditor_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gText_sssssss;}> = {!iTasks.API.Core.Tasks.gText_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_sssssss;}> = {iTasks.API.Core.Tasks.gDefault_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_sssssss;}> = {!iTasks.API.Core.Tasks.gEditMeta_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_ssssssss;}> = {!iTasks.API.Core.Tasks.gEditor_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gText_ssssssss;}> = {!iTasks.API.Core.Tasks.gText_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_ssssssss;}> = {iTasks.API.Core.Tasks.gDefault_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_ssssssss;}> = {!iTasks.API.Core.Tasks.gEditMeta_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditor_sssssssss;}> = {!iTasks.API.Core.Tasks.gEditor_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.gText_sssssssss;}> = {!iTasks.API.Core.Tasks.gText_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.gDefault_sssssssss;}> = {iTasks.API.Core.Tasks.gDefault_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.gEditMeta_sssssssss;}> = {!iTasks.API.Core.Tasks.gEditMeta_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_ssss;}> = {!iTasks.API.Core.Tasks.gVerify_ssss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_sssss;}> = {!iTasks.API.Core.Tasks.gVerify_sssss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_ssssss;}> = {!iTasks.API.Core.Tasks.gVerify_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_sssssss;}> = {!iTasks.API.Core.Tasks.gVerify_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_ssssssss;}> = {!iTasks.API.Core.Tasks.gVerify_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gVerify_sssssssss;}> = {!iTasks.API.Core.Tasks.gVerify_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_ssss;}> = {!iTasks.API.Core.Tasks.gUpdate_ssss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_sssss;}> = {!iTasks.API.Core.Tasks.gUpdate_sssss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_ssssss;}> = {!iTasks.API.Core.Tasks.gUpdate_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_sssssss;}> = {!iTasks.API.Core.Tasks.gUpdate_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_ssssssss;}> = {!iTasks.API.Core.Tasks.gUpdate_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gUpdate_sssssssss;}> = {!iTasks.API.Core.Tasks.gUpdate_sssssssss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_s;}> = {!iTasks.API.Core.Tasks.gLexOrd_s}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_ss;}> = {!iTasks.API.Core.Tasks.gLexOrd_ss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_sss;}> = {!iTasks.API.Core.Tasks.gLexOrd_sss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_ssss;}> = {!iTasks.API.Core.Tasks.gLexOrd_ssss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_sssss;}> = {!iTasks.API.Core.Tasks.gLexOrd_sssss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_ssssss;}> = {!iTasks.API.Core.Tasks.gLexOrd_ssssss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_sssssss;}> = {!iTasks.API.Core.Tasks.gLexOrd_sssssss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_ssssssss;}> = {!iTasks.API.Core.Tasks.gLexOrd_ssssssss}
+
+:: <{iTasks.API.Core.Tasks.gLexOrd_sssssssss;}> = {!iTasks.API.Core.Tasks.gLexOrd_sssssssss}
+

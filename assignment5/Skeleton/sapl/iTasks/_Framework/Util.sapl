@@ -1,0 +1,225 @@
+|| ?module? iTasks._Framework.Util
+
+
+iTasks._Framework.Util.mb2list !_x_0 = case _x_0 (Data.Maybe.Nothing -> _predefined._Nil) (Data.Maybe.Just a_1_0 -> a_1_0) 
+iTasks._Framework.Util.list2mb !_x_0 = case _x_0 (_predefined._Nil -> Data.Maybe.Nothing) (_ -> Data.Maybe.Just _x_0)
+iTasks._Framework.Util.voidNothing = Data.Maybe.Nothing
+iTasks._Framework.Util.addspace_18 !_x_0 = case _x_0 (_predefined._Nil -> _predefined._Nil) (_predefined._Cons c_1_0 cs_1_1 -> case (<{StdChar.==_18}> c_1_0 '_') (True -> _predefined._Cons ' ' (iTasks._Framework.Util.addspace_18 cs_1_1)) (False -> case (StdChar.isUpper c_1_0) (True -> _predefined._Cons ' ' (_predefined._Cons (StdChar.toLower c_1_0) (iTasks._Framework.Util.addspace_18 cs_1_1))) (False -> _predefined._Cons c_1_0 (iTasks._Framework.Util.addspace_18 cs_1_1)) ) ) 
+<{iTasks._Framework.Util.cu;23;29_17}> !_vone_0 !<{_v+_1}> c_l_i_2 !g_l_3 = <{iTasks._Framework.Util.g_c1;23;34_746}> g_l_3 _vone_0 <{_v+_1}> c_l_i_2
+<{iTasks._Framework.Util.g_c1;23;34_746}> !g_l_0 _vone_1 <{_v+_2}> c_l_i_3 = case g_l_0 (_predefined._Cons c_1_0 g_t_1_1 -> <{iTasks._Framework.Util.cu;23;29_17}> _vone_1 <{_v+_2}> (select <{_v+_2}>::<{StdOverloaded.+;}> 0 c_l_i_3 (select _vone_1::<{StdOverloaded.one;}> 0)) g_t_1_1) (_ -> c_l_i_3)
+<{iTasks._Framework.Util.cu;23;29_16}> !_vArray_0 c_a_1 c_i_2::I !g_l_3 = <{iTasks._Framework.Util.g_c1;23;34_747}> g_l_3 _vArray_0 c_a_1 c_i_2
+<{iTasks._Framework.Util.g_c1;23;34_747}> !g_l_0 _vArray_1 c_a_2 c_i_3::I = case g_l_0 (_predefined._Cons c_1_0 g_t_1_1 -> <{iTasks._Framework.Util.cu;23;29_16}> _vArray_1 (select _vArray_1::<{_SystemArray.Array;}> 5 c_a_2 c_i_3 c_1_0) (<{StdInt.+_6}> c_i_3 StdInt.one_11) g_t_1_1) (_ -> c_a_2)
+<{iTasks._Framework.Util.cu;23;29_741}>::I !<{_v+_0}> c_l_i_1::I !g_l_2 = <{iTasks._Framework.Util.g_c1;23;34_748}> g_l_2 <{_v+_0}> c_l_i_1
+<{iTasks._Framework.Util.g_c1;23;34_748}>::I !g_l_0 <{_v+_1}> c_l_i_2::I = case g_l_0 (_predefined._Cons c_1_0 g_t_1_1 -> <{iTasks._Framework.Util.cu;23;29_741}> <{_v+_1}> (select <{_v+_1}>::<{StdOverloaded.+;}> 0 c_l_i_2 StdInt.one_11) g_t_1_1) (_ -> c_l_i_2)
+<{iTasks._Framework.Util.cu;23;29_742}> !c_a_0 c_i_1::I !g_l_2 = <{iTasks._Framework.Util.g_c1;23;34_749}> g_l_2 c_a_0 c_i_1
+<{iTasks._Framework.Util.g_c1;23;34_749}> !g_l_0 !c_a_1 c_i_2::I = case g_l_0 (_predefined._Cons c_1_0 g_t_1_1 -> <{iTasks._Framework.Util.cu;23;29_742}> (_SystemArray.update_21 c_a_1 c_i_2 c_1_0) (<{StdInt.+_6}> c_i_2 StdInt.one_11) g_t_1_1) (_ -> c_a_1)
+<{iTasks._Framework.Util.cu;23;29_743}>::I !c_l_i_0::I !g_l_1 = <{iTasks._Framework.Util.g_c1;23;34_750}> g_l_1 c_l_i_0
+<{iTasks._Framework.Util.g_c1;23;34_750}>::I !g_l_0 !c_l_i_1::I = case g_l_0 (_predefined._Cons c_1_0 g_t_1_1 -> <{iTasks._Framework.Util.cu;23;29_743}> (<{StdInt.+_6}> c_l_i_1 StdInt.one_11) g_t_1_1) (_ -> c_l_i_1)
+iTasks._Framework.Util.camelCaseToWords !label_0 = let _x_1_0 = StdList.fromString_78 label_0, lname_1_1::C = select _x_1_0::_Tuple2 0, lnames_1_2 = select _x_1_0::_Tuple2 1 in <{iTasks._Framework.Util.cu;23;29_742}> (_SystemArray._createArray_16 (<{iTasks._Framework.Util.cu;23;29_743}> 0 (_predefined._Cons (StdChar.toUpper lname_1_1) (iTasks._Framework.Util.addspace_18 lnames_1_2)))) 0 (_predefined._Cons (StdChar.toUpper lname_1_1) (iTasks._Framework.Util.addspace_18 lnames_1_2))
+iTasks._Framework.Util.decFormat !x_0::I = <{StdString.+++_11}> (StdString.toString_5 (<{StdInt./_10}> x_0 100)) (<{StdString.+++_11}> "." (Text.lpad_7 (StdString.toString_5 (StdInt.rem_28 x_0 100)) 2 '0'))
+iTasks._Framework.Util.tmToDateTime !tm_0 = iTasks.API.Core.Types.DateTime (iTasks.API.Core.Types._Date (select tm_0::System.Time._Tm 3) (<{StdInt.+_6}> 1 (select tm_0::System.Time._Tm 4)) (<{StdInt.+_6}> 1900 (select tm_0::System.Time._Tm 5))) (iTasks.API.Core.Types._Time (select tm_0::System.Time._Tm 2) (select tm_0::System.Time._Tm 1) (select tm_0::System.Time._Tm 0))
+iTasks._Framework.Util.currentLocalDateTimeWorld !world_0 = Data.Tuple.appFst iTasks._Framework.Util.tmToDateTime (System.Time.localTime world_0)
+iTasks._Framework.Util.currentUTCDateTimeWorld !world_0 = Data.Tuple.appFst iTasks._Framework.Util.tmToDateTime (System.Time.gmTime world_0)
+iTasks._Framework.Util.timestampToGmDateTime !timestamp_0 = iTasks._Framework.Util.tmToDateTime (System.Time.toGmTime timestamp_0)
+iTasks._Framework.Util.dateToTimestamp !_x_0 = case _x_0 (iTasks.API.Core.Types._Date day_1_0 mon_1_1 year_1_2 -> System.Time.mkTime (System.Time._Tm 0 0 0 day_1_0 (<{StdInt.-_7}> mon_1_1 1) (<{StdInt.-_7}> year_1_2 1900) 0 0 False)) 
+iTasks._Framework.Util.datetimeToTimestamp !_x_0 = case _x_0 (iTasks.API.Core.Types.DateTime _x_1_0 _x_1_1 -> case _x_1_0 (iTasks.API.Core.Types._Date day_2_0 mon_2_1 year_2_2 -> case _x_1_1 (iTasks.API.Core.Types._Time hour_3_0 min_3_1 sec_3_2 -> System.Time.mkTime (System.Time._Tm sec_3_2 min_3_1 hour_3_0 day_2_0 (<{StdInt.-_7}> mon_2_1 1) (<{StdInt.-_7}> year_2_2 1900) 0 0 False)) ) ) 
+iTasks._Framework.Util.isAbsolute_19::B !_vArray_0 !_vText_1 path_2 = select _vText_1::<{Text.Text;}> 13 (select _vArray_0::<{_SystemArray.Array;}> 5 (select _vArray_0::<{_SystemArray.Array;}> 0 1) 0 System.FilePath.pathSeparator) path_2
+iTasks._Framework.Util.undot_21 !acc_0 !_x_1 = case _x_1 (_predefined._Nil -> StdList.reverse acc_0) (_predefined._Cons _x_1_0 ds_1_1 -> case acc_0 (_predefined._Nil -> case _x_1_0 (".." -> iTasks._Framework.Util.undot_21 _predefined._Nil ds_1_1) ) (_predefined._Cons _x_2_0 acc_2_1 -> case _x_1_0 (".." -> iTasks._Framework.Util.undot_21 acc_2_1 ds_1_1) ) (_ -> case _x_1_0 ("." -> iTasks._Framework.Util.undot_21 acc_0 ds_1_1) ("" -> case acc_0 (_predefined._Nil -> iTasks._Framework.Util.undot_21 (_predefined._Cons "" _predefined._Nil) ds_1_1) (_ -> iTasks._Framework.Util.undot_21 acc_0 ds_1_1)) (_ -> iTasks._Framework.Util.undot_21 (_predefined._Cons _x_1_0 acc_0) ds_1_1))) 
+iTasks._Framework.Util.canonicalize_20 !path_0 = Text.join_5 (_SystemArray.update_21 (_SystemArray._createArray_16 1) 0 System.FilePath.pathSeparator) (iTasks._Framework.Util.undot_21 _predefined._Nil (Text.split_12 (_SystemArray.update_21 (_SystemArray._createArray_16 1) 0 System.FilePath.pathSeparator) path_0))
+iTasks._Framework.Util.isAbsolute_744::B !_vText_0 path_1 = select _vText_0::<{Text.Text;}> 13 (_SystemArray.update_21 (_SystemArray._createArray_16 1) 0 System.FilePath.pathSeparator) path_1
+iTasks._Framework.Util.isAbsolute_745::B !path_0 = Text.startsWith_13 (_SystemArray.update_21 (_SystemArray._createArray_16 1) 0 System.FilePath.pathSeparator) path_0
+iTasks._Framework.Util.toCanonicalPath !path_0 !world_1 = case (iTasks._Framework.Util.isAbsolute_745 path_0) (True -> <{_Tuple2!3}> (iTasks._Framework.Util.canonicalize_20 path_0) world_1) (False -> <{iTasks._Framework.Util._c;64;11_751}> (System.Directory.getCurrentDirectory world_1) path_0) 
+<{iTasks._Framework.Util._c;64;11_751}> !_x_0 !path_1 = case _x_0 (_Tuple2 _x_1_0 world_1_1 -> case _x_1_0 (Data.Error.Ok curDir_2_0 -> <{_Tuple2!3}> (iTasks._Framework.Util.canonicalize_20 (<{System.FilePath.</>}> curDir_2_0 path_1)) world_1_1) (_ -> <{_Tuple2!3}> (iTasks._Framework.Util.canonicalize_20 path_1) world_1_1)) 
+iTasks._Framework.Util.kvGet !_vEq_0 m_1 !_x_2 = case _x_2 (_predefined._Nil -> Data.Maybe.Nothing) (_predefined._Cons _x_1_0 kvs_1_1 -> case _x_1_0 (_Tuple2 k_2_0 v_2_1 -> case (select (select _vEq_0::<{StdClass.Eq;}> 0)::<{StdOverloaded.==;}> 0 k_2_0 m_1) (True -> Data.Maybe.Just v_2_1) (False -> iTasks._Framework.Util.kvGet _vEq_0 m_1 kvs_1_1) ) ) 
+iTasks._Framework.Util.kvSet !_vEq_0 m_1 nv_2 !_x_3 = case _x_3 (_predefined._Nil -> _predefined._Cons (_Tuple2 m_1 nv_2) _predefined._Nil) (_predefined._Cons _x_1_0 kvs_1_1 -> case _x_1_0 (_Tuple2 k_2_0 v_2_1 -> case (select (select _vEq_0::<{StdClass.Eq;}> 0)::<{StdOverloaded.==;}> 0 k_2_0 m_1) (True -> _predefined._Cons (_Tuple2 k_2_0 nv_2) kvs_1_1) (False -> _predefined._Cons (_Tuple2 k_2_0 v_2_1) (iTasks._Framework.Util.kvSet _vEq_0 m_1 nv_2 kvs_1_1)) ) ) 
+iTasks._Framework.Util.kvSetOnce !_vEq_0 m_1 nv_2 !_x_3 = case _x_3 (_predefined._Nil -> _predefined._Cons (_Tuple2 m_1 nv_2) _predefined._Nil) (_predefined._Cons _x_1_0 kvs_1_1 -> case _x_1_0 (_Tuple2 k_2_0 v_2_1 -> case (select (select _vEq_0::<{StdClass.Eq;}> 0)::<{StdOverloaded.==;}> 0 k_2_0 m_1) (True -> _predefined._Cons (_Tuple2 k_2_0 v_2_1) kvs_1_1) (False -> _predefined._Cons (_Tuple2 k_2_0 v_2_1) (iTasks._Framework.Util.kvSet _vEq_0 m_1 nv_2 kvs_1_1)) ) ) 
+iTasks._Framework.Util.toString_14 !_vtoString_0 !_x_1 = case _x_1 (Data.Maybe.Nothing -> "") (Data.Maybe.Just x_1_0 -> select _vtoString_0::<{StdOverloaded.toString;}> 0 x_1_0) 
+
+
+|| Converted Records
+:: <{iTasks._Framework.Util.JSONEncode_s;}> = {!iTasks._Framework.Util.JSONEncode_s}
+
+:: <{iTasks._Framework.Util.JSONEncode_ss;}> = {!iTasks._Framework.Util.JSONEncode_ss}
+
+:: <{iTasks._Framework.Util.JSONEncode_sss;}> = {!iTasks._Framework.Util.JSONEncode_sss}
+
+:: <{iTasks._Framework.Util.JSONDecode_s;}> = {!iTasks._Framework.Util.JSONDecode_s}
+
+:: <{iTasks._Framework.Util.JSONDecode_ss;}> = {!iTasks._Framework.Util.JSONDecode_ss}
+
+:: <{iTasks._Framework.Util.JSONDecode_sss;}> = {!iTasks._Framework.Util.JSONDecode_sss}
+
+:: <{iTasks._Framework.Util.gDefault_s;}> = {iTasks._Framework.Util.gDefault_s}
+
+:: <{iTasks._Framework.Util.gDefault_ss;}> = {iTasks._Framework.Util.gDefault_ss}
+
+:: <{iTasks._Framework.Util.gDefault_sss;}> = {iTasks._Framework.Util.gDefault_sss}
+
+:: <{iTasks._Framework.Util.gUpdate_s;}> = {!iTasks._Framework.Util.gUpdate_s}
+
+:: <{iTasks._Framework.Util.gUpdate_ss;}> = {!iTasks._Framework.Util.gUpdate_ss}
+
+:: <{iTasks._Framework.Util.gUpdate_sss;}> = {!iTasks._Framework.Util.gUpdate_sss}
+
+:: <{iTasks._Framework.Util.gVerify_s;}> = {!iTasks._Framework.Util.gVerify_s}
+
+:: <{iTasks._Framework.Util.gVerify_ss;}> = {!iTasks._Framework.Util.gVerify_ss}
+
+:: <{iTasks._Framework.Util.gVerify_sss;}> = {!iTasks._Framework.Util.gVerify_sss}
+
+:: <{iTasks._Framework.Util.gText_s;}> = {!iTasks._Framework.Util.gText_s}
+
+:: <{iTasks._Framework.Util.gText_ss;}> = {!iTasks._Framework.Util.gText_ss}
+
+:: <{iTasks._Framework.Util.gText_sss;}> = {!iTasks._Framework.Util.gText_sss}
+
+:: <{iTasks._Framework.Util.gEditor_s;}> = {!iTasks._Framework.Util.gEditor_s}
+
+:: <{iTasks._Framework.Util.gEditor_ss;}> = {!iTasks._Framework.Util.gEditor_ss}
+
+:: <{iTasks._Framework.Util.gEditor_sss;}> = {!iTasks._Framework.Util.gEditor_sss}
+
+:: <{iTasks._Framework.Util.gEditMeta_s;}> = {!iTasks._Framework.Util.gEditMeta_s}
+
+:: <{iTasks._Framework.Util.gEditMeta_ss;}> = {!iTasks._Framework.Util.gEditMeta_ss}
+
+:: <{iTasks._Framework.Util.gEditMeta_sss;}> = {!iTasks._Framework.Util.gEditMeta_sss}
+
+:: <{iTasks._Framework.Util.gEq_s;}> = {!iTasks._Framework.Util.gEq_s}
+
+:: <{iTasks._Framework.Util.gEq_ss;}> = {!iTasks._Framework.Util.gEq_ss}
+
+:: <{iTasks._Framework.Util.gEq_sss;}> = {!iTasks._Framework.Util.gEq_sss}
+
+:: <{iTasks._Framework.Util.JSONEncode_ssss;}> = {!iTasks._Framework.Util.JSONEncode_ssss}
+
+:: <{iTasks._Framework.Util.JSONDecode_ssss;}> = {!iTasks._Framework.Util.JSONDecode_ssss}
+
+:: <{iTasks._Framework.Util.gEq_ssss;}> = {!iTasks._Framework.Util.gEq_ssss}
+
+:: <{iTasks._Framework.Util.gDefault_ssss;}> = {iTasks._Framework.Util.gDefault_ssss}
+
+:: <{iTasks._Framework.Util.JSONEncode_sssss;}> = {!iTasks._Framework.Util.JSONEncode_sssss}
+
+:: <{iTasks._Framework.Util.JSONEncode_ssssss;}> = {!iTasks._Framework.Util.JSONEncode_ssssss}
+
+:: <{iTasks._Framework.Util.JSONEncode_sssssss;}> = {!iTasks._Framework.Util.JSONEncode_sssssss}
+
+:: <{iTasks._Framework.Util.JSONEncode_ssssssss;}> = {!iTasks._Framework.Util.JSONEncode_ssssssss}
+
+:: <{iTasks._Framework.Util.JSONEncode_sssssssss;}> = {!iTasks._Framework.Util.JSONEncode_sssssssss}
+
+:: <{iTasks._Framework.Util.JSONDecode_sssss;}> = {!iTasks._Framework.Util.JSONDecode_sssss}
+
+:: <{iTasks._Framework.Util.JSONDecode_ssssss;}> = {!iTasks._Framework.Util.JSONDecode_ssssss}
+
+:: <{iTasks._Framework.Util.JSONDecode_sssssss;}> = {!iTasks._Framework.Util.JSONDecode_sssssss}
+
+:: <{iTasks._Framework.Util.JSONDecode_ssssssss;}> = {!iTasks._Framework.Util.JSONDecode_ssssssss}
+
+:: <{iTasks._Framework.Util.JSONDecode_sssssssss;}> = {!iTasks._Framework.Util.JSONDecode_sssssssss}
+
+:: <{iTasks._Framework.Util.bimap_s;}> = {iTasks._Framework.Util.bimap_s}
+
+:: <{iTasks._Framework.Util.bimap_ss;}> = {iTasks._Framework.Util.bimap_ss}
+
+:: <{iTasks._Framework.Util.bimap_sss;}> = {iTasks._Framework.Util.bimap_sss}
+
+:: <{iTasks._Framework.Util.gEq_sssss;}> = {!iTasks._Framework.Util.gEq_sssss}
+
+:: <{iTasks._Framework.Util.gEq_ssssss;}> = {!iTasks._Framework.Util.gEq_ssssss}
+
+:: <{iTasks._Framework.Util.gEq_sssssss;}> = {!iTasks._Framework.Util.gEq_sssssss}
+
+:: <{iTasks._Framework.Util.gEq_ssssssss;}> = {!iTasks._Framework.Util.gEq_ssssssss}
+
+:: <{iTasks._Framework.Util.gEq_sssssssss;}> = {!iTasks._Framework.Util.gEq_sssssssss}
+
+:: <{iTasks._Framework.Util.gEditor_ssss;}> = {!iTasks._Framework.Util.gEditor_ssss}
+
+:: <{iTasks._Framework.Util.gText_ssss;}> = {!iTasks._Framework.Util.gText_ssss}
+
+:: <{iTasks._Framework.Util.gEditMeta_ssss;}> = {!iTasks._Framework.Util.gEditMeta_ssss}
+
+:: <{iTasks._Framework.Util.gEditor_sssss;}> = {!iTasks._Framework.Util.gEditor_sssss}
+
+:: <{iTasks._Framework.Util.gText_sssss;}> = {!iTasks._Framework.Util.gText_sssss}
+
+:: <{iTasks._Framework.Util.gDefault_sssss;}> = {iTasks._Framework.Util.gDefault_sssss}
+
+:: <{iTasks._Framework.Util.gEditMeta_sssss;}> = {!iTasks._Framework.Util.gEditMeta_sssss}
+
+:: <{iTasks._Framework.Util.gEditor_ssssss;}> = {!iTasks._Framework.Util.gEditor_ssssss}
+
+:: <{iTasks._Framework.Util.gText_ssssss;}> = {!iTasks._Framework.Util.gText_ssssss}
+
+:: <{iTasks._Framework.Util.gDefault_ssssss;}> = {iTasks._Framework.Util.gDefault_ssssss}
+
+:: <{iTasks._Framework.Util.gEditMeta_ssssss;}> = {!iTasks._Framework.Util.gEditMeta_ssssss}
+
+:: <{iTasks._Framework.Util.gEditor_sssssss;}> = {!iTasks._Framework.Util.gEditor_sssssss}
+
+:: <{iTasks._Framework.Util.gText_sssssss;}> = {!iTasks._Framework.Util.gText_sssssss}
+
+:: <{iTasks._Framework.Util.gDefault_sssssss;}> = {iTasks._Framework.Util.gDefault_sssssss}
+
+:: <{iTasks._Framework.Util.gEditMeta_sssssss;}> = {!iTasks._Framework.Util.gEditMeta_sssssss}
+
+:: <{iTasks._Framework.Util.gEditor_ssssssss;}> = {!iTasks._Framework.Util.gEditor_ssssssss}
+
+:: <{iTasks._Framework.Util.gText_ssssssss;}> = {!iTasks._Framework.Util.gText_ssssssss}
+
+:: <{iTasks._Framework.Util.gDefault_ssssssss;}> = {iTasks._Framework.Util.gDefault_ssssssss}
+
+:: <{iTasks._Framework.Util.gEditMeta_ssssssss;}> = {!iTasks._Framework.Util.gEditMeta_ssssssss}
+
+:: <{iTasks._Framework.Util.gEditor_sssssssss;}> = {!iTasks._Framework.Util.gEditor_sssssssss}
+
+:: <{iTasks._Framework.Util.gText_sssssssss;}> = {!iTasks._Framework.Util.gText_sssssssss}
+
+:: <{iTasks._Framework.Util.gDefault_sssssssss;}> = {iTasks._Framework.Util.gDefault_sssssssss}
+
+:: <{iTasks._Framework.Util.gEditMeta_sssssssss;}> = {!iTasks._Framework.Util.gEditMeta_sssssssss}
+
+:: <{iTasks._Framework.Util.gVerify_ssss;}> = {!iTasks._Framework.Util.gVerify_ssss}
+
+:: <{iTasks._Framework.Util.gVerify_sssss;}> = {!iTasks._Framework.Util.gVerify_sssss}
+
+:: <{iTasks._Framework.Util.gVerify_ssssss;}> = {!iTasks._Framework.Util.gVerify_ssssss}
+
+:: <{iTasks._Framework.Util.gVerify_sssssss;}> = {!iTasks._Framework.Util.gVerify_sssssss}
+
+:: <{iTasks._Framework.Util.gVerify_ssssssss;}> = {!iTasks._Framework.Util.gVerify_ssssssss}
+
+:: <{iTasks._Framework.Util.gVerify_sssssssss;}> = {!iTasks._Framework.Util.gVerify_sssssssss}
+
+:: <{iTasks._Framework.Util.gUpdate_ssss;}> = {!iTasks._Framework.Util.gUpdate_ssss}
+
+:: <{iTasks._Framework.Util.gUpdate_sssss;}> = {!iTasks._Framework.Util.gUpdate_sssss}
+
+:: <{iTasks._Framework.Util.gUpdate_ssssss;}> = {!iTasks._Framework.Util.gUpdate_ssssss}
+
+:: <{iTasks._Framework.Util.gUpdate_sssssss;}> = {!iTasks._Framework.Util.gUpdate_sssssss}
+
+:: <{iTasks._Framework.Util.gUpdate_ssssssss;}> = {!iTasks._Framework.Util.gUpdate_ssssssss}
+
+:: <{iTasks._Framework.Util.gUpdate_sssssssss;}> = {!iTasks._Framework.Util.gUpdate_sssssssss}
+
+:: <{iTasks._Framework.Util.gLexOrd_s;}> = {!iTasks._Framework.Util.gLexOrd_s}
+
+:: <{iTasks._Framework.Util.gLexOrd_ss;}> = {!iTasks._Framework.Util.gLexOrd_ss}
+
+:: <{iTasks._Framework.Util.gLexOrd_sss;}> = {!iTasks._Framework.Util.gLexOrd_sss}
+
+:: <{iTasks._Framework.Util.gLexOrd_ssss;}> = {!iTasks._Framework.Util.gLexOrd_ssss}
+
+:: <{iTasks._Framework.Util.gLexOrd_sssss;}> = {!iTasks._Framework.Util.gLexOrd_sssss}
+
+:: <{iTasks._Framework.Util.gLexOrd_ssssss;}> = {!iTasks._Framework.Util.gLexOrd_ssssss}
+
+:: <{iTasks._Framework.Util.gLexOrd_sssssss;}> = {!iTasks._Framework.Util.gLexOrd_sssssss}
+
+:: <{iTasks._Framework.Util.gLexOrd_ssssssss;}> = {!iTasks._Framework.Util.gLexOrd_ssssssss}
+
+:: <{iTasks._Framework.Util.gLexOrd_sssssssss;}> = {!iTasks._Framework.Util.gLexOrd_sssssssss}
+

@@ -1,0 +1,675 @@
+|| ?module? iTasks.UI.Definition
+
+
+iTasks.UI.Definition.defaultItemsOpts !items_0 = iTasks.UI.Definition._UIItemsOpts items_0 iTasks.UI.Definition.Vertical iTasks.UI.Definition.AlignLeft iTasks.UI.Definition.AlignTop Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing
+iTasks.UI.Definition.emptyUI = iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIFinal (iTasks.UI.Definition.UIViewport (iTasks.UI.Definition.defaultItemsOpts _predefined._Nil) (iTasks.UI.Definition._UIViewportOpts Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing))) _predefined._Nil
+iTasks.UI.Definition.hasSizeOpts::B !_x_0 = case _x_0 (iTasks.UI.Definition.UIViewString sOpts_1_0 vOpts_1_1 -> True) (iTasks.UI.Definition.UIViewHtml sOpts_1_0 vOpts_1_1 -> True) (iTasks.UI.Definition.UIEditNote sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditButton sOpts_1_0 eOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UIListChoice sOpts_1_0 cOpts_1_1 -> True) (iTasks.UI.Definition.UIRadioGroup sOpts_1_0 cOpts_1_1 -> True) (iTasks.UI.Definition.UICheckboxGroup sOpts_1_0 cOpts_1_1 -> True) (iTasks.UI.Definition.UIGrid sOpts_1_0 cOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UITree sOpts_1_0 cOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UIActionButton sOpts_1_0 aOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UIMenuButton sOpts_1_0 opts_1_1 -> True) (iTasks.UI.Definition.UITasklet sOpts_1_0 opts_1_1 -> True) (iTasks.UI.Definition.UIEditlet sOpts_1_0 opts_1_1 -> True) (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> True) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UIFieldSet sOpts_1_0 iOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UITabSet sOpts_1_0 opts_1_1 -> True) (_ -> False)
+iTasks.UI.Definition.anon_137 height_0 width_1 !opts_2 = update opts_2::iTasks.UI.Definition._UISizeOpts [0:Data.Maybe.Just width_1,3:Data.Maybe.Just height_0]
+iTasks.UI.Definition.setSizeOpts !f_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIViewString sOpts_1_0 vOpts_1_1 -> iTasks.UI.Definition.UIViewString (f_0 sOpts_1_0) vOpts_1_1) (iTasks.UI.Definition.UIViewHtml sOpts_1_0 vOpts_1_1 -> iTasks.UI.Definition.UIViewHtml (f_0 sOpts_1_0) vOpts_1_1) (iTasks.UI.Definition.UIEditNote sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditNote (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditButton sOpts_1_0 eOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIEditButton (f_0 sOpts_1_0) eOpts_1_1 opts_1_2) (iTasks.UI.Definition.UIListChoice sOpts_1_0 cOpts_1_1 -> iTasks.UI.Definition.UIListChoice (f_0 sOpts_1_0) cOpts_1_1) (iTasks.UI.Definition.UIRadioGroup sOpts_1_0 cOpts_1_1 -> iTasks.UI.Definition.UIRadioGroup (f_0 sOpts_1_0) cOpts_1_1) (iTasks.UI.Definition.UICheckboxGroup sOpts_1_0 cOpts_1_1 -> iTasks.UI.Definition.UICheckboxGroup (f_0 sOpts_1_0) cOpts_1_1) (iTasks.UI.Definition.UIGrid sOpts_1_0 cOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIGrid (f_0 sOpts_1_0) cOpts_1_1 opts_1_2) (iTasks.UI.Definition.UITree sOpts_1_0 cOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UITree (f_0 sOpts_1_0) cOpts_1_1 opts_1_2) (iTasks.UI.Definition.UIActionButton sOpts_1_0 aOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIActionButton (f_0 sOpts_1_0) aOpts_1_1 opts_1_2) (iTasks.UI.Definition.UIMenuButton sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UIMenuButton (f_0 sOpts_1_0) opts_1_1) (iTasks.UI.Definition.UITasklet sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UITasklet (f_0 sOpts_1_0) opts_1_1) (iTasks.UI.Definition.UIEditlet sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UIEditlet (f_0 sOpts_1_0) opts_1_1) (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> iTasks.UI.Definition.UIContainer (f_0 sOpts_1_0) iOpts_1_1) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel (f_0 sOpts_1_0) iOpts_1_1 opts_1_2) (iTasks.UI.Definition.UIFieldSet sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIFieldSet (f_0 sOpts_1_0) iOpts_1_1 opts_1_2) (iTasks.UI.Definition.UITabSet sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UITabSet (f_0 sOpts_1_0) opts_1_1) 
+iTasks.UI.Definition.hasHSizeOpts::B !_x_0 = case _x_0 (iTasks.UI.Definition.UIViewDocument sOpts_1_0 vOpts_1_1 -> True) (iTasks.UI.Definition.UIViewSlider sOpts_1_0 vOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UIViewProgress sOpts_1_0 vOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UIEditString sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditPassword sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditInt sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditDecimal sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditSlider sOpts_1_0 eOpts_1_1 opts_1_2 -> True) (iTasks.UI.Definition.UIEditDate sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditTime sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditDateTime sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIEditDocument sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIDropdown sOpts_1_0 cOpts_1_1 -> True) (iTasks.UI.Definition.UILabel sOpts_1_0 opts_1_1 -> True) (_ -> False)
+iTasks.UI.Definition.anon_138 width_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIHSizeOpts [0:Data.Maybe.Just width_0]
+iTasks.UI.Definition.setHSizeOpts !f_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIViewDocument sOpts_1_0 vOpts_1_1 -> iTasks.UI.Definition.UIViewDocument (f_0 sOpts_1_0) vOpts_1_1) (iTasks.UI.Definition.UIViewSlider sOpts_1_0 vOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIViewSlider (f_0 sOpts_1_0) vOpts_1_1 opts_1_2) (iTasks.UI.Definition.UIViewProgress sOpts_1_0 vOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIViewProgress (f_0 sOpts_1_0) vOpts_1_1 opts_1_2) (iTasks.UI.Definition.UIEditString sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditString (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditPassword sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditPassword (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditInt sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditInt (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditDecimal sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditDecimal (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditSlider sOpts_1_0 eOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIEditSlider (f_0 sOpts_1_0) eOpts_1_1 opts_1_2) (iTasks.UI.Definition.UIEditDate sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditDate (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditTime sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditTime (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditDateTime sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditDateTime (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIEditDocument sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditDocument (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIDropdown sOpts_1_0 cOpts_1_1 -> iTasks.UI.Definition.UIDropdown (f_0 sOpts_1_0) cOpts_1_1) (iTasks.UI.Definition.UILabel sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UILabel (f_0 sOpts_1_0) opts_1_1) 
+iTasks.UI.Definition.setSize !width_0 !height_1 !ctrl_2 = case (iTasks.UI.Definition.hasSizeOpts ctrl_2) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_137 height_1 width_0) ctrl_2) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_2) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_138 width_0) ctrl_2) (False -> ctrl_2) ) 
+iTasks.UI.Definition.anon_139 width_0 !opts_1 = update opts_1::iTasks.UI.Definition._UISizeOpts [0:Data.Maybe.Just width_0]
+iTasks.UI.Definition.anon_140 width_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIHSizeOpts [0:Data.Maybe.Just width_0]
+iTasks.UI.Definition.setWidth !width_0 !ctrl_1 = case (iTasks.UI.Definition.hasSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_139 width_0) ctrl_1) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_140 width_0) ctrl_1) (False -> ctrl_1) ) 
+iTasks.UI.Definition.anon_141 height_0 !opts_1 = update opts_1::iTasks.UI.Definition._UISizeOpts [3:Data.Maybe.Just height_0]
+iTasks.UI.Definition.setHeight !height_0 !ctrl_1 = case (iTasks.UI.Definition.hasSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_141 height_0) ctrl_1) (False -> ctrl_1) 
+iTasks.UI.Definition.anon_142 minHeight_0 minWidth_1 !opts_2 = update opts_2::iTasks.UI.Definition._UISizeOpts [1:Data.Maybe.Just minWidth_1,4:Data.Maybe.Just minHeight_0]
+iTasks.UI.Definition.anon_143 minWidth_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIHSizeOpts [1:Data.Maybe.Just minWidth_0]
+iTasks.UI.Definition.setMinSize !minWidth_0 !minHeight_1 !ctrl_2 = case (iTasks.UI.Definition.hasSizeOpts ctrl_2) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_142 minHeight_1 minWidth_0) ctrl_2) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_2) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_143 minWidth_0) ctrl_2) (False -> ctrl_2) ) 
+iTasks.UI.Definition.anon_144 minWidth_0 !opts_1 = update opts_1::iTasks.UI.Definition._UISizeOpts [1:Data.Maybe.Just minWidth_0]
+iTasks.UI.Definition.anon_145 minWidth_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIHSizeOpts [1:Data.Maybe.Just minWidth_0]
+iTasks.UI.Definition.setMinWidth !minWidth_0 !ctrl_1 = case (iTasks.UI.Definition.hasSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_144 minWidth_0) ctrl_1) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_145 minWidth_0) ctrl_1) (False -> ctrl_1) ) 
+iTasks.UI.Definition.anon_146 minHeight_0 !opts_1 = update opts_1::iTasks.UI.Definition._UISizeOpts [4:Data.Maybe.Just minHeight_0]
+iTasks.UI.Definition.setMinHeight !minHeight_0 !ctrl_1 = case (iTasks.UI.Definition.hasSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_146 minHeight_0) ctrl_1) (False -> ctrl_1) 
+iTasks.UI.Definition.anon_147 maxHeight_0 maxWidth_1 !opts_2 = update opts_2::iTasks.UI.Definition._UISizeOpts [2:Data.Maybe.Just maxWidth_1,5:Data.Maybe.Just maxHeight_0]
+iTasks.UI.Definition.anon_148 maxWidth_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIHSizeOpts [2:Data.Maybe.Just maxWidth_0]
+iTasks.UI.Definition.setMaxSize !maxWidth_0 !maxHeight_1 !ctrl_2 = case (iTasks.UI.Definition.hasSizeOpts ctrl_2) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_147 maxHeight_1 maxWidth_0) ctrl_2) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_2) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_148 maxWidth_0) ctrl_2) (False -> ctrl_2) ) 
+iTasks.UI.Definition.anon_149 maxWidth_0 !opts_1 = update opts_1::iTasks.UI.Definition._UISizeOpts [2:Data.Maybe.Just maxWidth_0]
+iTasks.UI.Definition.anon_150 maxWidth_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIHSizeOpts [2:Data.Maybe.Just maxWidth_0]
+iTasks.UI.Definition.setMaxWidth !maxWidth_0 !ctrl_1 = case (iTasks.UI.Definition.hasSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_149 maxWidth_0) ctrl_1) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_150 maxWidth_0) ctrl_1) (False -> ctrl_1) ) 
+iTasks.UI.Definition.anon_151 maxHeight_0 !opts_1 = update opts_1::iTasks.UI.Definition._UISizeOpts [5:Data.Maybe.Just maxHeight_0]
+iTasks.UI.Definition.setMaxHeight !maxHeight_0 !ctrl_1 = case (iTasks.UI.Definition.hasSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_151 maxHeight_0) ctrl_1) (False -> ctrl_1) 
+iTasks.UI.Definition.fill !ctrl_0 = iTasks.UI.Definition.setSize iTasks.UI.Definition.FlexSize iTasks.UI.Definition.FlexSize ctrl_0
+iTasks.UI.Definition.fillHeight !ctrl_0 = iTasks.UI.Definition.setHeight iTasks.UI.Definition.FlexSize ctrl_0
+iTasks.UI.Definition.fillWidth !ctrl_0 = iTasks.UI.Definition.setWidth iTasks.UI.Definition.FlexSize ctrl_0
+iTasks.UI.Definition.fixedHeight !size_0::I !ctrl_1 = iTasks.UI.Definition.setHeight (iTasks.UI.Definition.ExactSize size_0) ctrl_1
+iTasks.UI.Definition.fixedWidth !size_0::I !ctrl_1 = iTasks.UI.Definition.setWidth (iTasks.UI.Definition.ExactSize size_0) ctrl_1
+iTasks.UI.Definition.wrapHeight !ctrl_0 = iTasks.UI.Definition.setHeight iTasks.UI.Definition.WrapSize ctrl_0
+iTasks.UI.Definition.wrapWidth !ctrl_0 = iTasks.UI.Definition.setWidth iTasks.UI.Definition.WrapSize ctrl_0
+iTasks.UI.Definition.anon_152 margins_0 !opts_1 = update opts_1::iTasks.UI.Definition._UISizeOpts [6:Data.Maybe.Just margins_0]
+iTasks.UI.Definition.hasFSizeOpts::B !_x_0 = case _x_0 (iTasks.UI.Definition.UIViewCheckbox sOpts_1_0 vOpts_1_1 -> True) (iTasks.UI.Definition.UIEditCheckbox sOpts_1_0 eOpts_1_1 -> True) (iTasks.UI.Definition.UIIcon sOpts_1_0 opts_1_1 -> True) (_ -> False)
+iTasks.UI.Definition.anon_153 margins_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIFSizeOpts [0:Data.Maybe.Just margins_0]
+iTasks.UI.Definition.setFSizeOpts !f_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIViewCheckbox sOpts_1_0 vOpts_1_1 -> iTasks.UI.Definition.UIViewCheckbox (f_0 sOpts_1_0) vOpts_1_1) (iTasks.UI.Definition.UIEditCheckbox sOpts_1_0 eOpts_1_1 -> iTasks.UI.Definition.UIEditCheckbox (f_0 sOpts_1_0) eOpts_1_1) (iTasks.UI.Definition.UIIcon sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UIIcon (f_0 sOpts_1_0) opts_1_1) 
+iTasks.UI.Definition.anon_154 margins_0 !opts_1 = update opts_1::iTasks.UI.Definition._UIHSizeOpts [3:Data.Maybe.Just margins_0]
+iTasks.UI.Definition.setMargins !top_0::I !right_1::I !bottom_2::I !left_3::I !ctrl_4 = case (iTasks.UI.Definition.hasSizeOpts ctrl_4) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_152 (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)) ctrl_4) (False -> case (iTasks.UI.Definition.hasFSizeOpts ctrl_4) (True -> iTasks.UI.Definition.setFSizeOpts (iTasks.UI.Definition.anon_153 (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)) ctrl_4) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_4) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_154 (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)) ctrl_4) (False -> ctrl_4) ) ) 
+iTasks.UI.Definition.anon_158 !top_0::I !m_1 = update m_1::iTasks.UI.Definition._UISideSizes [0:top_0]
+iTasks.UI.Definition.anon_155 f_0 !opts_1 = case opts_1 (iTasks.UI.Definition._UISizeOpts width_1_0 minWidth_1_1 maxWidth_1_2 height_1_3 minHeight_1_4 maxHeight_1_5 margins_1_6 -> update opts_1::iTasks.UI.Definition._UISizeOpts [6:Data.Maybe.Just (f_0 (Data.Maybe.fromMaybe (iTasks.UI.Definition._UISideSizes 0 0 0 0) margins_1_6))]) 
+iTasks.UI.Definition.anon_156 f_0 !opts_1 = case opts_1 (iTasks.UI.Definition._UIFSizeOpts margins_1_0 -> update opts_1::iTasks.UI.Definition._UIFSizeOpts [0:Data.Maybe.Just (f_0 (Data.Maybe.fromMaybe (iTasks.UI.Definition._UISideSizes 0 0 0 0) margins_1_0))]) 
+iTasks.UI.Definition.anon_157 f_0 !opts_1 = case opts_1 (iTasks.UI.Definition._UIHSizeOpts width_1_0 minWidth_1_1 maxWidth_1_2 margins_1_3 -> update opts_1::iTasks.UI.Definition._UIHSizeOpts [3:Data.Maybe.Just (f_0 (Data.Maybe.fromMaybe (iTasks.UI.Definition._UISideSizes 0 0 0 0) margins_1_3))]) 
+iTasks.UI.Definition.setMargin f_0 !ctrl_1 = case (iTasks.UI.Definition.hasSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setSizeOpts (iTasks.UI.Definition.anon_155 f_0) ctrl_1) (False -> case (iTasks.UI.Definition.hasFSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setFSizeOpts (iTasks.UI.Definition.anon_156 f_0) ctrl_1) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_1) (True -> iTasks.UI.Definition.setHSizeOpts (iTasks.UI.Definition.anon_157 f_0) ctrl_1) (False -> ctrl_1) ) ) 
+iTasks.UI.Definition.setTopMargin !top_0::I !ctrl_1 = iTasks.UI.Definition.setMargin (iTasks.UI.Definition.anon_158 top_0) ctrl_1
+iTasks.UI.Definition.anon_159 !right_0::I !m_1 = update m_1::iTasks.UI.Definition._UISideSizes [1:right_0]
+iTasks.UI.Definition.setRightMargin !right_0::I !ctrl_1 = iTasks.UI.Definition.setMargin (iTasks.UI.Definition.anon_159 right_0) ctrl_1
+iTasks.UI.Definition.anon_160 !bottom_0::I !m_1 = update m_1::iTasks.UI.Definition._UISideSizes [2:bottom_0]
+iTasks.UI.Definition.setBottomMargin !bottom_0::I !ctrl_1 = iTasks.UI.Definition.setMargin (iTasks.UI.Definition.anon_160 bottom_0) ctrl_1
+iTasks.UI.Definition.anon_161 !left_0::I !m_1 = update m_1::iTasks.UI.Definition._UISideSizes [3:left_0]
+iTasks.UI.Definition.setLeftMargin !left_0::I !ctrl_1 = iTasks.UI.Definition.setMargin (iTasks.UI.Definition.anon_161 left_0) ctrl_1
+iTasks.UI.Definition.setPadding !top_0::I !right_1::I !bottom_2::I !left_3::I !_x_4 = case _x_4 (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> iTasks.UI.Definition.UIContainer sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [4:Data.Maybe.Just (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)])) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [4:Data.Maybe.Just (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)]) opts_1_2) (_ -> _x_4)
+iTasks.UI.Definition.setTitle !title_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 (update opts_1_2::iTasks.UI.Definition._UIPanelOpts [0:Data.Maybe.Just (Text.HTML.escapeStr title_0)])) (iTasks.UI.Definition.UIFieldSet sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIFieldSet sOpts_1_0 iOpts_1_1 (update opts_1_2::iTasks.UI.Definition._UIFieldSetOpts [0:Data.Maybe.Just (Text.HTML.escapeStr title_0)])) (_ -> _x_1)
+iTasks.UI.Definition.setFramed !frame_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 (update opts_1_2::iTasks.UI.Definition._UIPanelOpts [1:frame_0])) (_ -> _x_1)
+iTasks.UI.Definition.setIconCls !iconCls_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIActionButton sOpts_1_0 aOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIActionButton sOpts_1_0 aOpts_1_1 (update opts_1_2::iTasks.UI.Definition._UIButtonOpts [1:Data.Maybe.Just iconCls_0])) (iTasks.UI.Definition.UIMenuButton sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UIMenuButton sOpts_1_0 (update opts_1_1::iTasks.UI.Definition._UIMenuButtonOpts [1:Data.Maybe.Just iconCls_0])) (iTasks.UI.Definition.UIIcon sOpts_1_0 opts_1_1 -> iTasks.UI.Definition.UIIcon sOpts_1_0 (update opts_1_1::iTasks.UI.Definition._UIIconOpts [0:iconCls_0])) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 (update opts_1_2::iTasks.UI.Definition._UIPanelOpts [3:Data.Maybe.Just iconCls_0])) (_ -> _x_1)
+iTasks.UI.Definition.setBaseCls !baseCls_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> iTasks.UI.Definition.UIContainer sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [5:Data.Maybe.Just baseCls_0])) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [5:Data.Maybe.Just baseCls_0]) opts_1_2) (_ -> _x_1)
+iTasks.UI.Definition.setDirection !dir_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> iTasks.UI.Definition.UIContainer sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [1:dir_0])) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [1:dir_0]) opts_1_2) (_ -> _x_1)
+iTasks.UI.Definition.setHalign !align_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> iTasks.UI.Definition.UIContainer sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [2:align_0])) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [2:align_0]) opts_1_2) (_ -> _x_1)
+iTasks.UI.Definition.setValign !align_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> iTasks.UI.Definition.UIContainer sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [3:align_0])) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> iTasks.UI.Definition.UIPanel sOpts_1_0 (update iOpts_1_1::iTasks.UI.Definition._UIItemsOpts [3:align_0]) opts_1_2) (_ -> _x_1)
+iTasks.UI.Definition.anon_162 !_x_0 = case _x_0 (iTasks.UI.Definition._UISizeOpts width_1_0 minWidth_1_1 maxWidth_1_2 height_1_3 minHeight_1_4 maxHeight_1_5 margins_1_6 -> margins_1_6) 
+iTasks.UI.Definition.getSizeOpts !f_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIViewString sOpts_1_0 vOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIViewHtml sOpts_1_0 vOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditNote sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditButton sOpts_1_0 eOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIListChoice sOpts_1_0 cOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIRadioGroup sOpts_1_0 cOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UICheckboxGroup sOpts_1_0 cOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIGrid sOpts_1_0 cOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UITree sOpts_1_0 cOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIActionButton sOpts_1_0 aOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIMenuButton sOpts_1_0 opts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UITasklet sOpts_1_0 opts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditlet sOpts_1_0 opts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIContainer sOpts_1_0 iOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIPanel sOpts_1_0 iOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIFieldSet sOpts_1_0 iOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UITabSet sOpts_1_0 opts_1_1 -> f_0 sOpts_1_0) 
+iTasks.UI.Definition.anon_163 !_x_0 = case _x_0 (iTasks.UI.Definition._UIFSizeOpts margins_1_0 -> margins_1_0) 
+iTasks.UI.Definition.getFSizeOpts !f_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIViewCheckbox sOpts_1_0 vOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditCheckbox sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIIcon sOpts_1_0 opts_1_1 -> f_0 sOpts_1_0) 
+iTasks.UI.Definition.anon_164 !_x_0 = case _x_0 (iTasks.UI.Definition._UIHSizeOpts width_1_0 minWidth_1_1 maxWidth_1_2 margins_1_3 -> margins_1_3) 
+iTasks.UI.Definition.getHSizeOpts !f_0 !_x_1 = case _x_1 (iTasks.UI.Definition.UIViewDocument sOpts_1_0 vOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIViewSlider sOpts_1_0 vOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIViewProgress sOpts_1_0 vOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditString sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditPassword sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditInt sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditDecimal sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditSlider sOpts_1_0 eOpts_1_1 opts_1_2 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditDate sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditTime sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditDateTime sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIEditDocument sOpts_1_0 eOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UIDropdown sOpts_1_0 cOpts_1_1 -> f_0 sOpts_1_0) (iTasks.UI.Definition.UILabel sOpts_1_0 opts_1_1 -> f_0 sOpts_1_0) 
+iTasks.UI.Definition.getMargins !ctrl_0 = case (iTasks.UI.Definition.hasSizeOpts ctrl_0) (True -> iTasks.UI.Definition.getSizeOpts iTasks.UI.Definition.anon_162 ctrl_0) (False -> case (iTasks.UI.Definition.hasFSizeOpts ctrl_0) (True -> iTasks.UI.Definition.getFSizeOpts iTasks.UI.Definition.anon_163 ctrl_0) (False -> case (iTasks.UI.Definition.hasHSizeOpts ctrl_0) (True -> iTasks.UI.Definition.getHSizeOpts iTasks.UI.Definition.anon_164 ctrl_0) (False -> Data.Maybe.Nothing) ) ) 
+iTasks.UI.Definition.defaultSizeOpts = iTasks.UI.Definition._UISizeOpts Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing
+iTasks.UI.Definition.defaultHSizeOpts = iTasks.UI.Definition._UIHSizeOpts Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing
+iTasks.UI.Definition.defaultFSizeOpts = iTasks.UI.Definition._UIFSizeOpts Data.Maybe.Nothing
+iTasks.UI.Definition.defaultContainer !items_0 = iTasks.UI.Definition.UIContainer iTasks.UI.Definition.defaultSizeOpts (iTasks.UI.Definition.defaultItemsOpts items_0)
+iTasks.UI.Definition.defaultFieldSet !title_0 !items_1 = iTasks.UI.Definition.UIFieldSet iTasks.UI.Definition.defaultSizeOpts (iTasks.UI.Definition.defaultItemsOpts items_1) (iTasks.UI.Definition._UIFieldSetOpts title_0)
+iTasks.UI.Definition.defaultPanel !items_0 = iTasks.UI.Definition.UIPanel iTasks.UI.Definition.defaultSizeOpts (iTasks.UI.Definition.defaultItemsOpts items_0) (iTasks.UI.Definition._UIPanelOpts Data.Maybe.Nothing False Data.Maybe.Nothing Data.Maybe.Nothing)
+iTasks.UI.Definition.defaultWindow !items_0 = iTasks.UI.Definition.UIWindow iTasks.UI.Definition.defaultSizeOpts (iTasks.UI.Definition.defaultItemsOpts items_0) (iTasks.UI.Definition._UIWindowOpts iTasks.UI.Definition.FloatingWindow Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing Data.Maybe.Nothing)
+iTasks.UI.Definition.stringDisplay !value_0 = iTasks.UI.Definition.UIViewString iTasks.UI.Definition.defaultSizeOpts (iTasks.UI.Definition._UIViewOpts (Data.Maybe.Just (Text.HTML.escapeStr value_0)))
+iTasks.UI.Definition.uiDefAttributes !_x_0 = case _x_0 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> attributes_3_0) ) (iTasks.UI.Definition.UIBlock _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> attributes_3_0) ) ) (_ -> Data.Map.newMap)
+iTasks.UI.Definition.fst_211 !tuple_0 = select tuple_0::_Tuple2 0
+iTasks.UI.Definition.uiDefControls !_x_0 = case _x_0 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> StdList.map iTasks.UI.Definition.fst_211 controls_3_1) ) (iTasks.UI.Definition.UIBlock _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> select content_3_1::iTasks.UI.Definition._UIItemsOpts 0) ) (iTasks.UI.Definition.UIFinal _x_2_0 -> case _x_2_0 (iTasks.UI.Definition.UIViewport content_3_0 _x_3_1 -> select content_3_0::iTasks.UI.Definition._UIItemsOpts 0) ) ) (_ -> _predefined._Nil)
+<{iTasks.UI.Definition.c;326;99_165}> !g_l_0 = <{iTasks.UI.Definition.g_c1;326;103_1253}> g_l_0
+<{iTasks.UI.Definition.g_c1;326;103_1253}> !g_l_0 = case g_l_0 (_predefined._Cons c_1_0 g_t_1_1 -> _predefined._Cons (_Tuple2 c_1_0 Data.Map.newMap) (<{iTasks.UI.Definition.c;326;99_165}> g_t_1_1)) (_ -> _predefined._Nil)
+<{iTasks.UI.Definition.c;327;99_166}> !g_l_0 = <{iTasks.UI.Definition.g_c1;327;103_1254}> g_l_0
+<{iTasks.UI.Definition.g_c1;327;103_1254}> !g_l_0 = case g_l_0 (_predefined._Cons c_1_0 g_t_1_1 -> _predefined._Cons (_Tuple2 c_1_0 Data.Map.newMap) (<{iTasks.UI.Definition.c;327;99_166}> g_t_1_1)) (_ -> _predefined._Nil)
+iTasks.UI.Definition.uiDefAnnotatedControls !_x_0 = case _x_0 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> controls_3_1) ) (iTasks.UI.Definition.UIBlock _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> <{iTasks.UI.Definition.c;326;99_165}> (select content_3_1::iTasks.UI.Definition._UIItemsOpts 0)) ) (iTasks.UI.Definition.UIFinal _x_2_0 -> case _x_2_0 (iTasks.UI.Definition.UIViewport content_3_0 _x_3_1 -> <{iTasks.UI.Definition.c;327;99_166}> (select content_3_0::iTasks.UI.Definition._UIItemsOpts 0)) ) ) (_ -> _predefined._Nil)
+iTasks.UI.Definition.uiDefActions !_x_0 = case _x_0 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIEmpty _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIEmpty actions_3_0 -> actions_3_0) ) (iTasks.UI.Definition.UIBlock _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> actions_3_3) ) ) (_ -> _predefined._Nil)
+iTasks.UI.Definition.uiDefDirection !_x_0 = case _x_0 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIBlock _x_2_0 -> case _x_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> select content_3_1::iTasks.UI.Definition._UIItemsOpts 1) ) (iTasks.UI.Definition.UIFinal _x_2_0 -> case _x_2_0 (iTasks.UI.Definition.UIViewport content_3_0 _x_3_1 -> select content_3_0::iTasks.UI.Definition._UIItemsOpts 1) ) ) (_ -> iTasks.UI.Definition.Vertical)
+iTasks.UI.Definition.uiDefWindows !_x_0 = case _x_0 (iTasks.UI.Definition._UIDef content_1_0 windows_1_1 -> windows_1_1) (_ -> _predefined._Nil)
+iTasks.UI.Definition.uiDefSetAttribute key_0 value_1 !_x_2 = case _x_2 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm stack_2_0 -> case stack_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (update stack_2_0::iTasks.UI.Definition._UIForm [0:Data.Map.put (<{StdOverloaded.<;}> <{StdString.<_3}>) key_0 value_1 attributes_3_0])) windows_1_1) ) (iTasks.UI.Definition.UIBlock sub_2_0 -> case sub_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update sub_2_0::iTasks.UI.Definition._UIBlock [0:Data.Map.put (<{StdOverloaded.<;}> <{StdString.<_3}>) key_0 value_1 attributes_3_0])) windows_1_1) ) ) (_ -> _x_2)
+iTasks.UI.Definition.uiDefSetDirection direction_0 !_x_1 = case _x_1 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIBlock sub_2_0 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update sub_2_0::iTasks.UI.Definition._UIBlock [1:update (select sub_2_0::iTasks.UI.Definition._UIBlock 1)::iTasks.UI.Definition._UIItemsOpts [1:direction_0]])) windows_1_1) ) (_ -> _x_1)
+iTasks.UI.Definition.uiDefSetHalign align_0 !_x_1 = case _x_1 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIBlock sub_2_0 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update sub_2_0::iTasks.UI.Definition._UIBlock [1:update (select sub_2_0::iTasks.UI.Definition._UIBlock 1)::iTasks.UI.Definition._UIItemsOpts [2:align_0]])) windows_1_1) ) (_ -> _x_1)
+iTasks.UI.Definition.uiDefSetValign align_0 !_x_1 = case _x_1 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIBlock sub_2_0 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update sub_2_0::iTasks.UI.Definition._UIBlock [1:update (select sub_2_0::iTasks.UI.Definition._UIBlock 1)::iTasks.UI.Definition._UIItemsOpts [3:align_0]])) windows_1_1) ) (_ -> _x_1)
+iTasks.UI.Definition.uiDefSetPadding top_0::I right_1::I bottom_2::I left_3::I !_x_4 = case _x_4 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIBlock sub_2_0 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update sub_2_0::iTasks.UI.Definition._UIBlock [1:update (select sub_2_0::iTasks.UI.Definition._UIBlock 1)::iTasks.UI.Definition._UIItemsOpts [4:Data.Maybe.Just (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)]])) windows_1_1) ) (_ -> _x_4)
+iTasks.UI.Definition.uiDefSetMargins top_0::I right_1::I bottom_2::I left_3::I !_x_4 = case _x_4 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm stack_2_0 -> case stack_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (update stack_2_0::iTasks.UI.Definition._UIForm [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [6:Data.Maybe.Just (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)]])) windows_1_1) ) (iTasks.UI.Definition.UIBlock ui_2_0 -> case ui_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update ui_2_0::iTasks.UI.Definition._UIBlock [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [6:Data.Maybe.Just (iTasks.UI.Definition._UISideSizes top_0 right_1 bottom_2 left_3)]])) windows_1_1) ) ) (_ -> _x_4)
+iTasks.UI.Definition.uiDefSetBaseCls baseCls_0 !_x_1 = case _x_1 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIBlock sub_2_0 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update sub_2_0::iTasks.UI.Definition._UIBlock [1:update (select sub_2_0::iTasks.UI.Definition._UIBlock 1)::iTasks.UI.Definition._UIItemsOpts [5:Data.Maybe.Just baseCls_0]])) windows_1_1) ) (_ -> _x_1)
+iTasks.UI.Definition.uiDefSetHeight height_0 !_x_1 = case _x_1 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm stack_2_0 -> case stack_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (update stack_2_0::iTasks.UI.Definition._UIForm [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [3:Data.Maybe.Just height_0]])) windows_1_1) ) (iTasks.UI.Definition.UIBlock ui_2_0 -> case ui_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update ui_2_0::iTasks.UI.Definition._UIBlock [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [3:Data.Maybe.Just height_0]])) windows_1_1) ) ) (_ -> _x_1)
+iTasks.UI.Definition.uiDefSetWidth width_0 !_x_1 = case _x_1 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm stack_2_0 -> case stack_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (update stack_2_0::iTasks.UI.Definition._UIForm [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [0:Data.Maybe.Just width_0]])) windows_1_1) ) (iTasks.UI.Definition.UIBlock ui_2_0 -> case ui_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update ui_2_0::iTasks.UI.Definition._UIBlock [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [0:Data.Maybe.Just width_0]])) windows_1_1) ) ) (_ -> _x_1)
+iTasks.UI.Definition.uiDefSetSize width_0 height_1 !_x_2 = case _x_2 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIForm stack_2_0 -> case stack_2_0 (iTasks.UI.Definition._UIForm attributes_3_0 controls_3_1 size_3_2 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIForm (update stack_2_0::iTasks.UI.Definition._UIForm [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [0:Data.Maybe.Just width_0,3:Data.Maybe.Just height_1]])) windows_1_1) ) (iTasks.UI.Definition.UIBlock ui_2_0 -> case ui_2_0 (iTasks.UI.Definition._UIBlock attributes_3_0 content_3_1 size_3_2 actions_3_3 hotkeys_3_4 -> iTasks.UI.Definition._UIDef (iTasks.UI.Definition.UIBlock (update ui_2_0::iTasks.UI.Definition._UIBlock [2:update size_3_2::iTasks.UI.Definition._UISizeOpts [0:Data.Maybe.Just width_0,3:Data.Maybe.Just height_1]])) windows_1_1) ) ) (_ -> _x_2)
+iTasks.UI.Definition.anon_171 !<{_vJSONEncode*_0}> k_1 = _predefined._Cons (_Tuple2 "hotkeys" (Text.JSON.toJSONInField <{_vJSONEncode*_0}> k_1)) _predefined._Nil
+iTasks.UI.Definition.anon_170 t_0 = _predefined._Cons (_Tuple2 "title" (Text.JSON.JSONString t_0)) _predefined._Nil
+iTasks.UI.Definition.toGenericUIActionOpts_235 !x_0 = case x_0 (iTasks.UI.Definition._UIActionOpts x11_1_0 x12_1_1 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1))) 
+iTasks.UI.Definition.JSONEncode_FIELD_401 !fx_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.FIELD x_1_0 -> fx_0 True x_1_0) 
+<{iTasks.UI.Definition.++_403}> !_x_0 !list_1 = case _x_0 (_predefined._Cons hd_1_0 tl_1_1 -> _predefined._Cons hd_1_0 (<{iTasks.UI.Definition.++_403}> tl_1_1 list_1)) (_ -> list_1)
+iTasks.UI.Definition.JSONEncode_PAIR_402 !fx_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (fx_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.fli__UIActionOpts_230 = _predefined._Cons "taskId" (_predefined._Cons "actionId" _predefined._Nil)
+iTasks.UI.Definition.isNotNull_400::B !_x_0 = case _x_0 (Text.JSON.JSONNull -> False) (_ -> True)
+<{iTasks.UI.Definition.c;86;47_399}> !g_l_0 g_l_1 = <{iTasks.UI.Definition.g_c1;86;33_1256}> g_l_0 g_l_1
+<{iTasks.UI.Definition.g_c1;86;33_1256}> !g_l_0 g_l_1 = case g_l_0 (_predefined._Cons o_1_0 g_t_1_1 -> <{iTasks.UI.Definition.g_c1;86;54_1255}> g_l_1 o_1_0 g_t_1_1) (_ -> _predefined._Nil)
+<{iTasks.UI.Definition.g_c1;86;54_1255}> !g_l_0 o_1 g_t_2 = case g_l_0 (_predefined._Cons name_1_0 g_t_1_1 -> case (iTasks.UI.Definition.isNotNull_400 o_1) (True -> _predefined._Cons (_Tuple2 name_1_0 o_1) (<{iTasks.UI.Definition.c;86;47_399}> g_t_2 g_t_1_1)) (False -> <{iTasks.UI.Definition.c;86;47_399}> g_t_2 g_t_1_1) ) (_ -> _predefined._Nil)
+iTasks.UI.Definition.JSONEncode_RECORD_398 grd_fields_0 fx_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (fx_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_FIELD_1125 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode__String_14 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1126 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1125 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1127 grd_fields_0 fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1126 fy_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1129 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1125 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1125 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1128 grd_fields_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1129 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIActionOpts_180 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1128 iTasks.UI.Definition.fli__UIActionOpts_230 x1_0 (iTasks.UI.Definition.toGenericUIActionOpts_235 x2_1)
+iTasks.UI.Definition.JSONEncode_s_617 !_vJSONEncode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONEncode__List_16 (select _vJSONEncode_s_0::<{iTasks.UI.Definition.JSONEncode_s;}> 0) x1_1 x2_2
+iTasks.UI.Definition.JSONEncode_s_619 !_vJSONEncode_s_0 !_vJSONEncode_s_1 !x1_2::B !x2_3 = Text.JSON.JSONEncode__Tuple2_17 (select _vJSONEncode_s_0::<{iTasks.UI.Definition.JSONEncode_s;}> 0) (select _vJSONEncode_s_1::<{iTasks.UI.Definition.JSONEncode_s;}> 0) x1_2 x2_3
+iTasks.UI.Definition.JSONEncode_s_1130 !_vJSONEncode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONEncode__Tuple2_17 iTasks.API.Core.Types.JSONEncode_Hotkey_543 (select _vJSONEncode_s_0::<{iTasks.UI.Definition.JSONEncode_s;}> 0) x1_1 x2_2
+iTasks.UI.Definition.JSONEncode_s_1133 !x1_0::B !x2_1 = Text.JSON.JSONEncode__Tuple2_17 iTasks.API.Core.Types.JSONEncode_Hotkey_543 iTasks.UI.Definition.JSONEncode_UIActionOpts_180 x1_0 x2_1
+iTasks.UI.Definition.JSONEncode_s_1131 !x1_0::B !x2_1 = Text.JSON.JSONEncode__List_16 iTasks.UI.Definition.JSONEncode_s_1133 x1_0 x2_1
+iTasks.UI.Definition.anon_1132 k_0 = _predefined._Cons (_Tuple2 "hotkeys" (Text.JSON.toJSONInField (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_s_1131) k_0)) _predefined._Nil
+iTasks.UI.Definition.encViewportOpts !_x_0 = case _x_0 (iTasks.UI.Definition._UIViewportOpts title_1_0 menu_1_1 hotkeys_1_2 -> Text.JSON.JSONObject (<{StdList.++}> (_predefined._Cons (_Tuple2 "xtype" (Text.JSON.JSONString "itwc_viewport")) _predefined._Nil) (<{StdList.++}> (Data.Maybe.maybe _predefined._Nil iTasks.UI.Definition.anon_170 title_1_0) (Data.Maybe.maybe _predefined._Nil iTasks.UI.Definition.anon_1132 hotkeys_1_2)))) 
+<{iTasks.UI.Definition.c;529;34_168}> !g_l_0 = <{iTasks.UI.Definition.g_c1;529;55_1258}> g_l_0
+<{iTasks.UI.Definition.g_c1;529;55_1258}> !g_l_0 = case g_l_0 (_predefined._Cons g_h_1_0 g_t_1_1 -> <{iTasks.UI.Definition.g_c2;529;55_1257}> g_h_1_0 g_t_1_1) (_ -> _predefined._Nil)
+<{iTasks.UI.Definition.g_c2;529;55_1257}> !g_h_0 g_t_1 = case g_h_0 (Text.JSON.JSONObject fields_1_0 -> _predefined._Cons fields_1_0 (<{iTasks.UI.Definition.c;529;34_168}> g_t_1)) (_ -> <{iTasks.UI.Definition.c;529;34_168}> g_t_1)
+iTasks.UI.Definition.enc xtype_0 opts_1 = Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "xtype" (Text.JSON.JSONString xtype_0)) (StdList.flatten (<{iTasks.UI.Definition.c;529;34_168}> opts_1)))
+iTasks.UI.Definition.toGenericUIItemsOpts_248 !x_0 = case x_0 (iTasks.UI.Definition._UIItemsOpts x11_1_0 x12_1_1 x13_1_2 x14_1_3 x15_1_4 x16_1_5 x17_1_6 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.PAIR (StdGeneric.FIELD x12_1_1) (StdGeneric.FIELD x13_1_2))) (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x14_1_3) (StdGeneric.FIELD x15_1_4)) (StdGeneric.PAIR (StdGeneric.FIELD x16_1_5) (StdGeneric.FIELD x17_1_6))))) 
+iTasks.UI.Definition.fli__UIItemsOpts_238 = _predefined._Cons "items" (_predefined._Cons "direction" (_predefined._Cons "halign" (_predefined._Cons "valign" (_predefined._Cons "padding" (_predefined._Cons "baseCls" (_predefined._Cons "bodyCls" _predefined._Nil))))))
+iTasks.UI.Definition.JSONEncode_UISideSizes_200 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition._UISideSizes top_1_0 right_1_1 bottom_1_2 left_1_3 -> _predefined._Cons (Text.JSON.JSONString (<{StdString.+++_11}> (StdString.toString_5 top_1_0) (<{StdString.+++_11}> " " (<{StdString.+++_11}> (StdString.toString_5 right_1_1) (<{StdString.+++_11}> " " (<{StdString.+++_11}> (StdString.toString_5 bottom_1_2) (<{StdString.+++_11}> " " (StdString.toString_5 left_1_3)))))))) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIVAlign_203 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.AlignTop -> _predefined._Cons (Text.JSON.JSONString "top") _predefined._Nil) (iTasks.UI.Definition.AlignMiddle -> _predefined._Cons (Text.JSON.JSONString "middle") _predefined._Nil) (iTasks.UI.Definition.AlignBottom -> _predefined._Cons (Text.JSON.JSONString "bottom") _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIHAlign_204 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.AlignLeft -> _predefined._Cons (Text.JSON.JSONString "left") _predefined._Nil) (iTasks.UI.Definition.AlignCenter -> _predefined._Cons (Text.JSON.JSONString "center") _predefined._Nil) (iTasks.UI.Definition.AlignRight -> _predefined._Cons (Text.JSON.JSONString "right") _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIDirection_205 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.Vertical -> _predefined._Cons (Text.JSON.JSONString "vertical") _predefined._Nil) (iTasks.UI.Definition.Horizontal -> _predefined._Cons (Text.JSON.JSONString "horizontal") _predefined._Nil) 
+iTasks.UI.Definition.encodeUIValue_70 !_vencodeU_0 !_x_1 = case _x_1 (Data.Maybe.Nothing -> Text.JSON.JSONNull) (Data.Maybe.Just a_1_0 -> select _vencodeU_0::<{iTasks.UI.Definition.encodeUIValue;}> 0 a_1_0) 
+iTasks.UI.Definition.encViewOpts !_vencodeU_0 !_x_1 = case _x_1 (iTasks.UI.Definition._UIViewOpts value_1_0 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "value" (iTasks.UI.Definition.encodeUIValue_70 _vencodeU_0 value_1_0)) _predefined._Nil)) 
+iTasks.UI.Definition.anon_169 v_0 = _predefined._Cons (_Tuple2 "value" v_0) _predefined._Nil
+iTasks.UI.Definition.encEditOpts !_x_0 = case _x_0 (iTasks.UI.Definition._UIEditOpts task_1_0 editor_1_1 value_1_2 -> Text.JSON.JSONObject (<{StdList.++}> (_predefined._Cons (_Tuple2 "taskId" (Text.JSON.JSONString task_1_0)) (_predefined._Cons (_Tuple2 "editorId" (Text.JSON.JSONString editor_1_1)) _predefined._Nil)) (Data.Maybe.maybe _predefined._Nil iTasks.UI.Definition.anon_169 value_1_2))) 
+iTasks.UI.Definition.toGenericUITabOpts_359 !x_0 = case x_0 (iTasks.UI.Definition._UITabOpts x11_1_0 x12_1_1 x13_1_2 x14_1_3 x15_1_4 x16_1_5 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.PAIR (StdGeneric.FIELD x12_1_1) (StdGeneric.FIELD x13_1_2))) (StdGeneric.PAIR (StdGeneric.FIELD x14_1_3) (StdGeneric.PAIR (StdGeneric.FIELD x15_1_4) (StdGeneric.FIELD x16_1_5))))) 
+iTasks.UI.Definition.fli__UITabOpts_350 = _predefined._Cons "title" (_predefined._Cons "iconCls" (_predefined._Cons "menu" (_predefined._Cons "hotkeys" (_predefined._Cons "focusTaskId" (_predefined._Cons "closeTaskId" _predefined._Nil)))))
+<{iTasks.UI.Definition.c;449;60_167}> !g_l_0 = <{iTasks.UI.Definition.g_c1;449;79_1260}> g_l_0
+<{iTasks.UI.Definition.g_c1;449;79_1260}> !g_l_0 = case g_l_0 (_predefined._Cons g_h_1_0 g_t_1_1 -> <{iTasks.UI.Definition.g_c2;449;79_1259}> g_h_1_0 g_t_1_1) (_ -> _predefined._Nil)
+<{iTasks.UI.Definition.g_c2;449;79_1259}> !g_h_0 g_t_1 = case g_h_0 (_Tuple2 name_1_0 _x_1_1 -> case (StdBool.not (<{StdString.==_2}> name_1_0 "value")) (True -> _predefined._Cons g_h_0 (<{iTasks.UI.Definition.c;449;60_167}> g_t_1)) ) (_ -> <{iTasks.UI.Definition.c;449;60_167}> g_t_1)
+iTasks.UI.Definition.removeEditletValue !_x_0 = case _x_0 (Text.JSON.JSONObject fields_1_0 -> Text.JSON.JSONObject (<{iTasks.UI.Definition.c;449;60_167}> fields_1_0)) 
+iTasks.UI.Definition.encodeUIValue_60 !v_0 = Text.JSON.JSONString v_0
+iTasks.UI.Definition.encodeUIValue_61 !v_0::I = Text.JSON.JSONInt v_0
+iTasks.UI.Definition.encodeUIValue_63 !v_0::B = Text.JSON.JSONBool v_0
+iTasks.UI.Definition.encodeUIValue_64 !v_0 = Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode_Document_153) v_0
+iTasks.UI.Definition.encodeUIValue_67 !v_0 = Text.JSON.JSONString (Text.HTML.toString_7 v_0)
+iTasks.UI.Definition.encodeUIValue_68 !_x_0 = case _x_0 (iTasks.API.Core.Types.ProgressUndetermined -> Text.JSON.JSONString "undetermined") (iTasks.API.Core.Types.ProgressRatio ratio_1_0 -> Text.JSON.JSONReal ratio_1_0) 
+iTasks.UI.Definition.toGenericUISliderOpts_257 !x_0 = case x_0 (iTasks.UI.Definition._UISliderOpts x11_1_0 x12_1_1 x13_1_2 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.PAIR (StdGeneric.FIELD x12_1_1) (StdGeneric.FIELD x13_1_2)))) 
+iTasks.UI.Definition.fli__UISliderOpts_251 = _predefined._Cons "minValue" (_predefined._Cons "maxValue" (_predefined._Cons "value" _predefined._Nil))
+iTasks.UI.Definition.JSONEncode_FIELD_1134 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode_Int_10 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1135 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1134 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1136 grd_fields_0 fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1135 fy_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1137 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1134 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1134 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1139 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1134 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1137 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1138 grd_fields_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1139 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UISliderOpts_182 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1138 iTasks.UI.Definition.fli__UISliderOpts_251 x1_0 (iTasks.UI.Definition.toGenericUISliderOpts_257 x2_1)
+iTasks.UI.Definition.toGenericUIProgressOpts_264 !x_0 = case x_0 (iTasks.UI.Definition._UIProgressOpts x11_1_0 -> StdGeneric.RECORD (StdGeneric.FIELD x11_1_0)) 
+iTasks.UI.Definition.fli__UIProgressOpts_260 = _predefined._Cons "text" _predefined._Nil
+iTasks.UI.Definition.JSONEncode_RECORD_1140 grd_fields_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_FIELD_1125 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIProgressOpts_183 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1140 iTasks.UI.Definition.fli__UIProgressOpts_260 x1_0 (iTasks.UI.Definition.toGenericUIProgressOpts_264 x2_1)
+iTasks.UI.Definition.toGenericUIGridOpts_272 !x_0 = case x_0 (iTasks.UI.Definition._UIGridOpts x11_1_0 x12_1_1 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1))) 
+iTasks.UI.Definition.fli__UIGridOpts_267 = _predefined._Cons "columns" (_predefined._Cons "doubleClickAction" _predefined._Nil)
+iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode_Maybe_26 _x_0 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_FIELD_1141 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode__List_16 _x_0 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1143 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1141 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1144 grd_fields_0 _x_1 fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1143 _x_1 fy_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1146 _x_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1141 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1145 grd_fields_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1146 _x_1 _x_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIGridOpts_184 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1145 iTasks.UI.Definition.fli__UIGridOpts_267 Text.JSON.JSONEncode__String_14 (Text.JSON.JSONEncode__Tuple2_17 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14) x1_0 (iTasks.UI.Definition.toGenericUIGridOpts_272 x2_1)
+iTasks.UI.Definition.toGenericUITreeOpts_279 !x_0 = case x_0 (iTasks.UI.Definition._UITreeOpts x11_1_0 -> StdGeneric.RECORD (StdGeneric.FIELD x11_1_0)) 
+iTasks.UI.Definition.fli__UITreeOpts_275 = _predefined._Cons "doubleClickAction" _predefined._Nil
+iTasks.UI.Definition.JSONEncode_RECORD_1147 grd_fields_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UITreeOpts_185 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1147 iTasks.UI.Definition.fli__UITreeOpts_275 (Text.JSON.JSONEncode__Tuple2_17 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14) x1_0 (iTasks.UI.Definition.toGenericUITreeOpts_279 x2_1)
+iTasks.UI.Definition.toGenericUIButtonOpts_288 !x_0 = case x_0 (iTasks.UI.Definition._UIButtonOpts x11_1_0 x12_1_1 x13_1_2 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.PAIR (StdGeneric.FIELD x12_1_1) (StdGeneric.FIELD x13_1_2)))) 
+iTasks.UI.Definition.fli__UIButtonOpts_282 = _predefined._Cons "text" (_predefined._Cons "iconCls" (_predefined._Cons "disabled" _predefined._Nil))
+iTasks.UI.Definition.JSONEncode_FIELD_1148 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode_Bool_13 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1149 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1150 grd_fields_0 _x_1 fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1149 _x_1 fy_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1151 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1148 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1153 _x_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1151 _x_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1152 grd_fields_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1153 _x_1 _x_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIButtonOpts_186 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1152 iTasks.UI.Definition.fli__UIButtonOpts_282 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUIButtonOpts_288 x2_1)
+iTasks.UI.Definition.toGenericUITreeNode_300 !x_0 = case x_0 (iTasks.UI.Definition._UITreeNode x11_1_0 x12_1_1 x13_1_2 x14_1_3 x15_1_4 x16_1_5 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.PAIR (StdGeneric.FIELD x12_1_1) (StdGeneric.FIELD x13_1_2))) (StdGeneric.PAIR (StdGeneric.FIELD x14_1_3) (StdGeneric.PAIR (StdGeneric.FIELD x15_1_4) (StdGeneric.FIELD x16_1_5))))) 
+iTasks.UI.Definition.fli__UITreeNode_291 = _predefined._Cons "text" (_predefined._Cons "iconCls" (_predefined._Cons "children" (_predefined._Cons "leaf" (_predefined._Cons "expanded" (_predefined._Cons "value" _predefined._Nil)))))
+iTasks.UI.Definition.JSONEncode_PAIR_1156 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1148 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1155 _x_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1125 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_0 _x_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1157 _x_0 _x_1 !fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1155 _x_0 _x_1 False x_1_0) (fy_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1158 grd_fields_0 _x_1 _x_2 fy_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1157 _x_1 _x_2 fy_3 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1159 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1148 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1134 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1160 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1148 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1159 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1162 _x_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1155 _x_0 _x_1 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1160 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1161 grd_fields_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1162 _x_1 _x_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UITreeNode_187 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1161 iTasks.UI.Definition.fli__UITreeNode_291 Text.JSON.JSONEncode__String_14 (Text.JSON.JSONEncode__List_16 iTasks.UI.Definition.JSONEncode_UITreeNode_187) x1_0 (iTasks.UI.Definition.toGenericUITreeNode_300 x2_1)
+iTasks.UI.Definition.toGenericUILabelOpts_307 !x_0 = case x_0 (iTasks.UI.Definition._UILabelOpts x11_1_0 -> StdGeneric.RECORD (StdGeneric.FIELD x11_1_0)) 
+iTasks.UI.Definition.fli__UILabelOpts_303 = _predefined._Cons "text" _predefined._Nil
+iTasks.UI.Definition.JSONEncode_UILabelOpts_188 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1140 iTasks.UI.Definition.fli__UILabelOpts_303 x1_0 (iTasks.UI.Definition.toGenericUILabelOpts_307 x2_1)
+iTasks.UI.Definition.toGenericUIIconOpts_315 !x_0 = case x_0 (iTasks.UI.Definition._UIIconOpts x11_1_0 x12_1_1 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1))) 
+iTasks.UI.Definition.fli__UIIconOpts_310 = _predefined._Cons "iconCls" (_predefined._Cons "tooltip" _predefined._Nil)
+iTasks.UI.Definition.JSONEncode_PAIR_1163 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1125 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1164 grd_fields_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1163 _x_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIIconOpts_189 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1164 iTasks.UI.Definition.fli__UIIconOpts_310 Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUIIconOpts_315 x2_1)
+iTasks.UI.Definition.toGenericUIPanelOpts_325 !x_0 = case x_0 (iTasks.UI.Definition._UIPanelOpts x11_1_0 x12_1_1 x13_1_2 x14_1_3 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1)) (StdGeneric.PAIR (StdGeneric.FIELD x13_1_2) (StdGeneric.FIELD x14_1_3)))) 
+iTasks.UI.Definition.fli__UIPanelOpts_318 = _predefined._Cons "title" (_predefined._Cons "frame" (_predefined._Cons "hotkeys" (_predefined._Cons "iconCls" _predefined._Nil)))
+iTasks.UI.Definition.JSONEncode_PAIR_1165 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1151 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1166 grd_fields_0 _x_1 fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1165 _x_1 fy_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1168 _x_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1151 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_1 _x_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1167 grd_fields_0 _x_1 _x_2 _x_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1168 _x_1 _x_2 _x_3 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIPanelOpts_190 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1167 iTasks.UI.Definition.fli__UIPanelOpts_318 Text.JSON.JSONEncode__String_14 (Text.JSON.JSONEncode__List_16 (Text.JSON.JSONEncode__Tuple2_17 iTasks.API.Core.Types.JSONEncode_Hotkey_543 iTasks.UI.Definition.JSONEncode_UIActionOpts_180)) Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUIPanelOpts_325 x2_1)
+iTasks.UI.Definition.toGenericUIFieldSetOpts_332 !x_0 = case x_0 (iTasks.UI.Definition._UIFieldSetOpts x11_1_0 -> StdGeneric.RECORD (StdGeneric.FIELD x11_1_0)) 
+iTasks.UI.Definition.fli__UIFieldSetOpts_328 = _predefined._Cons "title" _predefined._Nil
+iTasks.UI.Definition.JSONEncode_UIFieldSetOpts_191 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1147 iTasks.UI.Definition.fli__UIFieldSetOpts_328 Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUIFieldSetOpts_332 x2_1)
+iTasks.UI.Definition.toGenericUITaskletOpts_374 !x_0 = case x_0 (iTasks.UI.Definition._UITaskletOpts x11_1_0 x12_1_1 x13_1_2 x14_1_3 x15_1_4 x16_1_5 x17_1_6 x18_1_7 x19_1_8 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1)) (StdGeneric.PAIR (StdGeneric.FIELD x13_1_2) (StdGeneric.FIELD x14_1_3))) (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x15_1_4) (StdGeneric.FIELD x16_1_5)) (StdGeneric.PAIR (StdGeneric.FIELD x17_1_6) (StdGeneric.PAIR (StdGeneric.FIELD x18_1_7) (StdGeneric.FIELD x19_1_8)))))) 
+iTasks.UI.Definition.fli__UITaskletOpts_362 = _predefined._Cons "taskId" (_predefined._Cons "html" (_predefined._Cons "st" (_predefined._Cons "script" (_predefined._Cons "events" (_predefined._Cons "interfaceFuncs" (_predefined._Cons "resultFunc" (_predefined._Cons "instanceNo" (_predefined._Cons "controllerFunc" _predefined._Nil))))))))
+iTasks.UI.Definition.JSONEncode_PAIR_1170 _x_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_1 _x_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1171 _x_0 _x_1 !fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_0 _x_1 False x_1_0) (fy_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1169 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1163 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1172 _x_0 !fy_1 !fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1169 _x_0 fy_1 False x_1_0) (fy_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1173 grd_fields_0 _x_1 fy_2 fy_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1172 _x_1 fy_2 fy_3 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1174 _x_0 _x_1 _x_2 _x_3 _x_4 !_x_5::B !_x_6 = case _x_6 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_0 _x_1 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1170 _x_2 _x_3 _x_4 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1177 _x_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1163 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_1 _x_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1176 _x_0 _x_1 _x_2 !fy_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1177 _x_0 _x_1 _x_2 False x_1_0) (fy_3 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1175 grd_fields_0 _x_1 _x_2 _x_3 fy_4 !_x_5::B !_x_6 = case _x_6 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1176 _x_1 _x_2 _x_3 fy_4 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1179 _x_0 _x_1 _x_2 _x_3 _x_4 _x_5 _x_6 _x_7 !_x_8::B !_x_9 = case _x_9 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1177 _x_0 _x_1 _x_2 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1174 _x_3 _x_4 _x_5 _x_6 _x_7 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1178 grd_fields_0 _x_1 _x_2 _x_3 _x_4 _x_5 _x_6 _x_7 _x_8 !_x_9::B !_x_10 = case _x_10 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1179 _x_1 _x_2 _x_3 _x_4 _x_5 _x_6 _x_7 _x_8 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UITaskletOpts_194 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1178 iTasks.UI.Definition.fli__UITaskletOpts_362 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 (Text.JSON.JSONEncode__List_16 (Text.JSON.JSONEncode__Tuple3_18 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14)) (Text.JSON.JSONEncode__List_16 (Text.JSON.JSONEncode__Tuple2_17 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14)) Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUITaskletOpts_374 x2_1)
+iTasks.UI.Definition.toGenericUIEditletOpts_388 !x_0 = case x_0 (iTasks.UI.Definition._UIEditletOpts x11_1_0 x12_1_1 x13_1_2 x14_1_3 x15_1_4 x16_1_5 x17_1_6 x18_1_7 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1)) (StdGeneric.PAIR (StdGeneric.FIELD x13_1_2) (StdGeneric.FIELD x14_1_3))) (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x15_1_4) (StdGeneric.FIELD x16_1_5)) (StdGeneric.PAIR (StdGeneric.FIELD x17_1_6) (StdGeneric.FIELD x18_1_7))))) 
+iTasks.UI.Definition.fli__UIEditletOpts_377 = _predefined._Cons "taskId" (_predefined._Cons "editorId" (_predefined._Cons "value" (_predefined._Cons "html" (_predefined._Cons "script" (_predefined._Cons "initClient" (_predefined._Cons "initDiff" (_predefined._Cons "appDiff" _predefined._Nil)))))))
+iTasks.UI.Definition.JSONEncode_PAIR_1182 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1129 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_FIELD_1180 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode_JSONNode_27 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1181 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1180 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1183 !fy_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1182 fy_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1184 grd_fields_0 fy_1 fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1183 fy_1 fy_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1186 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1129 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1129 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1185 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1180 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1125 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1189 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1129 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1185 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1188 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1189 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1187 grd_fields_0 fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1188 fy_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1191 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1189 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1186 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1190 grd_fields_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1191 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIEditletOpts_195 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1190 iTasks.UI.Definition.fli__UIEditletOpts_377 x1_0 (iTasks.UI.Definition.toGenericUIEditletOpts_388 x2_1)
+iTasks.UI.Definition.toGenericUIEmbeddingOpts_396 !x_0 = case x_0 (iTasks.UI.Definition._UIEmbeddingOpts x11_1_0 x12_1_1 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1))) 
+iTasks.UI.Definition.fli__UIEmbeddingOpts_391 = _predefined._Cons "instanceNo" (_predefined._Cons "instanceKey" _predefined._Nil)
+iTasks.UI.Definition.JSONEncode_PAIR_1192 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1134 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1125 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1193 grd_fields_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1192 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIEmbeddingOpts_196 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1193 iTasks.UI.Definition.fli__UIEmbeddingOpts_391 x1_0 (iTasks.UI.Definition.toGenericUIEmbeddingOpts_396 x2_1)
+iTasks.UI.Definition.toJSONField !_vJSONEncode_s_0 x_1 = <{iTasks.UI.Definition._c;463;17_1261}> (select _vJSONEncode_s_0::<{iTasks.UI.Definition.JSONEncode_s;}> 0 True x_1)
+<{iTasks.UI.Definition._c;463;17_1261}> !_x_0 = case _x_0 (_predefined._Cons node_1_0 _x_1_1 -> case _x_1_1 (_predefined._Nil -> node_1_0) ) (_ -> Text.JSON.JSONError)
+<{iTasks.UI.Definition.c;468;26_173}> !g_l_0 = <{iTasks.UI.Definition.g_c1;468;35_1262}> g_l_0
+<{iTasks.UI.Definition.g_c1;468;35_1262}> !g_l_0 = case g_l_0 (_predefined._Cons field_1_0 g_t_1_1 -> case (<{GenEq.=!=}> (<{iTasks.UI.Definition.gEq_s;}> iTasks.API.Core.Types.gEq_JSONNode_682) (select field_1_0::_Tuple2 1) Text.JSON.JSONNull) (True -> _predefined._Cons field_1_0 (<{iTasks.UI.Definition.c;468;26_173}> g_t_1_1)) (False -> <{iTasks.UI.Definition.c;468;26_173}> g_t_1_1) ) (_ -> _predefined._Nil)
+iTasks.UI.Definition.JSONEncode_UISize_201 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.ExactSize s_1_0 -> _predefined._Cons (Text.JSON.JSONInt s_1_0) _predefined._Nil) (iTasks.UI.Definition.WrapSize -> _predefined._Cons (Text.JSON.JSONString "wrap") _predefined._Nil) (iTasks.UI.Definition.FlexSize -> _predefined._Cons (Text.JSON.JSONString "flex") _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIBound_202 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.ExactBound s_1_0 -> _predefined._Cons (Text.JSON.JSONInt s_1_0) _predefined._Nil) (iTasks.UI.Definition.WrapBound -> _predefined._Cons (Text.JSON.JSONString "wrap") _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_s_655 !_vJSONEncode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONEncode_Maybe_26 (select _vJSONEncode_s_0::<{iTasks.UI.Definition.JSONEncode_s;}> 0) x1_1 x2_2
+iTasks.UI.Definition.JSONEncode_s_1198 !x1_0::B !x2_1 = Text.JSON.JSONEncode_Maybe_26 iTasks.UI.Definition.JSONEncode_UISideSizes_200 x1_0 x2_1
+iTasks.UI.Definition.toJSONField_1199 !x_0 = <{iTasks.UI.Definition._c;463;17_1263}> (iTasks.UI.Definition.JSONEncode_s_1198 True x_0)
+<{iTasks.UI.Definition._c;463;17_1263}> !_x_0 = case _x_0 (_predefined._Cons node_1_0 _x_1_1 -> case _x_1_1 (_predefined._Nil -> node_1_0) ) (_ -> Text.JSON.JSONError)
+iTasks.UI.Definition.JSONEncode_s_1196 !x1_0::B !x2_1 = Text.JSON.JSONEncode_Maybe_26 iTasks.UI.Definition.JSONEncode_UIBound_202 x1_0 x2_1
+iTasks.UI.Definition.toJSONField_1197 !x_0 = <{iTasks.UI.Definition._c;463;17_1264}> (iTasks.UI.Definition.JSONEncode_s_1196 True x_0)
+<{iTasks.UI.Definition._c;463;17_1264}> !_x_0 = case _x_0 (_predefined._Cons node_1_0 _x_1_1 -> case _x_1_1 (_predefined._Nil -> node_1_0) ) (_ -> Text.JSON.JSONError)
+iTasks.UI.Definition.JSONEncode_s_1194 !x1_0::B !x2_1 = Text.JSON.JSONEncode_Maybe_26 iTasks.UI.Definition.JSONEncode_UISize_201 x1_0 x2_1
+iTasks.UI.Definition.toJSONField_1195 !x_0 = <{iTasks.UI.Definition._c;463;17_1265}> (iTasks.UI.Definition.JSONEncode_s_1194 True x_0)
+<{iTasks.UI.Definition._c;463;17_1265}> !_x_0 = case _x_0 (_predefined._Cons node_1_0 _x_1_1 -> case _x_1_1 (_predefined._Nil -> node_1_0) ) (_ -> Text.JSON.JSONError)
+iTasks.UI.Definition.JSONEncode_UISizeOpts_197 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition._UISizeOpts width_1_0 minWidth_1_1 maxWidth_1_2 height_1_3 minHeight_1_4 maxHeight_1_5 margins_1_6 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;468;26_173}> (_predefined._Cons (_Tuple2 "itwcWidth" (iTasks.UI.Definition.toJSONField_1195 width_1_0)) (_predefined._Cons (_Tuple2 "itwcMinWidth" (iTasks.UI.Definition.toJSONField_1197 minWidth_1_1)) (_predefined._Cons (_Tuple2 "itwcMaxWidth" (iTasks.UI.Definition.toJSONField_1197 maxWidth_1_2)) (_predefined._Cons (_Tuple2 "itwcHeight" (iTasks.UI.Definition.toJSONField_1195 height_1_3)) (_predefined._Cons (_Tuple2 "itwcMinHeight" (iTasks.UI.Definition.toJSONField_1197 minHeight_1_4)) (_predefined._Cons (_Tuple2 "itwcMaxHeight" (iTasks.UI.Definition.toJSONField_1197 maxHeight_1_5)) (_predefined._Cons (_Tuple2 "margins" (iTasks.UI.Definition.toJSONField_1199 margins_1_6)) _predefined._Nil))))))))) _predefined._Nil) 
+<{iTasks.UI.Definition.c;478;26_174}> !g_l_0 = <{iTasks.UI.Definition.g_c1;478;35_1266}> g_l_0
+<{iTasks.UI.Definition.g_c1;478;35_1266}> !g_l_0 = case g_l_0 (_predefined._Cons field_1_0 g_t_1_1 -> case (<{GenEq.=!=}> (<{iTasks.UI.Definition.gEq_s;}> iTasks.API.Core.Types.gEq_JSONNode_682) (select field_1_0::_Tuple2 1) Text.JSON.JSONNull) (True -> _predefined._Cons field_1_0 (<{iTasks.UI.Definition.c;478;26_174}> g_t_1_1)) (False -> <{iTasks.UI.Definition.c;478;26_174}> g_t_1_1) ) (_ -> _predefined._Nil)
+iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition._UIHSizeOpts width_1_0 minWidth_1_1 maxWidth_1_2 margins_1_3 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;478;26_174}> (_predefined._Cons (_Tuple2 "itwcWidth" (iTasks.UI.Definition.toJSONField_1195 width_1_0)) (_predefined._Cons (_Tuple2 "itwcMinWidth" (iTasks.UI.Definition.toJSONField_1197 minWidth_1_1)) (_predefined._Cons (_Tuple2 "itwcMaxWidth" (iTasks.UI.Definition.toJSONField_1197 maxWidth_1_2)) (_predefined._Cons (_Tuple2 "margins" (iTasks.UI.Definition.toJSONField_1199 margins_1_3)) _predefined._Nil)))))) _predefined._Nil) 
+<{iTasks.UI.Definition.c;485;26_175}> !g_l_0 = <{iTasks.UI.Definition.g_c1;485;35_1267}> g_l_0
+<{iTasks.UI.Definition.g_c1;485;35_1267}> !g_l_0 = case g_l_0 (_predefined._Cons field_1_0 g_t_1_1 -> case (<{GenEq.=!=}> (<{iTasks.UI.Definition.gEq_s;}> iTasks.API.Core.Types.gEq_JSONNode_682) (select field_1_0::_Tuple2 1) Text.JSON.JSONNull) (True -> _predefined._Cons field_1_0 (<{iTasks.UI.Definition.c;485;26_175}> g_t_1_1)) (False -> <{iTasks.UI.Definition.c;485;26_175}> g_t_1_1) ) (_ -> _predefined._Nil)
+iTasks.UI.Definition.JSONEncode_UIFSizeOpts_199 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition._UIFSizeOpts margins_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;485;26_175}> (_predefined._Cons (_Tuple2 "margins" (iTasks.UI.Definition.toJSONField_1199 margins_1_0)) _predefined._Nil))) _predefined._Nil) 
+iTasks.UI.Definition.anon_176 s_0 = _predefined._Cons (_Tuple2 "text" (Text.JSON.JSONString s_0)) _predefined._Nil
+iTasks.UI.Definition.anon_177 s_0 = _predefined._Cons (_Tuple2 "iconCls" (Text.JSON.JSONString s_0)) _predefined._Nil
+iTasks.UI.Definition.JSONEncode_UIMenuItem_208 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.UIActionMenuItem aopts_1_0 opts_1_1 -> _predefined._Cons (iTasks.UI.Definition.enc "itwc_actionmenuitem" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIActionOpts_180) aopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIButtonOpts_186) opts_1_1) _predefined._Nil))) _predefined._Nil) (iTasks.UI.Definition.UISubMenuItem opts_1_0 -> _predefined._Cons (iTasks.UI.Definition.enc "itwc_submenuitem" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIMenuButtonOpts_207) opts_1_0) _predefined._Nil)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIMenuButtonOpts_207 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition._UIMenuButtonOpts text_1_0 iconCls_1_1 disabled_1_2 menu_1_3 -> _predefined._Cons (Text.JSON.JSONObject (<{StdList.++}> (Data.Maybe.maybe _predefined._Nil iTasks.UI.Definition.anon_176 text_1_0) (<{StdList.++}> (_predefined._Cons (_Tuple2 "disabled" (Text.JSON.JSONBool disabled_1_2)) (_predefined._Cons (_Tuple2 "menu" (Text.JSON.JSONArray (StdList.map (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIMenuItem_208)) menu_1_3))) _predefined._Nil)) (Data.Maybe.maybe _predefined._Nil iTasks.UI.Definition.anon_177 iconCls_1_1)))) _predefined._Nil) 
+iTasks.UI.Definition.toGenericUIChoiceOpts_227 !x_0 = case x_0 (iTasks.UI.Definition._UIChoiceOpts x11_1_0 x12_1_1 x13_1_2 x14_1_3 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1)) (StdGeneric.PAIR (StdGeneric.FIELD x13_1_2) (StdGeneric.FIELD x14_1_3)))) 
+iTasks.UI.Definition.fli__UIChoiceOpts_220 = _predefined._Cons "taskId" (_predefined._Cons "editorId" (_predefined._Cons "value" (_predefined._Cons "options" _predefined._Nil)))
+iTasks.UI.Definition.JSONEncode_PAIR_1200 _x_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1141 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1141 _x_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1201 _x_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1129 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1200 _x_0 _x_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1202 grd_fields_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1201 _x_1 _x_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIChoiceOpts_179 <{JSONEncode_t_17-0_a_0}> !x1_1::B !x2_2 = iTasks.UI.Definition.JSONEncode_RECORD_1202 iTasks.UI.Definition.fli__UIChoiceOpts_220 Text.JSON.JSONEncode_Int_10 <{JSONEncode_t_17-0_a_0}> x1_1 (iTasks.UI.Definition.toGenericUIChoiceOpts_227 x2_2)
+iTasks.UI.Definition.JSONEncode_s_745 !_vJSONEncode_s_0 !x1_1::B !x2_2 = iTasks.UI.Definition.JSONEncode_UIChoiceOpts_179 (select _vJSONEncode_s_0::<{iTasks.UI.Definition.JSONEncode_s;}> 0) x1_1 x2_2
+iTasks.UI.Definition.JSONEncode_FIELD_1207 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> iTasks.UI.Definition.JSONEncode_UIVAlign_203 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1208 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1207 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1209 !fy_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1208 fy_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_FIELD_1204 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> iTasks.UI.Definition.JSONEncode_UIHAlign_204 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1228 _x_0 _x_1 _x_2 _x_3 _x_4 !_x_5::B !_x_6 = case _x_6 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1155 _x_0 _x_1 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1170 _x_2 _x_3 _x_4 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1229 grd_fields_0 _x_1 _x_2 _x_3 _x_4 _x_5 !_x_6::B !_x_7 = case _x_7 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1228 _x_1 _x_2 _x_3 _x_4 _x_5 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_s_1227 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_UIChoiceOpts_179 iTasks.UI.Definition.JSONEncode_UITreeNode_187 x1_0 x2_1
+iTasks.UI.Definition.JSONEncode_s_1225 !x1_0::B !x2_1 = Text.JSON.JSONEncode__List_16 Text.JSON.JSONEncode__String_14 x1_0 x2_1
+iTasks.UI.Definition.JSONEncode_s_1226 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_UIChoiceOpts_179 iTasks.UI.Definition.JSONEncode_s_1225 x1_0 x2_1
+iTasks.UI.Definition.JSONEncode_s_1224 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_UIChoiceOpts_179 Text.JSON.JSONEncode__String_14 x1_0 x2_1
+iTasks.UI.Definition.encodeUIValue_1223 !_x_0 = case _x_0 (Data.Maybe.Nothing -> Text.JSON.JSONNull) (Data.Maybe.Just a_1_0 -> iTasks.UI.Definition.encodeUIValue_68 a_1_0) 
+iTasks.UI.Definition.encViewOpts_1222 !_x_0 = case _x_0 (iTasks.UI.Definition._UIViewOpts value_1_0 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "value" (iTasks.UI.Definition.encodeUIValue_1223 value_1_0)) _predefined._Nil)) 
+iTasks.UI.Definition.encodeUIValue_1221 !_x_0 = case _x_0 (Data.Maybe.Nothing -> Text.JSON.JSONNull) (Data.Maybe.Just a_1_0 -> iTasks.UI.Definition.encodeUIValue_61 a_1_0) 
+iTasks.UI.Definition.encViewOpts_1220 !_x_0 = case _x_0 (iTasks.UI.Definition._UIViewOpts value_1_0 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "value" (iTasks.UI.Definition.encodeUIValue_1221 value_1_0)) _predefined._Nil)) 
+iTasks.UI.Definition.encodeUIValue_1219 !_x_0 = case _x_0 (Data.Maybe.Nothing -> Text.JSON.JSONNull) (Data.Maybe.Just a_1_0 -> iTasks.UI.Definition.encodeUIValue_63 a_1_0) 
+iTasks.UI.Definition.encViewOpts_1218 !_x_0 = case _x_0 (iTasks.UI.Definition._UIViewOpts value_1_0 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "value" (iTasks.UI.Definition.encodeUIValue_1219 value_1_0)) _predefined._Nil)) 
+iTasks.UI.Definition.encodeUIValue_1217 !_x_0 = case _x_0 (Data.Maybe.Nothing -> Text.JSON.JSONNull) (Data.Maybe.Just a_1_0 -> iTasks.UI.Definition.encodeUIValue_64 a_1_0) 
+iTasks.UI.Definition.encViewOpts_1216 !_x_0 = case _x_0 (iTasks.UI.Definition._UIViewOpts value_1_0 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "value" (iTasks.UI.Definition.encodeUIValue_1217 value_1_0)) _predefined._Nil)) 
+iTasks.UI.Definition.encodeUIValue_1215 !_x_0 = case _x_0 (Data.Maybe.Nothing -> Text.JSON.JSONNull) (Data.Maybe.Just a_1_0 -> iTasks.UI.Definition.encodeUIValue_67 a_1_0) 
+iTasks.UI.Definition.encViewOpts_1214 !_x_0 = case _x_0 (iTasks.UI.Definition._UIViewOpts value_1_0 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "value" (iTasks.UI.Definition.encodeUIValue_1215 value_1_0)) _predefined._Nil)) 
+iTasks.UI.Definition.encodeUIValue_1213 !_x_0 = case _x_0 (Data.Maybe.Nothing -> Text.JSON.JSONNull) (Data.Maybe.Just a_1_0 -> iTasks.UI.Definition.encodeUIValue_60 a_1_0) 
+iTasks.UI.Definition.encViewOpts_1212 !_x_0 = case _x_0 (iTasks.UI.Definition._UIViewOpts value_1_0 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "value" (iTasks.UI.Definition.encodeUIValue_1213 value_1_0)) _predefined._Nil)) 
+iTasks.UI.Definition.JSONEncode_FIELD_1203 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> iTasks.UI.Definition.JSONEncode_UIDirection_205 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1205 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1203 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1206 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1141 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1205 fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1210 _x_0 !fy_1 !fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1206 _x_0 fy_1 False x_1_0) (fy_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1211 grd_fields_0 _x_1 fy_2 fy_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1210 _x_1 fy_2 fy_3 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1231 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1207 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1230 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1231 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1235 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1203 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1204 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1234 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1141 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1235 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1233 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1234 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1232 grd_fields_0 _x_1 fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1233 _x_1 fy_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1236 _x_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1231 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_1 _x_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1238 _x_0 _x_1 _x_2 _x_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1234 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1236 _x_1 _x_2 _x_3 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1237 grd_fields_0 _x_1 _x_2 _x_3 _x_4 !_x_5::B !_x_6 = case _x_6 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1238 _x_1 _x_2 _x_3 _x_4 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UITabOpts_193 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1229 iTasks.UI.Definition.fli__UITabOpts_350 Text.JSON.JSONEncode__String_14 (Text.JSON.JSONEncode__List_16 iTasks.UI.Definition.JSONEncode_UIControl_209) (Text.JSON.JSONEncode__List_16 (Text.JSON.JSONEncode__Tuple2_17 iTasks.API.Core.Types.JSONEncode_Hotkey_543 iTasks.UI.Definition.JSONEncode_UIActionOpts_180)) Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUITabOpts_359 x2_1)
+iTasks.UI.Definition.encodeUITab !_x_0 = case _x_0 (iTasks.UI.Definition.UITab iopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_tabitem" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIItemsOpts_181) iopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UITabOpts_193) opts_1_1) _predefined._Nil))) 
+<{iTasks.UI.Definition.c;549;53_172}> !g_l_0 = <{iTasks.UI.Definition.g_c1;549;58_1268}> g_l_0
+iTasks.UI.Definition.encTabSetOpts !_x_0 = case _x_0 (iTasks.UI.Definition._UITabSetOpts items_1_0 activeTab_1_1 -> Text.JSON.JSONObject (_predefined._Cons (_Tuple2 "items" (Text.JSON.JSONArray (<{iTasks.UI.Definition.c;549;53_172}> items_1_0))) _predefined._Nil)) 
+iTasks.UI.Definition.encodeUIControl !_x_0 = case _x_0 (iTasks.UI.Definition.UIViewString sopts_1_0 vopts_1_1 -> iTasks.UI.Definition.enc "itwc_view_string" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encViewOpts_1212 vopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIViewHtml sopts_1_0 vopts_1_1 -> iTasks.UI.Definition.enc "itwc_view_html" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encViewOpts_1214 vopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIViewDocument sopts_1_0 vopts_1_1 -> iTasks.UI.Definition.enc "itwc_view_document" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encViewOpts_1216 vopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIViewCheckbox sopts_1_0 vopts_1_1 -> iTasks.UI.Definition.enc "itwc_view_checkbox" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIFSizeOpts_199) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encViewOpts_1218 vopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIViewSlider sopts_1_0 vopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_view_slider" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encViewOpts_1220 vopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISliderOpts_182) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UIViewProgress sopts_1_0 vopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_view_progress" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encViewOpts_1222 vopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIProgressOpts_183) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UIEditString sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_string" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditNote sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_note" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditPassword sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_password" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditInt sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_int" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditDecimal sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_decimal" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditCheckbox sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_checkbox" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIFSizeOpts_199) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditSlider sopts_1_0 eopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_edit_slider" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISliderOpts_182) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UIEditDate sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_date" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditTime sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_time" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditDateTime sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_datetime" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditDocument sopts_1_0 eopts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_document" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditButton sopts_1_0 eopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_editbutton" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encEditOpts eopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIButtonOpts_186) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UIDropdown sopts_1_0 copts_1_1 -> iTasks.UI.Definition.enc "itwc_choice_dropdown" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_s_1224) copts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIListChoice sopts_1_0 copts_1_1 -> iTasks.UI.Definition.enc "itwc_choice_list" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_s_1224) copts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIRadioGroup sopts_1_0 copts_1_1 -> iTasks.UI.Definition.enc "itwc_choice_radiogroup" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_s_1224) copts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UICheckboxGroup sopts_1_0 copts_1_1 -> iTasks.UI.Definition.enc "itwc_choice_checkboxgroup" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_s_1224) copts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIGrid sopts_1_0 copts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_choice_grid" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_s_1226) copts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIGridOpts_184) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UITree sopts_1_0 copts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_choice_tree" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_s_1227) copts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UITreeOpts_185) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UIActionButton sopts_1_0 aopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_actionbutton" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIActionOpts_180) aopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIButtonOpts_186) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UIMenuButton sopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_menubutton" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIMenuButtonOpts_207) opts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UILabel sopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_label" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIHSizeOpts_198) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UILabelOpts_188) opts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIIcon sopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_icon" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIFSizeOpts_199) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIIconOpts_189) opts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UISplitter -> iTasks.UI.Definition.enc "itwc_splitter" _predefined._Nil) (iTasks.UI.Definition.UIContainer sopts_1_0 iopts_1_1 -> iTasks.UI.Definition.enc "itwc_container" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIItemsOpts_181) iopts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIPanel sopts_1_0 iopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_panel" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIItemsOpts_181) iopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIPanelOpts_190) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UIFieldSet sopts_1_0 iopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_fieldset" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIItemsOpts_181) iopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIFieldSetOpts_191) opts_1_2) _predefined._Nil)))) (iTasks.UI.Definition.UITabSet sopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_tabset" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.encTabSetOpts opts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UITasklet sopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_tasklet" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UITaskletOpts_194) opts_1_1) _predefined._Nil))) (iTasks.UI.Definition.UIEditlet sopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_edit_editlet" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (iTasks.UI.Definition.removeEditletValue (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIEditletOpts_195) opts_1_1)) _predefined._Nil))) (iTasks.UI.Definition.UIEmbedding sopts_1_0 opts_1_1 -> iTasks.UI.Definition.enc "itwc_embedding" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIEmbeddingOpts_196) opts_1_1) _predefined._Nil))) 
+iTasks.UI.Definition.JSONEncode_UIControl_209 !_x_0::B !control_1 = _predefined._Cons (iTasks.UI.Definition.encodeUIControl control_1) _predefined._Nil
+iTasks.UI.Definition.JSONEncode_UIItemsOpts_181 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1237 iTasks.UI.Definition.fli__UIItemsOpts_238 iTasks.UI.Definition.JSONEncode_UIControl_209 iTasks.UI.Definition.JSONEncode_UISideSizes_200 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUIItemsOpts_248 x2_1)
+<{iTasks.UI.Definition.g_c1;549;58_1268}> !g_l_0 = case g_l_0 (_predefined._Cons i_1_0 g_t_1_1 -> _predefined._Cons (iTasks.UI.Definition.encodeUITab i_1_0) (<{iTasks.UI.Definition.c;549;53_172}> g_t_1_1)) (_ -> _predefined._Nil)
+iTasks.UI.Definition.encodeUIDefinition !_x_0 = case _x_0 (iTasks.UI.Definition._UIDef _x_1_0 windows_1_1 -> case _x_1_0 (iTasks.UI.Definition.UIFinal _x_2_0 -> case _x_2_0 (iTasks.UI.Definition.UIViewport iopts_3_0 opts_3_1 -> iTasks.UI.Definition.enc "itwc_viewport" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIItemsOpts_181) iopts_3_0) (_predefined._Cons (iTasks.UI.Definition.encViewportOpts opts_3_1) _predefined._Nil))) ) ) (_ -> iTasks.UI.Definition.enc "itwc_viewport" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIItemsOpts_181) (iTasks.UI.Definition.defaultItemsOpts (iTasks.UI.Definition.uiDefControls _x_0))) _predefined._Nil))
+iTasks.UI.Definition.toGenericUIWindowOpts_347 !x_0 = case x_0 (iTasks.UI.Definition._UIWindowOpts x11_1_0 x12_1_1 x13_1_2 x14_1_3 x15_1_4 x16_1_5 x17_1_6 x18_1_7 x19_1_8 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1)) (StdGeneric.PAIR (StdGeneric.FIELD x13_1_2) (StdGeneric.FIELD x14_1_3))) (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x15_1_4) (StdGeneric.FIELD x16_1_5)) (StdGeneric.PAIR (StdGeneric.FIELD x17_1_6) (StdGeneric.PAIR (StdGeneric.FIELD x18_1_7) (StdGeneric.FIELD x19_1_8)))))) 
+iTasks.UI.Definition.fli__UIWindowOpts_335 = _predefined._Cons "windowType" (_predefined._Cons "title" (_predefined._Cons "iconCls" (_predefined._Cons "menu" (_predefined._Cons "hotkeys" (_predefined._Cons "vpos" (_predefined._Cons "hpos" (_predefined._Cons "focusTaskId" (_predefined._Cons "closeTaskId" _predefined._Nil))))))))
+iTasks.UI.Definition.JSONEncode_UIWindowType_206 !_x_0::B !_x_1 = case _x_1 (iTasks.UI.Definition.FloatingWindow -> _predefined._Cons (Text.JSON.JSONString "floating") _predefined._Nil) (iTasks.UI.Definition.ModalDialog -> _predefined._Cons (Text.JSON.JSONString "modal") _predefined._Nil) (iTasks.UI.Definition.NotificationBubble -> _predefined._Cons (Text.JSON.JSONString "bubble") _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_FIELD_1239 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> iTasks.UI.Definition.JSONEncode_UIWindowType_206 True x_1_0) 
+iTasks.UI.Definition.JSONEncode_PAIR_1240 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1239 False x_1_0) (fy_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1241 !fy_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1240 fy_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1242 !fy_0 !fy_1 !fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1241 fy_0 fy_1 False x_1_0) (fy_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1243 grd_fields_0 fy_1 fy_2 fy_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1242 fy_1 fy_2 fy_3 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1247 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_FIELD_1239 False x_1_0) (iTasks.UI.Definition.JSONEncode_FIELD_1142 _x_0 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1246 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1247 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1245 _x_0 !fy_1 !fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1246 _x_0 fy_1 False x_1_0) (fy_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1244 grd_fields_0 _x_1 fy_2 fy_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1245 _x_1 fy_2 fy_3 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1250 _x_0 _x_1 _x_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1247 _x_0 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1154 _x_1 _x_2 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_PAIR_1249 _x_0 _x_1 _x_2 !fy_3 !_x_4::B !_x_5 = case _x_5 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1250 _x_0 _x_1 _x_2 False x_1_0) (fy_3 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1248 grd_fields_0 _x_1 _x_2 _x_3 fy_4 !_x_5::B !_x_6 = case _x_6 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1249 _x_1 _x_2 _x_3 fy_4 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_PAIR_1252 _x_0 _x_1 _x_2 _x_3 _x_4 _x_5 _x_6 _x_7 !_x_8::B !_x_9 = case _x_9 (StdGeneric.PAIR x_1_0 y_1_1 -> <{iTasks.UI.Definition.++_403}> (iTasks.UI.Definition.JSONEncode_PAIR_1250 _x_0 _x_1 _x_2 False x_1_0) (iTasks.UI.Definition.JSONEncode_PAIR_1174 _x_3 _x_4 _x_5 _x_6 _x_7 False y_1_1)) 
+iTasks.UI.Definition.JSONEncode_RECORD_1251 grd_fields_0 _x_1 _x_2 _x_3 _x_4 _x_5 _x_6 _x_7 _x_8 !_x_9::B !_x_10 = case _x_10 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{iTasks.UI.Definition.c;86;47_399}> (iTasks.UI.Definition.JSONEncode_PAIR_1252 _x_1 _x_2 _x_3 _x_4 _x_5 _x_6 _x_7 _x_8 False x_1_0) grd_fields_0)) _predefined._Nil) 
+iTasks.UI.Definition.JSONEncode_UIWindowOpts_192 !x1_0::B !x2_1 = iTasks.UI.Definition.JSONEncode_RECORD_1251 iTasks.UI.Definition.fli__UIWindowOpts_335 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 (Text.JSON.JSONEncode__List_16 iTasks.UI.Definition.JSONEncode_UIControl_209) (Text.JSON.JSONEncode__List_16 (Text.JSON.JSONEncode__Tuple2_17 iTasks.API.Core.Types.JSONEncode_Hotkey_543 iTasks.UI.Definition.JSONEncode_UIActionOpts_180)) iTasks.UI.Definition.JSONEncode_UIVAlign_203 iTasks.UI.Definition.JSONEncode_UIHAlign_204 Text.JSON.JSONEncode__String_14 Text.JSON.JSONEncode__String_14 x1_0 (iTasks.UI.Definition.toGenericUIWindowOpts_347 x2_1)
+iTasks.UI.Definition.encodeUIWindow !_x_0 = case _x_0 (iTasks.UI.Definition.UIWindow sopts_1_0 iopts_1_1 opts_1_2 -> iTasks.UI.Definition.enc "itwc_window" (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UISizeOpts_197) sopts_1_0) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIItemsOpts_181) iopts_1_1) (_predefined._Cons (Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.UI.Definition.JSONEncode_UIWindowOpts_192) opts_1_2) _predefined._Nil)))) 
+iTasks.UI.Definition.encodeUIValue_62 !v_0::D = Text.JSON.JSONReal v_0
+iTasks.UI.Definition.encodeUIValue_65 !v_0 = Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode_Date_150) v_0
+iTasks.UI.Definition.encodeUIValue_66 !v_0 = Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> iTasks.API.Core.Types.JSONEncode_Time_151) v_0
+iTasks.UI.Definition.encodeUIValue_69 !v_0 = Text.JSON.toJSON (<{iTasks.UI.Definition.JSONEncode_s;}> Text.JSON.JSONEncode_JSONNode_27) v_0
+iTasks.UI.Definition.toGenericUIViewOpts_217 !x_0 = case x_0 (iTasks.UI.Definition._UIViewOpts x11_1_0 -> StdGeneric.RECORD (StdGeneric.FIELD x11_1_0)) 
+iTasks.UI.Definition.fli__UIViewOpts_213 = _predefined._Cons "value" _predefined._Nil
+iTasks.UI.Definition.JSONEncode_UIViewOpts_178 <{JSONEncode_t_17-0_a_0}> !x1_1::B !x2_2 = iTasks.UI.Definition.JSONEncode_RECORD_1147 iTasks.UI.Definition.fli__UIViewOpts_213 <{JSONEncode_t_17-0_a_0}> x1_1 (iTasks.UI.Definition.toGenericUIViewOpts_217 x2_2)
+iTasks.UI.Definition.JSONEncode_UIDef_210 !_x_0::B !uidef_1 = _predefined._Cons (iTasks.UI.Definition.encodeUIDefinition uidef_1) _predefined._Nil
+<{iTasks.UI.Definition.TD;UIDef}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIContent}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIEmpty}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIForm}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIBlock}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIAttributes}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIActions}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIAction}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIViewport}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIViewportOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIWindow}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIWindowOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIWindowType}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UITab}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIControl}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UISizeOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIHSizeOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIFSizeOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UISize}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIBound}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIItemsOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIHAlign}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIVAlign}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIDirection}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UISide}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UISideSizes}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIViewOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIEditOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIActionOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIKeyAction}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIChoiceOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UISliderOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIProgressOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIGridOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UITreeOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UITreeNode}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIButtonOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIMenuButtonOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIMenuItem}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UILabelOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIIconOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UITaskletOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIEditletOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIPanelOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIFieldSetOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UITabSetOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UIEmbeddingOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;UITabOpts}> _x_0::B = _predefined._Nil
+<{iTasks.UI.Definition.TD;encodeUIValue;}> _x_0::B = _predefined._Nil
+
+:: iTasks.UI.Definition.UIContent = iTasks.UI.Definition.UIEmpty !a1 | iTasks.UI.Definition.UIForm !a1 | iTasks.UI.Definition.UIBlock !a1 | iTasks.UI.Definition.UIBlocks !a1 !a2 | iTasks.UI.Definition.UIFinal !a1
+:: iTasks.UI.Definition.UIViewport = iTasks.UI.Definition.UIViewport !a1 !a2
+:: iTasks.UI.Definition.UIWindow = iTasks.UI.Definition.UIWindow !a1 !a2 !a3
+:: iTasks.UI.Definition.UIWindowType = iTasks.UI.Definition.FloatingWindow | iTasks.UI.Definition.ModalDialog | iTasks.UI.Definition.NotificationBubble
+:: iTasks.UI.Definition.UITab = iTasks.UI.Definition.UITab !a1 !a2
+:: iTasks.UI.Definition.UIControl = iTasks.UI.Definition.UIViewString !a1 !a2 | iTasks.UI.Definition.UIViewHtml !a1 !a2 | iTasks.UI.Definition.UIViewDocument !a1 !a2 | iTasks.UI.Definition.UIViewCheckbox !a1 !a2 | iTasks.UI.Definition.UIViewSlider !a1 !a2 !a3 | iTasks.UI.Definition.UIViewProgress !a1 !a2 !a3 | iTasks.UI.Definition.UIEditString !a1 !a2 | iTasks.UI.Definition.UIEditNote !a1 !a2 | iTasks.UI.Definition.UIEditPassword !a1 !a2 | iTasks.UI.Definition.UIEditInt !a1 !a2 | iTasks.UI.Definition.UIEditDecimal !a1 !a2 | iTasks.UI.Definition.UIEditCheckbox !a1 !a2 | iTasks.UI.Definition.UIEditSlider !a1 !a2 !a3 | iTasks.UI.Definition.UIEditDate !a1 !a2 | iTasks.UI.Definition.UIEditTime !a1 !a2 | iTasks.UI.Definition.UIEditDateTime !a1 !a2 | iTasks.UI.Definition.UIEditDocument !a1 !a2 | iTasks.UI.Definition.UIEditButton !a1 !a2 !a3 | iTasks.UI.Definition.UIDropdown !a1 !a2 | iTasks.UI.Definition.UIGrid !a1 !a2 !a3 | iTasks.UI.Definition.UITree !a1 !a2 !a3 | iTasks.UI.Definition.UIListChoice !a1 !a2 | iTasks.UI.Definition.UIRadioGroup !a1 !a2 | iTasks.UI.Definition.UICheckboxGroup !a1 !a2 | iTasks.UI.Definition.UIActionButton !a1 !a2 !a3 | iTasks.UI.Definition.UIMenuButton !a1 !a2 | iTasks.UI.Definition.UILabel !a1 !a2 | iTasks.UI.Definition.UIIcon !a1 !a2 | iTasks.UI.Definition.UISplitter | iTasks.UI.Definition.UITasklet !a1 !a2 | iTasks.UI.Definition.UIEditlet !a1 !a2 | iTasks.UI.Definition.UIContainer !a1 !a2 | iTasks.UI.Definition.UIPanel !a1 !a2 !a3 | iTasks.UI.Definition.UIFieldSet !a1 !a2 !a3 | iTasks.UI.Definition.UITabSet !a1 !a2 | iTasks.UI.Definition.UIEmbedding !a1 !a2
+:: iTasks.UI.Definition.UISize = iTasks.UI.Definition.ExactSize !a1::I | iTasks.UI.Definition.WrapSize | iTasks.UI.Definition.FlexSize
+:: iTasks.UI.Definition.UIBound = iTasks.UI.Definition.ExactBound !a1::I | iTasks.UI.Definition.WrapBound
+:: iTasks.UI.Definition.UIHAlign = iTasks.UI.Definition.AlignLeft | iTasks.UI.Definition.AlignCenter | iTasks.UI.Definition.AlignRight
+:: iTasks.UI.Definition.UIVAlign = iTasks.UI.Definition.AlignTop | iTasks.UI.Definition.AlignMiddle | iTasks.UI.Definition.AlignBottom
+:: iTasks.UI.Definition.UIDirection = iTasks.UI.Definition.Horizontal | iTasks.UI.Definition.Vertical
+:: iTasks.UI.Definition.UISide = iTasks.UI.Definition.TopSide | iTasks.UI.Definition.RightSide | iTasks.UI.Definition.BottomSide | iTasks.UI.Definition.LeftSide
+:: iTasks.UI.Definition.UIMenuItem = iTasks.UI.Definition.UIActionMenuItem !a1 !a2 | iTasks.UI.Definition.UISubMenuItem !a1
+
+|| Converted Records
+:: iTasks.UI.Definition._UIDef = {iTasks.UI.Definition.content, iTasks.UI.Definition.windows}
+
+:: iTasks.UI.Definition._UIEmpty = {iTasks.UI.Definition.actions}
+
+:: iTasks.UI.Definition._UIForm = {iTasks.UI.Definition.attributes, iTasks.UI.Definition.controls, iTasks.UI.Definition.size}
+
+:: iTasks.UI.Definition._UIBlock = {iTasks.UI.Definition.attributes, iTasks.UI.Definition.content, iTasks.UI.Definition.size, iTasks.UI.Definition.actions, iTasks.UI.Definition.hotkeys}
+
+:: iTasks.UI.Definition._UIAction = {!iTasks.UI.Definition.taskId, !iTasks.UI.Definition.action, !iTasks.UI.Definition.enabled::B}
+
+:: iTasks.UI.Definition._UIViewportOpts = {!iTasks.UI.Definition.title, !iTasks.UI.Definition.menu, !iTasks.UI.Definition.hotkeys}
+
+:: iTasks.UI.Definition._UIWindowOpts = {!iTasks.UI.Definition.windowType, !iTasks.UI.Definition.title, !iTasks.UI.Definition.iconCls, !iTasks.UI.Definition.menu, !iTasks.UI.Definition.hotkeys, !iTasks.UI.Definition.vpos, !iTasks.UI.Definition.hpos, !iTasks.UI.Definition.focusTaskId, !iTasks.UI.Definition.closeTaskId}
+
+:: iTasks.UI.Definition._UISizeOpts = {!iTasks.UI.Definition.width, !iTasks.UI.Definition.minWidth, !iTasks.UI.Definition.maxWidth, !iTasks.UI.Definition.height, !iTasks.UI.Definition.minHeight, !iTasks.UI.Definition.maxHeight, !iTasks.UI.Definition.margins}
+
+:: iTasks.UI.Definition._UIHSizeOpts = {!iTasks.UI.Definition.width, !iTasks.UI.Definition.minWidth, !iTasks.UI.Definition.maxWidth, !iTasks.UI.Definition.margins}
+
+:: iTasks.UI.Definition._UIFSizeOpts = {!iTasks.UI.Definition.margins}
+
+:: iTasks.UI.Definition._UIItemsOpts = {!iTasks.UI.Definition.items, !iTasks.UI.Definition.direction, !iTasks.UI.Definition.halign, !iTasks.UI.Definition.valign, !iTasks.UI.Definition.padding, !iTasks.UI.Definition.baseCls, !iTasks.UI.Definition.bodyCls}
+
+:: iTasks.UI.Definition._UISideSizes = {!iTasks.UI.Definition.top::I, !iTasks.UI.Definition.right::I, !iTasks.UI.Definition.bottom::I, !iTasks.UI.Definition.left::I}
+
+:: iTasks.UI.Definition._UIViewOpts = {!iTasks.UI.Definition.value}
+
+:: iTasks.UI.Definition._UIEditOpts = {!iTasks.UI.Definition.taskId, !iTasks.UI.Definition.editorId, !iTasks.UI.Definition.value}
+
+:: iTasks.UI.Definition._UIActionOpts = {!iTasks.UI.Definition.taskId, !iTasks.UI.Definition.actionId}
+
+:: iTasks.UI.Definition._UIChoiceOpts = {!iTasks.UI.Definition.taskId, !iTasks.UI.Definition.editorId, !iTasks.UI.Definition.value, !iTasks.UI.Definition.options}
+
+:: iTasks.UI.Definition._UISliderOpts = {!iTasks.UI.Definition.minValue::I, !iTasks.UI.Definition.maxValue::I, !iTasks.UI.Definition.value::I}
+
+:: iTasks.UI.Definition._UIProgressOpts = {!iTasks.UI.Definition.text}
+
+:: iTasks.UI.Definition._UIGridOpts = {!iTasks.UI.Definition.columns, !iTasks.UI.Definition.doubleClickAction}
+
+:: iTasks.UI.Definition._UITreeOpts = {!iTasks.UI.Definition.doubleClickAction}
+
+:: iTasks.UI.Definition._UITreeNode = {!iTasks.UI.Definition.text, !iTasks.UI.Definition.iconCls, !iTasks.UI.Definition.children, !iTasks.UI.Definition.leaf::B, !iTasks.UI.Definition.expanded::B, !iTasks.UI.Definition.value::I}
+
+:: iTasks.UI.Definition._UIButtonOpts = {!iTasks.UI.Definition.text, !iTasks.UI.Definition.iconCls, !iTasks.UI.Definition.disabled::B}
+
+:: iTasks.UI.Definition._UIMenuButtonOpts = {!iTasks.UI.Definition.text, !iTasks.UI.Definition.iconCls, !iTasks.UI.Definition.disabled::B, !iTasks.UI.Definition.menu}
+
+:: iTasks.UI.Definition._UILabelOpts = {!iTasks.UI.Definition.text}
+
+:: iTasks.UI.Definition._UIIconOpts = {!iTasks.UI.Definition.iconCls, !iTasks.UI.Definition.tooltip}
+
+:: iTasks.UI.Definition._UITaskletOpts = {!iTasks.UI.Definition.taskId, !iTasks.UI.Definition.html, !iTasks.UI.Definition.st, !iTasks.UI.Definition.script, !iTasks.UI.Definition.events, !iTasks.UI.Definition.interfaceFuncs, !iTasks.UI.Definition.resultFunc, !iTasks.UI.Definition.instanceNo, !iTasks.UI.Definition.controllerFunc}
+
+:: iTasks.UI.Definition._UIEditletOpts = {!iTasks.UI.Definition.taskId, !iTasks.UI.Definition.editorId, !iTasks.UI.Definition.value, !iTasks.UI.Definition.html, !iTasks.UI.Definition.script, !iTasks.UI.Definition.initClient, !iTasks.UI.Definition.initDiff, !iTasks.UI.Definition.appDiff}
+
+:: iTasks.UI.Definition._UIPanelOpts = {!iTasks.UI.Definition.title, !iTasks.UI.Definition.frame::B, !iTasks.UI.Definition.hotkeys, !iTasks.UI.Definition.iconCls}
+
+:: iTasks.UI.Definition._UIFieldSetOpts = {!iTasks.UI.Definition.title}
+
+:: iTasks.UI.Definition._UITabSetOpts = {!iTasks.UI.Definition.items, !iTasks.UI.Definition.activeTab}
+
+:: iTasks.UI.Definition._UIEmbeddingOpts = {!iTasks.UI.Definition.instanceNo::I, !iTasks.UI.Definition.instanceKey}
+
+:: iTasks.UI.Definition._UITabOpts = {!iTasks.UI.Definition.title, !iTasks.UI.Definition.iconCls, !iTasks.UI.Definition.menu, !iTasks.UI.Definition.hotkeys, !iTasks.UI.Definition.focusTaskId, !iTasks.UI.Definition.closeTaskId}
+
+:: <{iTasks.UI.Definition.encodeUIValue;}> = {!iTasks.UI.Definition.encodeUIValue}
+
+:: <{iTasks.UI.Definition.JSONEncode_s;}> = {!iTasks.UI.Definition.JSONEncode_s}
+
+:: <{iTasks.UI.Definition.JSONEncode_ss;}> = {!iTasks.UI.Definition.JSONEncode_ss}
+
+:: <{iTasks.UI.Definition.JSONEncode_sss;}> = {!iTasks.UI.Definition.JSONEncode_sss}
+
+:: <{iTasks.UI.Definition.JSONDecode_s;}> = {!iTasks.UI.Definition.JSONDecode_s}
+
+:: <{iTasks.UI.Definition.JSONDecode_ss;}> = {!iTasks.UI.Definition.JSONDecode_ss}
+
+:: <{iTasks.UI.Definition.JSONDecode_sss;}> = {!iTasks.UI.Definition.JSONDecode_sss}
+
+:: <{iTasks.UI.Definition.gDefault_s;}> = {iTasks.UI.Definition.gDefault_s}
+
+:: <{iTasks.UI.Definition.gDefault_ss;}> = {iTasks.UI.Definition.gDefault_ss}
+
+:: <{iTasks.UI.Definition.gDefault_sss;}> = {iTasks.UI.Definition.gDefault_sss}
+
+:: <{iTasks.UI.Definition.gUpdate_s;}> = {!iTasks.UI.Definition.gUpdate_s}
+
+:: <{iTasks.UI.Definition.gUpdate_ss;}> = {!iTasks.UI.Definition.gUpdate_ss}
+
+:: <{iTasks.UI.Definition.gUpdate_sss;}> = {!iTasks.UI.Definition.gUpdate_sss}
+
+:: <{iTasks.UI.Definition.gVerify_s;}> = {!iTasks.UI.Definition.gVerify_s}
+
+:: <{iTasks.UI.Definition.gVerify_ss;}> = {!iTasks.UI.Definition.gVerify_ss}
+
+:: <{iTasks.UI.Definition.gVerify_sss;}> = {!iTasks.UI.Definition.gVerify_sss}
+
+:: <{iTasks.UI.Definition.gText_s;}> = {!iTasks.UI.Definition.gText_s}
+
+:: <{iTasks.UI.Definition.gText_ss;}> = {!iTasks.UI.Definition.gText_ss}
+
+:: <{iTasks.UI.Definition.gText_sss;}> = {!iTasks.UI.Definition.gText_sss}
+
+:: <{iTasks.UI.Definition.gEditor_s;}> = {!iTasks.UI.Definition.gEditor_s}
+
+:: <{iTasks.UI.Definition.gEditor_ss;}> = {!iTasks.UI.Definition.gEditor_ss}
+
+:: <{iTasks.UI.Definition.gEditor_sss;}> = {!iTasks.UI.Definition.gEditor_sss}
+
+:: <{iTasks.UI.Definition.gEditMeta_s;}> = {!iTasks.UI.Definition.gEditMeta_s}
+
+:: <{iTasks.UI.Definition.gEditMeta_ss;}> = {!iTasks.UI.Definition.gEditMeta_ss}
+
+:: <{iTasks.UI.Definition.gEditMeta_sss;}> = {!iTasks.UI.Definition.gEditMeta_sss}
+
+:: <{iTasks.UI.Definition.gEq_s;}> = {!iTasks.UI.Definition.gEq_s}
+
+:: <{iTasks.UI.Definition.gEq_ss;}> = {!iTasks.UI.Definition.gEq_ss}
+
+:: <{iTasks.UI.Definition.gEq_sss;}> = {!iTasks.UI.Definition.gEq_sss}
+
+:: <{iTasks.UI.Definition.JSONEncode_ssss;}> = {!iTasks.UI.Definition.JSONEncode_ssss}
+
+:: <{iTasks.UI.Definition.JSONDecode_ssss;}> = {!iTasks.UI.Definition.JSONDecode_ssss}
+
+:: <{iTasks.UI.Definition.gEq_ssss;}> = {!iTasks.UI.Definition.gEq_ssss}
+
+:: <{iTasks.UI.Definition.gDefault_ssss;}> = {iTasks.UI.Definition.gDefault_ssss}
+
+:: <{iTasks.UI.Definition.JSONEncode_sssss;}> = {!iTasks.UI.Definition.JSONEncode_sssss}
+
+:: <{iTasks.UI.Definition.JSONEncode_ssssss;}> = {!iTasks.UI.Definition.JSONEncode_ssssss}
+
+:: <{iTasks.UI.Definition.JSONEncode_sssssss;}> = {!iTasks.UI.Definition.JSONEncode_sssssss}
+
+:: <{iTasks.UI.Definition.JSONEncode_ssssssss;}> = {!iTasks.UI.Definition.JSONEncode_ssssssss}
+
+:: <{iTasks.UI.Definition.JSONEncode_sssssssss;}> = {!iTasks.UI.Definition.JSONEncode_sssssssss}
+
+:: <{iTasks.UI.Definition.JSONDecode_sssss;}> = {!iTasks.UI.Definition.JSONDecode_sssss}
+
+:: <{iTasks.UI.Definition.JSONDecode_ssssss;}> = {!iTasks.UI.Definition.JSONDecode_ssssss}
+
+:: <{iTasks.UI.Definition.JSONDecode_sssssss;}> = {!iTasks.UI.Definition.JSONDecode_sssssss}
+
+:: <{iTasks.UI.Definition.JSONDecode_ssssssss;}> = {!iTasks.UI.Definition.JSONDecode_ssssssss}
+
+:: <{iTasks.UI.Definition.JSONDecode_sssssssss;}> = {!iTasks.UI.Definition.JSONDecode_sssssssss}
+
+:: <{iTasks.UI.Definition.bimap_s;}> = {iTasks.UI.Definition.bimap_s}
+
+:: <{iTasks.UI.Definition.bimap_ss;}> = {iTasks.UI.Definition.bimap_ss}
+
+:: <{iTasks.UI.Definition.bimap_sss;}> = {iTasks.UI.Definition.bimap_sss}
+
+:: <{iTasks.UI.Definition.gEq_sssss;}> = {!iTasks.UI.Definition.gEq_sssss}
+
+:: <{iTasks.UI.Definition.gEq_ssssss;}> = {!iTasks.UI.Definition.gEq_ssssss}
+
+:: <{iTasks.UI.Definition.gEq_sssssss;}> = {!iTasks.UI.Definition.gEq_sssssss}
+
+:: <{iTasks.UI.Definition.gEq_ssssssss;}> = {!iTasks.UI.Definition.gEq_ssssssss}
+
+:: <{iTasks.UI.Definition.gEq_sssssssss;}> = {!iTasks.UI.Definition.gEq_sssssssss}
+
+:: <{iTasks.UI.Definition.gEditor_ssss;}> = {!iTasks.UI.Definition.gEditor_ssss}
+
+:: <{iTasks.UI.Definition.gText_ssss;}> = {!iTasks.UI.Definition.gText_ssss}
+
+:: <{iTasks.UI.Definition.gEditMeta_ssss;}> = {!iTasks.UI.Definition.gEditMeta_ssss}
+
+:: <{iTasks.UI.Definition.gEditor_sssss;}> = {!iTasks.UI.Definition.gEditor_sssss}
+
+:: <{iTasks.UI.Definition.gText_sssss;}> = {!iTasks.UI.Definition.gText_sssss}
+
+:: <{iTasks.UI.Definition.gDefault_sssss;}> = {iTasks.UI.Definition.gDefault_sssss}
+
+:: <{iTasks.UI.Definition.gEditMeta_sssss;}> = {!iTasks.UI.Definition.gEditMeta_sssss}
+
+:: <{iTasks.UI.Definition.gEditor_ssssss;}> = {!iTasks.UI.Definition.gEditor_ssssss}
+
+:: <{iTasks.UI.Definition.gText_ssssss;}> = {!iTasks.UI.Definition.gText_ssssss}
+
+:: <{iTasks.UI.Definition.gDefault_ssssss;}> = {iTasks.UI.Definition.gDefault_ssssss}
+
+:: <{iTasks.UI.Definition.gEditMeta_ssssss;}> = {!iTasks.UI.Definition.gEditMeta_ssssss}
+
+:: <{iTasks.UI.Definition.gEditor_sssssss;}> = {!iTasks.UI.Definition.gEditor_sssssss}
+
+:: <{iTasks.UI.Definition.gText_sssssss;}> = {!iTasks.UI.Definition.gText_sssssss}
+
+:: <{iTasks.UI.Definition.gDefault_sssssss;}> = {iTasks.UI.Definition.gDefault_sssssss}
+
+:: <{iTasks.UI.Definition.gEditMeta_sssssss;}> = {!iTasks.UI.Definition.gEditMeta_sssssss}
+
+:: <{iTasks.UI.Definition.gEditor_ssssssss;}> = {!iTasks.UI.Definition.gEditor_ssssssss}
+
+:: <{iTasks.UI.Definition.gText_ssssssss;}> = {!iTasks.UI.Definition.gText_ssssssss}
+
+:: <{iTasks.UI.Definition.gDefault_ssssssss;}> = {iTasks.UI.Definition.gDefault_ssssssss}
+
+:: <{iTasks.UI.Definition.gEditMeta_ssssssss;}> = {!iTasks.UI.Definition.gEditMeta_ssssssss}
+
+:: <{iTasks.UI.Definition.gEditor_sssssssss;}> = {!iTasks.UI.Definition.gEditor_sssssssss}
+
+:: <{iTasks.UI.Definition.gText_sssssssss;}> = {!iTasks.UI.Definition.gText_sssssssss}
+
+:: <{iTasks.UI.Definition.gDefault_sssssssss;}> = {iTasks.UI.Definition.gDefault_sssssssss}
+
+:: <{iTasks.UI.Definition.gEditMeta_sssssssss;}> = {!iTasks.UI.Definition.gEditMeta_sssssssss}
+
+:: <{iTasks.UI.Definition.gVerify_ssss;}> = {!iTasks.UI.Definition.gVerify_ssss}
+
+:: <{iTasks.UI.Definition.gVerify_sssss;}> = {!iTasks.UI.Definition.gVerify_sssss}
+
+:: <{iTasks.UI.Definition.gVerify_ssssss;}> = {!iTasks.UI.Definition.gVerify_ssssss}
+
+:: <{iTasks.UI.Definition.gVerify_sssssss;}> = {!iTasks.UI.Definition.gVerify_sssssss}
+
+:: <{iTasks.UI.Definition.gVerify_ssssssss;}> = {!iTasks.UI.Definition.gVerify_ssssssss}
+
+:: <{iTasks.UI.Definition.gVerify_sssssssss;}> = {!iTasks.UI.Definition.gVerify_sssssssss}
+
+:: <{iTasks.UI.Definition.gUpdate_ssss;}> = {!iTasks.UI.Definition.gUpdate_ssss}
+
+:: <{iTasks.UI.Definition.gUpdate_sssss;}> = {!iTasks.UI.Definition.gUpdate_sssss}
+
+:: <{iTasks.UI.Definition.gUpdate_ssssss;}> = {!iTasks.UI.Definition.gUpdate_ssssss}
+
+:: <{iTasks.UI.Definition.gUpdate_sssssss;}> = {!iTasks.UI.Definition.gUpdate_sssssss}
+
+:: <{iTasks.UI.Definition.gUpdate_ssssssss;}> = {!iTasks.UI.Definition.gUpdate_ssssssss}
+
+:: <{iTasks.UI.Definition.gUpdate_sssssssss;}> = {!iTasks.UI.Definition.gUpdate_sssssssss}
+
+:: <{iTasks.UI.Definition.gLexOrd_s;}> = {!iTasks.UI.Definition.gLexOrd_s}
+
+:: <{iTasks.UI.Definition.gLexOrd_ss;}> = {!iTasks.UI.Definition.gLexOrd_ss}
+
+:: <{iTasks.UI.Definition.gLexOrd_sss;}> = {!iTasks.UI.Definition.gLexOrd_sss}
+
+:: <{iTasks.UI.Definition.gLexOrd_ssss;}> = {!iTasks.UI.Definition.gLexOrd_ssss}
+
+:: <{iTasks.UI.Definition.gLexOrd_sssss;}> = {!iTasks.UI.Definition.gLexOrd_sssss}
+
+:: <{iTasks.UI.Definition.gLexOrd_ssssss;}> = {!iTasks.UI.Definition.gLexOrd_ssssss}
+
+:: <{iTasks.UI.Definition.gLexOrd_sssssss;}> = {!iTasks.UI.Definition.gLexOrd_sssssss}
+
+:: <{iTasks.UI.Definition.gLexOrd_ssssssss;}> = {!iTasks.UI.Definition.gLexOrd_ssssssss}
+
+:: <{iTasks.UI.Definition.gLexOrd_sssssssss;}> = {!iTasks.UI.Definition.gLexOrd_sssssssss}
+

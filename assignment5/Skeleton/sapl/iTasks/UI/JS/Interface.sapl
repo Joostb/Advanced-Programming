@@ -1,0 +1,462 @@
+|| ?module? iTasks.UI.JS.Interface
+
+
+iTasks.UI.JS.Interface.jsNull = StdMisc.undef
+iTasks.UI.JS.Interface.jsWindow = StdMisc.undef
+iTasks.UI.JS.Interface.jsDocument = StdMisc.undef
+iTasks.UI.JS.Interface.jsEmptyObject !world_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsNewObject !cons_name_0 !args_1 !world_2 = StdMisc.undef
+iTasks.UI.JS.Interface.jsGetObjectAttr !attr_0 !obj_1 !world_2 = StdMisc.undef
+iTasks.UI.JS.Interface.jsGetObjectEl !index_0::I !obj_1 !world_2 = StdMisc.undef
+iTasks.UI.JS.Interface.jsSetObjectAttr !attr_0 !value_1 !obj_2 !world_3 = StdMisc.undef
+iTasks.UI.JS.Interface.jsSetObjectEl !index_0::I !value_1 !obj_2 !world_3 = StdMisc.undef
+iTasks.UI.JS.Interface.jsDeleteObjectAttr !value_0 !obj_1 !world_2 = StdMisc.undef
+iTasks.UI.JS.Interface.getElementById !elem_0 = iTasks.UI.JS.Interface.SDomId elem_0
+iTasks.UI.JS.Interface.toJSArg !val_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsApply !fun_0 !scope_1 !args_2 !world_3 = StdMisc.undef
+iTasks.UI.JS.Interface.callObjectMethod !method_0 !args_1 !obj_2 !world_3 = let !_x_1_0 = iTasks.UI.JS.Interface.jsGetObjectAttr method_0 obj_2 world_3 in iTasks.UI.JS.Interface.jsApply (select _x_1_0::_Tuple2 0) obj_2 args_1 (select _x_1_0::_Tuple2 1)
+iTasks.UI.JS.Interface.getObject !_x_0 !world_1 = case _x_0 (iTasks.UI.JS.Interface.SObj _vJSObjAttr_1_0 obj_1_1 attr_1_2 -> select _vJSObjAttr_1_0::<{iTasks.UI.JS.Interface.JSObjAttr;}> 0 attr_1_2 obj_1_1 world_1) (iTasks.UI.JS.Interface.SDomId elem_1_0 -> iTasks.UI.JS.Interface.callObjectMethod "getElementById" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg elem_1_0) _predefined._Nil) iTasks.UI.JS.Interface.jsDocument world_1) (iTasks.UI.JS.Interface.SRec _vJSObjAttr_1_0 sel_1_1 attr_1_2 -> let !_x_2_0 = iTasks.UI.JS.Interface.getObject sel_1_1 world_1 in select _vJSObjAttr_1_0::<{iTasks.UI.JS.Interface.JSObjAttr;}> 0 attr_1_2 (select _x_2_0::_Tuple2 0) (select _x_2_0::_Tuple2 1)) 
+<{iTasks.UI.JS.Interface..?}> !sel_0 !world_1 = iTasks.UI.JS.Interface.getObject sel_0 world_1
+iTasks.UI.JS.Interface.toJSVal !val_0 = StdMisc.undef
+iTasks.UI.JS.Interface.setObject !_x_0 !val_1 !world_2 = case _x_0 (iTasks.UI.JS.Interface.SObj _vJSObjAttr_1_0 obj_1_1 attr_1_2 -> select _vJSObjAttr_1_0::<{iTasks.UI.JS.Interface.JSObjAttr;}> 1 attr_1_2 val_1 obj_1_1 world_2) (iTasks.UI.JS.Interface.SRec _vJSObjAttr_1_0 sel_1_1 attr_1_2 -> let !_x_2_0 = iTasks.UI.JS.Interface.getObject sel_1_1 world_2 in select _vJSObjAttr_1_0::<{iTasks.UI.JS.Interface.JSObjAttr;}> 1 attr_1_2 val_1 (select _x_2_0::_Tuple2 0) (select _x_2_0::_Tuple2 1)) 
+iTasks.UI.JS.Interface.anon_138 !sel_0 !val_1 !world_2 = iTasks.UI.JS.Interface.setObject sel_0 (iTasks.UI.JS.Interface.toJSVal val_1) world_2
+<{iTasks.UI.JS.Interface..=}> !sel_0 !val_1 = iTasks.UI.JS.Interface.anon_138 sel_0 val_1
+iTasks.UI.JS.Interface.anon_148 !f_0 g_1 x_2 = f_0 (g_1 x_2)
+iTasks.UI.JS.Interface.snd_147 !tuple_0 = select tuple_0::_Tuple2 1
+iTasks.UI.JS.Interface.anon_931 !g_0 x_1 = iTasks.UI.JS.Interface.snd_147 (g_0 x_1)
+<{iTasks.UI.JS.Interface..$!}> !<{_v.$_0}> !_vToArgs_1 !a_2 !b_3 = iTasks.UI.JS.Interface.anon_931 (select <{_v.$_0}>::<{iTasks.UI.JS.Interface..$;}> 0 _vToArgs_1 a_2 b_3)
+iTasks.UI.JS.Interface.new !_vToArgs_0 !objNm_1 !args_2 = iTasks.UI.JS.Interface.jsNewObject objNm_1 (select _vToArgs_0::<{iTasks.UI.JS.Interface.ToArgs;}> 0 args_2)
+iTasks.UI.JS.Interface.jsWrapFun !fun_0 !world_1 = StdMisc.undef
+iTasks.UI.JS.Interface.jsThis !world_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsTypeof !obj_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsAbort !_x_0 = StdMisc.undef
+iTasks.UI.JS.Interface.toJSArgs !xs_0 = StdList.map iTasks.UI.JS.Interface.toJSArg xs_0
+iTasks.UI.JS.Interface.fromJSValUnsafe !ptr_0 = StdMisc.undef
+iTasks.UI.JS.Interface.fromJSVal !ptr_0 !world_1 = StdMisc.undef
+iTasks.UI.JS.Interface.newJSArray !world_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsArrayPush !x_0 !arr_1 !world_2 = iTasks.UI.JS.Interface.callObjectMethod "push" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_0) _predefined._Nil) arr_1 world_2
+iTasks.UI.JS.Interface.jsArrayPop !arr_0 !world_1 = iTasks.UI.JS.Interface.callObjectMethod "pop" _predefined._Nil arr_0 world_1
+iTasks.UI.JS.Interface.jsArrayReverse !arr_0 !world_1 = iTasks.UI.JS.Interface.callObjectMethod "reverse" _predefined._Nil arr_0 world_1
+iTasks.UI.JS.Interface.foldl_149 op_0 r_1 !_x_2 = case _x_2 (_predefined._Nil -> r_1) (_predefined._Cons a_1_0 x_1_1 -> iTasks.UI.JS.Interface.foldl_149 op_0 (op_0 r_1 a_1_0) x_1_1) 
+iTasks.UI.JS.Interface.op_139 !arr_0 !world_1 !_x_2 = case _x_2 (_Tuple2 i_1_0 arg_1_1 -> iTasks.UI.JS.Interface.jsSetObjectEl i_1_0 (iTasks.UI.JS.Interface.toJSVal arg_1_1) arr_0 world_1) 
+iTasks.UI.JS.Interface.foldl_932 arr_0 !r_1 !_x_2 = case _x_2 (_predefined._Nil -> r_1) (_predefined._Cons a_1_0 x_1_1 -> iTasks.UI.JS.Interface.foldl_932 arr_0 (iTasks.UI.JS.Interface.op_139 arr_0 r_1 a_1_0) x_1_1) 
+iTasks.UI.JS.Interface.toJSArray !xs_0 !world_1 = let !_x_1_0 = iTasks.UI.JS.Interface.newJSArray world_1, !world_1_1 = iTasks.UI.JS.Interface.foldl_932 arr_1_2 (select _x_1_0::_Tuple2 1) (StdList.zip2 (_SystemEnum._from_4 0) xs_0), arr_1_2 = select _x_1_0::_Tuple2 0 in <{_Tuple2!3}> arr_1_2 world_1_1
+iTasks.UI.JS.Interface.jsValToInt::I !ptr_0 = iTasks.UI.JS.Interface._f936_936 (iTasks.UI.JS.Interface.fromJSValUnsafe ptr_0)
+iTasks.UI.JS.Interface._f936_936::I !_x_0 = case _x_0 (_SystemDynamic._DynamicTemp value_1_0 type_1_1 -> let !result_2_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Int)), !unify_bool_2_1 = select result_2_0::_Tuple2 0, unify_subst_2_2 = _SystemDynamic._initial_unification_environment 0 0 in case unify_bool_2_1 (True -> value_1_0) (False -> let !result_4_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char))), !unify_bool_4_1 = select result_4_0::_Tuple2 0 in case unify_bool_4_1 (True -> StdInt.toInt_23 value_1_0) (False -> let !result_6_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Real)), !unify_bool_6_1 = select result_6_0::_Tuple2 0 in case unify_bool_6_1 (True -> StdInt.toInt_22 value_1_0) (False -> StdMisc.abort "Int was expected but something else came") ) ) ) 
+<{iTasks.UI.JS.Interface.fromJSArray`_140}> !f_0 !n_1::I !l_2::I !arr_3 !world_4 = case (<{StdInt.==_16}> n_1 l_2) (True -> <{_Tuple2!3}> _predefined._Nil world_4) (False -> let !_x_2_0 = iTasks.UI.JS.Interface.jsGetObjectEl n_1 arr_3 world_4, !_x_2_1 = <{iTasks.UI.JS.Interface.fromJSArray`_140}> f_0 (<{StdInt.+_6}> n_1 1) l_2 arr_3 (select _x_2_0::_Tuple2 1) in <{_Tuple2!3}> (_predefined._Cons (f_0 (select _x_2_0::_Tuple2 0)) (select _x_2_1::_Tuple2 0)) (select _x_2_1::_Tuple2 1)) 
+iTasks.UI.JS.Interface.fromJSArray !arr_0 !f_1 !world_2 = let !_x_1_0 = iTasks.UI.JS.Interface.jsGetObjectAttr "length" arr_0 world_2 in <{iTasks.UI.JS.Interface.fromJSArray`_140}> f_1 0 (iTasks.UI.JS.Interface.jsValToInt (select _x_1_0::_Tuple2 0)) arr_0 (select _x_1_0::_Tuple2 1)
+iTasks.UI.JS.Interface.jsIsUndefined::B !obj_0 = <{StdString.==_2}> (iTasks.UI.JS.Interface.jsTypeof obj_0) "undefined"
+iTasks.UI.JS.Interface.foldl_150 op_0 r_1 !_x_2 = case _x_2 (_predefined._Nil -> r_1) (_predefined._Cons a_1_0 x_1_1 -> iTasks.UI.JS.Interface.foldl_150 op_0 (op_0 r_1 a_1_0) x_1_1) 
+iTasks.UI.JS.Interface.anon_141 attr_0 obj_1 = iTasks.UI.JS.Interface.jsGetObjectAttr attr_0 obj_1
+iTasks.UI.JS.Interface.jsUnsafeObjCoerce !x_0 = StdMisc.undef
+iTasks.UI.JS.Interface.ifObj !val_0 !f_1 !def_2 !world_3 = let !t_1_0 = iTasks.UI.JS.Interface.jsTypeof val_0 in case (case (<{StdString.==_2}> t_1_0 "object") (True -> True) (False -> <{StdString.==_2}> t_1_0 "string") ) (True -> f_1 (iTasks.UI.JS.Interface.jsUnsafeObjCoerce val_0) world_3) (False -> <{_Tuple2!3}> def_2 world_3) 
+iTasks.UI.JS.Interface.op_142 !_x_0 !attr_1 = case _x_0 (_Tuple2 obj_1_0 world_1_1 -> iTasks.UI.JS.Interface.ifObj obj_1_0 (iTasks.UI.JS.Interface.anon_141 attr_1) obj_1_0 world_1_1) 
+iTasks.UI.JS.Interface.foldl_933 !r_0 !_x_1 = case _x_1 (_predefined._Nil -> r_0) (_predefined._Cons a_1_0 x_1_1 -> iTasks.UI.JS.Interface.foldl_933 (iTasks.UI.JS.Interface.op_142 r_0 a_1_0) x_1_1) 
+iTasks.UI.JS.Interface.findObject !query_0 !world_1 = let !_x_1_0 = iTasks.UI.JS.Interface.jsGetObjectAttr (select _x_1_1::_Tuple2 0) iTasks.UI.JS.Interface.jsWindow world_1, _x_1_1 = Text.split_12 "." query_0, attrs_1_2 = select _x_1_1::_Tuple2 1 in <{iTasks.UI.JS.Interface._c;233;5_937}> attrs_1_2 _x_1_0
+<{iTasks.UI.JS.Interface._c;233;5_937}> !attrs_0 !_x_1 = case attrs_0 (_predefined._Nil -> <{_Tuple2!3}> (select _x_1::_Tuple2 0) (select _x_1::_Tuple2 1)) (_ -> iTasks.UI.JS.Interface.foldl_933 (_Tuple2 (select _x_1::_Tuple2 0) (select _x_1::_Tuple2 1)) attrs_0)
+iTasks.UI.JS.Interface.addJSFromUrl !url_0 !mbCallback_1 !world_2 = let !_x_1_0 = iTasks.UI.JS.Interface.callObjectMethod "createElement" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg "script") _predefined._Nil) iTasks.UI.JS.Interface.jsDocument world_2, !world_1_1 = iTasks.UI.JS.Interface.jsSetObjectAttr "src" (iTasks.UI.JS.Interface.toJSVal url_0) script_1_8 (select _x_1_0::_Tuple2 1), !world_1_2 = iTasks.UI.JS.Interface.jsSetObjectAttr "type" (iTasks.UI.JS.Interface.toJSVal "text/javascript") script_1_8 world_1_1, !world_1_3 = iTasks.UI.JS.Interface.jsSetObjectAttr "async" (iTasks.UI.JS.Interface.toJSVal False) script_1_8 world_1_2, !world_1_4 = <{iTasks.UI.JS.Interface._c;310;31_938}> mbCallback_1 world_1_3 script_1_8, !_x_1_5 = iTasks.UI.JS.Interface.callObjectMethod "getElementsByTagName" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg "head") _predefined._Nil) iTasks.UI.JS.Interface.jsDocument world_1_4, !_x_1_6 = iTasks.UI.JS.Interface.jsGetObjectEl 0 (select _x_1_5::_Tuple2 0) (select _x_1_5::_Tuple2 1), !_x_1_7 = iTasks.UI.JS.Interface.callObjectMethod "appendChild" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg script_1_8) _predefined._Nil) (select _x_1_6::_Tuple2 0) (select _x_1_6::_Tuple2 1), script_1_8 = select _x_1_0::_Tuple2 0 in select _x_1_7::_Tuple2 1
+<{iTasks.UI.JS.Interface._c;310;31_938}> !mbCallback_0 !world_1 script_2 = case mbCallback_0 (Data.Maybe.Nothing -> world_1) (Data.Maybe.Just callback_1_0 -> iTasks.UI.JS.Interface.jsSetObjectAttr "onload" callback_1_0 script_2 world_1) 
+iTasks.UI.JS.Interface.addCSSFromUrl !url_0 !world_1 = let !_x_1_0 = iTasks.UI.JS.Interface.callObjectMethod "createElement" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg "link") _predefined._Nil) iTasks.UI.JS.Interface.jsDocument world_1, !world_1_1 = iTasks.UI.JS.Interface.jsSetObjectAttr "rel" (iTasks.UI.JS.Interface.toJSVal "stylesheet") link_1_8 (select _x_1_0::_Tuple2 1), !world_1_2 = iTasks.UI.JS.Interface.jsSetObjectAttr "type" (iTasks.UI.JS.Interface.toJSVal "text/css") link_1_8 world_1_1, !world_1_3 = iTasks.UI.JS.Interface.jsSetObjectAttr "href" (iTasks.UI.JS.Interface.toJSVal url_0) link_1_8 world_1_2, !world_1_4 = iTasks.UI.JS.Interface.jsSetObjectAttr "async" (iTasks.UI.JS.Interface.toJSVal True) link_1_8 world_1_3, !_x_1_5 = iTasks.UI.JS.Interface.callObjectMethod "getElementsByTagName" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg "head") _predefined._Nil) iTasks.UI.JS.Interface.jsDocument world_1_4, !_x_1_6 = iTasks.UI.JS.Interface.jsGetObjectEl 0 (select _x_1_5::_Tuple2 0) (select _x_1_5::_Tuple2 1), !_x_1_7 = iTasks.UI.JS.Interface.callObjectMethod "appendChild" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg link_1_8) _predefined._Nil) (select _x_1_6::_Tuple2 0) (select _x_1_6::_Tuple2 1), link_1_8 = select _x_1_0::_Tuple2 0 in select _x_1_7::_Tuple2 1
+iTasks.UI.JS.Interface.jsTrace !val_0 !world_1 = let !_x_1_0 = iTasks.UI.JS.Interface.findObject "console" world_1, !_x_1_1 = iTasks.UI.JS.Interface.callObjectMethod "log" (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg val_0) _predefined._Nil) (select _x_1_0::_Tuple2 0) (select _x_1_0::_Tuple2 1) in select _x_1_1::_Tuple2 1
+iTasks.UI.JS.Interface.jsValToString !ptr_0 = let val_1_0 = iTasks.UI.JS.Interface.fromJSValUnsafe ptr_0 in iTasks.UI.JS.Interface._f939_939 val_1_0
+iTasks.UI.JS.Interface._f939_939 !val_0 = case val_0 (_SystemDynamic._DynamicTemp value_1_0 type_1_1 -> let !result_2_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char))), !unify_bool_2_1 = select result_2_0::_Tuple2 0, unify_subst_2_2 = _SystemDynamic._initial_unification_environment 0 0 in case unify_bool_2_1 (True -> value_1_0) (False -> let !result_4_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Real)), !unify_bool_4_1 = select result_4_0::_Tuple2 0 in case unify_bool_4_1 (True -> StdString.toString_7 value_1_0) (False -> let !result_6_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Int)), !unify_bool_6_1 = select result_6_0::_Tuple2 0 in case unify_bool_6_1 (True -> StdString.toString_5 value_1_0) (False -> iTasks.UI.JS.Interface.jsAbort val_0) ) ) ) 
+iTasks.UI.JS.Interface.jsValToReal::D !ptr_0 = iTasks.UI.JS.Interface._f940_940 (iTasks.UI.JS.Interface.fromJSValUnsafe ptr_0)
+iTasks.UI.JS.Interface._f940_940::D !_x_0 = case _x_0 (_SystemDynamic._DynamicTemp value_1_0 type_1_1 -> let !result_2_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Real)), !unify_bool_2_1 = select result_2_0::_Tuple2 0, unify_subst_2_2 = _SystemDynamic._initial_unification_environment 0 0 in case unify_bool_2_1 (True -> value_1_0) (False -> let !result_4_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char))), !unify_bool_4_1 = select result_4_0::_Tuple2 0 in case unify_bool_4_1 (True -> StdReal.toReal_15 value_1_0) (False -> let !result_6_0 = _SystemDynamic._unify unify_subst_2_2 type_1_1 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Int)), !unify_bool_6_1 = select result_6_0::_Tuple2 0 in case unify_bool_6_1 (True -> StdReal.toReal_13 value_1_0) (False -> StdMisc.abort "Real was expected but something else came") ) ) ) 
+iTasks.UI.JS.Interface.jsValToBool::B !ptr_0 = iTasks.UI.JS.Interface._f941_941 (iTasks.UI.JS.Interface.fromJSValUnsafe ptr_0)
+iTasks.UI.JS.Interface._f941_941::B !_x_0 = case _x_0 (_SystemDynamic._DynamicTemp value_1_0 type_1_1 -> let !result_2_0 = _SystemDynamic._unify (_SystemDynamic._initial_unification_environment 0 0) type_1_1 (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Bool)), !unify_bool_2_1 = select result_2_0::_Tuple2 0 in case unify_bool_2_1 (True -> value_1_0) (False -> StdMisc.abort "Bool was expected but something else came") ) 
+iTasks.UI.JS.Interface.withDef !f_0 !def_1 !ptr_2 = case (iTasks.UI.JS.Interface.jsIsUndefined ptr_2) (True -> def_1) (False -> f_0 ptr_2) 
+iTasks.UI.JS.Interface.callFunction !fn_0 !args_1 !world_2 = iTasks.UI.JS.Interface.callObjectMethod fn_0 args_1 iTasks.UI.JS.Interface.jsWindow world_2
+iTasks.UI.JS.Interface.jsUnsafeCoerce !x_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsUnsafeArrCoerce !x_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsUnsafeFunCoerce !x_0 = StdMisc.undef
+iTasks.UI.JS.Interface.jsIsArray !x_0 !world_1 = let !_x_1_0 = iTasks.UI.JS.Interface.findObject "Array" world_1, !_x_1_1 = iTasks.UI.JS.Interface.callObjectMethod "isArray" _predefined._Nil (select _x_1_0::_Tuple2 0) (select _x_1_0::_Tuple2 1) in <{_Tuple2!3}> (iTasks.UI.JS.Interface.jsValToBool (select _x_1_1::_Tuple2 0)) (select _x_1_1::_Tuple2 1)
+iTasks.UI.JS.Interface.ifArr !val_0 !f_1 !def_2 !world_3 = let !_x_1_0 = iTasks.UI.JS.Interface.jsIsArray val_0 world_3 in case (select _x_1_0::_Tuple2 0) (True -> f_1 (iTasks.UI.JS.Interface.jsUnsafeArrCoerce val_0) (select _x_1_0::_Tuple2 1)) (False -> <{_Tuple2!3}> def_2 (select _x_1_0::_Tuple2 1)) 
+iTasks.UI.JS.Interface.ifFun !val_0 !f_1 !def_2 !world_3 = case (<{StdString.==_2}> (iTasks.UI.JS.Interface.jsTypeof val_0) "function") (True -> f_1 (iTasks.UI.JS.Interface.jsUnsafeFunCoerce val_0) world_3) (False -> <{_Tuple2!3}> def_2 world_3) 
+iTasks.UI.JS.Interface.jsIsNull::B !x_0 = StdMisc.undef
+iTasks.UI.JS.Interface.callObject !_x_0 !args_1 !world_2 = case _x_0 (iTasks.UI.JS.Interface.SObj _vJSObjAttr_1_0 obj_1_1 method_1_2 -> let !_x_2_0 = select _vJSObjAttr_1_0::<{iTasks.UI.JS.Interface.JSObjAttr;}> 0 method_1_2 obj_1_1 world_2 in iTasks.UI.JS.Interface.jsApply (select _x_2_0::_Tuple2 0) obj_1_1 args_1 (select _x_2_0::_Tuple2 1)) (iTasks.UI.JS.Interface.SRec _vJSObjAttr_1_0 sel_1_1 method_1_2 -> let !_x_2_0 = iTasks.UI.JS.Interface.getObject sel_1_1 world_2, !_x_2_1 = select _vJSObjAttr_1_0::<{iTasks.UI.JS.Interface.JSObjAttr;}> 0 method_1_2 obj_2_2 (select _x_2_0::_Tuple2 1), obj_2_2 = select _x_2_0::_Tuple2 0 in iTasks.UI.JS.Interface.jsApply (select _x_2_1::_Tuple2 0) obj_2_2 args_1 (select _x_2_1::_Tuple2 1)) 
+iTasks.UI.JS.Interface.anon_143 x_0 s_1 = _Tuple2 x_0 s_1
+iTasks.UI.JS.Interface.pure_53 x_0 = iTasks.UI.JS.Interface.JSIO (iTasks.UI.JS.Interface.anon_143 x_0)
+iTasks.UI.JS.Interface.anon_151 !f_0 g_1 x_2 = f_0 (g_1 x_2)
+iTasks.UI.JS.Interface.run_144 !a2mb_0 !f_1 world_2 = let !_x_1_0 = f_1 world_2, !_x_1_1 = a2mb_0 (select _x_1_0::_Tuple2 0) in select _x_1_1::_Tuple1 0 (select _x_1_0::_Tuple2 1)
+iTasks.UI.JS.Interface.bind_55 !_x_0 a2mb_1 = case _x_0 (iTasks.UI.JS.Interface.JSIO f_1_0 -> iTasks.UI.JS.Interface.JSIO (iTasks.UI.JS.Interface.run_144 a2mb_1 f_1_0)) 
+iTasks.UI.JS.Interface.anon_934 !_x_0 g_1 x_2 = Control.Applicative.lift _x_0 (g_1 x_2)
+iTasks.UI.JS.Interface.anon_935 g_0 x_1 = Control.Applicative.lift (<{Control.Applicative.Applicative;}> <{iTasks.UI.JS.Interface.<*>_52}> iTasks.UI.JS.Interface.pure_53 (<{Data.Functor.Functor;}> iTasks.UI.JS.Interface.fmap_54)) (g_0 x_1)
+iTasks.UI.JS.Interface.fmap_54 f_0 !x_1 = iTasks.UI.JS.Interface.bind_55 x_1 (iTasks.UI.JS.Interface.anon_935 f_0)
+<{iTasks.UI.JS.Interface.<*>_52}> f_0 g_1 = Control.Applicative.liftA2 (<{Control.Applicative.Applicative;}> <{iTasks.UI.JS.Interface.<*>_52}> iTasks.UI.JS.Interface.pure_53 (<{Data.Functor.Functor;}> iTasks.UI.JS.Interface.fmap_54)) StdFunc.id f_0 g_1
+iTasks.UI.JS.Interface.jsGetter_56 !idx_0 !obj_1 !world_2 = iTasks.UI.JS.Interface.jsGetObjectAttr idx_0 obj_1 world_2
+iTasks.UI.JS.Interface.jsSetter_57 !idx_0 !val_1 !obj_2 !world_3 = iTasks.UI.JS.Interface.jsSetObjectAttr idx_0 val_1 obj_2 world_3
+iTasks.UI.JS.Interface.jsGetter_58 !idx_0::I !obj_1 !world_2 = iTasks.UI.JS.Interface.jsGetObjectEl idx_0 obj_1 world_2
+iTasks.UI.JS.Interface.jsSetter_59 !idx_0::I !val_1 !obj_2 !world_3 = iTasks.UI.JS.Interface.jsSetObjectEl idx_0 val_1 obj_2 world_3
+<{iTasks.UI.JS.Interface..#_60}> !_vJSObjAttr_0 !a_1 !b_2 = iTasks.UI.JS.Interface.SObj _vJSObjAttr_0 (iTasks.UI.JS.Interface.jsUnsafeObjCoerce a_1) b_2
+<{iTasks.UI.JS.Interface..#_61}> !_vJSObjAttr_0 !a_1 !b_2 = iTasks.UI.JS.Interface.SRec _vJSObjAttr_0 a_1 b_2
+iTasks.UI.JS.Interface.anon_145 !_vToArgs_0 !fun_1 !args_2 !world_3 = iTasks.UI.JS.Interface.callFunction fun_1 (select _vToArgs_0::<{iTasks.UI.JS.Interface.ToArgs;}> 0 args_2) world_3
+<{iTasks.UI.JS.Interface..$_62}> !_vToArgs_0 !fun_1 !args_2 = iTasks.UI.JS.Interface.anon_145 _vToArgs_0 fun_1 args_2
+iTasks.UI.JS.Interface.anon_146 !_vToArgs_0 !sel_1 !args_2 !world_3 = iTasks.UI.JS.Interface.callObject sel_1 (select _vToArgs_0::<{iTasks.UI.JS.Interface.ToArgs;}> 0 args_2) world_3
+<{iTasks.UI.JS.Interface..$_63}> !_vToArgs_0 !sel_1 !args_2 = iTasks.UI.JS.Interface.anon_146 _vToArgs_0 sel_1 args_2
+iTasks.UI.JS.Interface.toArgs_64 !n_0::I = _predefined._Cons (iTasks.UI.JS.Interface.toJSArg n_0) _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_65 !b_0::B = _predefined._Cons (iTasks.UI.JS.Interface.toJSArg b_0) _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_66 !r_0::D = _predefined._Cons (iTasks.UI.JS.Interface.toJSArg r_0) _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_67 !c_0::C = _predefined._Cons (iTasks.UI.JS.Interface.toJSArg c_0) _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_68 !s_0 = _predefined._Cons (iTasks.UI.JS.Interface.toJSArg s_0) _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_69 !_x_0 = _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_70 !_x_0 = _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_71 !x_0 = _predefined._Cons x_0 _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_72 !x_0 = _predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_0) _predefined._Nil
+iTasks.UI.JS.Interface.toArgs_73 !xs_0 = xs_0
+iTasks.UI.JS.Interface.toArgs_74 !_x_0 = case _x_0 (_Tuple2 x_1_0 y_1_1 -> _predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_1_0) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg y_1_1) _predefined._Nil)) 
+iTasks.UI.JS.Interface.toArgs_75 !_x_0 = case _x_0 (_Tuple3 x_1_0 y_1_1 z_1_2 -> _predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_1_0) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg y_1_1) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg z_1_2) _predefined._Nil))) 
+iTasks.UI.JS.Interface.toArgs_76 !_x_0 = case _x_0 (_Tuple4 x_1_0 y_1_1 z_1_2 p_1_3 -> _predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_1_0) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg y_1_1) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg z_1_2) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg p_1_3) _predefined._Nil)))) 
+iTasks.UI.JS.Interface.toArgs_77 !_x_0 = case _x_0 (_Tuple5 x_1_0 y_1_1 z_1_2 p_1_3 q_1_4 -> _predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_1_0) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg y_1_1) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg z_1_2) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg p_1_3) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg q_1_4) _predefined._Nil))))) 
+iTasks.UI.JS.Interface.toArgs_78 !_x_0 = case _x_0 (_Tuple6 x_1_0 y_1_1 z_1_2 p_1_3 q_1_4 r_1_5 -> _predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_1_0) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg y_1_1) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg z_1_2) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg p_1_3) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg q_1_4) (_predefined._Cons (iTasks.UI.JS.Interface.toJSArg r_1_5) _predefined._Nil)))))) 
+iTasks.UI.JS.Interface.toArgs_79 !x_0 = _predefined._Cons (iTasks.UI.JS.Interface.toJSArg x_0) _predefined._Nil
+iTasks.UI.JS.Interface.toGenericJSVal_157 !x_0 = case x_0 (iTasks.UI.JS.Interface.JSVal x11_1_0 -> StdGeneric.OBJECT (StdGeneric.CONS x11_1_0)) 
+iTasks.UI.JS.Interface.bimapToGeneric_180 !x_0 = iTasks.UI.JS.Interface._f942_942 x_0
+iTasks.UI.JS.Interface._f942_942 !x_0 = case x_0 (_Tuple3 x1_1_0 x2_1_1 x3_1_2 -> _Tuple3 (iTasks.UI.JS.Interface.toGenericJSVal_157 x1_1_0) x2_1_1 x3_1_2) 
+iTasks.UI.JS.Interface.gti_JSVal_154 = StdGeneric.GenTypeArrow (StdGeneric.GenTypeVar 0) (StdGeneric.GenTypeApp (StdGeneric.GenTypeCons "JSVal") (StdGeneric.GenTypeVar 0))
+iTasks.UI.JS.Interface.tdi_JSVal_153 = StdGeneric._GenericTypeDefDescriptor "JSVal" 1 1 iTasks.UI.JS.Interface.cli_JSVal_152
+iTasks.UI.JS.Interface.cdi_JSVal_155 = StdGeneric._GenericConsDescriptor "JSVal" 1 StdGeneric.GenConsNoPrio iTasks.UI.JS.Interface.tdi_JSVal_153 iTasks.UI.JS.Interface.gti_JSVal_154 0
+iTasks.UI.JS.Interface.cli_JSVal_152 = _predefined._Cons iTasks.UI.JS.Interface.cdi_JSVal_155 _predefined._Nil
+iTasks.UI.JS.Interface.gEditor_JSVal_80 <{gEditor_a_65-0_a_0}> <{gText_a_68-0_a_1}> <{gDefault_a_69-0_a_2}> <{gEditMeta_a_65-1_a_3}> <{JSONEncode_a_17-0_a_4}> <{JSONDecode_a_17-1_a_5}> !x1_6 !x2_7 !x3_8 !x4_9 = iTasks._Framework.Generic.Interaction.gEditor_OBJECT_16 1 iTasks.UI.JS.Interface.cli_JSVal_152 (iTasks._Framework.Generic.Interaction.gEditor_CONS_17 1 0 <{gEditor_a_65-0_a_0}> <{gEditMeta_a_65-1_a_3}>) (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 <{gEditMeta_a_65-1_a_3}>) x1_6 (iTasks.UI.JS.Interface.bimapToGeneric_180 x2_7) x3_8 x4_9
+iTasks.UI.JS.Interface.gEditMeta_JSVal_81 <{gEditMeta_a_65-1_a_0}> x1_1 = iTasks._Framework.Generic.Interaction.gEditMeta_OBJECT_49 (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 <{gEditMeta_a_65-1_a_0}>) (iTasks.UI.JS.Interface.toGenericJSVal_157 x1_1)
+iTasks.UI.JS.Interface.bimapToGeneric_181 !x_0 = iTasks.UI.JS.Interface._f943_943 x_0
+iTasks.UI.JS.Interface._f943_943 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSVal_157 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.fromGenericJSVal_156 !c_0 = case c_0 (StdGeneric.OBJECT c_1_0 -> case c_1_0 (StdGeneric.CONS x1_2_0 -> iTasks.UI.JS.Interface.JSVal x1_2_0) ) 
+iTasks.UI.JS.Interface.bimapFromGeneric_182 !x_0 = iTasks.UI.JS.Interface._f944_944 x_0
+iTasks.UI.JS.Interface._f944_944 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.fromGenericJSVal_156 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.bimapFromGeneric_183 !x_0 = iTasks.UI.JS.Interface._f945_945 x_0
+iTasks.UI.JS.Interface._f945_945 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_182 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gUpdate_JSVal_82 <{gUpdate_a_65-3_a_0}> <{gDefault_a_69-0_a_1}> <{JSONEncode_a_17-0_a_2}> <{JSONDecode_a_17-1_a_3}> !x1_4 !x2_5 !x3_6 !x4_7 = iTasks.UI.JS.Interface.bimapFromGeneric_183 (iTasks._Framework.Generic.Interaction.gUpdate_OBJECT_115 1 iTasks.UI.JS.Interface.cli_JSVal_152 (iTasks._Framework.Generic.Interaction.gUpdate_CONS_116 1 0 <{gUpdate_a_65-3_a_0}> <{gDefault_a_69-0_a_1}> <{JSONEncode_a_17-0_a_2}> <{JSONDecode_a_17-1_a_3}>) (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 <{gDefault_a_69-0_a_1}>) (Text.JSON.JSONEncode_CONS_29 "JSVal" <{JSONEncode_a_17-0_a_2}>) (Text.JSON.JSONDecode_CONS_41 "JSVal" <{JSONDecode_a_17-1_a_3}>) x1_4 x2_5 (iTasks.UI.JS.Interface.bimapToGeneric_181 x3_6) x4_7)
+iTasks.UI.JS.Interface.bimapToGeneric_184 !x_0 = iTasks.UI.JS.Interface._f946_946 x_0
+iTasks.UI.JS.Interface._f946_946 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSVal_157 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gVerify_JSVal_83 <{gVerify_a_65-2_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Interaction.gVerify_OBJECT_82 (iTasks._Framework.Generic.Interaction.gVerify_CONS_83 1 <{gVerify_a_65-2_a_0}>) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_184 x2_2)
+iTasks.UI.JS.Interface.bimapToGeneric_185 !x_0 = iTasks.UI.JS.Interface._f947_947 x_0
+iTasks.UI.JS.Interface._f947_947 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.toGenericJSVal_157 x1_1_0)) 
+iTasks.UI.JS.Interface.gText_JSVal_84 <{gText_a_68-0_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Visualization.gText_OBJECT_8 (iTasks._Framework.Generic.Visualization.gText_CONS_7 "JSVal" iTasks.UI.JS.Interface.tdi_JSVal_153 <{gText_a_68-0_a_0}>) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_185 x2_2)
+iTasks.UI.JS.Interface.JSONEncode_JSVal_85 <{JSONEncode_t_17-0_a_0}> !x1_1::B !x2_2 = Text.JSON.JSONEncode_OBJECT_30 (Text.JSON.JSONEncode_CONS_29 "JSVal" <{JSONEncode_t_17-0_a_0}>) x1_1 (iTasks.UI.JS.Interface.toGenericJSVal_157 x2_2)
+iTasks.UI.JS.Interface.bimapFromGeneric_186 !x_0 = iTasks.UI.JS.Interface._f948_948 x_0
+iTasks.UI.JS.Interface._f948_948 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.fromGenericJSVal_156 x1_1_0)) 
+iTasks.UI.JS.Interface.bimapFromGeneric_187 !x_0 = iTasks.UI.JS.Interface._f949_949 x_0
+iTasks.UI.JS.Interface._f949_949 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_186 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.JSONDecode_JSVal_86 <{JSONDecode_t_17-1_a_0}> !x1_1::B !x2_2 = iTasks.UI.JS.Interface.bimapFromGeneric_187 (Text.JSON.JSONDecode_OBJECT_42 (Text.JSON.JSONDecode_CONS_41 "JSVal" <{JSONDecode_t_17-1_a_0}>) x1_1 x2_2)
+iTasks.UI.JS.Interface.gDefault_JSVal_87 <{gDefault_a_69-0_a_0}> = iTasks.UI.JS.Interface.fromGenericJSVal_156 (iTasks._Framework.Generic.Defaults.gDefault_OBJECT_5 (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 <{gDefault_a_69-0_a_0}>))
+iTasks.UI.JS.Interface.gEq_JSVal_88::B <{gEq_a_25-0_a_0}> x1_1 x2_2 = GenEq.gEq_OBJECT_13 (GenEq.gEq_CONS_10 <{gEq_a_25-0_a_0}>) (iTasks.UI.JS.Interface.toGenericJSVal_157 x1_1) (iTasks.UI.JS.Interface.toGenericJSVal_157 x2_2)
+iTasks.UI.JS.Interface.toGenericJSObject_164 !x_0 = case x_0 (iTasks.UI.JS.Interface.JSObject -> StdGeneric.OBJECT (StdGeneric.CONS StdGeneric.UNIT)) 
+iTasks.UI.JS.Interface.bimapToGeneric_188 !x_0 = iTasks.UI.JS.Interface._f950_950 x_0
+iTasks.UI.JS.Interface._f950_950 !x_0 = case x_0 (_Tuple3 x1_1_0 x2_1_1 x3_1_2 -> _Tuple3 (iTasks.UI.JS.Interface.toGenericJSObject_164 x1_1_0) x2_1_1 x3_1_2) 
+iTasks.UI.JS.Interface.gti_JSObject_161 = StdGeneric.GenTypeApp (StdGeneric.GenTypeCons "JSObject") (StdGeneric.GenTypeVar 0)
+iTasks.UI.JS.Interface.tdi_JSObject_160 = StdGeneric._GenericTypeDefDescriptor "JSObject" 1 1 iTasks.UI.JS.Interface.cli_JSObject_159
+iTasks.UI.JS.Interface.cdi_JSObject_162 = StdGeneric._GenericConsDescriptor "JSObject" 0 StdGeneric.GenConsNoPrio iTasks.UI.JS.Interface.tdi_JSObject_160 iTasks.UI.JS.Interface.gti_JSObject_161 0
+iTasks.UI.JS.Interface.cli_JSObject_159 = _predefined._Cons iTasks.UI.JS.Interface.cdi_JSObject_162 _predefined._Nil
+iTasks.UI.JS.Interface.gEditor_JSObject_89 <{gEditor_a_65-0_a_0}> <{gText_a_68-0_a_1}> <{gDefault_a_69-0_a_2}> <{gEditMeta_a_65-1_a_3}> <{JSONEncode_a_17-0_a_4}> <{JSONDecode_a_17-1_a_5}> !x1_6 !x2_7 !x3_8 !x4_9 = iTasks._Framework.Generic.Interaction.gEditor_OBJECT_16 1 iTasks.UI.JS.Interface.cli_JSObject_159 (iTasks._Framework.Generic.Interaction.gEditor_CONS_17 0 0 iTasks._Framework.Generic.Interaction.gEditor_UNIT_13 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) x1_6 (iTasks.UI.JS.Interface.bimapToGeneric_188 x2_7) x3_8 x4_9
+iTasks.UI.JS.Interface.gEditMeta_JSObject_90 <{gEditMeta_a_65-1_a_0}> x1_1 = iTasks._Framework.Generic.Interaction.gEditMeta_OBJECT_49 (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) (iTasks.UI.JS.Interface.toGenericJSObject_164 x1_1)
+iTasks.UI.JS.Interface.bimapToGeneric_189 !x_0 = iTasks.UI.JS.Interface._f951_951 x_0
+iTasks.UI.JS.Interface._f951_951 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSObject_164 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.fromGenericJSObject_163 !c_0 = case c_0 (StdGeneric.OBJECT c_1_0 -> case c_1_0 (StdGeneric.CONS c_2_0 -> case c_2_0 (StdGeneric.UNIT -> iTasks.UI.JS.Interface.JSObject) ) ) 
+iTasks.UI.JS.Interface.bimapFromGeneric_190 !x_0 = iTasks.UI.JS.Interface._f952_952 x_0
+iTasks.UI.JS.Interface._f952_952 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.fromGenericJSObject_163 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.bimapFromGeneric_191 !x_0 = iTasks.UI.JS.Interface._f953_953 x_0
+iTasks.UI.JS.Interface._f953_953 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_190 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gUpdate_JSObject_91 <{gUpdate_a_65-3_a_0}> <{gDefault_a_69-0_a_1}> <{JSONEncode_a_17-0_a_2}> <{JSONDecode_a_17-1_a_3}> !x1_4 !x2_5 !x3_6 !x4_7 = iTasks.UI.JS.Interface.bimapFromGeneric_191 (iTasks._Framework.Generic.Interaction.gUpdate_OBJECT_115 1 iTasks.UI.JS.Interface.cli_JSObject_159 (iTasks._Framework.Generic.Interaction.gUpdate_CONS_116 0 0 iTasks._Framework.Generic.Interaction.gUpdate_UNIT_112 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1 Text.JSON.JSONEncode_UNIT_15 Text.JSON.JSONDecode_UNIT_39) (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1) (Text.JSON.JSONEncode_CONS_29 "JSObject" Text.JSON.JSONEncode_UNIT_15) (Text.JSON.JSONDecode_CONS_41 "JSObject" Text.JSON.JSONDecode_UNIT_39) x1_4 x2_5 (iTasks.UI.JS.Interface.bimapToGeneric_189 x3_6) x4_7)
+iTasks.UI.JS.Interface.bimapToGeneric_192 !x_0 = iTasks.UI.JS.Interface._f954_954 x_0
+iTasks.UI.JS.Interface._f954_954 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSObject_164 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gVerify_JSObject_92 <{gVerify_a_65-2_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Interaction.gVerify_OBJECT_82 (iTasks._Framework.Generic.Interaction.gVerify_CONS_83 0 iTasks._Framework.Generic.Interaction.gVerify_UNIT_79) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_192 x2_2)
+iTasks.UI.JS.Interface.bimapToGeneric_193 !x_0 = iTasks.UI.JS.Interface._f955_955 x_0
+iTasks.UI.JS.Interface._f955_955 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.toGenericJSObject_164 x1_1_0)) 
+iTasks.UI.JS.Interface.gText_JSObject_93 <{gText_a_68-0_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Visualization.gText_OBJECT_8 (iTasks._Framework.Generic.Visualization.gText_CONS_7 "JSObject" iTasks.UI.JS.Interface.tdi_JSObject_160 iTasks._Framework.Generic.Visualization.gText_UNIT_4) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_193 x2_2)
+iTasks.UI.JS.Interface.JSONEncode_JSObject_94 <{JSONEncode_t_17-0_a_0}> !x1_1::B !x2_2 = Text.JSON.JSONEncode_OBJECT_30 (Text.JSON.JSONEncode_CONS_29 "JSObject" Text.JSON.JSONEncode_UNIT_15) x1_1 (iTasks.UI.JS.Interface.toGenericJSObject_164 x2_2)
+iTasks.UI.JS.Interface.bimapFromGeneric_194 !x_0 = iTasks.UI.JS.Interface._f956_956 x_0
+iTasks.UI.JS.Interface._f956_956 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.fromGenericJSObject_163 x1_1_0)) 
+iTasks.UI.JS.Interface.bimapFromGeneric_195 !x_0 = iTasks.UI.JS.Interface._f957_957 x_0
+iTasks.UI.JS.Interface._f957_957 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_194 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.JSONDecode_JSObject_95 <{JSONDecode_t_17-1_a_0}> !x1_1::B !x2_2 = iTasks.UI.JS.Interface.bimapFromGeneric_195 (Text.JSON.JSONDecode_OBJECT_42 (Text.JSON.JSONDecode_CONS_41 "JSObject" Text.JSON.JSONDecode_UNIT_39) x1_1 x2_2)
+iTasks.UI.JS.Interface.gDefault_JSObject_96 <{gDefault_a_69-0_a_0}> = iTasks.UI.JS.Interface.fromGenericJSObject_163 (iTasks._Framework.Generic.Defaults.gDefault_OBJECT_5 (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1))
+iTasks.UI.JS.Interface.gEq_JSObject_97::B <{gEq_a_25-0_a_0}> x1_1 x2_2 = GenEq.gEq_OBJECT_13 (GenEq.gEq_CONS_10 GenEq.gEq_UNIT_7) (iTasks.UI.JS.Interface.toGenericJSObject_164 x1_1) (iTasks.UI.JS.Interface.toGenericJSObject_164 x2_2)
+iTasks.UI.JS.Interface.toGenericJSFunction_171 !x_0 = case x_0 (iTasks.UI.JS.Interface.JSFunction -> StdGeneric.OBJECT (StdGeneric.CONS StdGeneric.UNIT)) 
+iTasks.UI.JS.Interface.bimapToGeneric_196 !x_0 = iTasks.UI.JS.Interface._f958_958 x_0
+iTasks.UI.JS.Interface._f958_958 !x_0 = case x_0 (_Tuple3 x1_1_0 x2_1_1 x3_1_2 -> _Tuple3 (iTasks.UI.JS.Interface.toGenericJSFunction_171 x1_1_0) x2_1_1 x3_1_2) 
+iTasks.UI.JS.Interface.gti_JSFunction_168 = StdGeneric.GenTypeApp (StdGeneric.GenTypeCons "JSFunction") (StdGeneric.GenTypeVar 0)
+iTasks.UI.JS.Interface.tdi_JSFunction_167 = StdGeneric._GenericTypeDefDescriptor "JSFunction" 1 1 iTasks.UI.JS.Interface.cli_JSFunction_166
+iTasks.UI.JS.Interface.cdi_JSFunction_169 = StdGeneric._GenericConsDescriptor "JSFunction" 0 StdGeneric.GenConsNoPrio iTasks.UI.JS.Interface.tdi_JSFunction_167 iTasks.UI.JS.Interface.gti_JSFunction_168 0
+iTasks.UI.JS.Interface.cli_JSFunction_166 = _predefined._Cons iTasks.UI.JS.Interface.cdi_JSFunction_169 _predefined._Nil
+iTasks.UI.JS.Interface.gEditor_JSFunction_98 <{gEditor_a_65-0_a_0}> <{gText_a_68-0_a_1}> <{gDefault_a_69-0_a_2}> <{gEditMeta_a_65-1_a_3}> <{JSONEncode_a_17-0_a_4}> <{JSONDecode_a_17-1_a_5}> !x1_6 !x2_7 !x3_8 !x4_9 = iTasks._Framework.Generic.Interaction.gEditor_OBJECT_16 1 iTasks.UI.JS.Interface.cli_JSFunction_166 (iTasks._Framework.Generic.Interaction.gEditor_CONS_17 0 0 iTasks._Framework.Generic.Interaction.gEditor_UNIT_13 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) x1_6 (iTasks.UI.JS.Interface.bimapToGeneric_196 x2_7) x3_8 x4_9
+iTasks.UI.JS.Interface.gEditMeta_JSFunction_99 <{gEditMeta_a_65-1_a_0}> x1_1 = iTasks._Framework.Generic.Interaction.gEditMeta_OBJECT_49 (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) (iTasks.UI.JS.Interface.toGenericJSFunction_171 x1_1)
+iTasks.UI.JS.Interface.bimapToGeneric_197 !x_0 = iTasks.UI.JS.Interface._f959_959 x_0
+iTasks.UI.JS.Interface._f959_959 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSFunction_171 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.fromGenericJSFunction_170 !c_0 = case c_0 (StdGeneric.OBJECT c_1_0 -> case c_1_0 (StdGeneric.CONS c_2_0 -> case c_2_0 (StdGeneric.UNIT -> iTasks.UI.JS.Interface.JSFunction) ) ) 
+iTasks.UI.JS.Interface.bimapFromGeneric_198 !x_0 = iTasks.UI.JS.Interface._f960_960 x_0
+iTasks.UI.JS.Interface._f960_960 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.fromGenericJSFunction_170 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.bimapFromGeneric_199 !x_0 = iTasks.UI.JS.Interface._f961_961 x_0
+iTasks.UI.JS.Interface._f961_961 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_198 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gUpdate_JSFunction_100 <{gUpdate_a_65-3_a_0}> <{gDefault_a_69-0_a_1}> <{JSONEncode_a_17-0_a_2}> <{JSONDecode_a_17-1_a_3}> !x1_4 !x2_5 !x3_6 !x4_7 = iTasks.UI.JS.Interface.bimapFromGeneric_199 (iTasks._Framework.Generic.Interaction.gUpdate_OBJECT_115 1 iTasks.UI.JS.Interface.cli_JSFunction_166 (iTasks._Framework.Generic.Interaction.gUpdate_CONS_116 0 0 iTasks._Framework.Generic.Interaction.gUpdate_UNIT_112 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1 Text.JSON.JSONEncode_UNIT_15 Text.JSON.JSONDecode_UNIT_39) (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1) (Text.JSON.JSONEncode_CONS_29 "JSFunction" Text.JSON.JSONEncode_UNIT_15) (Text.JSON.JSONDecode_CONS_41 "JSFunction" Text.JSON.JSONDecode_UNIT_39) x1_4 x2_5 (iTasks.UI.JS.Interface.bimapToGeneric_197 x3_6) x4_7)
+iTasks.UI.JS.Interface.bimapToGeneric_200 !x_0 = iTasks.UI.JS.Interface._f962_962 x_0
+iTasks.UI.JS.Interface._f962_962 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSFunction_171 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gVerify_JSFunction_101 <{gVerify_a_65-2_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Interaction.gVerify_OBJECT_82 (iTasks._Framework.Generic.Interaction.gVerify_CONS_83 0 iTasks._Framework.Generic.Interaction.gVerify_UNIT_79) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_200 x2_2)
+iTasks.UI.JS.Interface.bimapToGeneric_201 !x_0 = iTasks.UI.JS.Interface._f963_963 x_0
+iTasks.UI.JS.Interface._f963_963 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.toGenericJSFunction_171 x1_1_0)) 
+iTasks.UI.JS.Interface.gText_JSFunction_102 <{gText_a_68-0_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Visualization.gText_OBJECT_8 (iTasks._Framework.Generic.Visualization.gText_CONS_7 "JSFunction" iTasks.UI.JS.Interface.tdi_JSFunction_167 iTasks._Framework.Generic.Visualization.gText_UNIT_4) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_201 x2_2)
+iTasks.UI.JS.Interface.JSONEncode_JSFunction_103 <{JSONEncode_t_17-0_a_0}> !x1_1::B !x2_2 = Text.JSON.JSONEncode_OBJECT_30 (Text.JSON.JSONEncode_CONS_29 "JSFunction" Text.JSON.JSONEncode_UNIT_15) x1_1 (iTasks.UI.JS.Interface.toGenericJSFunction_171 x2_2)
+iTasks.UI.JS.Interface.bimapFromGeneric_202 !x_0 = iTasks.UI.JS.Interface._f964_964 x_0
+iTasks.UI.JS.Interface._f964_964 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.fromGenericJSFunction_170 x1_1_0)) 
+iTasks.UI.JS.Interface.bimapFromGeneric_203 !x_0 = iTasks.UI.JS.Interface._f965_965 x_0
+iTasks.UI.JS.Interface._f965_965 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_202 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.JSONDecode_JSFunction_104 <{JSONDecode_t_17-1_a_0}> !x1_1::B !x2_2 = iTasks.UI.JS.Interface.bimapFromGeneric_203 (Text.JSON.JSONDecode_OBJECT_42 (Text.JSON.JSONDecode_CONS_41 "JSFunction" Text.JSON.JSONDecode_UNIT_39) x1_1 x2_2)
+iTasks.UI.JS.Interface.gDefault_JSFunction_105 <{gDefault_a_69-0_a_0}> = iTasks.UI.JS.Interface.fromGenericJSFunction_170 (iTasks._Framework.Generic.Defaults.gDefault_OBJECT_5 (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1))
+iTasks.UI.JS.Interface.gEq_JSFunction_106::B <{gEq_a_25-0_a_0}> x1_1 x2_2 = GenEq.gEq_OBJECT_13 (GenEq.gEq_CONS_10 GenEq.gEq_UNIT_7) (iTasks.UI.JS.Interface.toGenericJSFunction_171 x1_1) (iTasks.UI.JS.Interface.toGenericJSFunction_171 x2_2)
+iTasks.UI.JS.Interface.toGenericJSArray_178 !x_0 = case x_0 (iTasks.UI.JS.Interface.JSArray -> StdGeneric.OBJECT (StdGeneric.CONS StdGeneric.UNIT)) 
+iTasks.UI.JS.Interface.bimapToGeneric_204 !x_0 = iTasks.UI.JS.Interface._f966_966 x_0
+iTasks.UI.JS.Interface._f966_966 !x_0 = case x_0 (_Tuple3 x1_1_0 x2_1_1 x3_1_2 -> _Tuple3 (iTasks.UI.JS.Interface.toGenericJSArray_178 x1_1_0) x2_1_1 x3_1_2) 
+iTasks.UI.JS.Interface.gti_JSArray_175 = StdGeneric.GenTypeApp (StdGeneric.GenTypeCons "JSArray") (StdGeneric.GenTypeVar 0)
+iTasks.UI.JS.Interface.tdi_JSArray_174 = StdGeneric._GenericTypeDefDescriptor "JSArray" 1 1 iTasks.UI.JS.Interface.cli_JSArray_173
+iTasks.UI.JS.Interface.cdi_JSArray_176 = StdGeneric._GenericConsDescriptor "JSArray" 0 StdGeneric.GenConsNoPrio iTasks.UI.JS.Interface.tdi_JSArray_174 iTasks.UI.JS.Interface.gti_JSArray_175 0
+iTasks.UI.JS.Interface.cli_JSArray_173 = _predefined._Cons iTasks.UI.JS.Interface.cdi_JSArray_176 _predefined._Nil
+iTasks.UI.JS.Interface.gEditor_JSArray_107 <{gEditor_a_65-0_a_0}> <{gText_a_68-0_a_1}> <{gDefault_a_69-0_a_2}> <{gEditMeta_a_65-1_a_3}> <{JSONEncode_a_17-0_a_4}> <{JSONDecode_a_17-1_a_5}> !x1_6 !x2_7 !x3_8 !x4_9 = iTasks._Framework.Generic.Interaction.gEditor_OBJECT_16 1 iTasks.UI.JS.Interface.cli_JSArray_173 (iTasks._Framework.Generic.Interaction.gEditor_CONS_17 0 0 iTasks._Framework.Generic.Interaction.gEditor_UNIT_13 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) x1_6 (iTasks.UI.JS.Interface.bimapToGeneric_204 x2_7) x3_8 x4_9
+iTasks.UI.JS.Interface.gEditMeta_JSArray_108 <{gEditMeta_a_65-1_a_0}> x1_1 = iTasks._Framework.Generic.Interaction.gEditMeta_OBJECT_49 (iTasks._Framework.Generic.Interaction.gEditMeta_CONS_50 iTasks._Framework.Generic.Interaction.gEditMeta_UNIT_46) (iTasks.UI.JS.Interface.toGenericJSArray_178 x1_1)
+iTasks.UI.JS.Interface.bimapToGeneric_205 !x_0 = iTasks.UI.JS.Interface._f967_967 x_0
+iTasks.UI.JS.Interface._f967_967 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSArray_178 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.fromGenericJSArray_177 !c_0 = case c_0 (StdGeneric.OBJECT c_1_0 -> case c_1_0 (StdGeneric.CONS c_2_0 -> case c_2_0 (StdGeneric.UNIT -> iTasks.UI.JS.Interface.JSArray) ) ) 
+iTasks.UI.JS.Interface.bimapFromGeneric_206 !x_0 = iTasks.UI.JS.Interface._f968_968 x_0
+iTasks.UI.JS.Interface._f968_968 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.fromGenericJSArray_177 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.bimapFromGeneric_207 !x_0 = iTasks.UI.JS.Interface._f969_969 x_0
+iTasks.UI.JS.Interface._f969_969 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_206 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gUpdate_JSArray_109 <{gUpdate_a_65-3_a_0}> <{gDefault_a_69-0_a_1}> <{JSONEncode_a_17-0_a_2}> <{JSONDecode_a_17-1_a_3}> !x1_4 !x2_5 !x3_6 !x4_7 = iTasks.UI.JS.Interface.bimapFromGeneric_207 (iTasks._Framework.Generic.Interaction.gUpdate_OBJECT_115 1 iTasks.UI.JS.Interface.cli_JSArray_173 (iTasks._Framework.Generic.Interaction.gUpdate_CONS_116 0 0 iTasks._Framework.Generic.Interaction.gUpdate_UNIT_112 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1 Text.JSON.JSONEncode_UNIT_15 Text.JSON.JSONDecode_UNIT_39) (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1) (Text.JSON.JSONEncode_CONS_29 "JSArray" Text.JSON.JSONEncode_UNIT_15) (Text.JSON.JSONDecode_CONS_41 "JSArray" Text.JSON.JSONDecode_UNIT_39) x1_4 x2_5 (iTasks.UI.JS.Interface.bimapToGeneric_205 x3_6) x4_7)
+iTasks.UI.JS.Interface.bimapToGeneric_208 !x_0 = iTasks.UI.JS.Interface._f970_970 x_0
+iTasks.UI.JS.Interface._f970_970 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.toGenericJSArray_178 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.gVerify_JSArray_110 <{gVerify_a_65-2_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Interaction.gVerify_OBJECT_82 (iTasks._Framework.Generic.Interaction.gVerify_CONS_83 0 iTasks._Framework.Generic.Interaction.gVerify_UNIT_79) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_208 x2_2)
+iTasks.UI.JS.Interface.bimapToGeneric_209 !x_0 = iTasks.UI.JS.Interface._f971_971 x_0
+iTasks.UI.JS.Interface._f971_971 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.toGenericJSArray_178 x1_1_0)) 
+iTasks.UI.JS.Interface.gText_JSArray_111 <{gText_a_68-0_a_0}> !x1_1 x2_2 = iTasks._Framework.Generic.Visualization.gText_OBJECT_8 (iTasks._Framework.Generic.Visualization.gText_CONS_7 "JSArray" iTasks.UI.JS.Interface.tdi_JSArray_174 iTasks._Framework.Generic.Visualization.gText_UNIT_4) x1_1 (iTasks.UI.JS.Interface.bimapToGeneric_209 x2_2)
+iTasks.UI.JS.Interface.JSONEncode_JSArray_112 <{JSONEncode_t_17-0_a_0}> !x1_1::B !x2_2 = Text.JSON.JSONEncode_OBJECT_30 (Text.JSON.JSONEncode_CONS_29 "JSArray" Text.JSON.JSONEncode_UNIT_15) x1_1 (iTasks.UI.JS.Interface.toGenericJSArray_178 x2_2)
+iTasks.UI.JS.Interface.bimapFromGeneric_210 !x_0 = iTasks.UI.JS.Interface._f972_972 x_0
+iTasks.UI.JS.Interface._f972_972 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (iTasks.UI.JS.Interface.fromGenericJSArray_177 x1_1_0)) 
+iTasks.UI.JS.Interface.bimapFromGeneric_211 !x_0 = iTasks.UI.JS.Interface._f973_973 x_0
+iTasks.UI.JS.Interface._f973_973 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (iTasks.UI.JS.Interface.bimapFromGeneric_210 x1_1_0) x2_1_1) 
+iTasks.UI.JS.Interface.JSONDecode_JSArray_113 <{JSONDecode_t_17-1_a_0}> !x1_1::B !x2_2 = iTasks.UI.JS.Interface.bimapFromGeneric_211 (Text.JSON.JSONDecode_OBJECT_42 (Text.JSON.JSONDecode_CONS_41 "JSArray" Text.JSON.JSONDecode_UNIT_39) x1_1 x2_2)
+iTasks.UI.JS.Interface.gDefault_JSArray_114 <{gDefault_a_69-0_a_0}> = iTasks.UI.JS.Interface.fromGenericJSArray_177 (iTasks._Framework.Generic.Defaults.gDefault_OBJECT_5 (iTasks._Framework.Generic.Defaults.gDefault_CONS_4 iTasks._Framework.Generic.Defaults.gDefault_UNIT_1))
+iTasks.UI.JS.Interface.gEq_JSArray_115::B <{gEq_a_25-0_a_0}> x1_1 x2_2 = GenEq.gEq_OBJECT_13 (GenEq.gEq_CONS_10 GenEq.gEq_UNIT_7) (iTasks.UI.JS.Interface.toGenericJSArray_178 x1_1) (iTasks.UI.JS.Interface.toGenericJSArray_178 x2_2)
+<{iTasks.UI.JS.Interface.TD;DomElementId}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSIO}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSWorld}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSVal}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSObj}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSFun}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSArr}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSArg}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSFunction}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSArray}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSObject}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSWindow}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSDocument}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSEvent}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSObjSelector}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;JSObjAttr;}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;.#;}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;.$;}> _x_0::B = _predefined._Nil
+<{iTasks.UI.JS.Interface.TD;ToArgs;}> _x_0::B = _predefined._Nil
+
+:: iTasks.UI.JS.Interface.JSIO = iTasks.UI.JS.Interface.JSIO a1
+:: iTasks.UI.JS.Interface.JSWorld = iTasks.UI.JS.Interface.JSWorld
+:: iTasks.UI.JS.Interface.JSVal = iTasks.UI.JS.Interface.JSVal !a1
+:: iTasks.UI.JS.Interface.JSArg = iTasks.UI.JS.Interface.JSArg a1
+:: iTasks.UI.JS.Interface.JSWindow = iTasks.UI.JS.Interface.JSWindow
+:: iTasks.UI.JS.Interface.JSDocument = iTasks.UI.JS.Interface.JSDocument
+:: iTasks.UI.JS.Interface.JSFunction = iTasks.UI.JS.Interface.JSFunction
+:: iTasks.UI.JS.Interface.JSArray = iTasks.UI.JS.Interface.JSArray
+:: iTasks.UI.JS.Interface.JSObject = iTasks.UI.JS.Interface.JSObject
+:: iTasks.UI.JS.Interface.JSEvent = iTasks.UI.JS.Interface.JSEvent
+:: iTasks.UI.JS.Interface.JSObjSelector = iTasks.UI.JS.Interface.SObj !a1 !a2 a3 | iTasks.UI.JS.Interface.SDomId !a1 | iTasks.UI.JS.Interface.SRec !a1 !a2 a3
+
+|| Converted Records
+:: <{iTasks.UI.JS.Interface.JSObjAttr;}> = {!iTasks.UI.JS.Interface.jsGetter, !iTasks.UI.JS.Interface.jsSetter}
+
+:: <{iTasks.UI.JS.Interface..#;}> = {!<{iTasks.UI.JS.Interface..#}>}
+
+:: <{iTasks.UI.JS.Interface..$;}> = {!<{iTasks.UI.JS.Interface..$}>}
+
+:: <{iTasks.UI.JS.Interface.ToArgs;}> = {!iTasks.UI.JS.Interface.toArgs}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_s;}> = {!iTasks.UI.JS.Interface.JSONEncode_s}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_ss;}> = {!iTasks.UI.JS.Interface.JSONEncode_ss}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_sss;}> = {!iTasks.UI.JS.Interface.JSONEncode_sss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_s;}> = {!iTasks.UI.JS.Interface.JSONDecode_s}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_ss;}> = {!iTasks.UI.JS.Interface.JSONDecode_ss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_sss;}> = {!iTasks.UI.JS.Interface.JSONDecode_sss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_s;}> = {iTasks.UI.JS.Interface.gDefault_s}
+
+:: <{iTasks.UI.JS.Interface.gDefault_ss;}> = {iTasks.UI.JS.Interface.gDefault_ss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_sss;}> = {iTasks.UI.JS.Interface.gDefault_sss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_s;}> = {!iTasks.UI.JS.Interface.gUpdate_s}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_ss;}> = {!iTasks.UI.JS.Interface.gUpdate_ss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_sss;}> = {!iTasks.UI.JS.Interface.gUpdate_sss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_s;}> = {!iTasks.UI.JS.Interface.gVerify_s}
+
+:: <{iTasks.UI.JS.Interface.gVerify_ss;}> = {!iTasks.UI.JS.Interface.gVerify_ss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_sss;}> = {!iTasks.UI.JS.Interface.gVerify_sss}
+
+:: <{iTasks.UI.JS.Interface.gText_s;}> = {!iTasks.UI.JS.Interface.gText_s}
+
+:: <{iTasks.UI.JS.Interface.gText_ss;}> = {!iTasks.UI.JS.Interface.gText_ss}
+
+:: <{iTasks.UI.JS.Interface.gText_sss;}> = {!iTasks.UI.JS.Interface.gText_sss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_s;}> = {!iTasks.UI.JS.Interface.gEditor_s}
+
+:: <{iTasks.UI.JS.Interface.gEditor_ss;}> = {!iTasks.UI.JS.Interface.gEditor_ss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_sss;}> = {!iTasks.UI.JS.Interface.gEditor_sss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_s;}> = {!iTasks.UI.JS.Interface.gEditMeta_s}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_ss;}> = {!iTasks.UI.JS.Interface.gEditMeta_ss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_sss;}> = {!iTasks.UI.JS.Interface.gEditMeta_sss}
+
+:: <{iTasks.UI.JS.Interface.gEq_s;}> = {!iTasks.UI.JS.Interface.gEq_s}
+
+:: <{iTasks.UI.JS.Interface.gEq_ss;}> = {!iTasks.UI.JS.Interface.gEq_ss}
+
+:: <{iTasks.UI.JS.Interface.gEq_sss;}> = {!iTasks.UI.JS.Interface.gEq_sss}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_ssss;}> = {!iTasks.UI.JS.Interface.JSONEncode_ssss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_ssss;}> = {!iTasks.UI.JS.Interface.JSONDecode_ssss}
+
+:: <{iTasks.UI.JS.Interface.gEq_ssss;}> = {!iTasks.UI.JS.Interface.gEq_ssss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_ssss;}> = {iTasks.UI.JS.Interface.gDefault_ssss}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_sssss;}> = {!iTasks.UI.JS.Interface.JSONEncode_sssss}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_ssssss;}> = {!iTasks.UI.JS.Interface.JSONEncode_ssssss}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_sssssss;}> = {!iTasks.UI.JS.Interface.JSONEncode_sssssss}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_ssssssss;}> = {!iTasks.UI.JS.Interface.JSONEncode_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.JSONEncode_sssssssss;}> = {!iTasks.UI.JS.Interface.JSONEncode_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_sssss;}> = {!iTasks.UI.JS.Interface.JSONDecode_sssss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_ssssss;}> = {!iTasks.UI.JS.Interface.JSONDecode_ssssss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_sssssss;}> = {!iTasks.UI.JS.Interface.JSONDecode_sssssss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_ssssssss;}> = {!iTasks.UI.JS.Interface.JSONDecode_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.JSONDecode_sssssssss;}> = {!iTasks.UI.JS.Interface.JSONDecode_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.bimap_s;}> = {iTasks.UI.JS.Interface.bimap_s}
+
+:: <{iTasks.UI.JS.Interface.bimap_ss;}> = {iTasks.UI.JS.Interface.bimap_ss}
+
+:: <{iTasks.UI.JS.Interface.bimap_sss;}> = {iTasks.UI.JS.Interface.bimap_sss}
+
+:: <{iTasks.UI.JS.Interface.gEq_sssss;}> = {!iTasks.UI.JS.Interface.gEq_sssss}
+
+:: <{iTasks.UI.JS.Interface.gEq_ssssss;}> = {!iTasks.UI.JS.Interface.gEq_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gEq_sssssss;}> = {!iTasks.UI.JS.Interface.gEq_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gEq_ssssssss;}> = {!iTasks.UI.JS.Interface.gEq_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gEq_sssssssss;}> = {!iTasks.UI.JS.Interface.gEq_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_ssss;}> = {!iTasks.UI.JS.Interface.gEditor_ssss}
+
+:: <{iTasks.UI.JS.Interface.gText_ssss;}> = {!iTasks.UI.JS.Interface.gText_ssss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_ssss;}> = {!iTasks.UI.JS.Interface.gEditMeta_ssss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_sssss;}> = {!iTasks.UI.JS.Interface.gEditor_sssss}
+
+:: <{iTasks.UI.JS.Interface.gText_sssss;}> = {!iTasks.UI.JS.Interface.gText_sssss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_sssss;}> = {iTasks.UI.JS.Interface.gDefault_sssss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_sssss;}> = {!iTasks.UI.JS.Interface.gEditMeta_sssss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_ssssss;}> = {!iTasks.UI.JS.Interface.gEditor_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gText_ssssss;}> = {!iTasks.UI.JS.Interface.gText_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_ssssss;}> = {iTasks.UI.JS.Interface.gDefault_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_ssssss;}> = {!iTasks.UI.JS.Interface.gEditMeta_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_sssssss;}> = {!iTasks.UI.JS.Interface.gEditor_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gText_sssssss;}> = {!iTasks.UI.JS.Interface.gText_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_sssssss;}> = {iTasks.UI.JS.Interface.gDefault_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_sssssss;}> = {!iTasks.UI.JS.Interface.gEditMeta_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_ssssssss;}> = {!iTasks.UI.JS.Interface.gEditor_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gText_ssssssss;}> = {!iTasks.UI.JS.Interface.gText_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_ssssssss;}> = {iTasks.UI.JS.Interface.gDefault_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_ssssssss;}> = {!iTasks.UI.JS.Interface.gEditMeta_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditor_sssssssss;}> = {!iTasks.UI.JS.Interface.gEditor_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.gText_sssssssss;}> = {!iTasks.UI.JS.Interface.gText_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.gDefault_sssssssss;}> = {iTasks.UI.JS.Interface.gDefault_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.gEditMeta_sssssssss;}> = {!iTasks.UI.JS.Interface.gEditMeta_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_ssss;}> = {!iTasks.UI.JS.Interface.gVerify_ssss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_sssss;}> = {!iTasks.UI.JS.Interface.gVerify_sssss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_ssssss;}> = {!iTasks.UI.JS.Interface.gVerify_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_sssssss;}> = {!iTasks.UI.JS.Interface.gVerify_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_ssssssss;}> = {!iTasks.UI.JS.Interface.gVerify_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gVerify_sssssssss;}> = {!iTasks.UI.JS.Interface.gVerify_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_ssss;}> = {!iTasks.UI.JS.Interface.gUpdate_ssss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_sssss;}> = {!iTasks.UI.JS.Interface.gUpdate_sssss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_ssssss;}> = {!iTasks.UI.JS.Interface.gUpdate_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_sssssss;}> = {!iTasks.UI.JS.Interface.gUpdate_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_ssssssss;}> = {!iTasks.UI.JS.Interface.gUpdate_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gUpdate_sssssssss;}> = {!iTasks.UI.JS.Interface.gUpdate_sssssssss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_s;}> = {!iTasks.UI.JS.Interface.gLexOrd_s}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_ss;}> = {!iTasks.UI.JS.Interface.gLexOrd_ss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_sss;}> = {!iTasks.UI.JS.Interface.gLexOrd_sss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_ssss;}> = {!iTasks.UI.JS.Interface.gLexOrd_ssss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_sssss;}> = {!iTasks.UI.JS.Interface.gLexOrd_sssss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_ssssss;}> = {!iTasks.UI.JS.Interface.gLexOrd_ssssss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_sssssss;}> = {!iTasks.UI.JS.Interface.gLexOrd_sssssss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_ssssssss;}> = {!iTasks.UI.JS.Interface.gLexOrd_ssssssss}
+
+:: <{iTasks.UI.JS.Interface.gLexOrd_sssssssss;}> = {!iTasks.UI.JS.Interface.gLexOrd_sssssssss}
+

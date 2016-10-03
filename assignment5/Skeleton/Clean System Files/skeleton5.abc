@@ -1,0 +1,5386 @@
+.comp 920 10011101001
+.start __skeleton5_Start
+.depend "_SystemArray" "20160531160413"
+.depend "StdArray" "20160531160413"
+.depend "_SystemEnum" "20160531160413"
+.depend "StdEnum" "20160531160413"
+.depend "StdTuple" "20160531160413"
+.depend "StdOrdList" "20160531160413"
+.depend "iTasks.API.Extensions.Admin.WorkflowAdmin" "20161001160347"
+.depend "iTasks.API.Extensions.User" "20161001160347"
+.depend "iTasks.API.Extensions.Admin.UserAdmin" "20161001160347"
+.depend "iTasks.API.Common.SDSCombinators" "20161001160347"
+.depend "iTasks.API.Core.SDSCombinators" "20161001160347"
+.depend "iTasks.API.Core.SDSs" "20161001160347"
+.depend "iTasks.API.Common.TaskCombinators" "20161001160347"
+.depend "iTasks.API.Common.ExportTasks" "20161001160347"
+.depend "iTasks.API.Common.ImportTasks" "20161001160347"
+.depend "iTasks.API.Common.DBTasks" "20161001160347"
+.depend "iTasks.API.Common.InteractionTasks" "20161001160347"
+.depend "Text.URI" "20161001160346"
+.depend "iTasks.API.Core.IntegrationTasks" "20161001160347"
+.depend "iTasks.API.Core.OptimizedCoreTasks" "20161001160347"
+.depend "iTasks.API.Core.Tasks" "20161001160347"
+.depend "iTasks.API" "20161001160347"
+.depend "Internet.HTTP" "20161001160346"
+.depend "Data.IntMap.Base" "20161001160346"
+.depend "Data.IntMap.Strict" "20161001160346"
+.depend "Data.CircularStack" "20161001160346"
+.depend "iTasks._Framework.Tonic.AbsSyn" "20161001160347"
+.depend "iTasks._Framework.Serialization" "20161001160347"
+.depend "iTasks.UI.JS.Interface" "20161001160347"
+.depend "GenLexOrd" "20161001160347"
+.depend "iTasks._Framework.Generic.Defaults" "20161001160347"
+.depend "iTasks._Framework.Generic.Visualization" "20161001160347"
+.depend "iTasks.API.Core.TaskCombinators" "20161001160347"
+.depend "iTasks.UI.Layout" "20161001160347"
+.depend "iTasks._Framework.Generic.Interaction" "20161001160347"
+.depend "iTasks._Framework.Generic" "20161001160347"
+.depend "TCPStringChannelsInternal" "20161001160346"
+.depend "TCPStringChannels" "20161001160346"
+.depend "TCPEvent" "20161001160346"
+.depend "tcp_bytestreams" "20161001160346"
+.depend "TCPDef" "20161001160346"
+.depend "TCPChannels" "20161001160347"
+.depend "tcp" "20161001160346"
+.depend "StdMaybe" "20161001160346"
+.depend "TCPChannelClass" "20161001160346"
+.depend "TCPIP" "20161001160346"
+.depend "Sapl.SaplStruct" "20161001160346"
+.depend "Sapl.SaplParser" "20161001160346"
+.depend "Sapl.Target.Flavour" "20161001160346"
+.depend "System.OSError" "20161001160346"
+.depend "System.File" "20161001160346"
+.depend "Text.StringAppender" "20161001160346"
+.depend "Text.Unicode.UChar" "20161001160346"
+.depend "Text.Unicode" "20161001160346"
+.depend "Sapl.SaplTokenizer" "20161001160346"
+.depend "Sapl.Linker.SaplLinkerShared" "20161001160346"
+.depend "Sapl.Linker.LazyLinker" "20161001160346"
+.depend "Data.Queue" "20161001160346"
+.depend "iTasks._Framework.TaskState" "20161001160347"
+.depend "iTasks.UI.Diff" "20161001160347"
+.depend "Text.HTML" "20161001160346"
+.depend "iTasks.UI.Definition" "20161001160347"
+.depend "StdFile" "20160531160413"
+.depend "Data.Set" "20161001160346"
+.depend "Data.List" "20161001160346"
+.depend "StdFunc" "20160531160413"
+.depend "Data.Map" "20161001160346"
+.depend "iTasks._Framework.IWorld" "20161001160347"
+.depend "Data.Either" "20161001160346"
+.depend "iTasks._Framework.SDS" "20161001160347"
+.depend "System.Time" "20161001160346"
+.depend "Data.Error" "20161001160346"
+.depend "Data.Void" "20161001160346"
+.depend "StdString" "20160531160413"
+.depend "GenEq" "20161001160347"
+.depend "Data.Monoid" "20161001160346"
+.depend "Control.Monad" "20161001160346"
+.depend "Control.Applicative" "20161001160346"
+.depend "System.IO" "20161001160346"
+.depend "Data.Functor" "20161001160346"
+.depend "Data.Maybe" "20161001160346"
+.depend "StdGeneric" "20161001160347"
+.depend "Text.JSON" "20161001160346"
+.depend "iTasks._Framework.Store" "20161001160347"
+.depend "iTasks.API.Core.Types" "20161001160347"
+.depend "iTasks._Framework.Task" "20161001160347"
+.depend "System.OS" "20161001160346"
+.depend "System.FilePath" "20161001160346"
+.depend "StdReal" "20160531160413"
+.depend "StdChar" "20160531160413"
+.depend "StdInt" "20160531160413"
+.depend "StdBool" "20160531160413"
+.depend "StdClass" "20160531160413"
+.depend "StdList" "20160531160413"
+.depend "iTasks._Framework.Engine" "20161001160347"
+.depend "iTasks" "20161001160347"
+.depend "StdOverloaded" "20160531160413"
+.depend "_SystemDynamic" "20161001160347"
+.module m_skeleton5 "skeleton5" "20161002113916"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+||	Concurrent Clean Code Generator (Version 0.920)
+.impmod iTasks.API.Common.InteractionTasks
+.implab e_iTasks.API.Common.InteractionTasks_senterInformation
+.impdesc e_iTasks.API.Common.InteractionTasks_dviewInformation
+.impmod iTasks._Framework.Generic.Defaults
+.impdesc e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2
+.implab e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2 e_iTasks._Framework.Generic.Defaults_eagDefault_PAIR;2
+.implab e_iTasks._Framework.Generic.Defaults_sgDefault_RECORD;6
+.impdesc e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7
+.implab e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7 e_iTasks._Framework.Generic.Defaults_eagDefault_FIELD;7
+.impdesc e_iTasks._Framework.Generic.Defaults_dgDefault_Int;8
+.implab e_iTasks._Framework.Generic.Defaults_ngDefault_Int;8
+.impdesc e_iTasks._Framework.Generic.Defaults_dgDefault__String;12
+.implab e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+.impdesc e_iTasks._Framework.Generic.Defaults_dgDefault_Maybe;24
+.implab e_iTasks._Framework.Generic.Defaults_sgDefault_Maybe;24
+.implab e_iTasks._Framework.Generic.Defaults_ngDefault_Maybe;24 e_iTasks._Framework.Generic.Defaults_eagDefault_Maybe;24
+.impmod iTasks._Framework.Generic.Visualization
+.impdesc e_iTasks._Framework.Generic.Visualization_dgText_PAIR;5
+.implab e_iTasks._Framework.Generic.Visualization_sgText_RECORD;9
+.impdesc e_iTasks._Framework.Generic.Visualization_dgText_FIELD;10
+.impdesc e_iTasks._Framework.Generic.Visualization_dgText_Int;11
+.impdesc e_iTasks._Framework.Generic.Visualization_dgText__String;15
+.impdesc e_iTasks._Framework.Generic.Visualization_dgText_Maybe;27
+.implab e_iTasks._Framework.Generic.Visualization_sgText_Maybe;27
+.impmod iTasks._Framework.Generic.Interaction
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditor_PAIR;15
+.implab e_iTasks._Framework.Generic.Interaction_sgEditor_RECORD;18
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditor_FIELD;19
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditor_Int;20
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditor__String;24
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditor_Maybe;36
+.implab e_iTasks._Framework.Generic.Interaction_sgEditor_Maybe;36
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48
+.implab e_iTasks._Framework.Generic.Interaction_sgEditMeta_RECORD;51
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditMeta_Int;53
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57
+.impdesc e_iTasks._Framework.Generic.Interaction_dgEditMeta_Maybe;69
+.implab e_iTasks._Framework.Generic.Interaction_sgEditMeta_Maybe;69
+.impdesc e_iTasks._Framework.Generic.Interaction_dgVerify_PAIR;80
+.implab e_iTasks._Framework.Generic.Interaction_sgVerify_RECORD;84
+.impdesc e_iTasks._Framework.Generic.Interaction_dgVerify_FIELD;85
+.impdesc e_iTasks._Framework.Generic.Interaction_dgVerify_Int;86
+.impdesc e_iTasks._Framework.Generic.Interaction_dgVerify__String;90
+.impdesc e_iTasks._Framework.Generic.Interaction_dgVerify_Maybe;102
+.implab e_iTasks._Framework.Generic.Interaction_sgVerify_Maybe;102
+.impdesc e_iTasks._Framework.Generic.Interaction_dgUpdate_PAIR;113
+.implab e_iTasks._Framework.Generic.Interaction_sgUpdate_RECORD;117
+.impdesc e_iTasks._Framework.Generic.Interaction_dgUpdate_FIELD;118
+.impdesc e_iTasks._Framework.Generic.Interaction_dgUpdate_Int;119
+.impdesc e_iTasks._Framework.Generic.Interaction_dgUpdate__String;123
+.impdesc e_iTasks._Framework.Generic.Interaction_dgUpdate_Maybe;135
+.implab e_iTasks._Framework.Generic.Interaction_sgUpdate_Maybe;135
+.impmod iTasks._Framework.Generic
+.impdesc e_iTasks._Framework.Generic_riTask;
+.impmod StdString
+.implab e_StdString_s==;2
+.impdesc e_StdString_d+++;11
+.implab e_StdString_s+++;11
+.implab e_StdString_n+++;11
+.impmod GenEq
+.impdesc e_GenEq_dgEq_Int;2
+.impdesc e_GenEq_dgEq__String;6
+.impdesc e_GenEq_dgEq_PAIR;8
+.implab e_GenEq_sgEq_RECORD;11
+.impdesc e_GenEq_dgEq_FIELD;12
+.impmod Data.Maybe
+.impdesc e_Data.Maybe_dgEq_Maybe;13
+.implab e_Data.Maybe_sgEq_Maybe;13
+.impdesc e_Data.Maybe_dTD;Maybe
+.impdesc e_Data.Maybe_dNothing
+.impdesc e_Data.Maybe_dJust
+.impmod StdGeneric
+.impdesc e_StdGeneric_dPAIR
+.impdesc e_StdGeneric_dRECORD
+.impdesc e_StdGeneric_dFIELD
+.impmod Text.JSON
+.impdesc e_Text.JSON_dJSONEncode_Int;10
+.implab e_Text.JSON_sJSONEncode_Int;10
+.impdesc e_Text.JSON_dJSONEncode__String;14
+.implab e_Text.JSON_sJSONEncode__String;14
+.impdesc e_Text.JSON_dJSONEncode_Maybe;26
+.implab e_Text.JSON_sJSONEncode_Maybe;26
+.impdesc e_Text.JSON_dJSONDecode_Int;34
+.implab e_Text.JSON_sJSONDecode_Int;34
+.impdesc e_Text.JSON_dJSONDecode__String;38
+.implab e_Text.JSON_sJSONDecode__String;38
+.impdesc e_Text.JSON_dJSONDecode_Maybe;53
+.implab e_Text.JSON_sJSONDecode_Maybe;53
+.impdesc e_Text.JSON_dJSONNull
+.impdesc e_Text.JSON_kJSONArray
+.impdesc e_Text.JSON_kJSONObject
+.impdesc e_Text.JSON_dJSONObject
+.implab e_Text.JSON_nJSONObject e_Text.JSON_eaJSONObject
+.impmod iTasks.API.Core.Types
+.implab e_iTasks.API.Core.Types_sreturn;27
+.implab e_iTasks.API.Core.Types_s>>=;28
+.impdesc e_iTasks.API.Core.Types_dtoPrompt;133
+.impdesc e_iTasks.API.Core.Types_dJSONEncode_Note;146
+.impdesc e_iTasks.API.Core.Types_dJSONDecode_Note;157
+.impdesc e_iTasks.API.Core.Types_dgDefault_Note;168
+.implab e_iTasks.API.Core.Types_ngDefault_Note;168 e_iTasks.API.Core.Types_eagDefault_Note;168
+.impdesc e_iTasks.API.Core.Types_dgEq_Note;179
+.impdesc e_iTasks.API.Core.Types_dgText_Note;190
+.impdesc e_iTasks.API.Core.Types_dgEditor_Note;201
+.impdesc e_iTasks.API.Core.Types_dgEditMeta_Note;212
+.impdesc e_iTasks.API.Core.Types_dgUpdate_Note;223
+.impdesc e_iTasks.API.Core.Types_dgVerify_Note;234
+.impdesc e_iTasks.API.Core.Types_dTD;Note
+.impdesc e_iTasks.API.Core.Types_rdescr;
+.impmod StdList
+.implab e_StdList_s!!
+.impmod iTasks._Framework.Engine
+.implab e_iTasks._Framework.Engine_sstartEngine
+.impdesc e_iTasks._Framework.Engine_dpublishAll;4
+.impdesc e_iTasks._Framework.Engine_rPublishable;
+.impmod _SystemDynamic
+.impdesc e__SystemDynamic_rTypeCodeConstructor
+.impdesc e__SystemDynamic_kTypeCons
+.impdesc e__SystemDynamic_kTypeApp
+.impdesc e__SystemDynamic_dTC_Char
+.impdesc e__SystemDynamic_dTC__UnboxedArray
+.record rTitledIdea aaaa 4 0 "TitledIdea"
+.record rgEditor_s; a 1 0 "gEditor_s;"
+.record rgEditMeta_s; a 1 0 "gEditMeta_s;"
+.record rgUpdate_s; a 1 0 "gUpdate_s;"
+.record rgVerify_s; a 1 0 "gVerify_s;"
+.record rgText_s; a 1 0 "gText_s;"
+.record rJSONEncode_s; a 1 0 "JSONEncode_s;"
+.record rJSONDecode_s; a 1 0 "JSONDecode_s;"
+.record rgDefault_s; a 1 0 "gDefault_s;"
+.record rgEq_s; a 1 0 "gEq_s;"
+.export __skeleton5_Start
+.o 0 0
+__skeleton5_Start
+	buildI 65536
+	build _ 1 nStart.5
+.d 1 0
+	jmp _driver
+.export e_skeleton5_sTD;TitledIdea
+.export e_skeleton5_eaTD;TitledIdea
+.descexp e_skeleton5_dTD;TitledIdea e_skeleton5_nTD;TitledIdea e_skeleton5_lTD;TitledIdea 1 0 "TD;TitledIdea"
+.o 2 0
+e_skeleton5_lTD;TitledIdea
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e_skeleton5_eaTD;TitledIdea
+.n 1 e_skeleton5_dTD;TitledIdea e_skeleton5_eaTD;TitledIdea
+.o 1 0
+e_skeleton5_nTD;TitledIdea
+	push_node _cycle_in_spine 1
+.o 2 0
+e_skeleton5_eaTD;TitledIdea
+.o 2 0
+e_skeleton5_sTD;TitledIdea
+.o 2 0
+sTD;TitledIdea.22
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	fillh _Nil 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_skeleton5_sTD;Number
+.export e_skeleton5_eaTD;Number
+.descexp e_skeleton5_dTD;Number e_skeleton5_nTD;Number e_skeleton5_lTD;Number 1 0 "TD;Number"
+.o 2 0
+e_skeleton5_lTD;Number
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e_skeleton5_eaTD;Number
+.n 1 e_skeleton5_dTD;Number e_skeleton5_eaTD;Number
+.o 1 0
+e_skeleton5_nTD;Number
+	push_node _cycle_in_spine 1
+.o 2 0
+e_skeleton5_eaTD;Number
+.o 2 0
+e_skeleton5_sTD;Number
+.o 2 0
+sTD;Number.21
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	fillh _Nil 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_skeleton5_sTD;TitleOfIdea
+.export e_skeleton5_eaTD;TitleOfIdea
+.descexp e_skeleton5_dTD;TitleOfIdea e_skeleton5_nTD;TitleOfIdea e_skeleton5_lTD;TitleOfIdea 1 0 "TD;TitleOfIdea"
+.o 2 0
+e_skeleton5_lTD;TitleOfIdea
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e_skeleton5_eaTD;TitleOfIdea
+.n 1 e_skeleton5_dTD;TitleOfIdea e_skeleton5_eaTD;TitleOfIdea
+.o 1 0
+e_skeleton5_nTD;TitleOfIdea
+	push_node _cycle_in_spine 1
+.o 2 0
+e_skeleton5_eaTD;TitleOfIdea
+.o 2 0
+e_skeleton5_sTD;TitleOfIdea
+.o 2 0
+sTD;TitleOfIdea.20
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	fillh _Nil 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_skeleton5_sTD;Name
+.export e_skeleton5_eaTD;Name
+.descexp e_skeleton5_dTD;Name e_skeleton5_nTD;Name e_skeleton5_lTD;Name 1 0 "TD;Name"
+.o 2 0
+e_skeleton5_lTD;Name
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e_skeleton5_eaTD;Name
+.n 1 e_skeleton5_dTD;Name e_skeleton5_eaTD;Name
+.o 1 0
+e_skeleton5_nTD;Name
+	push_node _cycle_in_spine 1
+.o 2 0
+e_skeleton5_eaTD;Name
+.o 2 0
+e_skeleton5_sTD;Name
+.o 2 0
+sTD;Name.19
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	fillh _Nil 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.export e_skeleton5_sTD;Idea
+.export e_skeleton5_eaTD;Idea
+.descexp e_skeleton5_dTD;Idea e_skeleton5_nTD;Idea e_skeleton5_lTD;Idea 1 0 "TD;Idea"
+.o 2 0
+e_skeleton5_lTD;Idea
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.d 2 0
+	jmp e_skeleton5_eaTD;Idea
+.n 1 e_skeleton5_dTD;Idea e_skeleton5_eaTD;Idea
+.o 1 0
+e_skeleton5_nTD;Idea
+	push_node _cycle_in_spine 1
+.o 2 0
+e_skeleton5_eaTD;Idea
+.o 2 0
+e_skeleton5_sTD;Idea
+.o 2 0
+sTD;Idea.18
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	fillh _Nil 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.n 1 _ eaStart.5
+.o 1 0
+nStart.5
+	push_node _cycle_in_spine 1
+.o 2 0
+eaStart.5
+	jsr_eval 0
+.o 2 0
+sStart.5
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	mainTask
+	build _ 0 nmainTask.4
+			||	Publishable;
+			||	publishAll;4
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+	build_r e_iTasks._Framework.Generic_riTask; 10 0 0 0
+	update_a 0 10
+	pop_a 10
+	buildh e_iTasks._Framework.Engine_dpublishAll;4 1
+			||	world
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 4 0
+	jmp e_iTasks._Framework.Engine_sstartEngine
+.n 0 _ eamainTask.4
+.o 1 0
+nmainTask.4
+	push_node _cycle_in_spine 0
+.o 1 0
+eamainTask.4
+.o 1 0
+smainTask.4
+			||	Match code, stacksizes A: 0 B: 0
+			||	Building the contractum, Stacksizes A: 0 B: 0
+			||	viewInformation
+			||	[]
+	buildh _Nil 0
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+	build_r e_iTasks._Framework.Generic_riTask; 10 0 0 0
+	update_a 0 10
+	pop_a 10
+			||	descr;
+			||	toPrompt;133
+	buildh e_iTasks.API.Core.Types_dtoPrompt;133 0
+	build_r e_iTasks.API.Core.Types_rdescr; 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	"The result"
+	buildAC "The result"
+	buildh ARRAY 1
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	buildh e_iTasks.API.Common.InteractionTasks_dviewInformation 4
+			||	doIdentified;839
+			||	editIdea
+	buildh deditIdea.2 0
+	build _ 1 ndoIdentified;839.132
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+.d 23 0
+	jmp e_iTasks.API.Core.Types_s>>=;28
+.n 1 _ eadoIdentified;839.132
+.o 1 0
+ndoIdentified;839.132
+	push_node _cycle_in_spine 1
+.o 2 0
+eadoIdentified;839.132
+.o 2 0
+sdoIdentified;839.132
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	_f3
+			||	[]
+	buildh _Nil 0
+			||	TypeApp
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC_Char
+	buildh e__SystemDynamic_dTC_Char 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC__UnboxedArray
+	buildh e__SystemDynamic_dTC__UnboxedArray 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build_r e__SystemDynamic_kTypeApp 2 0 0 0
+	update_a 0 2
+	pop_a 2
+			||	gDefault_s;
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build_r rgDefault_s; 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build _ 3 n_f3.351
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+			||	iTask;
+			||	TypeApp
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC_Char
+	buildh e__SystemDynamic_dTC_Char 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC__UnboxedArray
+	buildh e__SystemDynamic_dTC__UnboxedArray 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build_r e__SystemDynamic_kTypeApp 2 0 0 0
+	update_a 0 2
+	pop_a 2
+			||	gEq_s;
+			||	gEq__String;6
+	buildh e_GenEq_dgEq__String;6 0
+			||	gDefault_s;
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+			||	JSONDecode_s;
+			||	JSONDecode__String;38
+	buildh e_Text.JSON_dJSONDecode__String;38 0
+			||	JSONEncode_s;
+			||	JSONEncode__String;14
+	buildh e_Text.JSON_dJSONEncode__String;14 0
+			||	gText_s;
+			||	gText__String;15
+	buildh e_iTasks._Framework.Generic.Visualization_dgText__String;15 0
+			||	gVerify_s;
+			||	gVerify__String;90
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify__String;90 0
+			||	gUpdate_s;
+			||	gUpdate__String;123
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate__String;123 0
+			||	gEditMeta_s;
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	gEditor_s;
+			||	gEditor__String;24
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor__String;24 0
+			||	task
+	push_a 21
+	push_a 21
+	update_a 1 22
+	update_a 2 1
+	update_a 3 2
+	update_a 4 3
+	update_a 5 4
+	update_a 6 5
+	update_a 7 6
+	update_a 8 7
+	update_a 9 8
+	update_a 10 9
+	update_a 11 10
+	update_a 12 11
+	update_a 13 12
+	update_a 14 13
+	update_a 15 14
+	update_a 16 15
+	update_a 17 16
+	update_a 18 17
+	update_a 19 18
+	update_a 20 19
+	update_a 21 20
+	update_a 0 21
+	pop_a 1
+	update_a 21 22
+	update_a 20 21
+	update_a 19 20
+	update_a 18 19
+	update_a 17 18
+	update_a 16 17
+	update_a 15 16
+	update_a 14 15
+	update_a 13 14
+	update_a 12 13
+	update_a 11 12
+	update_a 10 11
+	update_a 9 10
+	update_a 8 9
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 23 0
+	jmp e_iTasks.API.Core.Types_s>>=;28
+.n 3 _ ea_f3.351
+.o 1 0
+n_f3.351
+	push_node _cycle_in_spine 3
+.o 4 0
+ea_f3.351
+.o 4 0
+s_f3.351
+			||	Match code, stacksizes A: 3 B: 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	iTask;
+			||	_
+	push_a 1
+	jsr_eval 0
+			||	gEq_s;
+			||	gEq__String;6
+	buildh e_GenEq_dgEq__String;6 0
+			||	_
+	push_a 2
+	jsr_eval 0
+	repl_r_args 1 0
+			||	JSONDecode_s;
+			||	JSONDecode__String;38
+	buildh e_Text.JSON_dJSONDecode__String;38 0
+			||	JSONEncode_s;
+			||	JSONEncode__String;14
+	buildh e_Text.JSON_dJSONEncode__String;14 0
+			||	gText_s;
+			||	gText__String;15
+	buildh e_iTasks._Framework.Generic.Visualization_dgText__String;15 0
+			||	gVerify_s;
+			||	gVerify__String;90
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify__String;90 0
+			||	gUpdate_s;
+			||	gUpdate__String;123
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate__String;123 0
+			||	gEditMeta_s;
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	gEditor_s;
+			||	gEditor__String;24
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor__String;24 0
+			||	descr;
+			||	toPrompt;133
+	buildh e_iTasks.API.Core.Types_dtoPrompt;133 0
+			||	_
+	push_a 13
+			||	"Enter your name"
+	buildAC "Enter your name"
+	push_a 0
+	buildh ARRAY 1
+	updatepop_a 0 1
+	push_a 12
+	update_a 2 13
+	update_a 4 2
+	update_a 6 4
+	update_a 8 6
+	update_a 10 8
+	update_a 12 10
+	update_a 1 12
+	update_a 3 1
+	update_a 5 3
+	update_a 7 5
+	update_a 9 7
+	update_a 11 9
+	update_a 0 11
+	pop_a 1
+	update_a 12 15
+	update_a 11 14
+	update_a 10 13
+	update_a 9 12
+	update_a 8 11
+	update_a 7 10
+	update_a 6 9
+	update_a 5 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 14 0
+	jmp e_iTasks.API.Common.InteractionTasks_senterInformation
+.desc deditIdea.2 _hnf leditIdea.2 1 0 "editIdea"
+.o 2 0
+leditIdea.2
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.o 2 0
+eaeditIdea.2
+.o 2 0
+seditIdea.2
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	<lambda>[line:38];17;6
+			||	name
+	push_a 0
+	buildh d\;38;17;6.7 1
+			||	_f0
+			||	[]
+	buildh _Nil 0
+			||	+++;11
+			||	" add your title"
+	buildAC " add your title"
+	buildh ARRAY 1
+			||	name
+	push_a 3
+	build _ 2 e_StdString_n+++;11
+			||	TypeApp
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC_Char
+	buildh e__SystemDynamic_dTC_Char 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC__UnboxedArray
+	buildh e__SystemDynamic_dTC__UnboxedArray 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build_r e__SystemDynamic_kTypeApp 2 0 0 0
+	update_a 0 2
+	pop_a 2
+			||	gDefault_s;
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build_r rgDefault_s; 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build _ 4 n_f0.348
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+			||	iTask;
+			||	TypeApp
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC_Char
+	buildh e__SystemDynamic_dTC_Char 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TC__UnboxedArray
+	buildh e__SystemDynamic_dTC__UnboxedArray 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build_r e__SystemDynamic_kTypeApp 2 0 0 0
+	update_a 0 2
+	pop_a 2
+			||	gEq_s;
+			||	gEq__String;6
+	buildh e_GenEq_dgEq__String;6 0
+			||	gDefault_s;
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+			||	JSONDecode_s;
+			||	JSONDecode__String;38
+	buildh e_Text.JSON_dJSONDecode__String;38 0
+			||	JSONEncode_s;
+			||	JSONEncode__String;14
+	buildh e_Text.JSON_dJSONEncode__String;14 0
+			||	gText_s;
+			||	gText__String;15
+	buildh e_iTasks._Framework.Generic.Visualization_dgText__String;15 0
+			||	gVerify_s;
+			||	gVerify__String;90
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify__String;90 0
+			||	gUpdate_s;
+			||	gUpdate__String;123
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate__String;123 0
+			||	gEditMeta_s;
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	gEditor_s;
+			||	gEditor__String;24
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor__String;24 0
+	update_a 21 22
+	update_a 20 21
+	update_a 19 20
+	update_a 18 19
+	update_a 17 18
+	update_a 16 17
+	update_a 15 16
+	update_a 14 15
+	update_a 13 14
+	update_a 12 13
+	update_a 11 12
+	update_a 10 11
+	update_a 9 10
+	update_a 8 9
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 23 0
+	jmp e_iTasks.API.Core.Types_s>>=;28
+.n 4 _ ea_f0.348
+.o 1 0
+n_f0.348
+	push_node _cycle_in_spine 4
+.o 5 0
+ea_f0.348
+.o 5 0
+s_f0.348
+			||	Match code, stacksizes A: 4 B: 0
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	_
+	push_a 2
+	jsr_eval 0
+			||	iTask;
+			||	_
+	push_a 2
+	jsr_eval 0
+			||	gEq_s;
+			||	gEq__String;6
+	buildh e_GenEq_dgEq__String;6 0
+			||	_
+	push_a 3
+	jsr_eval 0
+	repl_r_args 1 0
+			||	JSONDecode_s;
+			||	JSONDecode__String;38
+	buildh e_Text.JSON_dJSONDecode__String;38 0
+			||	JSONEncode_s;
+			||	JSONEncode__String;14
+	buildh e_Text.JSON_dJSONEncode__String;14 0
+			||	gText_s;
+			||	gText__String;15
+	buildh e_iTasks._Framework.Generic.Visualization_dgText__String;15 0
+			||	gVerify_s;
+			||	gVerify__String;90
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify__String;90 0
+			||	gUpdate_s;
+			||	gUpdate__String;123
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate__String;123 0
+			||	gEditMeta_s;
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	gEditor_s;
+			||	gEditor__String;24
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor__String;24 0
+			||	descr;
+			||	toPrompt;133
+	buildh e_iTasks.API.Core.Types_dtoPrompt;133 0
+			||	_
+	push_a 15
+	push_a 12
+	update_a 1 13
+	update_a 2 1
+	update_a 3 2
+	update_a 4 3
+	update_a 5 4
+	update_a 6 5
+	update_a 7 6
+	update_a 8 7
+	update_a 9 8
+	update_a 10 9
+	update_a 11 10
+	update_a 12 11
+	update_a 0 12
+	pop_a 1
+	update_a 12 16
+	update_a 11 15
+	update_a 10 14
+	update_a 9 13
+	update_a 8 12
+	update_a 7 11
+	update_a 6 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 14 0
+	jmp e_iTasks.API.Common.InteractionTasks_senterInformation
+.desc d\;38;17;6.7 _hnf l\;38;17;6.7 2 0 "<lambda>[line:38];17;6"
+.a 2 ea\;38;17;6.7
+.o 2 0
+l\;38;17;6.7
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+ea\;38;17;6.7
+.o 3 0
+s\;38;17;6.7
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	<lambda>[line:39];17;811
+			||	title
+	push_a 1
+			||	name
+	push_a 1
+	buildh d\;39;17;811.104 2
+			||	_f1
+			||	[]
+	buildh _Nil 0
+			||	_f2
+			||	title
+	push_a 3
+			||	name
+	push_a 3
+	build _ 2 n_f2.350
+			||	TypeApp
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;Note
+	buildh e_iTasks.API.Core.Types_dTD;Note 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;Maybe
+	buildh e_Data.Maybe_dTD;Maybe 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build_r e__SystemDynamic_kTypeApp 2 0 0 0
+	update_a 0 2
+	pop_a 2
+			||	gDefault_s;
+			||	gDefault_s;809
+	build _ 0 ngDefault_s;809.102
+	build_r rgDefault_s; 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build _ 4 n_f1.349
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+			||	iTask;
+			||	TypeApp
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;Note
+	buildh e_iTasks.API.Core.Types_dTD;Note 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;Maybe
+	buildh e_Data.Maybe_dTD;Maybe 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+	build_r e__SystemDynamic_kTypeApp 2 0 0 0
+	update_a 0 2
+	pop_a 2
+			||	gEq_s;
+			||	gEq_s;810
+	buildh dgEq_s;810.103 0
+			||	gDefault_s;
+			||	gDefault_s;809
+	build _ 0 ngDefault_s;809.102
+			||	JSONDecode_s;
+			||	JSONDecode_s;808
+	buildh dJSONDecode_s;808.101 0
+			||	JSONEncode_s;
+			||	JSONEncode_s;807
+	buildh dJSONEncode_s;807.100 0
+			||	gText_s;
+			||	gText_s;806
+	buildh dgText_s;806.99 0
+			||	gVerify_s;
+			||	gVerify_s;805
+	buildh dgVerify_s;805.98 0
+			||	gUpdate_s;
+			||	gUpdate_s;817
+	buildh dgUpdate_s;817.110 0
+			||	gEditMeta_s;
+			||	gEditMeta_s;803
+	buildh dgEditMeta_s;803.96 0
+			||	gEditor_s;
+			||	gEditor_s;819
+	buildh dgEditor_s;819.112 0
+	update_a 21 23
+	update_a 20 22
+	update_a 19 21
+	update_a 18 20
+	update_a 17 19
+	update_a 16 18
+	update_a 15 17
+	update_a 14 16
+	update_a 13 15
+	update_a 12 14
+	update_a 11 13
+	update_a 10 12
+	update_a 9 11
+	update_a 8 10
+	update_a 7 9
+	update_a 6 8
+	update_a 5 7
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 23 0
+	jmp e_iTasks.API.Core.Types_s>>=;28
+.n 2 _ ea_f2.350
+.o 1 0
+n_f2.350
+	push_node _cycle_in_spine 2
+.o 3 0
+ea_f2.350
+.o 3 0
+s_f2.350
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	+++;11
+			||	_
+	push_a 1
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+			||	" add the idea of "
+	buildAC " add the idea of "
+			||	Remove unused stack elements
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 0
+	jsr catAC
+.o 1 0
+			||	_
+	push_a 1
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 0
+	jsr catAC
+.o 1 0
+	push_a 0
+	fillh ARRAY 1 2
+	pop_a 1
+.d 1 0
+	rtn
+.n 4 _ ea_f1.349
+.o 1 0
+n_f1.349
+	push_node _cycle_in_spine 4
+.o 5 0
+ea_f1.349
+.o 5 0
+s_f1.349
+			||	Match code, stacksizes A: 4 B: 0
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	_
+	push_a 2
+	jsr_eval 0
+			||	iTask;
+			||	_
+	push_a 2
+	jsr_eval 0
+			||	gEq_s;
+			||	gEq_s;810
+	buildh dgEq_s;810.103 0
+			||	_
+	push_a 3
+	jsr_eval 0
+	repl_r_args 1 0
+			||	JSONDecode_s;
+			||	JSONDecode_s;808
+	buildh dJSONDecode_s;808.101 0
+			||	JSONEncode_s;
+			||	JSONEncode_s;807
+	buildh dJSONEncode_s;807.100 0
+			||	gText_s;
+			||	gText_s;806
+	buildh dgText_s;806.99 0
+			||	gVerify_s;
+			||	gVerify_s;805
+	buildh dgVerify_s;805.98 0
+			||	gUpdate_s;
+			||	gUpdate_s;817
+	buildh dgUpdate_s;817.110 0
+			||	gEditMeta_s;
+			||	gEditMeta_s;803
+	buildh dgEditMeta_s;803.96 0
+			||	gEditor_s;
+			||	gEditor_s;819
+	buildh dgEditor_s;819.112 0
+			||	descr;
+			||	toPrompt;133
+	buildh e_iTasks.API.Core.Types_dtoPrompt;133 0
+			||	_
+	push_a 15
+	push_a 12
+	update_a 1 13
+	update_a 2 1
+	update_a 3 2
+	update_a 4 3
+	update_a 5 4
+	update_a 6 5
+	update_a 7 6
+	update_a 8 7
+	update_a 9 8
+	update_a 10 9
+	update_a 11 10
+	update_a 12 11
+	update_a 0 12
+	pop_a 1
+	update_a 12 16
+	update_a 11 15
+	update_a 10 14
+	update_a 9 13
+	update_a 8 12
+	update_a 7 11
+	update_a 6 10
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 14 0
+	jmp e_iTasks.API.Common.InteractionTasks_senterInformation
+.desc dgEditor_s;819.112 _hnf lgEditor_s;819.112 4 0 "gEditor_s;819"
+.a 0 agEditor_s;819.112
+.o 2 0
+lgEditor_s;819.112
+	repl_args 3 3
+.o 4 0
+agEditor_s;819.112
+.d 4 0
+	jsr eagEditor_s;819.112
+.o 4 3 ibb
+.impmod iTasks._Framework.Generic.Interaction
+.impdesc e_iTasks._Framework.Generic.Interaction_rVSt
+	build_r e_iTasks._Framework.Generic.Interaction_rVSt 3 3 1 0
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 4
+	pop_b 3
+.d 1 0
+	rtn
+.o 4 0
+eagEditor_s;819.112
+	jsr_eval 3
+	jsr_eval 2
+	push_a 1
+	jsr_eval 0
+	repl_args 3 3
+	jsr_eval 3
+	push_r_args 6 3 3
+	update_a 2 9
+	update_a 6 2
+	update_a 8 6
+	update_a 1 8
+	update_a 0 7
+	pop_a 2
+.o 8 3 ibb
+sgEditor_s;819.112
+			||	Match code, stacksizes A: 8 B: 3
+			||	Building the contractum, Stacksizes A: 8 B: 3
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+			||	gText_Note;190
+	buildh e_iTasks.API.Core.Types_dgText_Note;190 0
+			||	gEditor_Note;201
+	buildh e_iTasks.API.Core.Types_dgEditor_Note;201 0
+			||	x4
+	push_a 13
+	push_a 13
+	push_a 13
+	push_b 2
+	push_b 2
+	push_b 2
+			||	x3
+	push_a 13
+			||	x2
+	push_a 13
+	push_a 13
+	push_a 13
+			||	x1
+	push_a 13
+	push_a 13
+	update_a 8 14
+	update_a 2 8
+	update_a 10 2
+	update_a 4 10
+	update_a 12 4
+	update_a 6 12
+	update_a 0 6
+	update_a 13 0
+	update_a 7 13
+	update_a 1 7
+	update_a 9 1
+	update_a 3 9
+	update_a 11 3
+	update_a 5 11
+	update_a 0 5
+	pop_a 1
+	update_a 13 21
+	update_a 12 20
+	update_a 11 19
+	update_a 10 18
+	update_a 9 17
+	update_a 8 16
+	update_a 7 15
+	update_a 6 14
+	update_a 5 13
+	update_a 4 12
+	update_a 3 11
+	update_a 2 10
+	update_a 1 9
+	updatepop_a 0 8
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 14 3 ibb
+	jmp e_iTasks._Framework.Generic.Interaction_sgEditor_Maybe;36
+.desc dgUpdate_s;817.110 _hnf lgUpdate_s;817.110 4 0 "gUpdate_s;817"
+.a 0 agUpdate_s;817.110
+.o 2 0
+lgUpdate_s;817.110
+	repl_args 3 3
+.o 4 0
+agUpdate_s;817.110
+.d 4 0
+	jsr eagUpdate_s;817.110
+.o 5 0
+.impdesc e_iTasks._Framework.Generic.Interaction_rUSt
+	build_r e_iTasks._Framework.Generic.Interaction_rUSt 3 0 2 0
+	push_a 2
+	push_a 2
+	buildh _Tuple 2
+	buildh _Tuple 2
+	updatepop_a 0 5
+.d 1 0
+	rtn
+.o 4 0
+eagUpdate_s;817.110
+	jsr_eval 3
+	push_a 2
+	jsr_eval 0
+	repl_args 2 2
+	jsr_eval 3
+	jsr_eval 2
+	push_r_args 5 3 0
+	update_a 2 8
+	update_a 5 2
+	update_a 4 5
+	update_a 3 4
+	update_a 6 3
+	update_a 0 6
+	update_a 1 7
+	pop_a 2
+.o 7 0
+sgUpdate_s;817.110
+			||	Match code, stacksizes A: 7 B: 0
+			||	Building the contractum, Stacksizes A: 7 B: 0
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+			||	gUpdate_Note;223
+	buildh e_iTasks.API.Core.Types_dgUpdate_Note;223 0
+			||	x4
+	push_a 10
+	push_a 10
+	push_a 10
+			||	x3
+	push_a 10
+	push_a 10
+			||	x2
+	push_a 10
+			||	x1
+	push_a 10
+	push_a 10
+	update_a 7 11
+	update_a 3 7
+	update_a 10 3
+	update_a 6 10
+	update_a 2 6
+	update_a 9 2
+	update_a 5 9
+	update_a 1 5
+	update_a 8 1
+	update_a 4 8
+	update_a 0 4
+	pop_a 1
+	update_a 10 17
+	update_a 9 16
+	update_a 8 15
+	update_a 7 14
+	update_a 6 13
+	update_a 5 12
+	update_a 4 11
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 11 0
+	jmp e_iTasks._Framework.Generic.Interaction_sgUpdate_Maybe;135
+.desc dgEditMeta_s;803.96 _hnf lgEditMeta_s;803.96 1 0 "gEditMeta_s;803"
+.o 2 0
+lgEditMeta_s;803.96
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.o 2 0
+eagEditMeta_s;803.96
+.o 2 0
+sgEditMeta_s;803.96
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+			||	x1
+	push_a 1
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp e_iTasks._Framework.Generic.Interaction_sgEditMeta_Maybe;69
+.desc dgVerify_s;805.98 _hnf lgVerify_s;805.98 2 0 "gVerify_s;805"
+.a 2 eagVerify_s;805.98
+.o 2 0
+lgVerify_s;805.98
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eagVerify_s;805.98
+	jsr_eval 0
+	repl_r_args 0 2
+.o 2 2 bb
+sgVerify_s;805.98
+			||	Match code, stacksizes A: 1 B: 2
+			||	Building the contractum, Stacksizes A: 1 B: 2
+			||	gVerify_Note;234
+	buildh e_iTasks.API.Core.Types_dgVerify_Note;234 0
+			||	x2
+	push_a 1
+			||	x1
+	push_b 1
+	push_b 1
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 2
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 3 2 bb
+	jmp e_iTasks._Framework.Generic.Interaction_sgVerify_Maybe;102
+.desc dgText_s;806.99 _hnf lgText_s;806.99 2 0 "gText_s;806"
+.a 2 eagText_s;806.99
+.o 2 0
+lgText_s;806.99
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eagText_s;806.99
+	jsr_eval 0
+.o 3 0
+sgText_s;806.99
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	gText_Note;190
+	buildh e_iTasks.API.Core.Types_dgText_Note;190 0
+			||	x2
+	push_a 2
+			||	x1
+	push_a 2
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp e_iTasks._Framework.Generic.Visualization_sgText_Maybe;27
+.desc dJSONEncode_s;807.100 _hnf lJSONEncode_s;807.100 2 0 "JSONEncode_s;807"
+.a 2 eaJSONEncode_s;807.100
+.o 2 0
+lJSONEncode_s;807.100
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eaJSONEncode_s;807.100
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 2 1 b
+sJSONEncode_s;807.100
+			||	Match code, stacksizes A: 1 B: 1
+			||	Building the contractum, Stacksizes A: 1 B: 1
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+			||	x2
+	push_a 1
+			||	x1
+	push_b 0
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 2
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 3 1 b
+	jmp e_Text.JSON_sJSONEncode_Maybe;26
+.desc dJSONDecode_s;808.101 _hnf lJSONDecode_s;808.101 2 0 "JSONDecode_s;808"
+.a 0 aJSONDecode_s;808.101
+.o 2 0
+lJSONDecode_s;808.101
+	repl_args 1 1
+.o 2 0
+aJSONDecode_s;808.101
+.d 2 0
+	jsr eaJSONDecode_s;808.101
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 2 0
+eaJSONDecode_s;808.101
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 1 1 b
+sJSONDecode_s;808.101
+			||	Match code, stacksizes A: 1 B: 1
+			||	Building the contractum, Stacksizes A: 1 B: 1
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	x2
+	push_a 1
+			||	x1
+	push_b 0
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 2
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 b
+	jmp e_Text.JSON_sJSONDecode_Maybe;53
+.n 0 _ eagDefault_s;809.102
+.o 1 0
+ngDefault_s;809.102
+	push_node _cycle_in_spine 0
+.o 1 0
+eagDefault_s;809.102
+.o 1 0
+sgDefault_s;809.102
+			||	Match code, stacksizes A: 0 B: 0
+			||	Building the contractum, Stacksizes A: 0 B: 0
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+.d 2 0
+	jmp e_iTasks._Framework.Generic.Defaults_sgDefault_Maybe;24
+.desc dgEq_s;810.103 _hnf lgEq_s;810.103 2 0 "gEq_s;810"
+.a 0 agEq_s;810.103
+.o 2 0
+lgEq_s;810.103
+	repl_args 1 1
+.o 2 0
+agEq_s;810.103
+.d 2 0
+	jsr eagEq_s;810.103
+.o 0 1 b
+	buildB_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+eagEq_s;810.103
+.o 2 0
+sgEq_s;810.103
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	gEq_Note;179
+	buildh e_iTasks.API.Core.Types_dgEq_Note;179 0
+			||	x2
+	push_a 2
+			||	x1
+	push_a 2
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp e_Data.Maybe_sgEq_Maybe;13
+.desc d\;39;17;811.104 _hnf l\;39;17;811.104 3 0 "<lambda>[line:39];17;811"
+.a 3 ea\;39;17;811.104
+.o 2 0
+l\;39;17;811.104
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.o 4 0
+ea\;39;17;811.104
+.o 4 0
+s\;39;17;811.104
+			||	Match code, stacksizes A: 3 B: 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	TitledIdea
+			||	1
+	buildI 1
+			||	name
+	push_a 1
+			||	idea
+	push_a 4
+			||	title
+	push_a 4
+	build_r rTitledIdea 4 0 0 0
+	update_a 0 4
+	pop_a 4
+			||	iTask;
+			||	TypeCons
+			||	TypeCodeConstructor
+			||	TD;TitledIdea
+	buildh e_skeleton5_dTD;TitledIdea 0
+	build_r e__SystemDynamic_kTypeCons 1 0 0 0
+	update_a 0 1
+	pop_a 1
+			||	gEq_s;
+			||	gEq_TitledIdea;16
+	buildh dgEq_TitledIdea;16.17 0
+			||	gDefault_s;
+			||	gDefault_TitledIdea;15
+	build _ 0 ngDefault_TitledIdea;15.16
+			||	JSONDecode_s;
+			||	JSONDecode_TitledIdea;14
+	buildh dJSONDecode_TitledIdea;14.15 0
+			||	JSONEncode_s;
+			||	JSONEncode_TitledIdea;13
+	buildh dJSONEncode_TitledIdea;13.14 0
+			||	gText_s;
+			||	gText_TitledIdea;12
+	buildh dgText_TitledIdea;12.13 0
+			||	gVerify_s;
+			||	gVerify_TitledIdea;11
+	buildh dgVerify_TitledIdea;11.12 0
+			||	gUpdate_s;
+			||	gUpdate_TitledIdea;10
+	buildh dgUpdate_TitledIdea;10.11 0
+			||	gEditMeta_s;
+			||	gEditMeta_TitledIdea;9
+	buildh dgEditMeta_TitledIdea;9.10 0
+			||	gEditor_s;
+			||	gEditor_TitledIdea;8
+	buildh dgEditor_TitledIdea;8.9 0
+	update_a 10 13
+	update_a 9 12
+	update_a 8 11
+	update_a 7 10
+	update_a 6 9
+	update_a 5 8
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 12 0
+	jmp e_iTasks.API.Core.Types_sreturn;27
+.desc dgEq_TitledIdea;16.17 _hnf lgEq_TitledIdea;16.17 2 0 "gEq_TitledIdea;16"
+.a 0 agEq_TitledIdea;16.17
+.o 2 0
+lgEq_TitledIdea;16.17
+	repl_args 1 1
+.o 2 0
+agEq_TitledIdea;16.17
+.d 2 0
+	jsr eagEq_TitledIdea;16.17
+.o 0 1 b
+	buildB_b 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+eagEq_TitledIdea;16.17
+.o 2 0
+sgEq_TitledIdea;16.17
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	toGenericTitledIdea;30
+			||	x2
+	push_a 1
+	build _ 1 ntoGenericTitledIdea;30.25
+			||	toGenericTitledIdea;30
+			||	x1
+	push_a 1
+	build _ 1 ntoGenericTitledIdea;30.25
+			||	gEq_PAIR;8
+			||	gEq_PAIR;8
+			||	gEq_FIELD;12
+			||	gEq_Int;2
+	buildh e_GenEq_dgEq_Int;2 0
+	buildh e_GenEq_dgEq_FIELD;12 1
+			||	gEq_FIELD;12
+			||	gEq__String;6
+	buildh e_GenEq_dgEq__String;6 0
+	buildh e_GenEq_dgEq_FIELD;12 1
+	buildh e_GenEq_dgEq_PAIR;8 2
+			||	gEq_PAIR;8
+			||	gEq_FIELD;12
+			||	gEq_Maybe;13
+			||	gEq_Note;179
+	buildh e_iTasks.API.Core.Types_dgEq_Note;179 0
+	buildh e_Data.Maybe_dgEq_Maybe;13 1
+	buildh e_GenEq_dgEq_FIELD;12 1
+			||	gEq_FIELD;12
+			||	gEq__String;6
+	buildh e_GenEq_dgEq__String;6 0
+	buildh e_GenEq_dgEq_FIELD;12 1
+	buildh e_GenEq_dgEq_PAIR;8 2
+	buildh e_GenEq_dgEq_PAIR;8 2
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp e_GenEq_sgEq_RECORD;11
+.n 0 _
+.o 1 0
+ngDefault_TitledIdea;15.16
+	push_node _cycle_in_spine 0
+.d 0 0
+	jsr eagDefault_TitledIdea;15.16
+.o 4 0
+	fill_r rTitledIdea 4 0 4 0 0
+	pop_a 4
+.d 1 0
+	rtn
+.o 0 0
+eagDefault_TitledIdea;15.16
+.o 0 0
+sgDefault_TitledIdea;15.16
+			||	Match code, stacksizes A: 0 B: 0
+			||	Building the contractum, Stacksizes A: 0 B: 0
+			||	gDefault_RECORD;6
+			||	gDefault_PAIR;2
+			||	gDefault_PAIR;2
+			||	gDefault_FIELD;7
+			||	gDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Int;8 0 e_iTasks._Framework.Generic.Defaults_ngDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+			||	gDefault_PAIR;2
+			||	gDefault_FIELD;7
+			||	gDefault_Maybe;24
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Maybe;24 1 e_iTasks._Framework.Generic.Defaults_ngDefault_Maybe;24
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+	create
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+.d 2 0
+	jsr e_iTasks._Framework.Generic.Defaults_sgDefault_RECORD;6
+.o 1 0
+.d 1 0
+	jmp sfromGenericTitledIdea;29.24
+.desc dJSONDecode_TitledIdea;14.15 _hnf lJSONDecode_TitledIdea;14.15 2 0 "JSONDecode_TitledIdea;14"
+.a 0 aJSONDecode_TitledIdea;14.15
+.o 2 0
+lJSONDecode_TitledIdea;14.15
+	repl_args 1 1
+.o 2 0
+aJSONDecode_TitledIdea;14.15
+.d 2 0
+	jsr eaJSONDecode_TitledIdea;14.15
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 2 0
+eaJSONDecode_TitledIdea;14.15
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 1 1 b
+sJSONDecode_TitledIdea;14.15
+			||	Match code, stacksizes A: 1 B: 1
+			||	Building the contractum, Stacksizes A: 1 B: 1
+			||	JSONDecode_RECORD;800
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	x2
+	push_a 1
+			||	x1
+	push_b 0
+			||	3
+	buildI 3
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+			||	2
+	buildI 2
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+			||	1
+	buildI 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+			||	0
+	buildI 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	push_a 9
+	update_a 9 10
+	update_a 8 9
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 9 10
+	update_a 8 9
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 10 1 b
+	jsr sJSONDecode_RECORD;800.93
+.o 2 0
+.d 2 0
+	jmp sbimapFromGeneric;53.345
+.o 10 1 b
+sJSONDecode_RECORD;800.93
+			||	Match code, stacksizes A: 10 B: 1
+	eq_desc _Cons 2 9
+	jmp_true case.1
+	jmp case.2
+case.1
+	push_args 9 2 2
+	jsr_eval 0
+	pushD_a 0
+	eqD_b e_Text.JSON_kJSONObject 0
+	jmp_true case.3
+	eqD_b e_Text.JSON_kJSONArray 0
+	jmp_true case.4
+	pop_a 2
+	pop_b 1
+	jmp case.2
+case.3
+	pop_b 1
+	push_args 0 1 1
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 12 B: 1
+			||	xs
+	push_a 1
+	jsr_eval 0
+			||	JSONDecode_PAIR;801
+			||	[...|...]
+			||	[]
+	buildh _Nil 0
+			||	obj
+	push_a 2
+	buildh _Cons 2
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	_x
+	push_a 12
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	Remove unused stack elements
+	updatepop_b 0 1
+			||	gfd_name
+	buildh _Nil 0
+	update_a 0 14
+			||	_x
+	update_a 0 15
+			||	gfd_name
+	update_a 0 16
+			||	_x
+	update_a 0 17
+			||	_x
+	update_a 0 18
+			||	gfd_name
+	update_a 0 19
+			||	_x
+	update_a 0 20
+			||	gfd_name
+	update_a 0 21
+			||	_x
+	update_a 0 22
+			||	obj
+	update_a 0 12
+			||	xs
+	update_a 0 13
+	pop_a 1
+.d 10 1 b
+	jsr sJSONDecode_PAIR;801.94
+.o 2 0
+			||	l
+	push_a 14
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 15
+	update_a 2 14
+	update_a 1 13
+	updatepop_a 0 12
+.d 4 0
+	jmp sd;50.44
+case.4
+	pop_b 1
+	push_args 0 1 1
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 12 B: 1
+			||	xs
+	push_a 1
+	jsr_eval 0
+			||	JSONDecode_PAIR;801
+			||	[...|...]
+			||	[]
+	buildh _Nil 0
+			||	obj
+	push_a 2
+	buildh _Cons 2
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	_x
+	push_a 12
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	_x
+	push_a 12
+			||	gfd_name
+	push_a 12
+			||	Remove unused stack elements
+	updatepop_b 0 1
+			||	gfd_name
+	buildh _Nil 0
+	update_a 0 14
+			||	_x
+	update_a 0 15
+			||	gfd_name
+	update_a 0 16
+			||	_x
+	update_a 0 17
+			||	_x
+	update_a 0 18
+			||	gfd_name
+	update_a 0 19
+			||	_x
+	update_a 0 20
+			||	gfd_name
+	update_a 0 21
+			||	_x
+	update_a 0 22
+			||	obj
+	update_a 0 12
+			||	xs
+	update_a 0 13
+	pop_a 1
+.d 10 1 b
+	jsr sJSONDecode_PAIR;801.94
+.o 2 0
+			||	l
+	push_a 14
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 15
+	update_a 2 14
+	update_a 1 13
+	updatepop_a 0 12
+.d 4 0
+	jmp sd;51.45
+case.2
+			||	Building the contractum, Stacksizes A: 10 B: 1
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 10
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 11
+	updatepop_a 0 10
+	pop_b 1
+.d 2 0
+	rtn
+.o 10 1 b
+sJSONDecode_PAIR;801.94
+			||	Match code, stacksizes A: 10 B: 1
+			||	Building the contractum, Stacksizes A: 10 B: 1
+			||	JSONDecode_PAIR;784
+			||	l
+	push_a 9
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 5
+			||	_x
+	push_a 5
+			||	gfd_name
+	push_a 5
+			||	_x
+	push_a 5
+			||	gfd_name
+	push_a 5
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 5 10
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 1 b
+	jsr sJSONDecode_PAIR;784.77
+.o 2 0
+			||	l
+	push_a 6
+			||	_x
+	push_a 6
+			||	gfd_name
+	push_a 6
+			||	_x
+	push_a 6
+			||	gfd_name
+	push_a 6
+	push_a 6
+	update_a 5 7
+	update_a 6 5
+	update_a 0 6
+	pop_a 1
+	update_a 6 11
+	update_a 5 10
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 7 0
+	jmp sd1;793.86
+.o 2 0
+sbimapFromGeneric;52.46
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	x
+	push_a 0
+	updatepop_a 0 1
+.d 2 0
+	jmp s_f856;856.149
+.o 2 0
+s_f856;856.149
+			||	Match code, stacksizes A: 1 B: 0
+	eq_desc e_Data.Maybe_dNothing 0 0
+	jmp_true case.5
+	jmp case.6
+case.5
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	fillh e_Data.Maybe_dNothing 0 1
+	pop_a 1
+.d 1 0
+	rtn
+case.6
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	fromGenericTitledIdea;29
+			||	x1
+	push_a 0
+	build _ 1 nfromGenericTitledIdea;29.24
+	fillh e_Data.Maybe_dJust 1 2
+	pop_a 1
+.d 1 0
+	rtn
+.o 4 0
+sd;51.45
+			||	Match code, stacksizes A: 4 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.7
+	jmp case.8
+case.7
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	Just
+			||	RECORD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dRECORD 1
+	buildh e_Data.Maybe_dJust 1
+			||	xs
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 5
+	updatepop_a 0 4
+.d 2 0
+	rtn
+case.8
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 5
+	updatepop_a 0 4
+.d 2 0
+	rtn
+.o 4 0
+sd;50.44
+			||	Match code, stacksizes A: 4 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.9
+	jmp case.10
+case.9
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	Just
+			||	RECORD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dRECORD 1
+	buildh e_Data.Maybe_dJust 1
+			||	xs
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 5
+	updatepop_a 0 4
+.d 2 0
+	rtn
+case.10
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 5
+	updatepop_a 0 4
+.d 2 0
+	rtn
+.desc dJSONEncode_TitledIdea;13.14 _hnf lJSONEncode_TitledIdea;13.14 2 0 "JSONEncode_TitledIdea;13"
+.a 2 eaJSONEncode_TitledIdea;13.14
+.o 2 0
+lJSONEncode_TitledIdea;13.14
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eaJSONEncode_TitledIdea;13.14
+	jsr_eval 1
+	jsr_eval 0
+	push_r_args 1 4 0
+	pushB_a 4
+	update_a 3 5
+	update_a 1 3
+	update_a 2 4
+	update_a 0 2
+	pop_a 2
+.o 5 1 b
+sJSONEncode_TitledIdea;13.14
+			||	Match code, stacksizes A: 4 B: 1
+			||	Building the contractum, Stacksizes A: 4 B: 1
+			||	toGenericTitledIdea;30
+	create
+			||	x2
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+			||	Remove unused stack elements
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 5 0
+	jsr stoGenericTitledIdea;30.25
+.o 1 0
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+			||	fli__TitledIdea;23
+	build _ 0 nfli__TitledIdea;23.23
+			||	x1
+	push_b 0
+	updatepop_b 0 1
+.d 4 1 b
+	jmp sJSONEncode_RECORD;796.89
+.o 4 1 b
+sJSONEncode_RECORD;796.89
+			||	Match code, stacksizes A: 3 B: 1
+	push_args 2 1 1
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 4 B: 1
+			||	[]
+	buildh _Nil 0
+			||	JSONObject
+			||	c;86;47;47
+			||	JSONEncode_PAIR;797
+			||	x
+	push_a 1
+			||	False
+	buildB FALSE
+			||	_x
+	push_a 5
+	build _ 3 nJSONEncode_PAIR;797.90
+			||	grd_fields
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	build _ 2 nc;86;47;47.41
+	build e_Text.JSON_dJSONObject 1 e_Text.JSON_nJSONObject
+	fillh _Cons 2 6
+	pop_a 4
+	pop_b 1
+.d 1 0
+	rtn
+.n 3 _ eaJSONEncode_PAIR;797.90
+.o 1 0
+nJSONEncode_PAIR;797.90
+	push_node _cycle_in_spine 3
+.o 4 0
+eaJSONEncode_PAIR;797.90
+	jsr_eval 2
+	pushB_a 1
+	update_a 0 1
+	pop_a 1
+.o 3 1 b
+sJSONEncode_PAIR;797.90
+			||	Match code, stacksizes A: 2 B: 1
+	push_args 1 2 2
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 4 B: 1
+			||	JSONEncode_PAIR;786
+			||	y
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 4 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 1 b
+	jsr sJSONEncode_PAIR;786.79
+.o 1 0
+			||	JSONEncode_PAIR;783
+			||	x
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 4
+	push_a 2
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+			||	Remove unused stack elements
+			||	_x
+	buildh _Nil 0
+	update_a 0 6
+			||	x
+	update_a 0 5
+	pop_a 1
+.d 3 1 b
+	jsr sJSONEncode_PAIR;783.76
+.o 1 0
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp s++;37.31
+.n 2 _ eac;86;47;47.41
+.o 1 0
+nc;86;47;47.41
+	push_node _cycle_in_spine 2
+.o 3 0
+eac;86;47;47.41
+	jsr_eval 0
+.o 3 0
+sc;86;47;47.41
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	g_l;86;54
+	push_a 1
+			||	g_l;86;33
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp sg_c1;86;33;855.148
+.o 3 0
+sg_c1;86;33;855.148
+			||	Match code, stacksizes A: 2 B: 0
+	eq_desc _Cons 2 0
+	jmp_true case.11
+	jmp case.12
+case.11
+	repl_args 2 2
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	g_l;86;54
+	push_a 2
+	jsr_eval 0
+			||	g_t;86;33
+	push_a 2
+			||	o;g_h;86;33
+	push_a 2
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 4 0
+	jmp sg_c1;86;54;854.147
+case.12
+			||	Building the contractum, Stacksizes A: 2 B: 0
+	fillh _Nil 0 2
+	pop_a 2
+.d 1 0
+	rtn
+.o 4 0
+sg_c1;86;54;854.147
+			||	Match code, stacksizes A: 3 B: 0
+	eq_desc _Cons 2 0
+	jmp_true case.13
+	jmp case.14
+case.13
+	repl_args 2 2
+			||	o;g_h;86;33
+	push_a 2
+	jsr_eval 0
+			||	Remove unused stack elements
+.d 1 0
+	jsr sisNotNull;48.42
+.o 0 1 b
+	jmp_false else.15
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	c;86;47;47
+			||	g_t;86;54
+	push_a 1
+			||	g_t;86;33
+	push_a 4
+	build _ 2 nc;86;47;47.41
+			||	(...)
+			||	o;g_h;86;33
+	push_a 3
+			||	name;g_h;86;54
+	push_a 2
+	buildh _Tuple 2
+	fillh _Cons 2 6
+	pop_a 4
+.d 1 0
+	rtn
+else.15
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	g_t;86;33
+	push_a 3
+	jsr_eval 0
+			||	g_t;86;54
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 5
+	updatepop_a 0 4
+.d 3 0
+	jmp sc;86;47;47.41
+case.14
+			||	Building the contractum, Stacksizes A: 3 B: 0
+	fillh _Nil 0 3
+	pop_a 3
+.d 1 0
+	rtn
+.o 1 0
+sisNotNull;48.42
+			||	Match code, stacksizes A: 1 B: 0
+	eq_desc e_Text.JSON_dJSONNull 0 0
+	jmp_true case.16
+	jmp case.17
+case.16
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	pop_a 1
+	pushB FALSE
+.d 0 1 b
+	rtn
+case.17
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	pop_a 1
+	pushB TRUE
+.d 0 1 b
+	rtn
+.n 0 _ eafli__TitledIdea;23.23
+.o 1 0
+nfli__TitledIdea;23.23
+	push_node _cycle_in_spine 0
+.o 1 0
+eafli__TitledIdea;23.23
+.o 1 0
+sfli__TitledIdea;23.23
+			||	Match code, stacksizes A: 0 B: 0
+			||	Building the contractum, Stacksizes A: 0 B: 0
+			||	[...|...]
+			||	[...|...]
+			||	[...|...]
+			||	[]
+	buildh _Nil 0
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh _Cons 2
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh _Cons 2
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh _Cons 2
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	fillh _Cons 2 2
+.d 1 0
+	rtn
+.desc dgText_TitledIdea;12.13 _hnf lgText_TitledIdea;12.13 2 0 "gText_TitledIdea;12"
+.a 2 eagText_TitledIdea;12.13
+.o 2 0
+lgText_TitledIdea;12.13
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eagText_TitledIdea;12.13
+	jsr_eval 0
+.o 3 0
+sgText_TitledIdea;12.13
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	bimapToGeneric;45
+			||	x2
+	push_a 1
+	build _ 1 nbimapToGeneric;45.39
+			||	gText_PAIR;5
+			||	gText_PAIR;5
+			||	gText_FIELD;10
+			||	gText_Int;11
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_Int;11 0
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_FIELD;10 2
+			||	gText_FIELD;10
+			||	gText__String;15
+	buildh e_iTasks._Framework.Generic.Visualization_dgText__String;15 0
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_FIELD;10 2
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_PAIR;5 2
+			||	gText_PAIR;5
+			||	gText_FIELD;10
+			||	gText_Maybe;27
+			||	gText_Note;190
+	buildh e_iTasks.API.Core.Types_dgText_Note;190 0
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_Maybe;27 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_FIELD;10 2
+			||	gText_FIELD;10
+			||	gText__String;15
+	buildh e_iTasks._Framework.Generic.Visualization_dgText__String;15 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_FIELD;10 2
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_PAIR;5 2
+	buildh e_iTasks._Framework.Generic.Visualization_dgText_PAIR;5 2
+			||	x1
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp e_iTasks._Framework.Generic.Visualization_sgText_RECORD;9
+.n 1 _ eabimapToGeneric;45.39
+.o 1 0
+nbimapToGeneric;45.39
+	push_node _cycle_in_spine 1
+.o 2 0
+eabimapToGeneric;45.39
+	jsr_eval 0
+.o 2 0
+sbimapToGeneric;45.39
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	x
+	push_a 0
+	updatepop_a 0 1
+.d 2 0
+	jmp s_f853;853.146
+.o 2 0
+s_f853;853.146
+			||	Match code, stacksizes A: 1 B: 0
+	eq_desc e_Data.Maybe_dNothing 0 0
+	jmp_true case.18
+	jmp case.19
+case.18
+			||	Building the contractum, Stacksizes A: 1 B: 0
+	fillh e_Data.Maybe_dNothing 0 1
+	pop_a 1
+.d 1 0
+	rtn
+case.19
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	toGenericTitledIdea;30
+			||	x1
+	push_a 0
+	build _ 1 ntoGenericTitledIdea;30.25
+	fillh e_Data.Maybe_dJust 1 2
+	pop_a 1
+.d 1 0
+	rtn
+.desc dgVerify_TitledIdea;11.12 _hnf lgVerify_TitledIdea;11.12 2 0 "gVerify_TitledIdea;11"
+.a 2 eagVerify_TitledIdea;11.12
+.o 2 0
+lgVerify_TitledIdea;11.12
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eagVerify_TitledIdea;11.12
+	jsr_eval 0
+	repl_r_args 0 2
+.o 2 2 bb
+sgVerify_TitledIdea;11.12
+			||	Match code, stacksizes A: 1 B: 2
+			||	Building the contractum, Stacksizes A: 1 B: 2
+			||	bimapToGeneric;44
+			||	x2
+	push_a 0
+	build _ 1 nbimapToGeneric;44.38
+			||	gVerify_PAIR;80
+			||	gVerify_PAIR;80
+			||	gVerify_FIELD;85
+			||	gVerify_Int;86
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_Int;86 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_FIELD;85 1
+			||	gVerify_FIELD;85
+			||	gVerify__String;90
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify__String;90 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_FIELD;85 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_PAIR;80 2
+			||	gVerify_PAIR;80
+			||	gVerify_FIELD;85
+			||	gVerify_Maybe;102
+			||	gVerify_Note;234
+	buildh e_iTasks.API.Core.Types_dgVerify_Note;234 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_Maybe;102 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_FIELD;85 1
+			||	gVerify_FIELD;85
+			||	gVerify__String;90
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify__String;90 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_FIELD;85 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_PAIR;80 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgVerify_PAIR;80 2
+			||	x1
+	push_b 1
+	push_b 1
+			||	4
+	buildI 4
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 4 2 bb
+	jmp e_iTasks._Framework.Generic.Interaction_sgVerify_RECORD;84
+.n 1 _
+.o 1 0
+nbimapToGeneric;44.38
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr eabimapToGeneric;44.38
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 1 0
+eabimapToGeneric;44.38
+	jsr_eval 0
+	repl_args 2 2
+.o 2 0
+sbimapToGeneric;44.38
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	x
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jmp s_f852;852.145
+.o 2 0
+s_f852;852.145
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	toGenericTitledIdea;30
+			||	x1
+	push_a 0
+	build _ 1 ntoGenericTitledIdea;30.25
+			||	x2
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	rtn
+.desc dgUpdate_TitledIdea;10.11 _hnf lgUpdate_TitledIdea;10.11 4 0 "gUpdate_TitledIdea;10"
+.a 0 agUpdate_TitledIdea;10.11
+.o 2 0
+lgUpdate_TitledIdea;10.11
+	repl_args 3 3
+.o 4 0
+agUpdate_TitledIdea;10.11
+.d 4 0
+	jsr eagUpdate_TitledIdea;10.11
+.o 5 0
+	build_r e_iTasks._Framework.Generic.Interaction_rUSt 3 0 2 0
+	push_a 2
+	push_a 2
+	buildh _Tuple 2
+	buildh _Tuple 2
+	updatepop_a 0 5
+.d 1 0
+	rtn
+.o 4 0
+eagUpdate_TitledIdea;10.11
+	jsr_eval 3
+	push_a 2
+	jsr_eval 0
+	repl_args 2 2
+	jsr_eval 3
+	jsr_eval 2
+	push_r_args 5 3 0
+	update_a 2 8
+	update_a 5 2
+	update_a 4 5
+	update_a 3 4
+	update_a 6 3
+	update_a 0 6
+	update_a 1 7
+	pop_a 2
+.o 7 0
+sgUpdate_TitledIdea;10.11
+			||	Match code, stacksizes A: 7 B: 0
+			||	Building the contractum, Stacksizes A: 7 B: 0
+			||	gUpdate_RECORD;117
+			||	bimapToGeneric;41
+			||	x3
+	push_a 3
+	push_a 3
+			||	Remove unused stack elements
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jsr sbimapToGeneric;41.35
+.o 2 0
+			||	JSONDecode_PAIR;792
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	3
+	buildI 3
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+			||	2
+	buildI 2
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+			||	1
+	buildI 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+			||	0
+	buildI 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	push_a 8
+	update_a 8 9
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 0 5
+	pop_a 1
+	buildh dJSONDecode_PAIR;792.85 9
+			||	JSONEncode_PAIR;791
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+	buildh dJSONEncode_PAIR;791.84 1
+			||	gDefault_PAIR;2
+			||	gDefault_PAIR;2
+			||	gDefault_FIELD;7
+			||	gDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Int;8 0 e_iTasks._Framework.Generic.Defaults_ngDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+			||	gDefault_PAIR;2
+			||	gDefault_FIELD;7
+			||	gDefault_Maybe;24
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Maybe;24 1 e_iTasks._Framework.Generic.Defaults_ngDefault_Maybe;24
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+			||	gUpdate_PAIR;113
+			||	JSONDecode_PAIR;787
+			||	3
+	buildI 3
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+			||	2
+	buildI 2
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh dJSONDecode_PAIR;787.80 4
+			||	JSONEncode_PAIR;786
+	buildh dJSONEncode_PAIR;786.79 0
+			||	gDefault_PAIR;2
+			||	gDefault_FIELD;7
+			||	gDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Int;8 0 e_iTasks._Framework.Generic.Defaults_ngDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+			||	gUpdate_PAIR;113
+			||	JSONDecode_FIELD;780
+			||	3
+	buildI 3
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh dJSONDecode_FIELD;780.73 2
+			||	JSONEncode_FIELD;779
+	buildh dJSONEncode_FIELD;779.72 0
+			||	gDefault_FIELD;7
+			||	gDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Int;8 0 e_iTasks._Framework.Generic.Defaults_ngDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gUpdate_FIELD;118
+			||	JSONDecode_Int;34
+	buildh e_Text.JSON_dJSONDecode_Int;34 0
+			||	JSONEncode_Int;10
+	buildh e_Text.JSON_dJSONEncode_Int;10 0
+			||	gDefault_Int;8
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Int;8 0 e_iTasks._Framework.Generic.Defaults_ngDefault_Int;8
+			||	gUpdate_Int;119
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_Int;119 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_FIELD;118 4
+			||	JSONDecode_FIELD;774
+			||	2
+	buildI 2
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh dJSONDecode_FIELD;774.67 2
+			||	JSONEncode_FIELD;773
+	buildh dJSONEncode_FIELD;773.66 0
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gUpdate_FIELD;118
+			||	JSONDecode__String;38
+	buildh e_Text.JSON_dJSONDecode__String;38 0
+			||	JSONEncode__String;14
+	buildh e_Text.JSON_dJSONEncode__String;14 0
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+			||	gUpdate__String;123
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate__String;123 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_FIELD;118 4
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_PAIR;113 8
+			||	JSONDecode_PAIR;784
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	1
+	buildI 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+			||	0
+	buildI 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh dJSONDecode_PAIR;784.77 5
+			||	JSONEncode_PAIR;783
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+	buildh dJSONEncode_PAIR;783.76 1
+			||	gDefault_PAIR;2
+			||	gDefault_FIELD;7
+			||	gDefault_Maybe;24
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Maybe;24 1 e_iTasks._Framework.Generic.Defaults_ngDefault_Maybe;24
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_PAIR;2 2 e_iTasks._Framework.Generic.Defaults_ngDefault_PAIR;2
+			||	gUpdate_PAIR;113
+			||	JSONDecode_FIELD;776
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	1
+	buildI 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh dJSONDecode_FIELD;776.69 3
+			||	JSONEncode_FIELD;775
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+	buildh dJSONEncode_FIELD;775.68 1
+			||	gDefault_FIELD;7
+			||	gDefault_Maybe;24
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Maybe;24 1 e_iTasks._Framework.Generic.Defaults_ngDefault_Maybe;24
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gUpdate_FIELD;118
+			||	JSONDecode_Maybe;53
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+	buildh e_Text.JSON_dJSONDecode_Maybe;53 1
+			||	JSONEncode_Maybe;26
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+	buildh e_Text.JSON_dJSONEncode_Maybe;26 1
+			||	gDefault_Maybe;24
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_Maybe;24 1 e_iTasks._Framework.Generic.Defaults_ngDefault_Maybe;24
+			||	gUpdate_Maybe;135
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+			||	gUpdate_Note;223
+	buildh e_iTasks.API.Core.Types_dgUpdate_Note;223 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_Maybe;135 4
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_FIELD;118 4
+			||	JSONDecode_FIELD;774
+			||	0
+	buildI 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh dJSONDecode_FIELD;774.67 2
+			||	JSONEncode_FIELD;773
+	buildh dJSONEncode_FIELD;773.66 0
+			||	gDefault_FIELD;7
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault_FIELD;7 1 e_iTasks._Framework.Generic.Defaults_ngDefault_FIELD;7
+			||	gUpdate_FIELD;118
+			||	JSONDecode__String;38
+	buildh e_Text.JSON_dJSONDecode__String;38 0
+			||	JSONEncode__String;14
+	buildh e_Text.JSON_dJSONEncode__String;14 0
+			||	gDefault__String;12
+	build e_iTasks._Framework.Generic.Defaults_dgDefault__String;12 0 e_iTasks._Framework.Generic.Defaults_ngDefault__String;12
+			||	gUpdate__String;123
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate__String;123 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_FIELD;118 4
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_PAIR;113 8
+	buildh e_iTasks._Framework.Generic.Interaction_dgUpdate_PAIR;113 8
+			||	x4
+	push_a 10
+	push_a 10
+	push_a 10
+			||	x2
+	push_a 10
+			||	x1
+	push_a 10
+			||	4
+	buildI 4
+	push_a 11
+	update_a 6 12
+	update_a 2 6
+	update_a 7 2
+	update_a 3 7
+	update_a 8 3
+	update_a 11 8
+	update_a 5 11
+	update_a 10 5
+	update_a 4 10
+	update_a 9 4
+	update_a 0 9
+	pop_a 1
+			||	Remove unused stack elements
+	update_a 11 16
+	update_a 10 15
+	update_a 9 14
+	update_a 8 13
+	update_a 7 12
+	update_a 6 11
+	update_a 5 10
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 12 0
+	jsr e_iTasks._Framework.Generic.Interaction_sgUpdate_RECORD;117
+.o 5 0
+	build_r e_iTasks._Framework.Generic.Interaction_rUSt 3 0 2 0
+	update_a 0 5
+	update_a 2 4
+	update_a 1 3
+	pop_a 3
+.d 3 0
+	jsr sbimapFromGeneric;43.344
+.o 3 0
+	push_r_args 2 3 0
+	update_a 2 5
+	update_a 4 2
+	update_a 1 4
+	update_a 3 1
+	update_a 0 3
+	pop_a 1
+.d 5 0
+	rtn
+.desc dJSONEncode_PAIR;791.84 _hnf lJSONEncode_PAIR;791.84 3 0 "JSONEncode_PAIR;791"
+.a 3 eaJSONEncode_PAIR;791.84
+.o 2 0
+lJSONEncode_PAIR;791.84
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.o 4 0
+eaJSONEncode_PAIR;791.84
+	jsr_eval 2
+	jsr_eval 1
+	pushB_a 1
+	update_a 0 1
+	pop_a 1
+.o 3 1 b
+sJSONEncode_PAIR;791.84
+			||	Match code, stacksizes A: 2 B: 1
+	push_args 1 2 2
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 4 B: 1
+			||	JSONEncode_PAIR;786
+			||	y
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 4 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 1 b
+	jsr sJSONEncode_PAIR;786.79
+.o 1 0
+			||	JSONEncode_PAIR;783
+			||	x
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 4
+	push_a 2
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+			||	Remove unused stack elements
+			||	_x
+	buildh _Nil 0
+	update_a 0 6
+			||	x
+	update_a 0 5
+	pop_a 1
+.d 3 1 b
+	jsr sJSONEncode_PAIR;783.76
+.o 1 0
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp s++;37.31
+.desc dJSONDecode_PAIR;792.85 _hnf lJSONDecode_PAIR;792.85 11 0 "JSONDecode_PAIR;792"
+.a 0 aJSONDecode_PAIR;792.85
+.o 2 0
+lJSONDecode_PAIR;792.85
+	repl_args 10 10
+.o 11 0
+aJSONDecode_PAIR;792.85
+.d 11 0
+	jsr eaJSONDecode_PAIR;792.85
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 11 0
+eaJSONDecode_PAIR;792.85
+	jsr_eval 10
+	jsr_eval 9
+	pushB_a 9
+	update_a 8 9
+	update_a 7 8
+	update_a 6 7
+	update_a 5 6
+	update_a 4 5
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.o 10 1 b
+sJSONDecode_PAIR;792.85
+			||	Match code, stacksizes A: 10 B: 1
+			||	Building the contractum, Stacksizes A: 10 B: 1
+			||	JSONDecode_PAIR;784
+			||	l
+	push_a 9
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 5
+			||	_x
+	push_a 5
+			||	gfd_name
+	push_a 5
+			||	_x
+	push_a 5
+			||	gfd_name
+	push_a 5
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 5 10
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 6 1 b
+	jsr sJSONDecode_PAIR;784.77
+.o 2 0
+			||	l
+	push_a 6
+			||	_x
+	push_a 6
+			||	gfd_name
+	push_a 6
+			||	_x
+	push_a 6
+			||	gfd_name
+	push_a 6
+	push_a 6
+	update_a 5 7
+	update_a 6 5
+	update_a 0 6
+	pop_a 1
+	update_a 6 11
+	update_a 5 10
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 7 0
+	jmp sd1;793.86
+.o 7 0
+sd1;793.86
+			||	Match code, stacksizes A: 7 B: 0
+	eq_desc e_Data.Maybe_dJust 1 4
+	jmp_true case.20
+	jmp case.21
+case.20
+	push_args 4 1 1
+	buildh _Nil 0
+	update_a 0 6
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 8 B: 0
+			||	JSONDecode_PAIR;787
+			||	xs
+	push_a 6
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 5
+			||	gfd_name
+	push_a 5
+			||	_x
+	push_a 5
+			||	gfd_name
+	push_a 5
+			||	Remove unused stack elements
+	update_a 5 11
+	update_a 4 10
+	update_a 3 9
+	update_a 2 8
+	update_a 1 7
+	updatepop_a 0 6
+.d 5 1 b
+	jsr sJSONDecode_PAIR;787.80
+.o 2 0
+			||	x
+	push_a 2
+	jsr_eval 0
+			||	l
+	push_a 4
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp sd2;40.34
+case.21
+			||	Building the contractum, Stacksizes A: 7 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 7
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 8
+	updatepop_a 0 7
+.d 2 0
+	rtn
+.desc dJSONEncode_PAIR;783.76 _hnf lJSONEncode_PAIR;783.76 3 0 "JSONEncode_PAIR;783"
+.a 3 eaJSONEncode_PAIR;783.76
+.o 2 0
+lJSONEncode_PAIR;783.76
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.o 4 0
+eaJSONEncode_PAIR;783.76
+	jsr_eval 2
+	jsr_eval 1
+	pushB_a 1
+	update_a 0 1
+	pop_a 1
+.o 3 1 b
+sJSONEncode_PAIR;783.76
+			||	Match code, stacksizes A: 2 B: 1
+	push_args 1 2 2
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 4 B: 1
+			||	JSONEncode_FIELD;775
+			||	y
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 4
+	push_a 2
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 1 b
+	jsr sJSONEncode_FIELD;775.68
+.o 1 0
+			||	JSONEncode_FIELD;773
+			||	x
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+			||	x
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+.d 2 1 b
+	jsr sJSONEncode_FIELD;773.66
+.o 1 0
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s++;37.31
+.desc dJSONEncode_PAIR;786.79 _hnf lJSONEncode_PAIR;786.79 2 0 "JSONEncode_PAIR;786"
+.a 2 eaJSONEncode_PAIR;786.79
+.o 2 0
+lJSONEncode_PAIR;786.79
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eaJSONEncode_PAIR;786.79
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 2 1 b
+sJSONEncode_PAIR;786.79
+			||	Match code, stacksizes A: 1 B: 1
+	repl_args 2 2
+			||	Building the contractum, Stacksizes A: 2 B: 1
+			||	JSONEncode_FIELD;779
+			||	y
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 1 b
+	jsr sJSONEncode_FIELD;779.72
+.o 1 0
+			||	JSONEncode_FIELD;773
+			||	x
+	push_a 1
+	jsr_eval 0
+	create
+			||	False
+	pushB FALSE
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+			||	x
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+.d 2 1 b
+	jsr sJSONEncode_FIELD;773.66
+.o 1 0
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s++;37.31
+.desc dJSONDecode_PAIR;784.77 _hnf lJSONDecode_PAIR;784.77 7 0 "JSONDecode_PAIR;784"
+.a 0 aJSONDecode_PAIR;784.77
+.o 2 0
+lJSONDecode_PAIR;784.77
+	repl_args 6 6
+.o 7 0
+aJSONDecode_PAIR;784.77
+.d 7 0
+	jsr eaJSONDecode_PAIR;784.77
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 7 0
+eaJSONDecode_PAIR;784.77
+	jsr_eval 6
+	jsr_eval 5
+	pushB_a 5
+	update_a 4 5
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.o 6 1 b
+sJSONDecode_PAIR;784.77
+			||	Match code, stacksizes A: 6 B: 1
+			||	Building the contractum, Stacksizes A: 6 B: 1
+			||	JSONDecode_FIELD;774
+			||	l
+	push_a 5
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 2
+			||	gfd_name
+	push_a 2
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 1 b
+	jsr sJSONDecode_FIELD;774.67
+.o 2 0
+			||	l
+	push_a 5
+			||	_x
+	push_a 5
+			||	_x
+	push_a 5
+			||	gfd_name
+	push_a 5
+	push_a 5
+	update_a 4 6
+	update_a 5 4
+	update_a 0 5
+	pop_a 1
+	update_a 5 9
+	update_a 4 8
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 6 0
+	jmp sd1;785.78
+.o 6 0
+sd1;785.78
+			||	Match code, stacksizes A: 6 B: 0
+	eq_desc e_Data.Maybe_dJust 1 3
+	jmp_true case.22
+	jmp case.23
+case.22
+	push_args 3 1 1
+	buildh _Nil 0
+	update_a 0 5
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 7 B: 0
+			||	JSONDecode_FIELD;776
+			||	xs
+	push_a 5
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 4
+			||	_x
+	push_a 4
+			||	gfd_name
+	push_a 4
+			||	Remove unused stack elements
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 4 1 b
+	jsr sJSONDecode_FIELD;776.69
+.o 2 0
+			||	x
+	push_a 2
+	jsr_eval 0
+			||	l
+	push_a 4
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp sd2;40.34
+case.23
+			||	Building the contractum, Stacksizes A: 6 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 6
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 7
+	updatepop_a 0 6
+.d 2 0
+	rtn
+.desc dJSONDecode_PAIR;787.80 _hnf lJSONDecode_PAIR;787.80 6 0 "JSONDecode_PAIR;787"
+.a 0 aJSONDecode_PAIR;787.80
+.o 2 0
+lJSONDecode_PAIR;787.80
+	repl_args 5 5
+.o 6 0
+aJSONDecode_PAIR;787.80
+.d 6 0
+	jsr eaJSONDecode_PAIR;787.80
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 6 0
+eaJSONDecode_PAIR;787.80
+	jsr_eval 5
+	jsr_eval 4
+	pushB_a 4
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.o 5 1 b
+sJSONDecode_PAIR;787.80
+			||	Match code, stacksizes A: 5 B: 1
+			||	Building the contractum, Stacksizes A: 5 B: 1
+			||	JSONDecode_FIELD;774
+			||	l
+	push_a 4
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 2
+			||	gfd_name
+	push_a 2
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 1 b
+	jsr sJSONDecode_FIELD;774.67
+.o 2 0
+			||	l
+	push_a 4
+			||	_x
+	push_a 4
+			||	gfd_name
+	push_a 4
+	push_a 4
+	update_a 3 5
+	update_a 4 3
+	update_a 0 4
+	pop_a 1
+	update_a 4 7
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 5 0
+	jmp sd1;788.81
+.o 5 0
+sd1;788.81
+			||	Match code, stacksizes A: 5 B: 0
+	eq_desc e_Data.Maybe_dJust 1 2
+	jmp_true case.24
+	jmp case.25
+case.24
+	push_args 2 1 1
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 6 B: 0
+			||	JSONDecode_FIELD;780
+			||	xs
+	push_a 4
+			||	False
+	pushB FALSE
+			||	_x
+	push_a 3
+			||	gfd_name
+	push_a 3
+			||	Remove unused stack elements
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 3 1 b
+	jsr sJSONDecode_FIELD;780.73
+.o 2 0
+			||	x
+	push_a 2
+	jsr_eval 0
+			||	l
+	push_a 4
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 4 0
+	jmp sd2;40.34
+case.25
+			||	Building the contractum, Stacksizes A: 5 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 5
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 6
+	updatepop_a 0 5
+.d 2 0
+	rtn
+.desc dJSONEncode_FIELD;775.68 _hnf lJSONEncode_FIELD;775.68 3 0 "JSONEncode_FIELD;775"
+.a 3 eaJSONEncode_FIELD;775.68
+.o 2 0
+lJSONEncode_FIELD;775.68
+	push_args 0 2 2
+	update_a 3 2
+	create
+	update_a 0 4
+	pop_a 1
+.o 4 0
+eaJSONEncode_FIELD;775.68
+	jsr_eval 2
+	jsr_eval 1
+	pushB_a 1
+	update_a 0 1
+	pop_a 1
+.o 3 1 b
+sJSONEncode_FIELD;775.68
+			||	Match code, stacksizes A: 2 B: 1
+	push_args 1 1 1
+	buildh _Nil 0
+	update_a 0 3
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 3 B: 1
+			||	x
+	push_a 0
+	jsr_eval 0
+			||	True
+	pushB TRUE
+			||	_x
+	push_a 2
+	update_a 1 4
+	updatepop_a 0 3
+	updatepop_b 0 1
+.d 3 1 b
+	jmp e_Text.JSON_sJSONEncode_Maybe;26
+.desc dJSONEncode_FIELD;773.66 _hnf lJSONEncode_FIELD;773.66 2 0 "JSONEncode_FIELD;773"
+.a 2 eaJSONEncode_FIELD;773.66
+.o 2 0
+lJSONEncode_FIELD;773.66
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eaJSONEncode_FIELD;773.66
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 2 1 b
+sJSONEncode_FIELD;773.66
+			||	Match code, stacksizes A: 1 B: 1
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 1 B: 1
+			||	x
+	push_a 0
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+			||	True
+	pushB TRUE
+	updatepop_a 0 1
+	updatepop_b 0 1
+.d 2 1 b
+	jmp e_Text.JSON_sJSONEncode__String;14
+.desc dJSONEncode_FIELD;779.72 _hnf lJSONEncode_FIELD;779.72 2 0 "JSONEncode_FIELD;779"
+.a 2 eaJSONEncode_FIELD;779.72
+.o 2 0
+lJSONEncode_FIELD;779.72
+	push_args 0 1 1
+	update_a 2 1
+	create
+	update_a 0 3
+	pop_a 1
+.o 3 0
+eaJSONEncode_FIELD;779.72
+	jsr_eval 1
+	jsr_eval 0
+	pushB_a 0
+	pop_a 1
+.o 2 1 b
+sJSONEncode_FIELD;779.72
+			||	Match code, stacksizes A: 1 B: 1
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 1 B: 1
+			||	x
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+			||	True
+	pushB TRUE
+	update_b 1 2
+	updatepop_b 0 1
+	pop_a 1
+.d 1 2 bi
+	jmp e_Text.JSON_sJSONEncode_Int;10
+.desc dJSONDecode_FIELD;776.69 _hnf lJSONDecode_FIELD;776.69 5 0 "JSONDecode_FIELD;776"
+.a 0 aJSONDecode_FIELD;776.69
+.o 2 0
+lJSONDecode_FIELD;776.69
+	repl_args 4 4
+.o 5 0
+aJSONDecode_FIELD;776.69
+.d 5 0
+	jsr eaJSONDecode_FIELD;776.69
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 5 0
+eaJSONDecode_FIELD;776.69
+	jsr_eval 4
+	jsr_eval 3
+	pushB_a 3
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.o 4 1 b
+sJSONDecode_FIELD;776.69
+			||	Match code, stacksizes A: 4 B: 1
+	eq_desc _Cons 2 3
+	jmp_true case.26
+	jmp case.27
+case.26
+	push_args 3 2 2
+	jsr_eval 0
+	pushD_a 0
+	eqD_b e_Text.JSON_kJSONObject 0
+	jmp_true case.28
+	eqD_b e_Text.JSON_kJSONArray 0
+	jmp_true case.29
+	pop_a 2
+	pop_b 1
+	jmp case.27
+case.28
+	pop_b 1
+	repl_args 1 1
+	jsr_eval 1
+	eq_desc _Nil 0 1
+	jmp_true case.30
+	pop_a 2
+	jmp case.27
+case.30
+			||	Node definition field: findField;35 (shared or annotated)
+			||	gfd_name
+	push_a 2
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	create
+			||	fields
+	push_a 2
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+	pop_b 1
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 3 0
+	jsr sfindField;35.29
+.o 1 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	JSONDecode_Maybe;53
+			||	field: findField;35
+	push_a 0
+			||	True
+	pushB TRUE
+			||	_x
+	push_a 2
+			||	Remove unused stack elements
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 1 b
+	jsr e_Text.JSON_sJSONDecode_Maybe;53
+.o 2 0
+			||	l
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s_c;133;5;850.143
+case.29
+	pop_b 1
+	repl_args 1 1
+	jsr_eval 1
+	eq_desc _Nil 0 1
+	jmp_true case.31
+	pop_a 2
+	jmp case.27
+case.31
+			||	Node definition field: !! (shared or annotated)
+			||	_x
+	push_a 3
+	jsr_eval 0
+	pushI_a 4
+	pop_a 1
+			||	fields
+	push_a 0
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	updatepop_a 0 4
+.d 1 1 i
+	jsr e_StdList_s!!
+.o 1 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	JSONDecode_Maybe;53
+			||	[...|...]
+			||	[]
+	buildh _Nil 0
+			||	field: !!
+	push_a 1
+	buildh _Cons 2
+			||	True
+	pushB TRUE
+			||	_x
+	push_a 2
+			||	Remove unused stack elements
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 1 b
+	jsr e_Text.JSON_sJSONDecode_Maybe;53
+.o 2 0
+			||	l
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s_c;144;5;851.144
+case.27
+			||	Building the contractum, Stacksizes A: 4 B: 1
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 5
+	updatepop_a 0 4
+	pop_b 1
+.d 2 0
+	rtn
+.o 3 0
+s_c;144;5;851.144
+			||	Match code, stacksizes A: 3 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.32
+	jmp case.33
+case.32
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Just
+			||	FIELD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_Data.Maybe_dJust 1
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+case.33
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+.o 3 0
+s_c;133;5;850.143
+			||	Match code, stacksizes A: 3 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.34
+	jmp case.35
+case.34
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Just
+			||	FIELD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_Data.Maybe_dJust 1
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+case.35
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+.desc dJSONDecode_FIELD;774.67 _hnf lJSONDecode_FIELD;774.67 4 0 "JSONDecode_FIELD;774"
+.a 0 aJSONDecode_FIELD;774.67
+.o 2 0
+lJSONDecode_FIELD;774.67
+	repl_args 3 3
+.o 4 0
+aJSONDecode_FIELD;774.67
+.d 4 0
+	jsr eaJSONDecode_FIELD;774.67
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 4 0
+eaJSONDecode_FIELD;774.67
+	jsr_eval 3
+	jsr_eval 2
+	pushB_a 2
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.o 3 1 b
+sJSONDecode_FIELD;774.67
+			||	Match code, stacksizes A: 3 B: 1
+	eq_desc _Cons 2 2
+	jmp_true case.36
+	jmp case.37
+case.36
+	push_args 2 2 2
+	jsr_eval 0
+	pushD_a 0
+	eqD_b e_Text.JSON_kJSONObject 0
+	jmp_true case.38
+	eqD_b e_Text.JSON_kJSONArray 0
+	jmp_true case.39
+	pop_a 2
+	pop_b 1
+	jmp case.37
+case.38
+	pop_b 1
+	repl_args 1 1
+	jsr_eval 1
+	eq_desc _Nil 0 1
+	jmp_true case.40
+	pop_a 2
+	jmp case.37
+case.40
+			||	Node definition field: findField;35 (shared or annotated)
+			||	gfd_name
+	push_a 2
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	create
+			||	fields
+	push_a 2
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+	pop_b 1
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 3 0
+	jsr sfindField;35.29
+.o 1 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	JSONDecode__String;38
+			||	field: findField;35
+	push_a 0
+			||	True
+	pushB TRUE
+			||	Remove unused stack elements
+	updatepop_a 0 1
+.d 1 1 b
+	jsr e_Text.JSON_sJSONDecode__String;38
+.o 2 0
+			||	l
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s_c;133;5;848.141
+case.39
+	pop_b 1
+	repl_args 1 1
+	jsr_eval 1
+	eq_desc _Nil 0 1
+	jmp_true case.41
+	pop_a 2
+	jmp case.37
+case.41
+			||	Node definition field: !! (shared or annotated)
+			||	_x
+	push_a 3
+	jsr_eval 0
+	pushI_a 4
+	pop_a 1
+			||	fields
+	push_a 0
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	updatepop_a 0 4
+.d 1 1 i
+	jsr e_StdList_s!!
+.o 1 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	JSONDecode__String;38
+			||	[...|...]
+			||	[]
+	buildh _Nil 0
+			||	field: !!
+	push_a 1
+	buildh _Cons 2
+			||	True
+	pushB TRUE
+			||	Remove unused stack elements
+	updatepop_a 0 1
+.d 1 1 b
+	jsr e_Text.JSON_sJSONDecode__String;38
+.o 2 0
+			||	l
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s_c;144;5;849.142
+case.37
+			||	Building the contractum, Stacksizes A: 3 B: 1
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+	pop_b 1
+.d 2 0
+	rtn
+.o 3 0
+s_c;144;5;849.142
+			||	Match code, stacksizes A: 3 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.42
+	jmp case.43
+case.42
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Just
+			||	FIELD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_Data.Maybe_dJust 1
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+case.43
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+.o 3 0
+s_c;133;5;848.141
+			||	Match code, stacksizes A: 3 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.44
+	jmp case.45
+case.44
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Just
+			||	FIELD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_Data.Maybe_dJust 1
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+case.45
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+.desc dJSONDecode_FIELD;780.73 _hnf lJSONDecode_FIELD;780.73 4 0 "JSONDecode_FIELD;780"
+.a 0 aJSONDecode_FIELD;780.73
+.o 2 0
+lJSONDecode_FIELD;780.73
+	repl_args 3 3
+.o 4 0
+aJSONDecode_FIELD;780.73
+.d 4 0
+	jsr eaJSONDecode_FIELD;780.73
+.o 2 0
+	push_a 1
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 2
+.d 1 0
+	rtn
+.o 4 0
+eaJSONDecode_FIELD;780.73
+	jsr_eval 3
+	jsr_eval 2
+	pushB_a 2
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.o 3 1 b
+sJSONDecode_FIELD;780.73
+			||	Match code, stacksizes A: 3 B: 1
+	eq_desc _Cons 2 2
+	jmp_true case.46
+	jmp case.47
+case.46
+	push_args 2 2 2
+	jsr_eval 0
+	pushD_a 0
+	eqD_b e_Text.JSON_kJSONObject 0
+	jmp_true case.48
+	eqD_b e_Text.JSON_kJSONArray 0
+	jmp_true case.49
+	pop_a 2
+	pop_b 1
+	jmp case.47
+case.48
+	pop_b 1
+	repl_args 1 1
+	jsr_eval 1
+	eq_desc _Nil 0 1
+	jmp_true case.50
+	pop_a 2
+	jmp case.47
+case.50
+			||	Node definition field: findField;35 (shared or annotated)
+			||	gfd_name
+	push_a 2
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	create
+			||	fields
+	push_a 2
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+	pop_b 1
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 3 0
+	jsr sfindField;35.29
+.o 1 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	JSONDecode_Int;34
+			||	field: findField;35
+	push_a 0
+			||	True
+	pushB TRUE
+			||	Remove unused stack elements
+	updatepop_a 0 1
+.d 1 1 b
+	jsr e_Text.JSON_sJSONDecode_Int;34
+.o 2 0
+			||	l
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s_c;133;5;846.139
+case.49
+	pop_b 1
+	repl_args 1 1
+	jsr_eval 1
+	eq_desc _Nil 0 1
+	jmp_true case.51
+	pop_a 2
+	jmp case.47
+case.51
+			||	Node definition field: !! (shared or annotated)
+			||	_x
+	push_a 3
+	jsr_eval 0
+	pushI_a 4
+	pop_a 1
+			||	fields
+	push_a 0
+			||	Remove unused stack elements
+	updatepop_b 0 1
+	updatepop_a 0 4
+.d 1 1 i
+	jsr e_StdList_s!!
+.o 1 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	JSONDecode_Int;34
+			||	[...|...]
+			||	[]
+	buildh _Nil 0
+			||	field: !!
+	push_a 1
+	buildh _Cons 2
+			||	True
+	pushB TRUE
+			||	Remove unused stack elements
+	updatepop_a 0 1
+.d 1 1 b
+	jsr e_Text.JSON_sJSONDecode_Int;34
+.o 2 0
+			||	l
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s_c;144;5;847.140
+case.47
+			||	Building the contractum, Stacksizes A: 3 B: 1
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+	pop_b 1
+.d 2 0
+	rtn
+.o 3 0
+s_c;144;5;847.140
+			||	Match code, stacksizes A: 3 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.52
+	jmp case.53
+case.52
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Just
+			||	FIELD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_Data.Maybe_dJust 1
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+case.53
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+.o 3 0
+s_c;133;5;846.139
+			||	Match code, stacksizes A: 3 B: 0
+	eq_desc e_Data.Maybe_dJust 1 0
+	jmp_true case.54
+	jmp case.55
+case.54
+	repl_args 1 1
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Just
+			||	FIELD
+			||	x
+	push_a 0
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_Data.Maybe_dJust 1
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+case.55
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 3
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 4
+	updatepop_a 0 3
+.d 2 0
+	rtn
+.o 2 0
+sbimapFromGeneric;42.36
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	x
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jmp s_f844;844.137
+.o 2 0
+s_f844;844.137
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	fromGenericTitledIdea;29
+			||	x1
+	push_a 0
+	build _ 1 nfromGenericTitledIdea;29.24
+			||	x2
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	rtn
+.n 1 _
+.o 1 0
+nfromGenericTitledIdea;29.24
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr eafromGenericTitledIdea;29.24
+.o 4 0
+	fill_r rTitledIdea 4 0 4 0 0
+	pop_a 4
+.d 1 0
+	rtn
+.o 1 0
+eafromGenericTitledIdea;29.24
+	jsr_eval 0
+.o 1 0
+sfromGenericTitledIdea;29.24
+			||	Match code, stacksizes A: 1 B: 0
+	repl_args 1 1
+	jsr_eval 0
+	repl_args 2 2
+	jsr_eval 0
+	repl_args 2 2
+	jsr_eval 0
+	repl_args 1 1
+	jsr_eval 1
+	push_args 1 1 1
+	buildh _Nil 0
+	update_a 0 3
+	pop_a 1
+	jsr_eval 3
+	push_args 3 2 2
+	buildh _Nil 0
+	update_a 0 6
+	pop_a 1
+	jsr_eval 0
+	repl_args 1 1
+	jsr_eval 1
+	push_args 1 1 1
+	buildh _Nil 0
+	update_a 0 3
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 7 B: 0
+			||	x4
+	push_a 0
+			||	x3
+	push_a 2
+			||	x2
+	push_a 5
+			||	x1
+	push_a 7
+	update_a 3 10
+	update_a 2 9
+	update_a 1 8
+	updatepop_a 0 7
+.d 4 0
+	rtn
+.n 2 _ ea++;37.31
+.o 1 0
+n++;37.31
+	push_node _cycle_in_spine 2
+.o 3 0
+ea++;37.31
+	jsr_eval 0
+.o 3 0
+s++;37.31
+			||	Match code, stacksizes A: 2 B: 0
+	eq_desc _Cons 2 0
+	jmp_true case.56
+	jmp case.57
+case.56
+	repl_args 2 2
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	++;37
+			||	list
+	push_a 2
+			||	tl
+	push_a 2
+	build _ 2 n++;37.31
+			||	hd
+	push_a 1
+	fillh _Cons 2 5
+	pop_a 3
+.d 1 0
+	rtn
+case.57
+			||	Redirecting the root to: list
+	fill_a 1 2
+	pop_a 2
+.d 1 0
+	rtn
+.o 4 0
+sd2;40.34
+			||	Match code, stacksizes A: 4 B: 0
+	eq_desc e_Data.Maybe_dJust 1 1
+	jmp_true case.58
+	jmp case.59
+case.58
+	push_args 1 1 1
+	buildh _Nil 0
+	update_a 0 3
+	pop_a 1
+			||	Building the contractum, Stacksizes A: 5 B: 0
+			||	Just
+			||	PAIR
+			||	y
+	push_a 0
+			||	x
+	push_a 2
+	buildh e_StdGeneric_dPAIR 2
+	buildh e_Data.Maybe_dJust 1
+			||	ys
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 6
+	updatepop_a 0 5
+.d 2 0
+	rtn
+case.59
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	Nothing
+	buildh e_Data.Maybe_dNothing 0
+			||	l
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 5
+	updatepop_a 0 4
+.d 2 0
+	rtn
+.o 3 0
+sfindField;35.29
+			||	Match code, stacksizes A: 2 B: 0
+	eq_desc _Cons 2 1
+	jmp_true case.60
+	jmp case.61
+case.60
+	push_args 1 2 2
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+	jsr_eval 0
+	repl_args 2 2
+			||	l
+	push_a 0
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+			||	match
+	push_a 4
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+			||	Remove unused stack elements
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 0
+	jsr eqAC
+.o 0 1 b	
+	jmp_false else.62
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	[]
+	buildh _Nil 0
+			||	x
+	push_a 1
+	fillh _Cons 2 6
+	pop_a 4
+.d 1 0
+	rtn
+else.62
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	xs
+	push_a 1
+	jsr_eval 0
+			||	match
+	push_a 3
+	update_a 1 5
+	updatepop_a 0 4
+.d 3 0
+	jmp sfindField;35.29
+case.61
+			||	Building the contractum, Stacksizes A: 2 B: 0
+	fillh _Nil 0 2
+	pop_a 2
+.d 1 0
+	rtn
+.o 2 0
+sbimapToGeneric;41.35
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	x
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jmp s_f841;841.134
+.o 2 0
+s_f841;841.134
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	toGenericTitledIdea;30
+			||	x1
+	push_a 0
+	build _ 1 ntoGenericTitledIdea;30.25
+			||	x2
+	push_a 2
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	rtn
+.desc dgEditMeta_TitledIdea;9.10 _hnf lgEditMeta_TitledIdea;9.10 1 0 "gEditMeta_TitledIdea;9"
+.o 2 0
+lgEditMeta_TitledIdea;9.10
+	update_a 1 0
+	create
+	update_a 0 2
+	pop_a 1
+.o 2 0
+eagEditMeta_TitledIdea;9.10
+.o 2 0
+sgEditMeta_TitledIdea;9.10
+			||	Match code, stacksizes A: 1 B: 0
+			||	Building the contractum, Stacksizes A: 1 B: 0
+			||	toGenericTitledIdea;30
+			||	x1
+	push_a 0
+	build _ 1 ntoGenericTitledIdea;30.25
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Int;53
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Int;53 0
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Maybe;69
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Maybe;69 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp e_iTasks._Framework.Generic.Interaction_sgEditMeta_RECORD;51
+.desc dgEditor_TitledIdea;8.9 _hnf lgEditor_TitledIdea;8.9 4 0 "gEditor_TitledIdea;8"
+.a 0 agEditor_TitledIdea;8.9
+.o 2 0
+lgEditor_TitledIdea;8.9
+	repl_args 3 3
+.o 4 0
+agEditor_TitledIdea;8.9
+.d 4 0
+	jsr eagEditor_TitledIdea;8.9
+.o 4 3 ibb
+	build_r e_iTasks._Framework.Generic.Interaction_rVSt 3 3 1 0
+	push_a 1
+	buildh _Tuple 2
+	updatepop_a 0 4
+	pop_b 3
+.d 1 0
+	rtn
+.o 4 0
+eagEditor_TitledIdea;8.9
+	jsr_eval 3
+	jsr_eval 2
+	push_a 1
+	jsr_eval 0
+	repl_args 3 3
+	jsr_eval 3
+	push_r_args 6 3 3
+	update_a 2 9
+	update_a 6 2
+	update_a 8 6
+	update_a 1 8
+	update_a 0 7
+	pop_a 2
+.o 8 3 ibb
+sgEditor_TitledIdea;8.9
+			||	Match code, stacksizes A: 8 B: 3
+			||	Building the contractum, Stacksizes A: 8 B: 3
+			||	bimapToGeneric;32
+			||	x2
+	push_a 3
+	push_a 3
+	push_a 3
+			||	Remove unused stack elements
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr sbimapToGeneric;32.26
+.o 3 0
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Int;53
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Int;53 0
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Maybe;69
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Maybe;69 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+			||	gEditor_PAIR;15
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Int;53
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Int;53 0
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+			||	gEditor_PAIR;15
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Int;53
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Int;53 0
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditor_FIELD;19
+			||	gEditMeta_Int;53
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Int;53 0
+			||	gEditor_Int;20
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_Int;20 0
+			||	"number"
+	buildAC "number"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_FIELD;19 3
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditor_FIELD;19
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	gEditor__String;24
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor__String;24 0
+			||	"name"
+	buildAC "name"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_FIELD;19 3
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_PAIR;15 4
+			||	gEditMeta_PAIR;48
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Maybe;69
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Maybe;69 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_PAIR;48 2
+			||	gEditor_PAIR;15
+			||	gEditMeta_FIELD;52
+			||	gEditMeta_Maybe;69
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Maybe;69 1
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditor_FIELD;19
+			||	gEditMeta_Maybe;69
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_Maybe;69 1
+			||	gEditor_Maybe;36
+			||	JSONDecode_Note;157
+	buildh e_iTasks.API.Core.Types_dJSONDecode_Note;157 0
+			||	JSONEncode_Note;146
+	buildh e_iTasks.API.Core.Types_dJSONEncode_Note;146 0
+			||	gEditMeta_Note;212
+	buildh e_iTasks.API.Core.Types_dgEditMeta_Note;212 0
+			||	gDefault_Note;168
+	build e_iTasks.API.Core.Types_dgDefault_Note;168 0 e_iTasks.API.Core.Types_ngDefault_Note;168
+			||	gText_Note;190
+	buildh e_iTasks.API.Core.Types_dgText_Note;190 0
+			||	gEditor_Note;201
+	buildh e_iTasks.API.Core.Types_dgEditor_Note;201 0
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_Maybe;36 6
+			||	"idea"
+	buildAC "idea"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_FIELD;19 3
+			||	gEditMeta_FIELD;52
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta_FIELD;52 2
+			||	gEditor_FIELD;19
+			||	gEditMeta__String;57
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditMeta__String;57 0
+			||	gEditor__String;24
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor__String;24 0
+			||	"title"
+	buildAC "title"
+	buildh ARRAY 1
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_FIELD;19 3
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_PAIR;15 4
+	buildh e_iTasks._Framework.Generic.Interaction_dgEditor_PAIR;15 4
+			||	x4
+	push_a 9
+	push_a 9
+	push_a 9
+	push_b 2
+	push_b 2
+	push_b 2
+			||	x3
+	push_a 9
+			||	x1
+	push_a 9
+			||	4
+	buildI 4
+	push_a 10
+	update_a 6 11
+	update_a 10 6
+	update_a 5 10
+	update_a 9 5
+	update_a 4 9
+	update_a 2 4
+	update_a 7 2
+	update_a 0 7
+	update_a 8 0
+	update_a 3 8
+	update_a 0 3
+	pop_a 1
+	update_a 10 15
+	update_a 9 14
+	update_a 8 13
+	update_a 7 12
+	update_a 6 11
+	update_a 5 10
+	update_a 4 9
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+	update_b 2 5
+	update_b 1 4
+	updatepop_b 0 3
+.d 11 3 ibb
+	jmp e_iTasks._Framework.Generic.Interaction_sgEditor_RECORD;18
+.o 3 0
+sbimapToGeneric;32.26
+			||	Match code, stacksizes A: 3 B: 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	x
+	push_a 2
+	push_a 2
+	push_a 2
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jmp s_f840;840.133
+.o 3 0
+s_f840;840.133
+			||	Match code, stacksizes A: 3 B: 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	toGenericTitledIdea;30
+			||	x1
+	push_a 0
+	build _ 1 ntoGenericTitledIdea;30.25
+			||	x3
+	push_a 3
+			||	x2
+	push_a 3
+	push_a 2
+	update_a 2 3
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	rtn
+.n 1 _ eatoGenericTitledIdea;30.25
+.o 1 0
+ntoGenericTitledIdea;30.25
+	push_node _cycle_in_spine 1
+.o 2 0
+eatoGenericTitledIdea;30.25
+	jsr_eval 0
+	repl_r_args 4 0
+.o 5 0
+stoGenericTitledIdea;30.25
+			||	Match code, stacksizes A: 4 B: 0
+			||	Building the contractum, Stacksizes A: 4 B: 0
+			||	PAIR
+			||	PAIR
+			||	FIELD
+			||	x14
+	push_a 3
+	buildh e_StdGeneric_dFIELD 1
+			||	FIELD
+			||	x13
+	push_a 3
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_StdGeneric_dPAIR 2
+			||	PAIR
+			||	FIELD
+			||	x12
+	push_a 2
+	buildh e_StdGeneric_dFIELD 1
+			||	FIELD
+			||	x11
+	push_a 2
+	buildh e_StdGeneric_dFIELD 1
+	buildh e_StdGeneric_dPAIR 2
+	buildh e_StdGeneric_dPAIR 2
+	fillh e_StdGeneric_dRECORD 1 5
+	pop_a 4
+.d 1 0
+	rtn
+.o 3 0
+sbimapFromGeneric;43.344
+			||	Match code, stacksizes A: 3 B: 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	x
+	push_a 2
+	push_a 2
+	push_a 2
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jmp s_f845;845.347
+.o 2 0
+sbimapFromGeneric;53.345
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	x
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jmp s_f857;857.346
+.o 2 0
+s_f857;857.346
+			||	Match code, stacksizes A: 2 B: 0
+			||	Building the contractum, Stacksizes A: 2 B: 0
+			||	bimapFromGeneric;52
+	create
+			||	x1
+	push_a 1
+			||	Remove unused stack elements
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 0
+	jsr sbimapFromGeneric;52.46
+.o 1 0
+			||	x2
+	push_a 1
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 0
+	rtn
+.o 3 0
+s_f845;845.347
+			||	Match code, stacksizes A: 3 B: 0
+			||	Building the contractum, Stacksizes A: 3 B: 0
+			||	bimapFromGeneric;42
+			||	x1
+	push_a 1
+	push_a 1
+			||	Remove unused stack elements
+	update_a 1 3
+	updatepop_a 0 2
+.d 2 0
+	jsr sbimapFromGeneric;42.36
+.o 2 0
+			||	x2
+	push_a 2
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	rtn

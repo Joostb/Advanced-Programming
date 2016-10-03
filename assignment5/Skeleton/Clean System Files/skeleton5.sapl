@@ -1,0 +1,344 @@
+|| ?module? skeleton5
+
+
+skeleton5.doIdentified !_viTask_0 task_1 = <{iTasks.API.Core.Types.>>=_28}> (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__String_24) (<{skeleton5.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (<{skeleton5.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__String_123) (<{skeleton5.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__String_90) (<{skeleton5.gText_s;}> iTasks._Framework.Generic.Visualization.gText__String_15) (<{skeleton5.JSONEncode_s;}> Text.JSON.JSONEncode__String_14) (<{skeleton5.JSONDecode_s;}> Text.JSON.JSONDecode__String_38) (<{skeleton5.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__String_12) (<{skeleton5.gEq_s;}> GenEq.gEq__String_6) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))) _viTask_0 (iTasks.API.Common.InteractionTasks.enterInformation (<{iTasks.API.Core.Types.descr;}> iTasks.API.Core.Types.toPrompt_133) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__String_24) (<{skeleton5.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (<{skeleton5.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__String_123) (<{skeleton5.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__String_90) (<{skeleton5.gText_s;}> iTasks._Framework.Generic.Visualization.gText__String_15) (<{skeleton5.JSONEncode_s;}> Text.JSON.JSONEncode__String_14) (<{skeleton5.JSONDecode_s;}> Text.JSON.JSONDecode__String_38) (<{skeleton5.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__String_12) (<{skeleton5.gEq_s;}> GenEq.gEq__String_6) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))) "Enter your name" _predefined._Nil) task_1
+skeleton5.toGenericTitledIdea_30 !x_0 = case x_0 (skeleton5._TitledIdea x11_1_0 x12_1_1 x13_1_2 x14_1_3 -> StdGeneric.RECORD (StdGeneric.PAIR (StdGeneric.PAIR (StdGeneric.FIELD x11_1_0) (StdGeneric.FIELD x12_1_1)) (StdGeneric.PAIR (StdGeneric.FIELD x13_1_2) (StdGeneric.FIELD x14_1_3)))) 
+skeleton5.bimapToGeneric_32 !x_0 = skeleton5._f840_840 x_0
+skeleton5._f840_840 !x_0 = case x_0 (_Tuple3 x1_1_0 x2_1_1 x3_1_2 -> _Tuple3 (skeleton5.toGenericTitledIdea_30 x1_1_0) x2_1_1 x3_1_2) 
+skeleton5.gEditor_TitledIdea_8 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gEditor_RECORD_18 4 (iTasks._Framework.Generic.Interaction.gEditor_PAIR_15 (iTasks._Framework.Generic.Interaction.gEditor_PAIR_15 (iTasks._Framework.Generic.Interaction.gEditor_FIELD_19 "title" iTasks._Framework.Generic.Interaction.gEditor__String_24 iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "title" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditor_FIELD_19 "idea" (iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 iTasks.API.Core.Types.gEditor_Note_201 iTasks.API.Core.Types.gText_Note_190 iTasks.API.Core.Types.gDefault_Note_168 iTasks.API.Core.Types.gEditMeta_Note_212 iTasks.API.Core.Types.JSONEncode_Note_146 iTasks.API.Core.Types.JSONDecode_Note_157) (iTasks._Framework.Generic.Interaction.gEditMeta_Maybe_69 iTasks.API.Core.Types.gEditMeta_Note_212)) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "idea" (iTasks._Framework.Generic.Interaction.gEditMeta_Maybe_69 iTasks.API.Core.Types.gEditMeta_Note_212))) (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "title" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "idea" (iTasks._Framework.Generic.Interaction.gEditMeta_Maybe_69 iTasks.API.Core.Types.gEditMeta_Note_212))) (iTasks._Framework.Generic.Interaction.gEditor_PAIR_15 (iTasks._Framework.Generic.Interaction.gEditor_FIELD_19 "name" iTasks._Framework.Generic.Interaction.gEditor__String_24 iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "name" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditor_FIELD_19 "number" iTasks._Framework.Generic.Interaction.gEditor_Int_20 iTasks._Framework.Generic.Interaction.gEditMeta_Int_53) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "number" iTasks._Framework.Generic.Interaction.gEditMeta_Int_53)) (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "name" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "number" iTasks._Framework.Generic.Interaction.gEditMeta_Int_53))) (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "title" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "idea" (iTasks._Framework.Generic.Interaction.gEditMeta_Maybe_69 iTasks.API.Core.Types.gEditMeta_Note_212))) (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "name" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "number" iTasks._Framework.Generic.Interaction.gEditMeta_Int_53))) x1_0 (skeleton5.bimapToGeneric_32 x2_1) x3_2 x4_3
+skeleton5.gEditMeta_TitledIdea_9 x1_0 = iTasks._Framework.Generic.Interaction.gEditMeta_RECORD_51 (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "title" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "idea" (iTasks._Framework.Generic.Interaction.gEditMeta_Maybe_69 iTasks.API.Core.Types.gEditMeta_Note_212))) (iTasks._Framework.Generic.Interaction.gEditMeta_PAIR_48 (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "name" iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (iTasks._Framework.Generic.Interaction.gEditMeta_FIELD_52 "number" iTasks._Framework.Generic.Interaction.gEditMeta_Int_53))) (skeleton5.toGenericTitledIdea_30 x1_0)
+skeleton5.bimapToGeneric_41 !x_0 = skeleton5._f841_841 x_0
+skeleton5._f841_841 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (skeleton5.toGenericTitledIdea_30 x1_1_0) x2_1_1) 
+skeleton5.findField_35 !match_0 !_x_1 = case _x_1 (_predefined._Cons _x_1_0 xs_1_1 -> case _x_1_0 (_Tuple2 l_2_0 x_2_1 -> case (<{StdString.==_2}> l_2_0 match_0) (True -> _predefined._Cons x_2_1 _predefined._Nil) (False -> skeleton5.findField_35 match_0 xs_1_1) ) ) (_predefined._Nil -> _predefined._Nil) 
+skeleton5.JSONDecode_FIELD_34 gfd_name_0 _x_1::I fx_2 !_x_3::B !l_4 = case l_4 (_predefined._Cons _x_1_0 _x_1_1 -> case _x_1_0 (Text.JSON.JSONObject fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = skeleton5.findField_35 gfd_name_0 fields_2_0 in <{skeleton5._c;133;5_842}> (fx_2 True field_4_0) l_4) ) (Text.JSON.JSONArray fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = <{StdList.!!}> fields_2_0 _x_1 in <{skeleton5._c;144;5_843}> (fx_2 True (_predefined._Cons field_4_0 _predefined._Nil)) l_4) ) ) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_4)
+<{skeleton5._c;144;5_843}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+<{skeleton5._c;133;5_842}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+skeleton5.d2_40 !x_0 !_x_1 !l_2 = case _x_1 (_Tuple2 _x_1_0 ys_1_1 -> case _x_1_0 (Data.Maybe.Just y_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.PAIR x_0 y_2_0)) ys_1_1) (Data.Maybe.Nothing -> <{_Tuple2!3}> Data.Maybe.Nothing l_2) ) 
+skeleton5.d1_39 !fy_0 !_x_1 !l_2 = case _x_1 (_Tuple2 _x_1_0 xs_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> skeleton5.d2_40 x_2_0 (fy_0 False xs_1_1) l_2) (Data.Maybe.Nothing -> <{_Tuple2!3}> Data.Maybe.Nothing l_2) ) 
+skeleton5.JSONDecode_PAIR_38 !fx_0 !fy_1 !_x_2::B !l_3 = skeleton5.d1_39 fy_1 (fx_0 False l_3) l_3
+skeleton5.JSONEncode_FIELD_33 !fx_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.FIELD x_1_0 -> fx_0 True x_1_0) 
+<{skeleton5.++_37}> !_x_0 !list_1 = case _x_0 (_predefined._Cons hd_1_0 tl_1_1 -> _predefined._Cons hd_1_0 (<{skeleton5.++_37}> tl_1_1 list_1)) (_ -> list_1)
+skeleton5.JSONEncode_PAIR_36 !fx_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (fx_0 False x_1_0) (fy_1 False y_1_1)) 
+skeleton5.fromGenericTitledIdea_29 !c_0 = case c_0 (StdGeneric.RECORD c_1_0 -> case c_1_0 (StdGeneric.PAIR c_2_0 c_2_1 -> case c_2_0 (StdGeneric.PAIR c_3_0 c_3_1 -> case c_3_0 (StdGeneric.FIELD x1_4_0 -> case c_3_1 (StdGeneric.FIELD x2_5_0 -> case c_2_1 (StdGeneric.PAIR c_6_0 c_6_1 -> case c_6_0 (StdGeneric.FIELD x3_7_0 -> case c_6_1 (StdGeneric.FIELD x4_8_0 -> skeleton5._TitledIdea x1_4_0 x2_5_0 x3_7_0 x4_8_0) ) ) ) ) ) ) ) 
+skeleton5.bimapFromGeneric_42 !x_0 = skeleton5._f844_844 x_0
+skeleton5._f844_844 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (skeleton5.fromGenericTitledIdea_29 x1_1_0) x2_1_1) 
+skeleton5.bimapFromGeneric_43 !x_0 = skeleton5._f845_845 x_0
+skeleton5._f845_845 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (skeleton5.bimapFromGeneric_42 x1_1_0) x2_1_1) 
+skeleton5.JSONDecode_FIELD_780 gfd_name_0 _x_1::I !_x_2::B !l_3 = case l_3 (_predefined._Cons _x_1_0 _x_1_1 -> case _x_1_0 (Text.JSON.JSONObject fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = skeleton5.findField_35 gfd_name_0 fields_2_0 in <{skeleton5._c;133;5_846}> (Text.JSON.JSONDecode_Int_34 True field_4_0) l_3) ) (Text.JSON.JSONArray fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = <{StdList.!!}> fields_2_0 _x_1 in <{skeleton5._c;144;5_847}> (Text.JSON.JSONDecode_Int_34 True (_predefined._Cons field_4_0 _predefined._Nil)) l_3) ) ) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_3)
+<{skeleton5._c;144;5_847}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+<{skeleton5._c;133;5_846}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+skeleton5.JSONDecode_FIELD_774 gfd_name_0 _x_1::I !_x_2::B !l_3 = case l_3 (_predefined._Cons _x_1_0 _x_1_1 -> case _x_1_0 (Text.JSON.JSONObject fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = skeleton5.findField_35 gfd_name_0 fields_2_0 in <{skeleton5._c;133;5_848}> (Text.JSON.JSONDecode__String_38 True field_4_0) l_3) ) (Text.JSON.JSONArray fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = <{StdList.!!}> fields_2_0 _x_1 in <{skeleton5._c;144;5_849}> (Text.JSON.JSONDecode__String_38 True (_predefined._Cons field_4_0 _predefined._Nil)) l_3) ) ) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_3)
+<{skeleton5._c;144;5_849}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+<{skeleton5._c;133;5_848}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+skeleton5.JSONDecode_PAIR_778 gfd_name_0 _x_1::I !fy_2 !_x_3::B !l_4 = skeleton5.d1_39 fy_2 (skeleton5.JSONDecode_FIELD_774 gfd_name_0 _x_1 False l_4) l_4
+skeleton5.JSONDecode_FIELD_776 gfd_name_0 _x_1::I _x_2 !_x_3::B !l_4 = case l_4 (_predefined._Cons _x_1_0 _x_1_1 -> case _x_1_0 (Text.JSON.JSONObject fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = skeleton5.findField_35 gfd_name_0 fields_2_0 in <{skeleton5._c;133;5_850}> (Text.JSON.JSONDecode_Maybe_53 _x_2 True field_4_0) l_4) ) (Text.JSON.JSONArray fields_2_0 -> case _x_1_1 (_predefined._Nil -> let !field_4_0 = <{StdList.!!}> fields_2_0 _x_1 in <{skeleton5._c;144;5_851}> (Text.JSON.JSONDecode_Maybe_53 _x_2 True (_predefined._Cons field_4_0 _predefined._Nil)) l_4) ) ) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_4)
+<{skeleton5._c;144;5_851}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+<{skeleton5._c;133;5_850}> !_x_0 !l_1 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.FIELD x_2_0)) l_1) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_1)) 
+skeleton5.JSONDecode_PAIR_782 gfd_name_0 _x_1::I !fy_2 !fy_3 !_x_4::B !l_5 = skeleton5.d1_39 fy_3 (skeleton5.JSONDecode_PAIR_778 gfd_name_0 _x_1 fy_2 False l_5) l_5
+skeleton5.JSONEncode_FIELD_779 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode_Int_10 True x_1_0) 
+skeleton5.JSONEncode_FIELD_773 !_x_0::B !_x_1 = case _x_1 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode__String_14 True x_1_0) 
+skeleton5.JSONEncode_PAIR_777 !fy_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_FIELD_773 False x_1_0) (fy_0 False y_1_1)) 
+skeleton5.JSONEncode_FIELD_775 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.FIELD x_1_0 -> Text.JSON.JSONEncode_Maybe_26 _x_0 True x_1_0) 
+skeleton5.JSONEncode_PAIR_781 !fy_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_PAIR_777 fy_0 False x_1_0) (fy_1 False y_1_1)) 
+skeleton5.d1_788 gfd_name_0 _x_1::I !_x_2 !l_3 = case _x_2 (_Tuple2 _x_1_0 xs_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> skeleton5.d2_40 x_2_0 (skeleton5.JSONDecode_FIELD_780 gfd_name_0 _x_1 False xs_1_1) l_3) (Data.Maybe.Nothing -> <{_Tuple2!3}> Data.Maybe.Nothing l_3) ) 
+skeleton5.JSONDecode_PAIR_787 gfd_name_0 _x_1::I gfd_name_2 _x_3::I !_x_4::B !l_5 = skeleton5.d1_788 gfd_name_2 _x_3 (skeleton5.JSONDecode_FIELD_774 gfd_name_0 _x_1 False l_5) l_5
+skeleton5.d1_785 gfd_name_0 _x_1::I _x_2 !_x_3 !l_4 = case _x_3 (_Tuple2 _x_1_0 xs_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> skeleton5.d2_40 x_2_0 (skeleton5.JSONDecode_FIELD_776 gfd_name_0 _x_1 _x_2 False xs_1_1) l_4) (Data.Maybe.Nothing -> <{_Tuple2!3}> Data.Maybe.Nothing l_4) ) 
+skeleton5.JSONDecode_PAIR_784 gfd_name_0 _x_1::I gfd_name_2 _x_3::I _x_4 !_x_5::B !l_6 = skeleton5.d1_785 gfd_name_2 _x_3 _x_4 (skeleton5.JSONDecode_FIELD_774 gfd_name_0 _x_1 False l_6) l_6
+skeleton5.JSONDecode_PAIR_790 gfd_name_0 _x_1::I gfd_name_2 _x_3::I _x_4 !fy_5 !_x_6::B !l_7 = skeleton5.d1_39 fy_5 (skeleton5.JSONDecode_PAIR_784 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 False l_7) l_7
+skeleton5.JSONEncode_PAIR_786 !_x_0::B !_x_1 = case _x_1 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_FIELD_773 False x_1_0) (skeleton5.JSONEncode_FIELD_779 False y_1_1)) 
+skeleton5.JSONEncode_PAIR_783 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_FIELD_773 False x_1_0) (skeleton5.JSONEncode_FIELD_775 _x_0 False y_1_1)) 
+skeleton5.JSONEncode_PAIR_789 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_PAIR_783 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+skeleton5.d1_793 gfd_name_0 _x_1::I gfd_name_2 _x_3::I !_x_4 !l_5 = case _x_4 (_Tuple2 _x_1_0 xs_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> skeleton5.d2_40 x_2_0 (skeleton5.JSONDecode_PAIR_787 gfd_name_0 _x_1 gfd_name_2 _x_3 False xs_1_1) l_5) (Data.Maybe.Nothing -> <{_Tuple2!3}> Data.Maybe.Nothing l_5) ) 
+skeleton5.JSONDecode_PAIR_792 gfd_name_0 _x_1::I gfd_name_2 _x_3::I _x_4 gfd_name_5 _x_6::I gfd_name_7 _x_8::I !_x_9::B !l_10 = skeleton5.d1_793 gfd_name_5 _x_6 gfd_name_7 _x_8 (skeleton5.JSONDecode_PAIR_784 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 False l_10) l_10
+skeleton5.JSONEncode_PAIR_791 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_PAIR_783 _x_0 False x_1_0) (skeleton5.JSONEncode_PAIR_786 False y_1_1)) 
+skeleton5.gUpdate_TitledIdea_10 !x1_0 !x2_1 !x3_2 !x4_3 = skeleton5.bimapFromGeneric_43 (iTasks._Framework.Generic.Interaction.gUpdate_RECORD_117 4 (iTasks._Framework.Generic.Interaction.gUpdate_PAIR_113 (iTasks._Framework.Generic.Interaction.gUpdate_PAIR_113 (iTasks._Framework.Generic.Interaction.gUpdate_FIELD_118 iTasks._Framework.Generic.Interaction.gUpdate__String_123 iTasks._Framework.Generic.Defaults.gDefault__String_12 Text.JSON.JSONEncode__String_14 Text.JSON.JSONDecode__String_38) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) skeleton5.JSONEncode_FIELD_773 (skeleton5.JSONDecode_FIELD_774 "title" 0) (iTasks._Framework.Generic.Interaction.gUpdate_FIELD_118 (iTasks._Framework.Generic.Interaction.gUpdate_Maybe_135 iTasks.API.Core.Types.gUpdate_Note_223 iTasks.API.Core.Types.gDefault_Note_168 iTasks.API.Core.Types.JSONEncode_Note_146 iTasks.API.Core.Types.JSONDecode_Note_157) (iTasks._Framework.Generic.Defaults.gDefault_Maybe_24 iTasks.API.Core.Types.gDefault_Note_168) (Text.JSON.JSONEncode_Maybe_26 iTasks.API.Core.Types.JSONEncode_Note_146) (Text.JSON.JSONDecode_Maybe_53 iTasks.API.Core.Types.JSONDecode_Note_157)) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 (iTasks._Framework.Generic.Defaults.gDefault_Maybe_24 iTasks.API.Core.Types.gDefault_Note_168)) (skeleton5.JSONEncode_FIELD_775 iTasks.API.Core.Types.JSONEncode_Note_146) (skeleton5.JSONDecode_FIELD_776 "idea" 1 iTasks.API.Core.Types.JSONDecode_Note_157)) (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 (iTasks._Framework.Generic.Defaults.gDefault_Maybe_24 iTasks.API.Core.Types.gDefault_Note_168))) (skeleton5.JSONEncode_PAIR_783 iTasks.API.Core.Types.JSONEncode_Note_146) (skeleton5.JSONDecode_PAIR_784 "title" 0 "idea" 1 iTasks.API.Core.Types.JSONDecode_Note_157) (iTasks._Framework.Generic.Interaction.gUpdate_PAIR_113 (iTasks._Framework.Generic.Interaction.gUpdate_FIELD_118 iTasks._Framework.Generic.Interaction.gUpdate__String_123 iTasks._Framework.Generic.Defaults.gDefault__String_12 Text.JSON.JSONEncode__String_14 Text.JSON.JSONDecode__String_38) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) skeleton5.JSONEncode_FIELD_773 (skeleton5.JSONDecode_FIELD_774 "name" 2) (iTasks._Framework.Generic.Interaction.gUpdate_FIELD_118 iTasks._Framework.Generic.Interaction.gUpdate_Int_119 iTasks._Framework.Generic.Defaults.gDefault_Int_8 Text.JSON.JSONEncode_Int_10 Text.JSON.JSONDecode_Int_34) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault_Int_8) skeleton5.JSONEncode_FIELD_779 (skeleton5.JSONDecode_FIELD_780 "number" 3)) (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault_Int_8)) skeleton5.JSONEncode_PAIR_786 (skeleton5.JSONDecode_PAIR_787 "name" 2 "number" 3)) (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 (iTasks._Framework.Generic.Defaults.gDefault_Maybe_24 iTasks.API.Core.Types.gDefault_Note_168))) (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault_Int_8))) (skeleton5.JSONEncode_PAIR_791 iTasks.API.Core.Types.JSONEncode_Note_146) (skeleton5.JSONDecode_PAIR_792 "title" 0 "idea" 1 iTasks.API.Core.Types.JSONDecode_Note_157 "name" 2 "number" 3) x1_0 x2_1 (skeleton5.bimapToGeneric_41 x3_2) x4_3)
+skeleton5.bimapToGeneric_44 !x_0 = skeleton5._f852_852 x_0
+skeleton5._f852_852 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (skeleton5.toGenericTitledIdea_30 x1_1_0) x2_1_1) 
+skeleton5.gVerify_TitledIdea_11 !x1_0 x2_1 = iTasks._Framework.Generic.Interaction.gVerify_RECORD_84 4 (iTasks._Framework.Generic.Interaction.gVerify_PAIR_80 (iTasks._Framework.Generic.Interaction.gVerify_PAIR_80 (iTasks._Framework.Generic.Interaction.gVerify_FIELD_85 iTasks._Framework.Generic.Interaction.gVerify__String_90) (iTasks._Framework.Generic.Interaction.gVerify_FIELD_85 (iTasks._Framework.Generic.Interaction.gVerify_Maybe_102 iTasks.API.Core.Types.gVerify_Note_234))) (iTasks._Framework.Generic.Interaction.gVerify_PAIR_80 (iTasks._Framework.Generic.Interaction.gVerify_FIELD_85 iTasks._Framework.Generic.Interaction.gVerify__String_90) (iTasks._Framework.Generic.Interaction.gVerify_FIELD_85 iTasks._Framework.Generic.Interaction.gVerify_Int_86))) x1_0 (skeleton5.bimapToGeneric_44 x2_1)
+skeleton5.bimapToGeneric_45 !x_0 = skeleton5._f853_853 x_0
+skeleton5._f853_853 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (skeleton5.toGenericTitledIdea_30 x1_1_0)) 
+skeleton5.gText_TitledIdea_12 !x1_0 x2_1 = iTasks._Framework.Generic.Visualization.gText_RECORD_9 (iTasks._Framework.Generic.Visualization.gText_PAIR_5 (iTasks._Framework.Generic.Visualization.gText_PAIR_5 (iTasks._Framework.Generic.Visualization.gText_FIELD_10 "title" iTasks._Framework.Generic.Visualization.gText__String_15) (iTasks._Framework.Generic.Visualization.gText_FIELD_10 "idea" (iTasks._Framework.Generic.Visualization.gText_Maybe_27 iTasks.API.Core.Types.gText_Note_190))) (iTasks._Framework.Generic.Visualization.gText_PAIR_5 (iTasks._Framework.Generic.Visualization.gText_FIELD_10 "name" iTasks._Framework.Generic.Visualization.gText__String_15) (iTasks._Framework.Generic.Visualization.gText_FIELD_10 "number" iTasks._Framework.Generic.Visualization.gText_Int_11))) x1_0 (skeleton5.bimapToGeneric_45 x2_1)
+skeleton5.fli__TitledIdea_23 = _predefined._Cons "title" (_predefined._Cons "idea" (_predefined._Cons "name" (_predefined._Cons "number" _predefined._Nil)))
+skeleton5.isNotNull_48::B !_x_0 = case _x_0 (Text.JSON.JSONNull -> False) (_ -> True)
+<{skeleton5.c;86;47_47}> !g_l_0 g_l_1 = <{skeleton5.g_c1;86;33_855}> g_l_0 g_l_1
+<{skeleton5.g_c1;86;33_855}> !g_l_0 g_l_1 = case g_l_0 (_predefined._Cons o_1_0 g_t_1_1 -> <{skeleton5.g_c1;86;54_854}> g_l_1 o_1_0 g_t_1_1) (_ -> _predefined._Nil)
+<{skeleton5.g_c1;86;54_854}> !g_l_0 o_1 g_t_2 = case g_l_0 (_predefined._Cons name_1_0 g_t_1_1 -> case (skeleton5.isNotNull_48 o_1) (True -> _predefined._Cons (_Tuple2 name_1_0 o_1) (<{skeleton5.c;86;47_47}> g_t_2 g_t_1_1)) (False -> <{skeleton5.c;86;47_47}> g_t_2 g_t_1_1) ) (_ -> _predefined._Nil)
+skeleton5.JSONEncode_RECORD_46 grd_fields_0 fx_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{skeleton5.c;86;47_47}> (fx_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+skeleton5.JSONEncode_PAIR_794 _x_0 !fy_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_PAIR_783 _x_0 False x_1_0) (fy_1 False y_1_1)) 
+skeleton5.JSONEncode_RECORD_795 grd_fields_0 _x_1 fy_2 !_x_3::B !_x_4 = case _x_4 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{skeleton5.c;86;47_47}> (skeleton5.JSONEncode_PAIR_794 _x_1 fy_2 False x_1_0) grd_fields_0)) _predefined._Nil) 
+skeleton5.JSONEncode_PAIR_797 _x_0 !_x_1::B !_x_2 = case _x_2 (StdGeneric.PAIR x_1_0 y_1_1 -> <{skeleton5.++_37}> (skeleton5.JSONEncode_PAIR_783 _x_0 False x_1_0) (skeleton5.JSONEncode_PAIR_786 False y_1_1)) 
+skeleton5.JSONEncode_RECORD_796 grd_fields_0 _x_1 !_x_2::B !_x_3 = case _x_3 (StdGeneric.RECORD x_1_0 -> _predefined._Cons (Text.JSON.JSONObject (<{skeleton5.c;86;47_47}> (skeleton5.JSONEncode_PAIR_797 _x_1 False x_1_0) grd_fields_0)) _predefined._Nil) 
+skeleton5.JSONEncode_TitledIdea_13 !x1_0::B !x2_1 = skeleton5.JSONEncode_RECORD_796 skeleton5.fli__TitledIdea_23 iTasks.API.Core.Types.JSONEncode_Note_146 x1_0 (skeleton5.toGenericTitledIdea_30 x2_1)
+skeleton5.d_50 !_x_0 !xs_1 !l_2 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.RECORD x_2_0)) xs_1) (Data.Maybe.Nothing -> <{_Tuple2!3}> Data.Maybe.Nothing l_2) ) 
+skeleton5.d_51 !_x_0 !xs_1 !l_2 = case _x_0 (_Tuple2 _x_1_0 _x_1_1 -> case _x_1_0 (Data.Maybe.Just x_2_0 -> <{_Tuple2!3}> (Data.Maybe.Just (StdGeneric.RECORD x_2_0)) xs_1) (Data.Maybe.Nothing -> <{_Tuple2!3}> Data.Maybe.Nothing l_2) ) 
+skeleton5.JSONDecode_RECORD_49 fx_0 !_x_1::B !l_2 = case l_2 (_predefined._Cons obj_1_0 xs_1_1 -> case obj_1_0 (Text.JSON.JSONObject fields_2_0 -> skeleton5.d_50 (fx_0 False (_predefined._Cons obj_1_0 _predefined._Nil)) xs_1_1 l_2) (Text.JSON.JSONArray fields_2_0 -> skeleton5.d_51 (fx_0 False (_predefined._Cons obj_1_0 _predefined._Nil)) xs_1_1 l_2) ) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_2)
+skeleton5.bimapFromGeneric_52 !x_0 = skeleton5._f856_856 x_0
+skeleton5._f856_856 !x_0 = case x_0 (Data.Maybe.Nothing -> Data.Maybe.Nothing) (Data.Maybe.Just x1_1_0 -> Data.Maybe.Just (skeleton5.fromGenericTitledIdea_29 x1_1_0)) 
+skeleton5.bimapFromGeneric_53 !x_0 = skeleton5._f857_857 x_0
+skeleton5._f857_857 !x_0 = case x_0 (_Tuple2 x1_1_0 x2_1_1 -> _Tuple2 (skeleton5.bimapFromGeneric_52 x1_1_0) x2_1_1) 
+skeleton5.JSONDecode_PAIR_798 gfd_name_0 _x_1::I gfd_name_2 _x_3::I _x_4 !fy_5 !_x_6::B !l_7 = skeleton5.d1_39 fy_5 (skeleton5.JSONDecode_PAIR_784 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 False l_7) l_7
+skeleton5.JSONDecode_RECORD_799 gfd_name_0 _x_1::I gfd_name_2 _x_3::I _x_4 fy_5 !_x_6::B !l_7 = case l_7 (_predefined._Cons obj_1_0 xs_1_1 -> case obj_1_0 (Text.JSON.JSONObject fields_2_0 -> skeleton5.d_50 (skeleton5.JSONDecode_PAIR_798 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 fy_5 False (_predefined._Cons obj_1_0 _predefined._Nil)) xs_1_1 l_7) (Text.JSON.JSONArray fields_2_0 -> skeleton5.d_51 (skeleton5.JSONDecode_PAIR_798 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 fy_5 False (_predefined._Cons obj_1_0 _predefined._Nil)) xs_1_1 l_7) ) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_7)
+skeleton5.JSONDecode_PAIR_801 gfd_name_0 _x_1::I gfd_name_2 _x_3::I _x_4 gfd_name_5 _x_6::I gfd_name_7 _x_8::I !_x_9::B !l_10 = skeleton5.d1_793 gfd_name_5 _x_6 gfd_name_7 _x_8 (skeleton5.JSONDecode_PAIR_784 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 False l_10) l_10
+skeleton5.JSONDecode_RECORD_800 gfd_name_0 _x_1::I gfd_name_2 _x_3::I _x_4 gfd_name_5 _x_6::I gfd_name_7 _x_8::I !_x_9::B !l_10 = case l_10 (_predefined._Cons obj_1_0 xs_1_1 -> case obj_1_0 (Text.JSON.JSONObject fields_2_0 -> skeleton5.d_50 (skeleton5.JSONDecode_PAIR_801 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 gfd_name_5 _x_6 gfd_name_7 _x_8 False (_predefined._Cons obj_1_0 _predefined._Nil)) xs_1_1 l_10) (Text.JSON.JSONArray fields_2_0 -> skeleton5.d_51 (skeleton5.JSONDecode_PAIR_801 gfd_name_0 _x_1 gfd_name_2 _x_3 _x_4 gfd_name_5 _x_6 gfd_name_7 _x_8 False (_predefined._Cons obj_1_0 _predefined._Nil)) xs_1_1 l_10) ) (_ -> <{_Tuple2!3}> Data.Maybe.Nothing l_10)
+skeleton5.JSONDecode_TitledIdea_14 !x1_0::B !x2_1 = skeleton5.bimapFromGeneric_53 (skeleton5.JSONDecode_RECORD_800 "title" 0 "idea" 1 iTasks.API.Core.Types.JSONDecode_Note_157 "name" 2 "number" 3 x1_0 x2_1)
+skeleton5.gDefault_TitledIdea_15 = skeleton5.fromGenericTitledIdea_29 (iTasks._Framework.Generic.Defaults.gDefault_RECORD_6 (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 (iTasks._Framework.Generic.Defaults.gDefault_Maybe_24 iTasks.API.Core.Types.gDefault_Note_168))) (iTasks._Framework.Generic.Defaults.gDefault_PAIR_2 (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault__String_12) (iTasks._Framework.Generic.Defaults.gDefault_FIELD_7 iTasks._Framework.Generic.Defaults.gDefault_Int_8))))
+skeleton5.gEq_TitledIdea_16::B x1_0 x2_1 = GenEq.gEq_RECORD_11 (GenEq.gEq_PAIR_8 (GenEq.gEq_PAIR_8 (GenEq.gEq_FIELD_12 GenEq.gEq__String_6) (GenEq.gEq_FIELD_12 (Data.Maybe.gEq_Maybe_13 iTasks.API.Core.Types.gEq_Note_179))) (GenEq.gEq_PAIR_8 (GenEq.gEq_FIELD_12 GenEq.gEq__String_6) (GenEq.gEq_FIELD_12 GenEq.gEq_Int_2))) (skeleton5.toGenericTitledIdea_30 x1_0) (skeleton5.toGenericTitledIdea_30 x2_1)
+skeleton5.anon_5 !_vTApplicative_0 name_1 title_2 idea_3 = select _vTApplicative_0::<{iTasks.API.Core.Types.TApplicative;}> 1 (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (skeleton5._TitledIdea title_2 idea_3 name_1 1)
+skeleton5.JSONEncode_s_305 !_vJSONEncode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONEncode_Maybe_26 (select _vJSONEncode_s_0::<{skeleton5.JSONEncode_s;}> 0) x1_1 x2_2
+skeleton5.JSONDecode_s_344 !_vJSONDecode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONDecode_Maybe_53 (select _vJSONDecode_s_0::<{skeleton5.JSONDecode_s;}> 0) x1_1 x2_2
+skeleton5.gEq_s_349::B !_vgEq_s_0 x1_1 x2_2 = Data.Maybe.gEq_Maybe_13 (select _vgEq_s_0::<{skeleton5.gEq_s;}> 0) x1_1 x2_2
+skeleton5.gEditor_s_432 !_vgEditor_s_0 !_vgText_s_1 !_vgDefault_s_2 !_vgEditMeta_s_3 !_vJSONEncode_s_4 !_vJSONDecode_s_5 !x1_6 !x2_7 !x3_8 !x4_9 = iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 (select _vgEditor_s_0::<{skeleton5.gEditor_s;}> 0) (select _vgText_s_1::<{skeleton5.gText_s;}> 0) (select _vgDefault_s_2::<{skeleton5.gDefault_s;}> 0) (select _vgEditMeta_s_3::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_4::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_5::<{skeleton5.JSONDecode_s;}> 0) x1_6 x2_7 x3_8 x4_9
+skeleton5.gEditMeta_s_481 !_vgEditMeta_s_0 x1_1 = iTasks._Framework.Generic.Interaction.gEditMeta_Maybe_69 (select _vgEditMeta_s_0::<{skeleton5.gEditMeta_s;}> 0) x1_1
+skeleton5.gVerify_s_530 !_vgVerify_s_0 !x1_1 x2_2 = iTasks._Framework.Generic.Interaction.gVerify_Maybe_102 (select _vgVerify_s_0::<{skeleton5.gVerify_s;}> 0) x1_1 x2_2
+skeleton5.gUpdate_s_579 !_vgUpdate_s_0 !_vgDefault_s_1 !_vJSONEncode_s_2 !_vJSONDecode_s_3 !x1_4 !x2_5 !x3_6 !x4_7 = iTasks._Framework.Generic.Interaction.gUpdate_Maybe_135 (select _vgUpdate_s_0::<{skeleton5.gUpdate_s;}> 0) (select _vgDefault_s_1::<{skeleton5.gDefault_s;}> 0) (select _vJSONEncode_s_2::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_3::<{skeleton5.JSONDecode_s;}> 0) x1_4 x2_5 x3_6 x4_7
+skeleton5.gText_s_628 !_vgText_s_0 !x1_1 x2_2 = iTasks._Framework.Generic.Visualization.gText_Maybe_27 (select _vgText_s_0::<{skeleton5.gText_s;}> 0) x1_1 x2_2
+skeleton5.gDefault_s_676 !_vgDefault_s_0 = iTasks._Framework.Generic.Defaults.gDefault_Maybe_24 (select _vgDefault_s_0::<{skeleton5.gDefault_s;}> 0)
+skeleton5.anon_811 name_0 title_1 idea_2 = iTasks.API.Core.Types.return_27 (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (skeleton5._TitledIdea title_1 idea_2 name_0 1)
+skeleton5.gEq_s_810::B x1_0 x2_1 = Data.Maybe.gEq_Maybe_13 iTasks.API.Core.Types.gEq_Note_179 x1_0 x2_1
+skeleton5.gDefault_s_809 = iTasks._Framework.Generic.Defaults.gDefault_Maybe_24 iTasks.API.Core.Types.gDefault_Note_168
+skeleton5.JSONDecode_s_808 !x1_0::B !x2_1 = Text.JSON.JSONDecode_Maybe_53 iTasks.API.Core.Types.JSONDecode_Note_157 x1_0 x2_1
+skeleton5.JSONEncode_s_807 !x1_0::B !x2_1 = Text.JSON.JSONEncode_Maybe_26 iTasks.API.Core.Types.JSONEncode_Note_146 x1_0 x2_1
+skeleton5.gText_s_806 !x1_0 x2_1 = iTasks._Framework.Generic.Visualization.gText_Maybe_27 iTasks.API.Core.Types.gText_Note_190 x1_0 x2_1
+skeleton5.gVerify_s_805 !x1_0 x2_1 = iTasks._Framework.Generic.Interaction.gVerify_Maybe_102 iTasks.API.Core.Types.gVerify_Note_234 x1_0 x2_1
+skeleton5.gUpdate_s_804 !_vgDefault_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gUpdate_Maybe_135 iTasks.API.Core.Types.gUpdate_Note_223 (select _vgDefault_s_0::<{skeleton5.gDefault_s;}> 0) (select _vJSONEncode_s_1::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{skeleton5.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+skeleton5.gEditMeta_s_803 x1_0 = iTasks._Framework.Generic.Interaction.gEditMeta_Maybe_69 iTasks.API.Core.Types.gEditMeta_Note_212 x1_0
+skeleton5.gEditor_s_802 !_vgText_s_0 !_vgDefault_s_1 !_vgEditMeta_s_2 !_vJSONEncode_s_3 !_vJSONDecode_s_4 !x1_5 !x2_6 !x3_7 !x4_8 = iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 iTasks.API.Core.Types.gEditor_Note_201 (select _vgText_s_0::<{skeleton5.gText_s;}> 0) (select _vgDefault_s_1::<{skeleton5.gDefault_s;}> 0) (select _vgEditMeta_s_2::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_3::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_4::<{skeleton5.JSONDecode_s;}> 0) x1_5 x2_6 x3_7 x4_8
+skeleton5.gUpdate_s_813 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gUpdate_Maybe_135 iTasks.API.Core.Types.gUpdate_Note_223 iTasks.API.Core.Types.gDefault_Note_168 (select _vJSONEncode_s_0::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{skeleton5.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+skeleton5.gEditor_s_812 !_vgDefault_s_0 !_vgEditMeta_s_1 !_vJSONEncode_s_2 !_vJSONDecode_s_3 !x1_4 !x2_5 !x3_6 !x4_7 = iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 iTasks.API.Core.Types.gEditor_Note_201 iTasks.API.Core.Types.gText_Note_190 (select _vgDefault_s_0::<{skeleton5.gDefault_s;}> 0) (select _vgEditMeta_s_1::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_2::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_3::<{skeleton5.JSONDecode_s;}> 0) x1_4 x2_5 x3_6 x4_7
+skeleton5.gUpdate_s_815 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gUpdate_Maybe_135 iTasks.API.Core.Types.gUpdate_Note_223 iTasks.API.Core.Types.gDefault_Note_168 iTasks.API.Core.Types.JSONEncode_Note_146 (select _vJSONDecode_s_0::<{skeleton5.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+skeleton5.gEditor_s_814 !_vgEditMeta_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 iTasks.API.Core.Types.gEditor_Note_201 iTasks.API.Core.Types.gText_Note_190 iTasks.API.Core.Types.gDefault_Note_168 (select _vgEditMeta_s_0::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_1::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{skeleton5.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+skeleton5.gUpdate_s_817 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gUpdate_Maybe_135 iTasks.API.Core.Types.gUpdate_Note_223 iTasks.API.Core.Types.gDefault_Note_168 iTasks.API.Core.Types.JSONEncode_Note_146 iTasks.API.Core.Types.JSONDecode_Note_157 x1_0 x2_1 x3_2 x4_3
+skeleton5.gEditor_s_816 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 iTasks.API.Core.Types.gEditor_Note_201 iTasks.API.Core.Types.gText_Note_190 iTasks.API.Core.Types.gDefault_Note_168 iTasks.API.Core.Types.gEditMeta_Note_212 (select _vJSONEncode_s_0::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{skeleton5.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+skeleton5.gEditor_s_818 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 iTasks.API.Core.Types.gEditor_Note_201 iTasks.API.Core.Types.gText_Note_190 iTasks.API.Core.Types.gDefault_Note_168 iTasks.API.Core.Types.gEditMeta_Note_212 iTasks.API.Core.Types.JSONEncode_Note_146 (select _vJSONDecode_s_0::<{skeleton5.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+skeleton5.gEditor_s_819 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gEditor_Maybe_36 iTasks.API.Core.Types.gEditor_Note_201 iTasks.API.Core.Types.gText_Note_190 iTasks.API.Core.Types.gDefault_Note_168 iTasks.API.Core.Types.gEditMeta_Note_212 iTasks.API.Core.Types.JSONEncode_Note_146 iTasks.API.Core.Types.JSONDecode_Note_157 x1_0 x2_1 x3_2 x4_3
+skeleton5.anon_6 name_0 title_1 = <{iTasks.API.Core.Types.>>=_28}> (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_s_819) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_s_803) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_s_817) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_s_805) (<{skeleton5.gText_s;}> skeleton5.gText_s_806) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_s_807) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_s_808) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_s_809) (<{skeleton5.gEq_s;}> skeleton5.gEq_s_810) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{Data.Maybe.TD;Maybe}>)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;Note}>)))) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (iTasks.API.Common.InteractionTasks.enterInformation (<{iTasks.API.Core.Types.descr;}> iTasks.API.Core.Types.toPrompt_133) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_s_819) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_s_803) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_s_817) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_s_805) (<{skeleton5.gText_s;}> skeleton5.gText_s_806) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_s_807) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_s_808) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_s_809) (<{skeleton5.gEq_s;}> skeleton5.gEq_s_810) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{Data.Maybe.TD;Maybe}>)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{iTasks.API.Core.Types.TD;Note}>)))) (<{StdString.+++_11}> name_0 (<{StdString.+++_11}> " add the idea of " title_1)) _predefined._Nil) (skeleton5.anon_811 name_0 title_1)
+skeleton5.editIdea name_0 = <{iTasks.API.Core.Types.>>=_28}> (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__String_24) (<{skeleton5.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (<{skeleton5.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__String_123) (<{skeleton5.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__String_90) (<{skeleton5.gText_s;}> iTasks._Framework.Generic.Visualization.gText__String_15) (<{skeleton5.JSONEncode_s;}> Text.JSON.JSONEncode__String_14) (<{skeleton5.JSONDecode_s;}> Text.JSON.JSONDecode__String_38) (<{skeleton5.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__String_12) (<{skeleton5.gEq_s;}> GenEq.gEq__String_6) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (iTasks.API.Common.InteractionTasks.enterInformation (<{iTasks.API.Core.Types.descr;}> iTasks.API.Core.Types.toPrompt_133) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__String_24) (<{skeleton5.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (<{skeleton5.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__String_123) (<{skeleton5.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__String_90) (<{skeleton5.gText_s;}> iTasks._Framework.Generic.Visualization.gText__String_15) (<{skeleton5.JSONEncode_s;}> Text.JSON.JSONEncode__String_14) (<{skeleton5.JSONDecode_s;}> Text.JSON.JSONDecode__String_38) (<{skeleton5.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__String_12) (<{skeleton5.gEq_s;}> GenEq.gEq__String_6) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))) (<{StdString.+++_11}> name_0 " add your title") _predefined._Nil) (skeleton5.anon_6 name_0)
+skeleton5.JSONEncode_s_267 !_vJSONEncode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONEncode__List_16 (select _vJSONEncode_s_0::<{skeleton5.JSONEncode_s;}> 0) x1_1 x2_2
+skeleton5.JSONDecode_s_306 !_vJSONDecode_s_0 !x1_1::B !x2_2 = Text.JSON.JSONDecode__List_43 (select _vJSONDecode_s_0::<{skeleton5.JSONDecode_s;}> 0) x1_1 x2_2
+skeleton5.gEq_s_352::B !_vgEq_s_0 x1_1 x2_2 = GenEq.gEq__List_16 (select _vgEq_s_0::<{skeleton5.gEq_s;}> 0) x1_1 x2_2
+skeleton5.gEditor_s_394 !_vgEditor_s_0 !_vgText_s_1 !_vgDefault_s_2 !_vgEditMeta_s_3 !_vJSONEncode_s_4 !_vJSONDecode_s_5 !x1_6 !x2_7 !x3_8 !x4_9 = iTasks._Framework.Generic.Interaction.gEditor__List_25 (select _vgEditor_s_0::<{skeleton5.gEditor_s;}> 0) (select _vgText_s_1::<{skeleton5.gText_s;}> 0) (select _vgDefault_s_2::<{skeleton5.gDefault_s;}> 0) (select _vgEditMeta_s_3::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_4::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_5::<{skeleton5.JSONDecode_s;}> 0) x1_6 x2_7 x3_8 x4_9
+skeleton5.gEditMeta_s_443 !_vgEditMeta_s_0 x1_1 = iTasks._Framework.Generic.Interaction.gEditMeta__List_58 (select _vgEditMeta_s_0::<{skeleton5.gEditMeta_s;}> 0) x1_1
+skeleton5.gVerify_s_492 !_vgVerify_s_0 !x1_1 x2_2 = iTasks._Framework.Generic.Interaction.gVerify__List_91 (select _vgVerify_s_0::<{skeleton5.gVerify_s;}> 0) x1_1 x2_2
+skeleton5.gUpdate_s_541 !_vgUpdate_s_0 !_vgDefault_s_1 !_vJSONEncode_s_2 !_vJSONDecode_s_3 !x1_4 !x2_5 !x3_6 !x4_7 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 (select _vgUpdate_s_0::<{skeleton5.gUpdate_s;}> 0) (select _vgDefault_s_1::<{skeleton5.gDefault_s;}> 0) (select _vJSONEncode_s_2::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_3::<{skeleton5.JSONDecode_s;}> 0) x1_4 x2_5 x3_6 x4_7
+skeleton5.gText_s_590 !_vgText_s_0 !x1_1 x2_2 = iTasks._Framework.Generic.Visualization.gText__List_16 (select _vgText_s_0::<{skeleton5.gText_s;}> 0) x1_1 x2_2
+skeleton5.gDefault_s_638 !_vgDefault_s_0 = iTasks._Framework.Generic.Defaults.gDefault__List_13 (select _vgDefault_s_0::<{skeleton5.gDefault_s;}> 0)
+skeleton5.anon_7 !_vTApplicative_0 !_viTask_1 x_2 = select _vTApplicative_0::<{iTasks.API.Core.Types.TApplicative;}> 1 (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> (skeleton5.gEditor_s_394 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 0) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 4) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 7) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 1) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 6))) (<{skeleton5.gEditMeta_s;}> (skeleton5.gEditMeta_s_443 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 1))) (<{skeleton5.gUpdate_s;}> (skeleton5.gUpdate_s_541 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 2) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 7) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 6))) (<{skeleton5.gVerify_s;}> (skeleton5.gVerify_s_492 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 3))) (<{skeleton5.gText_s;}> (skeleton5.gText_s_590 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 4))) (<{skeleton5.JSONEncode_s;}> (skeleton5.JSONEncode_s_267 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 5))) (<{skeleton5.JSONDecode_s;}> (skeleton5.JSONDecode_s_306 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 6))) (<{skeleton5.gDefault_s;}> (skeleton5.gDefault_s_638 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 7))) (<{skeleton5.gEq_s;}> (skeleton5.gEq_s_352 (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 8))) (_SystemDynamic._normalise (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) (select _viTask_1::<{iTasks._Framework.Generic.iTask;}> 9) (_SystemDynamic._initial_unification_environment 1 0)) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeVar 0)))) (_predefined._Cons x_2 _predefined._Nil)
+skeleton5.anon_829 !_viTask_0 x_1 = iTasks.API.Core.Types.return_27 (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> (skeleton5.gEditor_s_394 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 0) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 4) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 7) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 1) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 6))) (<{skeleton5.gEditMeta_s;}> (skeleton5.gEditMeta_s_443 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 1))) (<{skeleton5.gUpdate_s;}> (skeleton5.gUpdate_s_541 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 2) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 7) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 5) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 6))) (<{skeleton5.gVerify_s;}> (skeleton5.gVerify_s_492 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 3))) (<{skeleton5.gText_s;}> (skeleton5.gText_s_590 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 4))) (<{skeleton5.JSONEncode_s;}> (skeleton5.JSONEncode_s_267 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 5))) (<{skeleton5.JSONDecode_s;}> (skeleton5.JSONDecode_s_306 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 6))) (<{skeleton5.gDefault_s;}> (skeleton5.gDefault_s_638 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 7))) (<{skeleton5.gEq_s;}> (skeleton5.gEq_s_352 (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 8))) (_SystemDynamic._normalise (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) (select _viTask_0::<{iTasks._Framework.Generic.iTask;}> 9) (_SystemDynamic._initial_unification_environment 1 0)) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeVar 0)))) (_predefined._Cons x_1 _predefined._Nil)
+skeleton5.gEq_s_828::B x1_0 x2_1 = GenEq.gEq__List_16 skeleton5.gEq_TitledIdea_16 x1_0 x2_1
+skeleton5.gDefault_s_827 = iTasks._Framework.Generic.Defaults.gDefault__List_13 skeleton5.gDefault_TitledIdea_15
+skeleton5.JSONDecode_s_826 !x1_0::B !x2_1 = Text.JSON.JSONDecode__List_43 skeleton5.JSONDecode_TitledIdea_14 x1_0 x2_1
+skeleton5.JSONEncode_s_825 !x1_0::B !x2_1 = Text.JSON.JSONEncode__List_16 skeleton5.JSONEncode_TitledIdea_13 x1_0 x2_1
+skeleton5.gText_s_824 !x1_0 x2_1 = iTasks._Framework.Generic.Visualization.gText__List_16 skeleton5.gText_TitledIdea_12 x1_0 x2_1
+skeleton5.gVerify_s_823 !x1_0 x2_1 = iTasks._Framework.Generic.Interaction.gVerify__List_91 skeleton5.gVerify_TitledIdea_11 x1_0 x2_1
+skeleton5.gUpdate_s_822 !_vgDefault_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 skeleton5.gUpdate_TitledIdea_10 (select _vgDefault_s_0::<{skeleton5.gDefault_s;}> 0) (select _vJSONEncode_s_1::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{skeleton5.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+skeleton5.gEditMeta_s_821 x1_0 = iTasks._Framework.Generic.Interaction.gEditMeta__List_58 skeleton5.gEditMeta_TitledIdea_9 x1_0
+skeleton5.gEditor_s_820 !_vgText_s_0 !_vgDefault_s_1 !_vgEditMeta_s_2 !_vJSONEncode_s_3 !_vJSONDecode_s_4 !x1_5 !x2_6 !x3_7 !x4_8 = iTasks._Framework.Generic.Interaction.gEditor__List_25 skeleton5.gEditor_TitledIdea_8 (select _vgText_s_0::<{skeleton5.gText_s;}> 0) (select _vgDefault_s_1::<{skeleton5.gDefault_s;}> 0) (select _vgEditMeta_s_2::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_3::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_4::<{skeleton5.JSONDecode_s;}> 0) x1_5 x2_6 x3_7 x4_8
+skeleton5.gUpdate_s_831 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 skeleton5.gUpdate_TitledIdea_10 skeleton5.gDefault_TitledIdea_15 (select _vJSONEncode_s_0::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{skeleton5.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+skeleton5.gEditor_s_830 !_vgDefault_s_0 !_vgEditMeta_s_1 !_vJSONEncode_s_2 !_vJSONDecode_s_3 !x1_4 !x2_5 !x3_6 !x4_7 = iTasks._Framework.Generic.Interaction.gEditor__List_25 skeleton5.gEditor_TitledIdea_8 skeleton5.gText_TitledIdea_12 (select _vgDefault_s_0::<{skeleton5.gDefault_s;}> 0) (select _vgEditMeta_s_1::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_2::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_3::<{skeleton5.JSONDecode_s;}> 0) x1_4 x2_5 x3_6 x4_7
+skeleton5.gUpdate_s_834 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 skeleton5.gUpdate_TitledIdea_10 skeleton5.gDefault_TitledIdea_15 skeleton5.JSONEncode_TitledIdea_13 (select _vJSONDecode_s_0::<{skeleton5.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+skeleton5.gEditor_s_833 !_vgEditMeta_s_0 !_vJSONEncode_s_1 !_vJSONDecode_s_2 !x1_3 !x2_4 !x3_5 !x4_6 = iTasks._Framework.Generic.Interaction.gEditor__List_25 skeleton5.gEditor_TitledIdea_8 skeleton5.gText_TitledIdea_12 skeleton5.gDefault_TitledIdea_15 (select _vgEditMeta_s_0::<{skeleton5.gEditMeta_s;}> 0) (select _vJSONEncode_s_1::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_2::<{skeleton5.JSONDecode_s;}> 0) x1_3 x2_4 x3_5 x4_6
+skeleton5.gUpdate_s_836 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gUpdate__List_124 skeleton5.gUpdate_TitledIdea_10 skeleton5.gDefault_TitledIdea_15 skeleton5.JSONEncode_TitledIdea_13 skeleton5.JSONDecode_TitledIdea_14 x1_0 x2_1 x3_2 x4_3
+skeleton5.gEditor_s_835 !_vJSONEncode_s_0 !_vJSONDecode_s_1 !x1_2 !x2_3 !x3_4 !x4_5 = iTasks._Framework.Generic.Interaction.gEditor__List_25 skeleton5.gEditor_TitledIdea_8 skeleton5.gText_TitledIdea_12 skeleton5.gDefault_TitledIdea_15 skeleton5.gEditMeta_TitledIdea_9 (select _vJSONEncode_s_0::<{skeleton5.JSONEncode_s;}> 0) (select _vJSONDecode_s_1::<{skeleton5.JSONDecode_s;}> 0) x1_2 x2_3 x3_4 x4_5
+skeleton5.gEditor_s_837 !_vJSONDecode_s_0 !x1_1 !x2_2 !x3_3 !x4_4 = iTasks._Framework.Generic.Interaction.gEditor__List_25 skeleton5.gEditor_TitledIdea_8 skeleton5.gText_TitledIdea_12 skeleton5.gDefault_TitledIdea_15 skeleton5.gEditMeta_TitledIdea_9 skeleton5.JSONEncode_TitledIdea_13 (select _vJSONDecode_s_0::<{skeleton5.JSONDecode_s;}> 0) x1_1 x2_2 x3_3 x4_4
+skeleton5.gEditor_s_838 !x1_0 !x2_1 !x3_2 !x4_3 = iTasks._Framework.Generic.Interaction.gEditor__List_25 skeleton5.gEditor_TitledIdea_8 skeleton5.gText_TitledIdea_12 skeleton5.gDefault_TitledIdea_15 skeleton5.gEditMeta_TitledIdea_9 skeleton5.JSONEncode_TitledIdea_13 skeleton5.JSONDecode_TitledIdea_14 x1_0 x2_1 x3_2 x4_3
+skeleton5.anon_832 x_0 = iTasks.API.Core.Types.return_27 (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_s_838) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_s_821) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_s_836) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_s_823) (<{skeleton5.gText_s;}> skeleton5.gText_s_824) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_s_825) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_s_826) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_s_827) (<{skeleton5.gEq_s;}> skeleton5.gEq_s_828) (_SystemDynamic._normalise (_SystemDynamic._bind_global_type_pattern_var (_SystemDynamic.TypeVar 0) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>)) (_SystemDynamic._initial_unification_environment 1 0)) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeVar 0)))) (_predefined._Cons x_0 _predefined._Nil)
+skeleton5.editIdeas name_0 = <{iTasks.API.Core.Types.>>=_28}> (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_s_838) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_s_821) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_s_836) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_s_823) (<{skeleton5.gText_s;}> skeleton5.gText_s_824) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_s_825) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_s_826) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_s_827) (<{skeleton5.gEq_s;}> skeleton5.gEq_s_828) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__List)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>)))) (skeleton5.editIdea name_0) skeleton5.anon_832
+skeleton5.doIdentified_839 task_0 = <{iTasks.API.Core.Types.>>=_28}> (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__String_24) (<{skeleton5.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (<{skeleton5.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__String_123) (<{skeleton5.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__String_90) (<{skeleton5.gText_s;}> iTasks._Framework.Generic.Visualization.gText__String_15) (<{skeleton5.JSONEncode_s;}> Text.JSON.JSONEncode__String_14) (<{skeleton5.JSONDecode_s;}> Text.JSON.JSONDecode__String_38) (<{skeleton5.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__String_12) (<{skeleton5.gEq_s;}> GenEq.gEq__String_6) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (iTasks.API.Common.InteractionTasks.enterInformation (<{iTasks.API.Core.Types.descr;}> iTasks.API.Core.Types.toPrompt_133) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> iTasks._Framework.Generic.Interaction.gEditor__String_24) (<{skeleton5.gEditMeta_s;}> iTasks._Framework.Generic.Interaction.gEditMeta__String_57) (<{skeleton5.gUpdate_s;}> iTasks._Framework.Generic.Interaction.gUpdate__String_123) (<{skeleton5.gVerify_s;}> iTasks._Framework.Generic.Interaction.gVerify__String_90) (<{skeleton5.gText_s;}> iTasks._Framework.Generic.Visualization.gText__String_15) (<{skeleton5.JSONEncode_s;}> Text.JSON.JSONEncode__String_14) (<{skeleton5.JSONDecode_s;}> Text.JSON.JSONDecode__String_38) (<{skeleton5.gDefault_s;}> iTasks._Framework.Generic.Defaults.gDefault__String_12) (<{skeleton5.gEq_s;}> GenEq.gEq__String_6) (_SystemDynamic.TypeApp (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC__UnboxedArray)) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor _SystemDynamic.TC_Char)))) "Enter your name" _predefined._Nil) task_0
+skeleton5.mainTask = <{iTasks.API.Core.Types.>>=_28}> (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) (skeleton5.doIdentified_839 skeleton5.editIdea) (iTasks.API.Common.InteractionTasks.viewInformation (<{iTasks.API.Core.Types.descr;}> iTasks.API.Core.Types.toPrompt_133) (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))) "The result" _predefined._Nil)
+skeleton5.Start !world_0 = iTasks._Framework.Engine.startEngine (<{iTasks._Framework.Engine.Publishable;}> (iTasks._Framework.Engine.publishAll_4 (<{iTasks._Framework.Generic.iTask;}> (<{skeleton5.gEditor_s;}> skeleton5.gEditor_TitledIdea_8) (<{skeleton5.gEditMeta_s;}> skeleton5.gEditMeta_TitledIdea_9) (<{skeleton5.gUpdate_s;}> skeleton5.gUpdate_TitledIdea_10) (<{skeleton5.gVerify_s;}> skeleton5.gVerify_TitledIdea_11) (<{skeleton5.gText_s;}> skeleton5.gText_TitledIdea_12) (<{skeleton5.JSONEncode_s;}> skeleton5.JSONEncode_TitledIdea_13) (<{skeleton5.JSONDecode_s;}> skeleton5.JSONDecode_TitledIdea_14) (<{skeleton5.gDefault_s;}> skeleton5.gDefault_TitledIdea_15) (<{skeleton5.gEq_s;}> skeleton5.gEq_TitledIdea_16) (_SystemDynamic.TypeCons (_SystemDynamic._TypeCodeConstructor <{skeleton5.TD;TitledIdea}>))))) skeleton5.mainTask world_0
+<{skeleton5.TD;Idea}> _x_0::B = _predefined._Nil
+<{skeleton5.TD;Name}> _x_0::B = _predefined._Nil
+<{skeleton5.TD;TitleOfIdea}> _x_0::B = _predefined._Nil
+<{skeleton5.TD;Number}> _x_0::B = _predefined._Nil
+<{skeleton5.TD;TitledIdea}> _x_0::B = _predefined._Nil
+
+
+|| Converted Records
+:: skeleton5._TitledIdea = {skeleton5.title, skeleton5.idea, skeleton5.name, skeleton5.number}
+
+:: <{skeleton5.gEditor_s;}> = {!skeleton5.gEditor_s}
+
+:: <{skeleton5.gEditor_ss;}> = {!skeleton5.gEditor_ss}
+
+:: <{skeleton5.gEditor_sss;}> = {!skeleton5.gEditor_sss}
+
+:: <{skeleton5.gEditMeta_s;}> = {!skeleton5.gEditMeta_s}
+
+:: <{skeleton5.gEditMeta_ss;}> = {!skeleton5.gEditMeta_ss}
+
+:: <{skeleton5.gEditMeta_sss;}> = {!skeleton5.gEditMeta_sss}
+
+:: <{skeleton5.gUpdate_s;}> = {!skeleton5.gUpdate_s}
+
+:: <{skeleton5.gUpdate_ss;}> = {!skeleton5.gUpdate_ss}
+
+:: <{skeleton5.gUpdate_sss;}> = {!skeleton5.gUpdate_sss}
+
+:: <{skeleton5.gVerify_s;}> = {!skeleton5.gVerify_s}
+
+:: <{skeleton5.gVerify_ss;}> = {!skeleton5.gVerify_ss}
+
+:: <{skeleton5.gVerify_sss;}> = {!skeleton5.gVerify_sss}
+
+:: <{skeleton5.gText_s;}> = {!skeleton5.gText_s}
+
+:: <{skeleton5.gText_ss;}> = {!skeleton5.gText_ss}
+
+:: <{skeleton5.gText_sss;}> = {!skeleton5.gText_sss}
+
+:: <{skeleton5.JSONEncode_s;}> = {!skeleton5.JSONEncode_s}
+
+:: <{skeleton5.JSONEncode_ss;}> = {!skeleton5.JSONEncode_ss}
+
+:: <{skeleton5.JSONEncode_sss;}> = {!skeleton5.JSONEncode_sss}
+
+:: <{skeleton5.JSONDecode_s;}> = {!skeleton5.JSONDecode_s}
+
+:: <{skeleton5.JSONDecode_ss;}> = {!skeleton5.JSONDecode_ss}
+
+:: <{skeleton5.JSONDecode_sss;}> = {!skeleton5.JSONDecode_sss}
+
+:: <{skeleton5.gDefault_s;}> = {skeleton5.gDefault_s}
+
+:: <{skeleton5.gDefault_ss;}> = {skeleton5.gDefault_ss}
+
+:: <{skeleton5.gDefault_sss;}> = {skeleton5.gDefault_sss}
+
+:: <{skeleton5.gEq_s;}> = {!skeleton5.gEq_s}
+
+:: <{skeleton5.gEq_ss;}> = {!skeleton5.gEq_ss}
+
+:: <{skeleton5.gEq_sss;}> = {!skeleton5.gEq_sss}
+
+:: <{skeleton5.JSONEncode_ssss;}> = {!skeleton5.JSONEncode_ssss}
+
+:: <{skeleton5.JSONDecode_ssss;}> = {!skeleton5.JSONDecode_ssss}
+
+:: <{skeleton5.gEq_ssss;}> = {!skeleton5.gEq_ssss}
+
+:: <{skeleton5.gDefault_ssss;}> = {skeleton5.gDefault_ssss}
+
+:: <{skeleton5.JSONEncode_sssss;}> = {!skeleton5.JSONEncode_sssss}
+
+:: <{skeleton5.JSONEncode_ssssss;}> = {!skeleton5.JSONEncode_ssssss}
+
+:: <{skeleton5.JSONEncode_sssssss;}> = {!skeleton5.JSONEncode_sssssss}
+
+:: <{skeleton5.JSONEncode_ssssssss;}> = {!skeleton5.JSONEncode_ssssssss}
+
+:: <{skeleton5.JSONEncode_sssssssss;}> = {!skeleton5.JSONEncode_sssssssss}
+
+:: <{skeleton5.JSONDecode_sssss;}> = {!skeleton5.JSONDecode_sssss}
+
+:: <{skeleton5.JSONDecode_ssssss;}> = {!skeleton5.JSONDecode_ssssss}
+
+:: <{skeleton5.JSONDecode_sssssss;}> = {!skeleton5.JSONDecode_sssssss}
+
+:: <{skeleton5.JSONDecode_ssssssss;}> = {!skeleton5.JSONDecode_ssssssss}
+
+:: <{skeleton5.JSONDecode_sssssssss;}> = {!skeleton5.JSONDecode_sssssssss}
+
+:: <{skeleton5.bimap_s;}> = {skeleton5.bimap_s}
+
+:: <{skeleton5.bimap_ss;}> = {skeleton5.bimap_ss}
+
+:: <{skeleton5.bimap_sss;}> = {skeleton5.bimap_sss}
+
+:: <{skeleton5.gEq_sssss;}> = {!skeleton5.gEq_sssss}
+
+:: <{skeleton5.gEq_ssssss;}> = {!skeleton5.gEq_ssssss}
+
+:: <{skeleton5.gEq_sssssss;}> = {!skeleton5.gEq_sssssss}
+
+:: <{skeleton5.gEq_ssssssss;}> = {!skeleton5.gEq_ssssssss}
+
+:: <{skeleton5.gEq_sssssssss;}> = {!skeleton5.gEq_sssssssss}
+
+:: <{skeleton5.gEditor_ssss;}> = {!skeleton5.gEditor_ssss}
+
+:: <{skeleton5.gText_ssss;}> = {!skeleton5.gText_ssss}
+
+:: <{skeleton5.gEditMeta_ssss;}> = {!skeleton5.gEditMeta_ssss}
+
+:: <{skeleton5.gEditor_sssss;}> = {!skeleton5.gEditor_sssss}
+
+:: <{skeleton5.gText_sssss;}> = {!skeleton5.gText_sssss}
+
+:: <{skeleton5.gDefault_sssss;}> = {skeleton5.gDefault_sssss}
+
+:: <{skeleton5.gEditMeta_sssss;}> = {!skeleton5.gEditMeta_sssss}
+
+:: <{skeleton5.gEditor_ssssss;}> = {!skeleton5.gEditor_ssssss}
+
+:: <{skeleton5.gText_ssssss;}> = {!skeleton5.gText_ssssss}
+
+:: <{skeleton5.gDefault_ssssss;}> = {skeleton5.gDefault_ssssss}
+
+:: <{skeleton5.gEditMeta_ssssss;}> = {!skeleton5.gEditMeta_ssssss}
+
+:: <{skeleton5.gEditor_sssssss;}> = {!skeleton5.gEditor_sssssss}
+
+:: <{skeleton5.gText_sssssss;}> = {!skeleton5.gText_sssssss}
+
+:: <{skeleton5.gDefault_sssssss;}> = {skeleton5.gDefault_sssssss}
+
+:: <{skeleton5.gEditMeta_sssssss;}> = {!skeleton5.gEditMeta_sssssss}
+
+:: <{skeleton5.gEditor_ssssssss;}> = {!skeleton5.gEditor_ssssssss}
+
+:: <{skeleton5.gText_ssssssss;}> = {!skeleton5.gText_ssssssss}
+
+:: <{skeleton5.gDefault_ssssssss;}> = {skeleton5.gDefault_ssssssss}
+
+:: <{skeleton5.gEditMeta_ssssssss;}> = {!skeleton5.gEditMeta_ssssssss}
+
+:: <{skeleton5.gEditor_sssssssss;}> = {!skeleton5.gEditor_sssssssss}
+
+:: <{skeleton5.gText_sssssssss;}> = {!skeleton5.gText_sssssssss}
+
+:: <{skeleton5.gDefault_sssssssss;}> = {skeleton5.gDefault_sssssssss}
+
+:: <{skeleton5.gEditMeta_sssssssss;}> = {!skeleton5.gEditMeta_sssssssss}
+
+:: <{skeleton5.gVerify_ssss;}> = {!skeleton5.gVerify_ssss}
+
+:: <{skeleton5.gVerify_sssss;}> = {!skeleton5.gVerify_sssss}
+
+:: <{skeleton5.gVerify_ssssss;}> = {!skeleton5.gVerify_ssssss}
+
+:: <{skeleton5.gVerify_sssssss;}> = {!skeleton5.gVerify_sssssss}
+
+:: <{skeleton5.gVerify_ssssssss;}> = {!skeleton5.gVerify_ssssssss}
+
+:: <{skeleton5.gVerify_sssssssss;}> = {!skeleton5.gVerify_sssssssss}
+
+:: <{skeleton5.gUpdate_ssss;}> = {!skeleton5.gUpdate_ssss}
+
+:: <{skeleton5.gUpdate_sssss;}> = {!skeleton5.gUpdate_sssss}
+
+:: <{skeleton5.gUpdate_ssssss;}> = {!skeleton5.gUpdate_ssssss}
+
+:: <{skeleton5.gUpdate_sssssss;}> = {!skeleton5.gUpdate_sssssss}
+
+:: <{skeleton5.gUpdate_ssssssss;}> = {!skeleton5.gUpdate_ssssssss}
+
+:: <{skeleton5.gUpdate_sssssssss;}> = {!skeleton5.gUpdate_sssssssss}
+
+:: <{skeleton5.gLexOrd_s;}> = {!skeleton5.gLexOrd_s}
+
+:: <{skeleton5.gLexOrd_ss;}> = {!skeleton5.gLexOrd_ss}
+
+:: <{skeleton5.gLexOrd_sss;}> = {!skeleton5.gLexOrd_sss}
+
+:: <{skeleton5.gLexOrd_ssss;}> = {!skeleton5.gLexOrd_ssss}
+
+:: <{skeleton5.gLexOrd_sssss;}> = {!skeleton5.gLexOrd_sssss}
+
+:: <{skeleton5.gLexOrd_ssssss;}> = {!skeleton5.gLexOrd_ssssss}
+
+:: <{skeleton5.gLexOrd_sssssss;}> = {!skeleton5.gLexOrd_sssssss}
+
+:: <{skeleton5.gLexOrd_ssssssss;}> = {!skeleton5.gLexOrd_ssssssss}
+
+:: <{skeleton5.gLexOrd_sssssssss;}> = {!skeleton5.gLexOrd_sssssssss}
+
